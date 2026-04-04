@@ -108,6 +108,12 @@
     .f2 { animation: float2 7s ease-in-out infinite 1s; }
     .f3 { animation: float3 4.5s ease-in-out infinite 0.5s; }
 
+    /* Mobile logo size */
+    @media (max-width: 767px) {
+      .site-logo { height: 42px !important; }
+      #site-header nav > div { height: 64px !important; }
+    }
+
     /* Focus */
     *:focus-visible { outline: 2px solid #F5A623; outline-offset: 3px; border-radius: 4px; }
 
@@ -131,7 +137,7 @@
 
       <!-- Logo -->
       <a href="index.html" aria-label="Smart Beginnings Academy — Home" style="flex-shrink:0;">
-        <img src="Logo Transparency_Shadow.png" alt="Smart Beginnings Academy" style="height:68px;width:auto;" />
+        <img src="Logo Transparency_Shadow.png" alt="Smart Beginnings Academy" class="site-logo" style="height:68px;width:auto;" />
       </a>
 
       <!-- Desktop Links -->

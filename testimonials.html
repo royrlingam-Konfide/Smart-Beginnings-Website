@@ -28,6 +28,11 @@
     .star{color:#F5A623;font-size:0.95rem;}
     .testimonial-card{background:white;border-radius:24px;padding:36px;box-shadow:0 4px 24px rgba(0,0,0,0.06);transition:transform 0.3s,box-shadow 0.3s;}
     .testimonial-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,0.1);}
+  
+    @media (max-width: 767px) {
+      .site-logo { height: 42px !important; }
+      #site-header nav > div { height: 64px !important; }
+    }
   </style>
 </head>
 <body>
@@ -35,7 +40,7 @@
 <header id="site-header">
   <nav style="max-width:1280px;margin:0 auto;padding:0 24px;">
     <div style="display:flex;align-items:center;justify-content:space-between;height:76px;">
-      <a href="index.html" style="flex-shrink:0;"><img src="Logo Transparency_Shadow.png" alt="Smart Beginnings Academy" style="height:54px;width:auto;" /></a>
+      <a href="index.html" style="flex-shrink:0;"><img src="Logo Transparency_Shadow.png" class="site-logo" alt="Smart Beginnings Academy" style="height:54px;width:auto;" /></a>
       <div style="display:flex;align-items:center;gap:32px;" class="hidden md:flex">
         <div class="nav-item" style="position:relative;"><a href="programs.html" class="nav-link">Programs</a>
           <div class="nav-dropdown" style="position:absolute;top:calc(100% + 12px);left:0;width:220px;background:white;border-radius:16px;box-shadow:0 12px 40px rgba(0,0,0,0.12);border:1px solid #f0f0f0;padding:8px;z-index:100;">
@@ -72,6 +77,39 @@
       <a href="schedule-tour.html" class="btn-amber" style="padding:15px 24px;font-size:0.95rem;justify-content:center;">Schedule a Tour <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     </div>
   </div>
+</nav>
+</header>
+
+<main id="main-content" style="padding-top:76px;">
+
+  <!-- Hero -->
+  <section style="background:linear-gradient(135deg,#063D30 0%,#0B6E5A 60%,#0D7A63 100%);padding:80px 24px 100px;position:relative;overflow:hidden;">
+    <div style="position:absolute;inset:0;pointer-events:none;">
+      <div style="position:absolute;top:-40px;right:-60px;width:280px;height:280px;border-radius:50%;background:rgba(255,255,255,0.05);"></div>
+      <div style="position:absolute;bottom:-30px;left:5%;width:180px;height:180px;border-radius:50%;background:rgba(255,255,255,0.04);"></div>
+    </div>
+    <div style="max-width:800px;margin:0 auto;text-align:center;position:relative;z-index:1;">
+      <div style="display:inline-flex;gap:4px;margin-bottom:20px;">
+        <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+      </div>
+      <h1 style="font-family:'Nunito',sans-serif;font-weight:900;font-size:clamp(2rem,4vw,3rem);color:white;line-height:1.15;letter-spacing:-0.03em;margin:0 0 20px;">What Our Families Are Saying</h1>
+      <p style="font-family:'Open Sans',sans-serif;font-size:1.05rem;color:rgba(255,255,255,0.85);line-height:1.7;margin:0 0 32px;">Real stories from real families. These are the parents who trust us with their most precious children every single day.</p>
+      <div style="display:flex;justify-content:center;gap:32px;flex-wrap:wrap;">
+        <div style="text-align:center;">
+          <div style="font-family:'Nunito',sans-serif;font-weight:900;font-size:2rem;color:#F5A623;">5.0</div>
+          <div style="font-size:0.82rem;color:rgba(255,255,255,0.7);">Average Rating</div>
+        </div>
+        <div style="width:1px;background:rgba(255,255,255,0.2);"></div>
+        <div style="text-align:center;">
+          <div style="font-family:'Nunito',sans-serif;font-weight:900;font-size:2rem;color:#F5A623;">300+</div>
+          <div style="font-size:0.82rem;color:rgba(255,255,255,0.7);">Families Served</div>
+        </div>
+        <div style="width:1px;background:rgba(255,255,255,0.2);"></div>
+        <div style="text-align:center;">
+          <div style="font-family:'Nunito',sans-serif;font-weight:900;font-size:2rem;color:#F5A623;">3</div>
+          <div style="font-size:0.82rem;color:rgba(255,255,255,0.7);">Locations</div>
+        </div>
+      </div>
     </div>
     <div style="position:absolute;bottom:-1px;left:0;right:0;overflow:hidden;line-height:0;">
       <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="width:100%;height:60px;display:block;"><path d="M0,40 C360,80 1080,0 1440,40 L1440,60 L0,60 Z" fill="#F7F7F7"/></svg>
@@ -302,7 +340,7 @@
   <div style="max-width:1280px;margin:0 auto;">
     <div style="display:grid;grid-template-columns:1fr;gap:40px;margin-bottom:48px;" class="md:grid-cols-2 lg:grid-cols-4">
       <div>
-        <img src="Logo Transparency_Shadow.png" alt="Smart Beginnings Academy" style="height:52px;width:auto;margin-bottom:16px;filter:brightness(0) invert(1);" />
+        <img src="Logo Transparency_Shadow.png" class="site-logo" alt="Smart Beginnings Academy" style="height:52px;width:auto;margin-bottom:16px;filter:brightness(0) invert(1);" />
         <p style="font-size:0.88rem;color:rgba(255,255,255,0.6);line-height:1.7;margin:0 0 20px;">A physician-founded preschool where every child's learning journey begins with care, science, and heart.</p>
       </div>
       <div>

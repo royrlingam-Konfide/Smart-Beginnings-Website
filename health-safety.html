@@ -40,6 +40,11 @@
     .section-label { display: inline-block; font-family: 'Nunito', sans-serif; font-weight: 700; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.12em; padding: 6px 16px; border-radius: 999px; background: #E1F5EE; color: #0B6E5A; margin-bottom: 16px; }
     .check-item { display: flex; align-items: flex-start; gap: 12px; }
     .check-icon { width: 22px; height: 22px; border-radius: 50%; background: #E1F5EE; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px; }
+  
+    @media (max-width: 767px) {
+      .site-logo { height: 42px !important; }
+      #site-header nav > div { height: 64px !important; }
+    }
   </style>
 </head>
 <body>
@@ -49,7 +54,7 @@
 <header id="site-header">
   <nav style="max-width:1280px;margin:0 auto;padding:0 24px;">
     <div style="display:flex;align-items:center;justify-content:space-between;height:76px;">
-      <a href="index.html" style="flex-shrink:0;"><img src="Logo Transparency_Shadow.png" alt="Smart Beginnings Academy" style="height:54px;width:auto;" /></a>
+      <a href="index.html" style="flex-shrink:0;"><img src="Logo Transparency_Shadow.png" class="site-logo" alt="Smart Beginnings Academy" style="height:54px;width:auto;" /></a>
       <div style="display:flex;align-items:center;gap:32px;" class="hidden md:flex">
         <div class="nav-item" style="position:relative;">
           <a href="programs.html" class="nav-link">Programs</a>
@@ -91,6 +96,37 @@
       <a href="schedule-tour.html" class="btn-amber" style="padding:15px 24px;font-size:0.95rem;justify-content:center;">Schedule a Tour <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     </div>
   </div>
+</header>
+<div style="height:76px;"></div>
+
+<main id="main-content">
+
+  <!-- HERO -->
+  <section style="background:linear-gradient(135deg,#063D30 0%,#0B6E5A 60%,#0D7A63 100%);padding:64px 24px 88px;text-align:center;position:relative;overflow:hidden;">
+    <div aria-hidden="true" style="position:absolute;top:0;right:0;width:350px;height:350px;border-radius:50%;background:radial-gradient(circle,rgba(245,166,35,0.15) 0%,transparent 70%);pointer-events:none;transform:translate(30%,-30%);"></div>
+    <div style="position:relative;z-index:1;max-width:680px;margin:0 auto;">
+      <span style="display:inline-block;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.78rem;text-transform:uppercase;letter-spacing:0.12em;padding:6px 16px;border-radius:999px;background:rgba(255,255,255,0.18);color:white;margin-bottom:20px;">Safety First</span>
+      <h1 style="font-family:'Nunito',sans-serif;font-weight:900;font-size:clamp(2rem,4.5vw,3.2rem);color:white;letter-spacing:-0.03em;margin:0 0 14px;">Health &amp; Safety</h1>
+      <p style="font-family:'Open Sans',sans-serif;font-size:1.05rem;color:rgba(255,255,255,0.88);line-height:1.75;margin:0 auto;max-width:560px;">As physicians and parents, our founders built every safety protocol with medical-grade rigor. Your child's wellbeing is never an afterthought — it is the foundation.</p>
+    </div>
+    <div style="position:absolute;bottom:-2px;left:0;right:0;" aria-hidden="true">
+      <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="display:block;width:100%;"><path d="M0 60L720 20L1440 60V60H0V60Z" fill="white"/></svg>
+    </div>
+  </section>
+
+  <!-- FOUNDER REASSURANCE -->
+  <section style="padding:64px 24px;background:white;">
+    <div style="max-width:860px;margin:0 auto;" class="reveal">
+      <div style="background:linear-gradient(135deg,#0B6E5A 0%,#074A3D 100%);border-radius:24px;padding:48px;display:grid;grid-template-columns:auto 1fr;gap:24px;align-items:center;">
+        <div style="width:72px;height:72px;border-radius:50%;background:rgba(255,255,255,0.18);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2L3 7v5c0 5.25 3.75 10.15 9 11.35C17.25 22.15 21 17.25 21 12V7L12 2z" fill="#F5A623"/></svg>
+        </div>
+        <div>
+          <p style="font-family:'Nunito',sans-serif;font-weight:800;font-size:clamp(1rem,2.5vw,1.3rem);color:white;line-height:1.55;margin:0 0 12px;font-style:italic;">"As physicians, our founders built Smart Beginnings Academy with health and safety at its foundation. Every protocol, every policy, and every procedure exists for one reason: to ensure your child is safe, healthy, and thriving every single day."</p>
+          <p style="font-family:'Open Sans',sans-serif;font-size:0.875rem;color:rgba(255,255,255,0.65);margin:0;">— Dr. Roy Lingam &amp; Dr. Sinthuja Magaswaran, Co-Founders</p>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- SAFETY SECTIONS -->
@@ -224,7 +260,7 @@
 
 <footer style="background:#1A1A1A;padding:32px 24px;">
   <div style="max-width:1280px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;">
-    <div style="display:flex;align-items:center;gap:16px;"><img src="Logo Transparency_Shadow.png" alt="Smart Beginnings Academy" style="height:36px;width:auto;" /><p style="font-family:'Open Sans',sans-serif;font-size:0.78rem;color:rgba(255,255,255,0.4);margin:0;">© 2025 Smart Beginnings Academy.</p></div>
+    <div style="display:flex;align-items:center;gap:16px;"><img src="Logo Transparency_Shadow.png" class="site-logo" alt="Smart Beginnings Academy" style="height:36px;width:auto;" /><p style="font-family:'Open Sans',sans-serif;font-size:0.78rem;color:rgba(255,255,255,0.4);margin:0;">© 2025 Smart Beginnings Academy.</p></div>
     <div style="display:flex;gap:20px;"><a href="index.html" style="font-family:'Open Sans',sans-serif;font-size:0.8rem;color:rgba(255,255,255,0.5);text-decoration:none;" onmouseover="this.style.color='#0D9E7E'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">Home</a><a href="about.html" style="font-family:'Open Sans',sans-serif;font-size:0.8rem;color:rgba(255,255,255,0.5);text-decoration:none;" onmouseover="this.style.color='#0D9E7E'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">About</a><a href="contact.html" style="font-family:'Open Sans',sans-serif;font-size:0.8rem;color:rgba(255,255,255,0.5);text-decoration:none;" onmouseover="this.style.color='#0D9E7E'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">Contact</a></div>
   </div>
 </footer>

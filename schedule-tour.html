@@ -43,6 +43,11 @@
     /* Success state */
     #success-msg { display: none; }
     #success-msg.show { display: block; }
+  
+    @media (max-width: 767px) {
+      .site-logo { height: 42px !important; }
+      #site-header nav > div { height: 64px !important; }
+    }
   </style>
 </head>
 <body>
@@ -52,7 +57,7 @@
 <header id="site-header">
   <nav style="max-width:1280px;margin:0 auto;padding:0 24px;" aria-label="Main navigation">
     <div style="display:flex;align-items:center;justify-content:space-between;height:76px;">
-      <a href="index.html" aria-label="Smart Beginnings Academy — Home" style="flex-shrink:0;"><img src="Logo Transparency_Shadow.png" alt="Smart Beginnings Academy" style="height:54px;width:auto;" /></a>
+      <a href="index.html" aria-label="Smart Beginnings Academy — Home" style="flex-shrink:0;"><img src="Logo Transparency_Shadow.png" class="site-logo" alt="Smart Beginnings Academy" style="height:54px;width:auto;" /></a>
       <div style="display:flex;align-items:center;gap:32px;" class="hidden md:flex">
         <div class="nav-item" style="position:relative;">
           <a href="programs.html" class="nav-link">Programs</a>
@@ -96,6 +101,128 @@
       <a href="schedule-tour.html" class="btn-amber" style="padding:15px 24px;font-size:0.95rem;justify-content:center;">Schedule a Tour <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     </div>
   </div>
+</header>
+<div style="height:76px;"></div>
+
+<main id="main-content">
+
+  <!-- Page Hero -->
+  <section style="background:linear-gradient(135deg,#063D30 0%,#0B6E5A 60%,#0D7A63 100%);padding:64px 24px 88px;text-align:center;position:relative;overflow:hidden;">
+    <div aria-hidden="true" style="position:absolute;top:0;right:0;width:350px;height:350px;border-radius:50%;background:radial-gradient(circle,rgba(245,166,35,0.15) 0%,transparent 70%);pointer-events:none;transform:translate(30%,-30%);"></div>
+    <div style="position:relative;z-index:1;max-width:680px;margin:0 auto;">
+      <h1 style="font-family:'Nunito',sans-serif;font-weight:900;font-size:clamp(2rem,4.5vw,3.2rem);color:white;letter-spacing:-0.03em;margin:0 0 14px;">Schedule Your Free Tour</h1>
+      <p style="font-family:'Open Sans',sans-serif;font-size:1.05rem;color:rgba(255,255,255,0.88);line-height:1.75;margin:0 auto;max-width:520px;">We'd love to show you around. Tours take about 20 minutes and there's no obligation — just an honest look at the place your child could call home.</p>
+    </div>
+    <div style="position:absolute;bottom:-2px;left:0;right:0;" aria-hidden="true">
+      <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="display:block;width:100%;"><path d="M0 60L720 20L1440 60V60H0V60Z" fill="#F7F7F7"/></svg>
+    </div>
+  </section>
+
+  <!-- Form Section -->
+  <section style="padding:72px 24px;background:#F7F7F7;">
+    <div style="max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;" class="md:grid-cols-2">
+
+      <!-- Form -->
+      <div class="reveal" style="background:white;border-radius:24px;padding:40px;box-shadow:0 8px 40px rgba(11,110,90,0.10);border:1px solid #f0f0f0;">
+        <h2 style="font-family:'Nunito',sans-serif;font-weight:900;font-size:1.6rem;color:#1A1A1A;margin:0 0 8px;">Book My Tour</h2>
+        <p style="font-family:'Open Sans',sans-serif;font-size:0.875rem;color:#6B7280;line-height:1.6;margin:0 0 28px;">Fill out the form below and we'll reach out within 1 business day to confirm your tour time.</p>
+
+        <!-- Success Message -->
+        <div id="success-msg" style="background:#E1F5EE;border:1.5px solid #0B6E5A;border-radius:16px;padding:24px;margin-bottom:24px;text-align:center;">
+          <div style="width:48px;height:48px;border-radius:50%;background:#0B6E5A;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3 style="font-family:'Nunito',sans-serif;font-weight:800;color:#0B6E5A;font-size:1.1rem;margin:0 0 8px;">Thank You!</h3>
+          <p style="font-family:'Open Sans',sans-serif;font-size:0.875rem;color:#4B5563;margin:0;line-height:1.6;">We'll reach out within 1 business day to confirm your tour. We can't wait to meet your family!</p>
+        </div>
+
+        <form id="tour-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:18px;">
+            <div>
+              <label for="parent-name" class="form-label">Parent Name <span style="color:#F43F5E;">*</span></label>
+              <input type="text" id="parent-name" name="parent_name" class="form-input" placeholder="Jane Smith" required autocomplete="name" />
+            </div>
+            <div>
+              <label for="child-name" class="form-label">Child's Name <span style="color:#F43F5E;">*</span></label>
+              <input type="text" id="child-name" name="child_name" class="form-input" placeholder="Alex Smith" required />
+            </div>
+          </div>
+
+          <div style="margin-bottom:18px;">
+            <label for="child-dob" class="form-label">Child's Date of Birth <span style="color:#F43F5E;">*</span></label>
+            <input type="date" id="child-dob" name="child_dob" class="form-input" required />
+          </div>
+
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:18px;">
+            <div>
+              <label for="email" class="form-label">Email <span style="color:#F43F5E;">*</span></label>
+              <input type="email" id="email" name="email" class="form-input" placeholder="jane@email.com" required autocomplete="email" />
+            </div>
+            <div>
+              <label for="phone" class="form-label">Phone <span style="color:#F43F5E;">*</span></label>
+              <input type="tel" id="phone" name="phone" class="form-input" placeholder="(630) 555-0100" required autocomplete="tel" />
+            </div>
+          </div>
+
+          <div style="margin-bottom:18px;">
+            <label for="location" class="form-label">Preferred Location <span style="color:#F43F5E;">*</span></label>
+            <select id="location" name="location" class="form-input" required>
+              <option value="" disabled selected>Select a location…</option>
+              <option value="oswego">Oswego</option>
+              <option value="ogden">Ogden</option>
+              <option value="kirk-butterfield">Kirk &amp; Butterfield</option>
+            </select>
+          </div>
+
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:18px;">
+            <div>
+              <label for="pref-date" class="form-label">Preferred Date <span style="color:#F43F5E;">*</span></label>
+              <input type="date" id="pref-date" name="preferred_date" class="form-input" required />
+            </div>
+            <div>
+              <label for="pref-time" class="form-label">Preferred Time <span style="color:#F43F5E;">*</span></label>
+              <select id="pref-time" name="preferred_time" class="form-input" required>
+                <option value="" disabled selected>Select a time…</option>
+                <option value="morning">Morning (9 AM – 11 AM)</option>
+                <option value="midday">Midday (11 AM – 1 PM)</option>
+                <option value="afternoon">Afternoon (1 PM – 4 PM)</option>
+              </select>
+            </div>
+          </div>
+
+          <div style="margin-bottom:28px;">
+            <label for="message" class="form-label">Message <span style="color:#9CA3AF;font-weight:400;">(optional)</span></label>
+            <textarea id="message" name="message" class="form-input" rows="4" placeholder="Any questions, specific interests, or things we should know about your child…" style="resize:vertical;min-height:100px;"></textarea>
+          </div>
+
+          <button type="submit" class="btn-amber" style="width:100%;justify-content:center;padding:16px 24px;font-size:1rem;box-shadow:0 8px 28px rgba(245,166,35,0.4);">
+            Book My Tour
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </form>
+      </div>
+
+      <!-- Trust sidebar -->
+      <div class="reveal delay-1" style="display:flex;flex-direction:column;gap:24px;">
+
+        <!-- What to expect -->
+        <div style="background:white;border-radius:20px;padding:32px;box-shadow:0 4px 20px rgba(11,110,90,0.08);border:1px solid #f0f0f0;">
+          <h3 style="font-family:'Nunito',sans-serif;font-weight:800;font-size:1.15rem;color:#1A1A1A;margin:0 0 20px;">What to Expect on Your Tour</h3>
+          <div style="display:flex;flex-direction:column;gap:16px;">
+            <div style="display:flex;gap:14px;align-items:flex-start;">
+              <div style="width:32px;height:32px;border-radius:50%;background:#E1F5EE;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-family:'Nunito',sans-serif;font-weight:800;font-size:0.8rem;color:#0B6E5A;">1</div>
+              <div><p style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.9rem;color:#1A1A1A;margin:0 0 3px;">Meet Our Staff</p><p style="font-family:'Open Sans',sans-serif;font-size:0.82rem;color:#6B7280;margin:0;line-height:1.5;">Greet the teachers and directors who would care for your child daily.</p></div>
+            </div>
+            <div style="display:flex;gap:14px;align-items:flex-start;">
+              <div style="width:32px;height:32px;border-radius:50%;background:#FEF3D8;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-family:'Nunito',sans-serif;font-weight:800;font-size:0.8rem;color:#E8950F;">2</div>
+              <div><p style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.9rem;color:#1A1A1A;margin:0 0 3px;">See the Classrooms</p><p style="font-family:'Open Sans',sans-serif;font-size:0.82rem;color:#6B7280;margin:0;line-height:1.5;">Walk through the age-appropriate spaces and see learning environments in action.</p></div>
+            </div>
+            <div style="display:flex;gap:14px;align-items:flex-start;">
+              <div style="width:32px;height:32px;border-radius:50%;background:#E1F5EE;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-family:'Nunito',sans-serif;font-weight:800;font-size:0.8rem;color:#0B6E5A;">3</div>
+              <div><p style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.9rem;color:#1A1A1A;margin:0 0 3px;">Ask All Your Questions</p><p style="font-family:'Open Sans',sans-serif;font-size:0.82rem;color:#6B7280;margin:0;line-height:1.5;">No pressure. We're here to answer every question and help you decide what's right for your family.</p></div>
+            </div>
+          </div>
+        </div>
 
         <!-- Physician promise -->
         <div style="background:linear-gradient(135deg,#0B6E5A 0%,#074A3D 100%);border-radius:20px;padding:32px;">
@@ -132,7 +259,7 @@
 <footer style="background:#1A1A1A;padding:32px 24px;">
   <div style="max-width:1280px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;">
     <div style="display:flex;align-items:center;gap:16px;">
-      <img src="Logo Transparency_Shadow.png" alt="Smart Beginnings Academy" style="height:36px;width:auto;" />
+      <img src="Logo Transparency_Shadow.png" class="site-logo" alt="Smart Beginnings Academy" style="height:36px;width:auto;" />
       <p style="font-family:'Open Sans',sans-serif;font-size:0.78rem;color:rgba(255,255,255,0.4);margin:0;">© 2025 Smart Beginnings Academy. All Rights Reserved.</p>
     </div>
     <div style="display:flex;gap:20px;">

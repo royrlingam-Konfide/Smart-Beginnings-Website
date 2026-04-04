@@ -26,6 +26,11 @@
     .timeline-dot{width:14px;height:14px;border-radius:50%;background:#F5A623;flex-shrink:0;margin-top:4px}
     .nav-dropdown{opacity:0;visibility:hidden;transform:translateY(-8px);transition:opacity 0.2s,transform 0.2s,visibility 0.2s}
     .nav-item:hover .nav-dropdown,.nav-item:focus-within .nav-dropdown{opacity:1;visibility:visible;transform:translateY(0)}
+  
+    @media (max-width: 767px) {
+      .site-logo { height: 42px !important; }
+      #site-header nav > div { height: 64px !important; }
+    }
   </style>
 </head>
 <body>
@@ -33,7 +38,7 @@
 <header id="site-header">
   <nav style="max-width:1280px;margin:0 auto;padding:0 24px;">
     <div style="display:flex;align-items:center;justify-content:space-between;height:76px;">
-      <a href="index.html" style="flex-shrink:0;"><img src="Logo Transparency_Shadow.png" alt="Smart Beginnings Academy" style="height:54px;width:auto;" /></a>
+      <a href="index.html" style="flex-shrink:0;"><img src="Logo Transparency_Shadow.png" class="site-logo" alt="Smart Beginnings Academy" style="height:54px;width:auto;" /></a>
       <div style="display:flex;align-items:center;gap:32px;" class="hidden md:flex">
         <div class="nav-item" style="position:relative;"><a href="programs.html" class="nav-link" style="color:#0B6E5A;">Programs</a>
           <div class="nav-dropdown" style="position:absolute;top:calc(100% + 12px);left:0;width:220px;background:white;border-radius:16px;box-shadow:0 12px 40px rgba(0,0,0,0.12);border:1px solid #f0f0f0;padding:8px;z-index:100;">
@@ -70,6 +75,46 @@
       <a href="schedule-tour.html" class="btn-amber" style="padding:15px 24px;font-size:0.95rem;justify-content:center;">Schedule a Tour <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     </div>
   </div>
+</nav>
+</header>
+
+<main id="main-content" style="padding-top:76px;">
+
+  <!-- Breadcrumb -->
+  <div style="background:#F7F7F7;border-bottom:1px solid #eee;">
+    <div style="max-width:1280px;margin:0 auto;padding:12px 24px;">
+      <nav aria-label="Breadcrumb" style="display:flex;align-items:center;gap:8px;font-size:0.85rem;font-family:'Open Sans',sans-serif;color:#6B7280;">
+        <a href="index.html" style="color:#0B6E5A;text-decoration:none;font-weight:600;">Home</a>
+        <span>›</span>
+        <a href="programs.html" style="color:#0B6E5A;text-decoration:none;font-weight:600;">Programs</a>
+        <span>›</span>
+        <span style="color:#D97706;font-weight:600;">Toddlers</span>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <section style="background:linear-gradient(135deg,#7C3D00 0%,#B85E00 40%,#D97706 100%);padding:80px 24px 100px;position:relative;overflow:hidden;">
+    <div style="position:absolute;inset:0;overflow:hidden;pointer-events:none;">
+      <div style="position:absolute;top:-60px;right:-60px;width:320px;height:320px;border-radius:50%;background:rgba(255,255,255,0.06);"></div>
+      <div style="position:absolute;bottom:-40px;left:10%;width:200px;height:200px;border-radius:50%;background:rgba(255,255,255,0.04);"></div>
+      <div style="position:absolute;top:30%;left:-30px;width:120px;height:120px;border-radius:50%;background:rgba(255,255,255,0.05);"></div>
+    </div>
+    <div style="max-width:1280px;margin:0 auto;position:relative;z-index:1;">
+      <div style="max-width:640px;">
+        <span style="display:inline-block;background:rgba(255,255,255,0.2);color:white;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.85rem;padding:6px 18px;border-radius:999px;margin-bottom:20px;letter-spacing:0.05em;">AGES 1 – 2 YEARS</span>
+        <h1 style="font-family:'Nunito',sans-serif;font-weight:900;font-size:clamp(2rem,4vw,3rem);color:white;line-height:1.15;letter-spacing:-0.03em;margin:0 0 20px;">Toddler Program</h1>
+        <p style="font-family:'Open Sans',sans-serif;font-size:1.05rem;color:rgba(255,255,255,0.88);line-height:1.7;margin:0 0 32px;">A safe, joyful space where busy explorers discover the world through play, build first words, and grow into confident little learners — with caregivers who cherish every milestone.</p>
+        <a href="schedule-tour.html" class="btn-amber" style="padding:14px 32px;font-size:1rem;">Schedule a Tour</a>
+      </div>
+      <div style="position:absolute;right:24px;top:50%;transform:translateY(-50%);display:none;" class="xl:block">
+        <div style="background:rgba(255,255,255,0.12);backdrop-filter:blur(8px);border-radius:24px;padding:28px 32px;color:white;text-align:center;min-width:180px;">
+          <div style="font-size:2.5rem;margin-bottom:8px;">🧸</div>
+          <div style="font-family:'Nunito',sans-serif;font-weight:800;font-size:1.8rem;line-height:1;">4:1</div>
+          <div style="font-size:0.82rem;opacity:0.85;margin-top:4px;">Child-to-Teacher</div>
+          <div style="font-size:0.78rem;opacity:0.7;">Ratio</div>
+        </div>
+      </div>
     </div>
     <div style="position:absolute;bottom:-1px;left:0;right:0;overflow:hidden;line-height:0;">
       <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="width:100%;height:60px;display:block;"><path d="M0,40 C360,80 1080,0 1440,40 L1440,60 L0,60 Z" fill="#F7F7F7"/></svg>
@@ -212,7 +257,7 @@
   <div style="max-width:1280px;margin:0 auto;">
     <div style="display:grid;grid-template-columns:1fr;gap:40px;margin-bottom:48px;" class="md:grid-cols-2 lg:grid-cols-4">
       <div>
-        <img src="Logo Transparency_Shadow.png" alt="Smart Beginnings Academy" style="height:52px;width:auto;margin-bottom:16px;filter:brightness(0) invert(1);" />
+        <img src="Logo Transparency_Shadow.png" class="site-logo" alt="Smart Beginnings Academy" style="height:52px;width:auto;margin-bottom:16px;filter:brightness(0) invert(1);" />
         <p style="font-size:0.88rem;color:rgba(255,255,255,0.6);line-height:1.7;margin:0 0 20px;">A physician-founded preschool where every child's learning journey begins with care, science, and heart.</p>
       </div>
       <div>
