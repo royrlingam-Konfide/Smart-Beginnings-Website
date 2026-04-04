@@ -17,6 +17,12 @@
     .hamburger-line{display:block;width:22px;height:2px;background:#2D2D2D;border-radius:2px;transition:transform 0.3s,opacity 0.3s}
     .hamburger.open .line-1{transform:translateY(8px) rotate(45deg)}.hamburger.open .line-2{opacity:0}.hamburger.open .line-3{transform:translateY(-8px) rotate(-45deg)}
     .prose h2{font-size:1.2rem;font-weight:800;color:#1A1A1A;margin:2rem 0 0.75rem;}.prose p,.prose li{font-size:0.93rem;line-height:1.75;color:#374151;}.prose ul{padding-left:1.5rem;margin:0.5rem 0 1rem;}
+  
+    /* Responsive nav — overrides inline display:flex on desktop nav and hamburger */
+    .desktop-nav { display: none !important; }
+    @media (min-width: 768px) { .desktop-nav { display: flex !important; } }
+    .hamburger { display: flex !important; }
+    @media (min-width: 768px) { .hamburger { display: none !important; } }
   </style>
 </head>
 <body>
@@ -24,7 +30,7 @@
   <nav style="max-width:1280px;margin:0 auto;padding:0 24px;">
     <div style="display:flex;align-items:center;justify-content:space-between;height:76px;">
       <a href="index.html" style="flex-shrink:0;"><img src="Logo Transparency_Shadow.png" alt="Smart Beginnings Academy" style="height:54px;width:auto;" /></a>
-      <div style="display:flex;align-items:center;gap:32px;" class="hidden md:flex">
+      <div class="desktop-nav" style="align-items:center;gap:32px;">
         <a href="programs.html" class="nav-link">Programs</a>
         <a href="about.html" class="nav-link">About</a>
         <a href="health-safety.html" class="nav-link">Health &amp; Safety</a>
@@ -32,7 +38,7 @@
       </div>
       <div style="display:flex;align-items:center;gap:16px;">
         <a href="schedule-tour.html" class="btn-amber hidden md:inline-flex">Schedule a Tour</a>
-        <button id="hamburger-btn" class="hamburger md:hidden" aria-label="Open menu" style="display:flex;flex-direction:column;gap:6px;padding:8px;background:none;border:none;cursor:pointer;">
+        <button id="hamburger-btn" class="hamburger" aria-label="Open menu" style="flex-direction:column;gap:6px;padding:8px;background:none;border:none;cursor:pointer;">
           <span class="hamburger-line line-1"></span><span class="hamburger-line line-2"></span><span class="hamburger-line line-3"></span>
         </button>
       </div>
