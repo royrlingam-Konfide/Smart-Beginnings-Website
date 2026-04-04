@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | Smart Beginnings Academy</title>
+  <meta name="description" content="Get in touch with Smart Beginnings Academy. We serve families in Oswego, Ogden, and Kirk &amp; Butterfield, IL." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Open Sans', sans-serif; color: #2D2D2D; -webkit-font-smoothing: antialiased; margin: 0; }
+    h1,h2,h3,h4 { font-family: 'Nunito', sans-serif; }
+    #site-header { position: fixed; top: 0; left: 0; right: 0; z-index: 50; background: white; transition: box-shadow 0.3s; }
+    #site-header.scrolled { box-shadow: 0 2px 24px rgba(0,0,0,0.09); }
+    .mobile-menu { max-height: 0; overflow: hidden; transition: max-height 0.4s cubic-bezier(0.4,0,0.2,1); }
+    .mobile-menu.open { max-height: 600px; }
+    .hamburger-line { display: block; width: 22px; height: 2px; background: #2D2D2D; border-radius: 2px; transition: transform 0.3s, opacity 0.3s; }
+    .hamburger.open .line-1 { transform: translateY(8px) rotate(45deg); }
+    .hamburger.open .line-2 { opacity: 0; }
+    .hamburger.open .line-3 { transform: translateY(-8px) rotate(-45deg); }
+    .nav-dropdown { opacity: 0; visibility: hidden; transform: translateY(-8px); transition: opacity 0.2s, transform 0.2s, visibility 0.2s; }
+    .nav-item:hover .nav-dropdown, .nav-item:focus-within .nav-dropdown { opacity: 1; visibility: visible; transform: translateY(0); }
+    .nav-link { position: relative; font-family: 'Nunito', sans-serif; font-weight: 600; font-size: 0.92rem; color: #2D2D2D; text-decoration: none; transition: color 0.2s; }
+    .nav-link::after { content: ''; position: absolute; bottom: -3px; left: 0; width: 0; height: 2px; background: #0B6E5A; border-radius: 2px; transition: width 0.25s; }
+    .nav-link:hover { color: #0B6E5A; }
+    .nav-link:hover::after { width: 100%; }
+    .btn-amber { display: inline-flex; align-items: center; gap: 8px; background: #F5A623; color: white; font-family: 'Nunito', sans-serif; font-weight: 700; border-radius: 999px; text-decoration: none; border: none; transition: background 0.2s, transform 0.2s, box-shadow 0.2s; cursor: pointer; }
+    .btn-amber:hover { background: #E8950F; transform: translateY(-1px); box-shadow: 0 6px 24px rgba(245,166,35,0.4); }
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .delay-1 { transition-delay: 0.12s; }
+    *:focus-visible { outline: 2px solid #F5A623; outline-offset: 3px; border-radius: 4px; }
+    .form-label { display: block; font-family: 'Nunito', sans-serif; font-weight: 700; font-size: 0.875rem; color: #1A1A1A; margin-bottom: 7px; }
+    .form-input { width: 100%; padding: 13px 16px; border: 1.5px solid #E5E5E5; border-radius: 12px; font-family: 'Open Sans', sans-serif; font-size: 0.9rem; color: #2D2D2D; background: white; transition: border-color 0.2s, box-shadow 0.2s; outline: none; }
+    .form-input:focus { border-color: #0B6E5A; box-shadow: 0 0 0 3px rgba(11,110,90,0.12); }
+    .form-input::placeholder { color: #9CA3AF; }
+    select.form-input { cursor: pointer; appearance: none; background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 9l6 6 6-6' stroke='%236B7280' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; padding-right: 40px; }
+    #contact-success { display: none; }
+    #contact-success.show { display: block; }
+  </style>
+</head>
+<body>
+
+<a href="#main-content" style="position:absolute;left:-9999px;top:4px;z-index:9999;background:#F5A623;color:white;padding:8px 20px;border-radius:999px;font-family:'Nunito',sans-serif;font-weight:700;text-decoration:none;" onfocus="this.style.left='16px'" onblur="this.style.left='-9999px'">Skip to main content</a>
+
+<header id="site-header">
+  <nav style="max-width:1280px;margin:0 auto;padding:0 24px;">
+    <div style="display:flex;align-items:center;justify-content:space-between;height:76px;">
+      <a href="index.html" style="flex-shrink:0;"><img src="Logo Transparency_Shadow.png" alt="Smart Beginnings Academy" style="height:54px;width:auto;" /></a>
+      <div style="display:flex;align-items:center;gap:32px;" class="hidden md:flex">
+        <div class="nav-item" style="position:relative;">
+          <a href="programs.html" class="nav-link">Programs</a>
+          <div class="nav-dropdown" style="position:absolute;top:calc(100% + 12px);left:0;width:220px;background:white;border-radius:16px;box-shadow:0 12px 40px rgba(0,0,0,0.12);border:1px solid #f0f0f0;padding:8px;z-index:100;">
+            <a href="programs-infants.html" style="display:block;padding:10px 14px;border-radius:10px;font-size:0.875rem;color:#2D2D2D;text-decoration:none;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='';this.style.color='#2D2D2D'">Infants (6 wks – 12 mo)</a>
+            <a href="programs-toddlers.html" style="display:block;padding:10px 14px;border-radius:10px;font-size:0.875rem;color:#2D2D2D;text-decoration:none;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='';this.style.color='#2D2D2D'">Toddlers (1 – 2 yrs)</a>
+            <a href="programs-preschool.html" style="display:block;padding:10px 14px;border-radius:10px;font-size:0.875rem;color:#2D2D2D;text-decoration:none;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='';this.style.color='#2D2D2D'">Preschool (3 yrs)</a>
+            <a href="programs-prek.html" style="display:block;padding:10px 14px;border-radius:10px;font-size:0.875rem;color:#2D2D2D;text-decoration:none;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='';this.style.color='#2D2D2D'">Pre-K (4 – 5 yrs)</a>
+          </div>
+        </div>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="health-safety.html" class="nav-link">Health &amp; Safety</a>
+        <a href="locations.html" class="nav-link">Locations</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+      </div>
+      <div style="display:flex;align-items:center;gap:16px;">
+        <a href="schedule-tour.html" class="btn-amber hidden md:inline-flex" style="padding:11px 24px;font-size:0.9rem;">Schedule a Tour</a>
+        <button id="hamburger-btn" class="hamburger md:hidden" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu" style="display:flex;flex-direction:column;gap:6px;padding:8px;background:none;border:none;cursor:pointer;">
+          <span class="hamburger-line line-1"></span><span class="hamburger-line line-2"></span><span class="hamburger-line line-3"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <div id="mobile-menu" class="mobile-menu" style="background:white;border-top:1px solid #f0f0f0;">
+    <div style="max-width:1280px;margin:0 auto;padding:16px 24px 24px;display:flex;flex-direction:column;gap:4px;">
+      <a href="schedule-tour.html" class="btn-amber" style="padding:14px 24px;font-size:0.95rem;justify-content:center;margin-bottom:8px;">Schedule a Tour</a>
+      <a href="programs.html" style="display:block;padding:12px 16px;border-radius:12px;font-family:'Nunito',sans-serif;font-weight:600;font-size:0.95rem;color:#2D2D2D;text-decoration:none;" onmouseover="this.style.background='#E1F5EE'" onmouseout="this.style.background=''">Programs</a>
+      <a href="about.html" style="display:block;padding:12px 16px;border-radius:12px;font-family:'Nunito',sans-serif;font-weight:600;font-size:0.95rem;color:#2D2D2D;text-decoration:none;" onmouseover="this.style.background='#E1F5EE'" onmouseout="this.style.background=''">About</a>
+      <a href="health-safety.html" style="display:block;padding:12px 16px;border-radius:12px;font-family:'Nunito',sans-serif;font-weight:600;font-size:0.95rem;color:#2D2D2D;text-decoration:none;" onmouseover="this.style.background='#E1F5EE'" onmouseout="this.style.background=''">Health &amp; Safety</a>
+      <a href="locations.html" style="display:block;padding:12px 16px;border-radius:12px;font-family:'Nunito',sans-serif;font-weight:600;font-size:0.95rem;color:#2D2D2D;text-decoration:none;" onmouseover="this.style.background='#E1F5EE'" onmouseout="this.style.background=''">Locations</a>
+    </div>
+  </div>
+</header>
+<div style="height:76px;"></div>
+
+<main id="main-content">
+
+  <section style="background:linear-gradient(135deg,#063D30 0%,#0B6E5A 60%,#0D7A63 100%);padding:64px 24px 88px;text-align:center;position:relative;overflow:hidden;">
+    <div aria-hidden="true" style="position:absolute;top:0;right:0;width:350px;height:350px;border-radius:50%;background:radial-gradient(circle,rgba(245,166,35,0.15) 0%,transparent 70%);pointer-events:none;transform:translate(30%,-30%);"></div>
+    <div style="position:relative;z-index:1;max-width:640px;margin:0 auto;">
+      <h1 style="font-family:'Nunito',sans-serif;font-weight:900;font-size:clamp(2rem,4.5vw,3.2rem);color:white;letter-spacing:-0.03em;margin:0 0 14px;">Get in Touch</h1>
+      <p style="font-family:'Open Sans',sans-serif;font-size:1.05rem;color:rgba(255,255,255,0.88);line-height:1.75;margin:0 auto;max-width:480px;">We'd love to hear from you. Reach out with any questions — our team responds within 1 business day.</p>
+    </div>
+    <div style="position:absolute;bottom:-2px;left:0;right:0;" aria-hidden="true"><svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="display:block;width:100%;"><path d="M0 60L720 20L1440 60V60H0V60Z" fill="#F7F7F7"/></svg></div>
+  </section>
+
+  <section style="padding:72px 24px 96px;background:#F7F7F7;">
+    <div style="max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;">
+
+      <!-- Contact Form -->
+      <div class="reveal" style="background:white;border-radius:24px;padding:40px;box-shadow:0 8px 40px rgba(11,110,90,0.10);border:1px solid #f0f0f0;">
+        <h2 style="font-family:'Nunito',sans-serif;font-weight:900;font-size:1.5rem;color:#1A1A1A;margin:0 0 8px;">Send Us a Message</h2>
+        <p style="font-family:'Open Sans',sans-serif;font-size:0.875rem;color:#6B7280;margin:0 0 28px;line-height:1.6;">Questions about enrollment, programs, or anything else — we're happy to help.</p>
+
+        <div id="contact-success" style="background:#E1F5EE;border:1.5px solid #0B6E5A;border-radius:16px;padding:24px;margin-bottom:24px;text-align:center;">
+          <div style="width:44px;height:44px;border-radius:50%;background:#0B6E5A;display:flex;align-items:center;justify-content:center;margin:0 auto 10px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h3 style="font-family:'Nunito',sans-serif;font-weight:800;color:#0B6E5A;font-size:1rem;margin:0 0 6px;">Message Sent!</h3>
+          <p style="font-family:'Open Sans',sans-serif;font-size:0.875rem;color:#4B5563;margin:0;">We'll be in touch within 1 business day.</p>
+        </div>
+
+        <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;">
+            <div><label for="c-name" class="form-label">Your Name <span style="color:#F43F5E">*</span></label><input type="text" id="c-name" name="name" class="form-input" placeholder="Jane Smith" required autocomplete="name" /></div>
+            <div><label for="c-email" class="form-label">Email <span style="color:#F43F5E">*</span></label><input type="email" id="c-email" name="email" class="form-input" placeholder="jane@email.com" required autocomplete="email" /></div>
+          </div>
+          <div style="margin-bottom:16px;"><label for="c-phone" class="form-label">Phone</label><input type="tel" id="c-phone" name="phone" class="form-input" placeholder="(630) 555-0100" autocomplete="tel" /></div>
+          <div style="margin-bottom:16px;">
+            <label for="c-subject" class="form-label">Subject <span style="color:#F43F5E">*</span></label>
+            <select id="c-subject" name="subject" class="form-input" required>
+              <option value="" disabled selected>Select a topic…</option>
+              <option>Enrollment &amp; Availability</option>
+              <option>Schedule a Tour</option>
+              <option>Programs &amp; Curriculum</option>
+              <option>Tuition &amp; Fees</option>
+              <option>Health &amp; Safety Questions</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div style="margin-bottom:16px;"><label for="c-location" class="form-label">Preferred Location</label><select id="c-location" name="location" class="form-input"><option value="">All locations / Not sure yet</option><option>Oswego</option><option>Ogden</option><option>Kirk &amp; Butterfield</option></select></div>
+          <div style="margin-bottom:28px;"><label for="c-message" class="form-label">Message <span style="color:#F43F5E">*</span></label><textarea id="c-message" name="message" class="form-input" rows="5" placeholder="How can we help?" required style="resize:vertical;min-height:120px;"></textarea></div>
+          <button type="submit" class="btn-amber" style="width:100%;justify-content:center;padding:15px 24px;font-size:1rem;box-shadow:0 8px 24px rgba(245,166,35,0.4);">Send Message <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        </form>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="reveal delay-1" style="display:flex;flex-direction:column;gap:20px;">
+        <div style="background:white;border-radius:20px;padding:32px;box-shadow:0 4px 20px rgba(11,110,90,0.08);border:1px solid #f0f0f0;">
+          <h3 style="font-family:'Nunito',sans-serif;font-weight:800;font-size:1.1rem;color:#1A1A1A;margin:0 0 20px;">Contact Information</h3>
+          <div style="display:flex;flex-direction:column;gap:16px;">
+            <div style="display:flex;gap:14px;align-items:flex-start;"><div style="width:40px;height:40px;border-radius:12px;background:#E1F5EE;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" stroke="#0B6E5A" stroke-width="2"/></svg></div><div><p style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.875rem;color:#1A1A1A;margin:0 0 4px;">Oswego (Main)</p><a href="tel:+16305550100" style="font-family:'Open Sans',sans-serif;font-size:0.875rem;color:#4B5563;text-decoration:none;" onmouseover="this.style.color='#0B6E5A'" onmouseout="this.style.color='#4B5563'">(630) 555-0100</a></div></div>
+            <div style="display:flex;gap:14px;align-items:flex-start;"><div style="width:40px;height:40px;border-radius:12px;background:#E1F5EE;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke="#0B6E5A" stroke-width="2"/></svg></div><div><p style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.875rem;color:#1A1A1A;margin:0 0 4px;">Email</p><a href="mailto:info@smartbeginningsacademy.com" style="font-family:'Open Sans',sans-serif;font-size:0.875rem;color:#4B5563;text-decoration:none;word-break:break-all;" onmouseover="this.style.color='#0B6E5A'" onmouseout="this.style.color='#4B5563'">info@smartbeginningsacademy.com</a></div></div>
+            <div style="display:flex;gap:14px;align-items:flex-start;"><div style="width:40px;height:40px;border-radius:12px;background:#E1F5EE;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#0B6E5A" stroke-width="2"/><polyline points="12 7 12 12 15 15" stroke="#0B6E5A" stroke-width="2" stroke-linecap="round"/></svg></div><div><p style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.875rem;color:#1A1A1A;margin:0 0 4px;">Hours</p><p style="font-family:'Open Sans',sans-serif;font-size:0.875rem;color:#4B5563;margin:0;line-height:1.55;">Mon – Fri: 6:30 AM – 6:00 PM<br/>Sat – Sun: Closed</p></div></div>
+          </div>
+        </div>
+        <div style="background:linear-gradient(135deg,#0B6E5A,#074A3D);border-radius:20px;padding:28px;">
+          <p style="font-family:'Nunito',sans-serif;font-weight:800;color:white;font-size:1rem;margin:0 0 10px;">Ready to visit?</p>
+          <p style="font-family:'Open Sans',sans-serif;font-size:0.875rem;color:rgba(255,255,255,0.82);line-height:1.7;margin:0 0 18px;">The best way to experience Smart Beginnings is in person. Schedule a free tour at any of our three locations.</p>
+          <a href="schedule-tour.html" class="btn-amber" style="padding:12px 24px;font-size:0.9rem;">Schedule a Tour <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+        <div style="background:white;border-radius:20px;padding:28px;box-shadow:0 4px 20px rgba(11,110,90,0.08);border:1px solid #f0f0f0;">
+          <h3 style="font-family:'Nunito',sans-serif;font-weight:800;font-size:1rem;color:#1A1A1A;margin:0 0 14px;">All Locations</h3>
+          <div style="display:flex;flex-direction:column;gap:10px;">
+            <div style="display:flex;gap:10px;align-items:center;"><div style="width:8px;height:8px;border-radius:50%;background:#0B6E5A;flex-shrink:0;"></div><div><p style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.875rem;color:#1A1A1A;margin:0;">Oswego</p><p style="font-family:'Open Sans',sans-serif;font-size:0.8rem;color:#6B7280;margin:0;">(630) 555-0100</p></div></div>
+            <div style="display:flex;gap:10px;align-items:center;"><div style="width:8px;height:8px;border-radius:50%;background:#F5A623;flex-shrink:0;"></div><div><p style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.875rem;color:#1A1A1A;margin:0;">Ogden</p><p style="font-family:'Open Sans',sans-serif;font-size:0.8rem;color:#6B7280;margin:0;">(630) 555-0101</p></div></div>
+            <div style="display:flex;gap:10px;align-items:center;"><div style="width:8px;height:8px;border-radius:50%;background:#0B6E5A;flex-shrink:0;"></div><div><p style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.875rem;color:#1A1A1A;margin:0;">Kirk &amp; Butterfield</p><p style="font-family:'Open Sans',sans-serif;font-size:0.8rem;color:#6B7280;margin:0;">(630) 555-0102</p></div></div>
+          </div>
+          <a href="locations.html" style="display:inline-flex;align-items:center;gap:6px;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.85rem;color:#0B6E5A;text-decoration:none;margin-top:14px;" onmouseover="this.style.opacity='0.75'" onmouseout="this.style.opacity='1'">View all locations &amp; maps <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer style="background:#1A1A1A;padding:32px 24px;">
+  <div style="max-width:1280px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;">
+    <div style="display:flex;align-items:center;gap:16px;"><img src="Logo Transparency_Shadow.png" alt="Smart Beginnings Academy" style="height:36px;width:auto;" /><p style="font-family:'Open Sans',sans-serif;font-size:0.78rem;color:rgba(255,255,255,0.4);margin:0;">© 2025 Smart Beginnings Academy.</p></div>
+    <div style="display:flex;gap:20px;"><a href="index.html" style="font-family:'Open Sans',sans-serif;font-size:0.8rem;color:rgba(255,255,255,0.5);text-decoration:none;" onmouseover="this.style.color='#0D9E7E'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">Home</a><a href="about.html" style="font-family:'Open Sans',sans-serif;font-size:0.8rem;color:rgba(255,255,255,0.5);text-decoration:none;" onmouseover="this.style.color='#0D9E7E'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">About</a><a href="privacy.html" style="font-family:'Open Sans',sans-serif;font-size:0.8rem;color:rgba(255,255,255,0.5);text-decoration:none;" onmouseover="this.style.color='#0D9E7E'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">Privacy</a></div>
+  </div>
+</footer>
+
+<script>
+  const header = document.getElementById('site-header');
+  window.addEventListener('scroll', () => { header.classList.toggle('scrolled', window.scrollY > 12); }, { passive: true });
+  const hBtn = document.getElementById('hamburger-btn'); const mMenu = document.getElementById('mobile-menu'); let open = false;
+  hBtn.addEventListener('click', () => { open = !open; hBtn.classList.toggle('open', open); mMenu.classList.toggle('open', open); hBtn.setAttribute('aria-expanded', String(open)); });
+  document.addEventListener('click', e => { if (open && !hBtn.contains(e.target) && !mMenu.contains(e.target)) { open = false; hBtn.classList.remove('open'); mMenu.classList.remove('open'); hBtn.setAttribute('aria-expanded', 'false'); } });
+  const io = new IntersectionObserver(entries => { entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } }); }, { threshold: 0.08 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  const cf = document.getElementById('contact-form');
+  const cs = document.getElementById('contact-success');
+  cf.addEventListener('submit', async e => {
+    e.preventDefault();
+    const btn = cf.querySelector('button[type="submit"]');
+    btn.textContent = 'Sending…'; btn.style.opacity = '0.7'; btn.disabled = true;
+    try { const r = await fetch(cf.action, { method: 'POST', body: new FormData(cf), headers: { Accept: 'application/json' } }); if (r.ok) { cf.style.display = 'none'; cs.classList.add('show'); } else { btn.textContent = 'Try Again'; btn.style.opacity = '1'; btn.disabled = false; } } catch { cf.style.display = 'none'; cs.classList.add('show'); }
+  });
+</script>
+</body>
+</html>

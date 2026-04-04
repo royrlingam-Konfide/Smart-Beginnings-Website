@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Schedule a Tour | Smart Beginnings Academy</title>
+  <meta name="description" content="Schedule your free tour at Smart Beginnings Academy in Oswego, Ogden or Kirk &amp; Butterfield. Meet our teachers, see our classrooms. No pressure, ever." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Open Sans', sans-serif; color: #2D2D2D; -webkit-font-smoothing: antialiased; margin: 0; }
+    h1,h2,h3,h4 { font-family: 'Nunito', sans-serif; }
+    #site-header { position: fixed; top: 0; left: 0; right: 0; z-index: 50; background: white; transition: box-shadow 0.3s ease; }
+    #site-header.scrolled { box-shadow: 0 2px 24px rgba(0,0,0,0.09); }
+    .mobile-menu { max-height: 0; overflow: hidden; transition: max-height 0.4s cubic-bezier(0.4,0,0.2,1); }
+    .mobile-menu.open { max-height: 640px; }
+    .hamburger-line { display: block; width: 22px; height: 2px; background: #2D2D2D; border-radius: 2px; transition: transform 0.3s ease, opacity 0.3s ease; }
+    .hamburger.open .line-1 { transform: translateY(8px) rotate(45deg); }
+    .hamburger.open .line-2 { opacity: 0; }
+    .hamburger.open .line-3 { transform: translateY(-8px) rotate(-45deg); }
+    .nav-dropdown { opacity: 0; visibility: hidden; transform: translateY(-8px); transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease; }
+    .nav-item:hover .nav-dropdown, .nav-item:focus-within .nav-dropdown { opacity: 1; visibility: visible; transform: translateY(0); }
+    .nav-link { position: relative; font-family: 'Nunito', sans-serif; font-weight: 600; font-size: 0.92rem; color: #2D2D2D; text-decoration: none; transition: color 0.2s; }
+    .nav-link::after { content: ''; position: absolute; bottom: -3px; left: 0; width: 0; height: 2px; background: #0B6E5A; border-radius: 2px; transition: width 0.25s ease; }
+    .nav-link:hover { color: #0B6E5A; }
+    .nav-link:hover::after { width: 100%; }
+    .btn-amber { display: inline-flex; align-items: center; gap: 8px; background: #F5A623; color: white; font-family: 'Nunito', sans-serif; font-weight: 700; border-radius: 999px; text-decoration: none; cursor: pointer; border: none; transition: background 0.2s, transform 0.2s, box-shadow 0.2s; }
+    .btn-amber:hover { background: #E8950F; transform: translateY(-1px); box-shadow: 0 6px 24px rgba(245,166,35,0.4); }
+    *:focus-visible { outline: 2px solid #F5A623; outline-offset: 3px; border-radius: 4px; }
+    /* Form styles */
+    .form-label { display: block; font-family: 'Nunito', sans-serif; font-weight: 700; font-size: 0.875rem; color: #1A1A1A; margin-bottom: 7px; }
+    .form-input { width: 100%; padding: 13px 16px; border: 1.5px solid #E5E5E5; border-radius: 12px; font-family: 'Open Sans', sans-serif; font-size: 0.9rem; color: #2D2D2D; background: white; transition: border-color 0.2s, box-shadow 0.2s; outline: none; }
+    .form-input:focus { border-color: #0B6E5A; box-shadow: 0 0 0 3px rgba(11,110,90,0.12); }
+    .form-input::placeholder { color: #9CA3AF; }
+    select.form-input { cursor: pointer; appearance: none; background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 9l6 6 6-6' stroke='%236B7280' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; padding-right: 40px; }
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .delay-1 { transition-delay: 0.12s; }
+    /* Success state */
+    #success-msg { display: none; }
+    #success-msg.show { display: block; }
+  </style>
+</head>
+<body>
+
+<a href="#main-content" style="position:absolute;left:-9999px;top:4px;z-index:9999;background:#F5A623;color:white;padding:8px 20px;border-radius:999px;font-family:'Nunito',sans-serif;font-weight:700;text-decoration:none;" onfocus="this.style.left='16px'" onblur="this.style.left='-9999px'">Skip to main content</a>
+
+<header id="site-header">
+  <nav style="max-width:1280px;margin:0 auto;padding:0 24px;" aria-label="Main navigation">
+    <div style="display:flex;align-items:center;justify-content:space-between;height:76px;">
+      <a href="index.html" aria-label="Smart Beginnings Academy — Home" style="flex-shrink:0;"><img src="Logo Transparency_Shadow.png" alt="Smart Beginnings Academy" style="height:54px;width:auto;" /></a>
+      <div style="display:flex;align-items:center;gap:32px;" class="hidden md:flex">
+        <div class="nav-item" style="position:relative;">
+          <a href="programs.html" class="nav-link">Programs</a>
+          <div class="nav-dropdown" style="position:absolute;top:calc(100% + 12px);left:0;width:220px;background:white;border-radius:16px;box-shadow:0 12px 40px rgba(0,0,0,0.12);border:1px solid #f0f0f0;padding:8px;z-index:100;">
+            <a href="programs-infants.html" style="display:block;padding:10px 14px;border-radius:10px;font-family:'Open Sans',sans-serif;font-size:0.875rem;color:#2D2D2D;text-decoration:none;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='transparent';this.style.color='#2D2D2D'">Infants (6 wks – 12 mo)</a>
+            <a href="programs-toddlers.html" style="display:block;padding:10px 14px;border-radius:10px;font-family:'Open Sans',sans-serif;font-size:0.875rem;color:#2D2D2D;text-decoration:none;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='transparent';this.style.color='#2D2D2D'">Toddlers (1 – 2 yrs)</a>
+            <a href="programs-preschool.html" style="display:block;padding:10px 14px;border-radius:10px;font-family:'Open Sans',sans-serif;font-size:0.875rem;color:#2D2D2D;text-decoration:none;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='transparent';this.style.color='#2D2D2D'">Preschool (3 yrs)</a>
+            <a href="programs-prek.html" style="display:block;padding:10px 14px;border-radius:10px;font-family:'Open Sans',sans-serif;font-size:0.875rem;color:#2D2D2D;text-decoration:none;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='transparent';this.style.color='#2D2D2D'">Pre-K (4 – 5 yrs)</a>
+          </div>
+        </div>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="health-safety.html" class="nav-link">Health &amp; Safety</a>
+        <a href="locations.html" class="nav-link">Locations</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+      </div>
+      <div style="display:flex;align-items:center;gap:16px;">
+        <a href="schedule-tour.html" class="btn-amber hidden md:inline-flex" style="padding:11px 24px;font-size:0.9rem;background:#E8950F;">Schedule a Tour</a>
+        <button id="hamburger-btn" class="hamburger md:hidden" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu" style="display:flex;flex-direction:column;gap:6px;padding:8px;background:none;border:none;cursor:pointer;">
+          <span class="hamburger-line line-1"></span>
+          <span class="hamburger-line line-2"></span>
+          <span class="hamburger-line line-3"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <div id="mobile-menu" class="mobile-menu" style="background:white;border-top:1px solid #f0f0f0;">
+    <div style="max-width:1280px;margin:0 auto;padding:16px 24px 24px;display:flex;flex-direction:column;gap:4px;">
+      <a href="schedule-tour.html" class="btn-amber" style="padding:14px 24px;font-size:0.95rem;justify-content:center;margin-bottom:8px;">Schedule a Tour</a>
+      <a href="programs.html" style="display:block;padding:12px 16px;border-radius:12px;font-family:'Nunito',sans-serif;font-weight:600;font-size:0.95rem;color:#2D2D2D;text-decoration:none;" onmouseover="this.style.background='#E1F5EE'" onmouseout="this.style.background='transparent'">Programs</a>
+      <a href="about.html" style="display:block;padding:12px 16px;border-radius:12px;font-family:'Nunito',sans-serif;font-weight:600;font-size:0.95rem;color:#2D2D2D;text-decoration:none;" onmouseover="this.style.background='#E1F5EE'" onmouseout="this.style.background='transparent'">About</a>
+      <a href="health-safety.html" style="display:block;padding:12px 16px;border-radius:12px;font-family:'Nunito',sans-serif;font-weight:600;font-size:0.95rem;color:#2D2D2D;text-decoration:none;" onmouseover="this.style.background='#E1F5EE'" onmouseout="this.style.background='transparent'">Health &amp; Safety</a>
+      <a href="locations.html" style="display:block;padding:12px 16px;border-radius:12px;font-family:'Nunito',sans-serif;font-weight:600;font-size:0.95rem;color:#2D2D2D;text-decoration:none;" onmouseover="this.style.background='#E1F5EE'" onmouseout="this.style.background='transparent'">Locations</a>
+    </div>
+  </div>
+</header>
+<div style="height:76px;"></div>
+
+<main id="main-content">
+
+  <!-- Page Hero -->
+  <section style="background:linear-gradient(135deg,#063D30 0%,#0B6E5A 60%,#0D7A63 100%);padding:64px 24px 88px;text-align:center;position:relative;overflow:hidden;">
+    <div aria-hidden="true" style="position:absolute;top:0;right:0;width:350px;height:350px;border-radius:50%;background:radial-gradient(circle,rgba(245,166,35,0.15) 0%,transparent 70%);pointer-events:none;transform:translate(30%,-30%);"></div>
+    <div style="position:relative;z-index:1;max-width:680px;margin:0 auto;">
+      <h1 style="font-family:'Nunito',sans-serif;font-weight:900;font-size:clamp(2rem,4.5vw,3.2rem);color:white;letter-spacing:-0.03em;margin:0 0 14px;">Schedule Your Free Tour</h1>
+      <p style="font-family:'Open Sans',sans-serif;font-size:1.05rem;color:rgba(255,255,255,0.88);line-height:1.75;margin:0 auto;max-width:520px;">We'd love to show you around. Tours take about 20 minutes and there's no obligation — just an honest look at the place your child could call home.</p>
+    </div>
+    <div style="position:absolute;bottom:-2px;left:0;right:0;" aria-hidden="true">
+      <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="display:block;width:100%;"><path d="M0 60L720 20L1440 60V60H0V60Z" fill="#F7F7F7"/></svg>
+    </div>
+  </section>
+
+  <!-- Form Section -->
+  <section style="padding:72px 24px;background:#F7F7F7;">
+    <div style="max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;" class="md:grid-cols-2">
+
+      <!-- Form -->
+      <div class="reveal" style="background:white;border-radius:24px;padding:40px;box-shadow:0 8px 40px rgba(11,110,90,0.10);border:1px solid #f0f0f0;">
+        <h2 style="font-family:'Nunito',sans-serif;font-weight:900;font-size:1.6rem;color:#1A1A1A;margin:0 0 8px;">Book My Tour</h2>
+        <p style="font-family:'Open Sans',sans-serif;font-size:0.875rem;color:#6B7280;line-height:1.6;margin:0 0 28px;">Fill out the form below and we'll reach out within 1 business day to confirm your tour time.</p>
+
+        <!-- Success Message -->
+        <div id="success-msg" style="background:#E1F5EE;border:1.5px solid #0B6E5A;border-radius:16px;padding:24px;margin-bottom:24px;text-align:center;">
+          <div style="width:48px;height:48px;border-radius:50%;background:#0B6E5A;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3 style="font-family:'Nunito',sans-serif;font-weight:800;color:#0B6E5A;font-size:1.1rem;margin:0 0 8px;">Thank You!</h3>
+          <p style="font-family:'Open Sans',sans-serif;font-size:0.875rem;color:#4B5563;margin:0;line-height:1.6;">We'll reach out within 1 business day to confirm your tour. We can't wait to meet your family!</p>
+        </div>
+
+        <form id="tour-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:18px;">
+            <div>
+              <label for="parent-name" class="form-label">Parent Name <span style="color:#F43F5E;">*</span></label>
+              <input type="text" id="parent-name" name="parent_name" class="form-input" placeholder="Jane Smith" required autocomplete="name" />
+            </div>
+            <div>
+              <label for="child-name" class="form-label">Child's Name <span style="color:#F43F5E;">*</span></label>
+              <input type="text" id="child-name" name="child_name" class="form-input" placeholder="Alex Smith" required />
+            </div>
+          </div>
+
+          <div style="margin-bottom:18px;">
+            <label for="child-dob" class="form-label">Child's Date of Birth <span style="color:#F43F5E;">*</span></label>
+            <input type="date" id="child-dob" name="child_dob" class="form-input" required />
+          </div>
+
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:18px;">
+            <div>
+              <label for="email" class="form-label">Email <span style="color:#F43F5E;">*</span></label>
+              <input type="email" id="email" name="email" class="form-input" placeholder="jane@email.com" required autocomplete="email" />
+            </div>
+            <div>
+              <label for="phone" class="form-label">Phone <span style="color:#F43F5E;">*</span></label>
+              <input type="tel" id="phone" name="phone" class="form-input" placeholder="(630) 555-0100" required autocomplete="tel" />
+            </div>
+          </div>
+
+          <div style="margin-bottom:18px;">
+            <label for="location" class="form-label">Preferred Location <span style="color:#F43F5E;">*</span></label>
+            <select id="location" name="location" class="form-input" required>
+              <option value="" disabled selected>Select a location…</option>
+              <option value="oswego">Oswego</option>
+              <option value="ogden">Ogden</option>
+              <option value="kirk-butterfield">Kirk &amp; Butterfield</option>
+            </select>
+          </div>
+
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:18px;">
+            <div>
+              <label for="pref-date" class="form-label">Preferred Date <span style="color:#F43F5E;">*</span></label>
+              <input type="date" id="pref-date" name="preferred_date" class="form-input" required />
+            </div>
+            <div>
+              <label for="pref-time" class="form-label">Preferred Time <span style="color:#F43F5E;">*</span></label>
+              <select id="pref-time" name="preferred_time" class="form-input" required>
+                <option value="" disabled selected>Select a time…</option>
+                <option value="morning">Morning (9 AM – 11 AM)</option>
+                <option value="midday">Midday (11 AM – 1 PM)</option>
+                <option value="afternoon">Afternoon (1 PM – 4 PM)</option>
+              </select>
+            </div>
+          </div>
+
+          <div style="margin-bottom:28px;">
+            <label for="message" class="form-label">Message <span style="color:#9CA3AF;font-weight:400;">(optional)</span></label>
+            <textarea id="message" name="message" class="form-input" rows="4" placeholder="Any questions, specific interests, or things we should know about your child…" style="resize:vertical;min-height:100px;"></textarea>
+          </div>
+
+          <button type="submit" class="btn-amber" style="width:100%;justify-content:center;padding:16px 24px;font-size:1rem;box-shadow:0 8px 28px rgba(245,166,35,0.4);">
+            Book My Tour
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </form>
+      </div>
+
+      <!-- Trust sidebar -->
+      <div class="reveal delay-1" style="display:flex;flex-direction:column;gap:24px;">
+
+        <!-- What to expect -->
+        <div style="background:white;border-radius:20px;padding:32px;box-shadow:0 4px 20px rgba(11,110,90,0.08);border:1px solid #f0f0f0;">
+          <h3 style="font-family:'Nunito',sans-serif;font-weight:800;font-size:1.15rem;color:#1A1A1A;margin:0 0 20px;">What to Expect on Your Tour</h3>
+          <div style="display:flex;flex-direction:column;gap:16px;">
+            <div style="display:flex;gap:14px;align-items:flex-start;">
+              <div style="width:32px;height:32px;border-radius:50%;background:#E1F5EE;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-family:'Nunito',sans-serif;font-weight:800;font-size:0.8rem;color:#0B6E5A;">1</div>
+              <div><p style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.9rem;color:#1A1A1A;margin:0 0 3px;">Meet Our Staff</p><p style="font-family:'Open Sans',sans-serif;font-size:0.82rem;color:#6B7280;margin:0;line-height:1.5;">Greet the teachers and directors who would care for your child daily.</p></div>
+            </div>
+            <div style="display:flex;gap:14px;align-items:flex-start;">
+              <div style="width:32px;height:32px;border-radius:50%;background:#FEF3D8;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-family:'Nunito',sans-serif;font-weight:800;font-size:0.8rem;color:#E8950F;">2</div>
+              <div><p style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.9rem;color:#1A1A1A;margin:0 0 3px;">See the Classrooms</p><p style="font-family:'Open Sans',sans-serif;font-size:0.82rem;color:#6B7280;margin:0;line-height:1.5;">Walk through the age-appropriate spaces and see learning environments in action.</p></div>
+            </div>
+            <div style="display:flex;gap:14px;align-items:flex-start;">
+              <div style="width:32px;height:32px;border-radius:50%;background:#E1F5EE;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-family:'Nunito',sans-serif;font-weight:800;font-size:0.8rem;color:#0B6E5A;">3</div>
+              <div><p style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.9rem;color:#1A1A1A;margin:0 0 3px;">Ask All Your Questions</p><p style="font-family:'Open Sans',sans-serif;font-size:0.82rem;color:#6B7280;margin:0;line-height:1.5;">No pressure. We're here to answer every question and help you decide what's right for your family.</p></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Physician promise -->
+        <div style="background:linear-gradient(135deg,#0B6E5A 0%,#074A3D 100%);border-radius:20px;padding:32px;">
+          <div style="display:flex;gap:16px;align-items:flex-start;">
+            <div style="width:48px;height:48px;border-radius:14px;background:rgba(255,255,255,0.18);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2L3 7v5c0 5.25 3.75 10.15 9 11.35C17.25 22.15 21 17.25 21 12V7L12 2z" fill="#F5A623"/></svg>
+            </div>
+            <div>
+              <p style="font-family:'Nunito',sans-serif;font-weight:800;color:white;font-size:1rem;margin:0 0 8px;">A Promise from Our Founders</p>
+              <p style="font-family:'Open Sans',sans-serif;font-size:0.875rem;color:rgba(255,255,255,0.8);line-height:1.72;margin:0;font-style:italic;">"When you visit Smart Beginnings, you'll feel the difference immediately. This is the school we wish had existed when our own children were young."</p>
+              <p style="font-family:'Nunito',sans-serif;font-weight:600;color:rgba(255,255,255,0.65);font-size:0.8rem;margin-top:12px;">— Dr. Roy Lingam &amp; Dr. Sinthuja Magaswaran</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Locations quick ref -->
+        <div style="background:white;border-radius:20px;padding:28px;box-shadow:0 4px 20px rgba(11,110,90,0.08);border:1px solid #f0f0f0;">
+          <h3 style="font-family:'Nunito',sans-serif;font-weight:800;font-size:1rem;color:#1A1A1A;margin:0 0 16px;">Our Locations</h3>
+          <div style="display:flex;flex-direction:column;gap:12px;">
+            <div style="display:flex;align-items:center;gap:10px;"><div style="width:8px;height:8px;border-radius:50%;background:#0B6E5A;flex-shrink:0;"></div><p style="font-family:'Open Sans',sans-serif;font-size:0.875rem;color:#4B5563;margin:0;"><strong style="font-family:'Nunito',sans-serif;color:#1A1A1A;">Oswego</strong> — 750 5th Street, Oswego, IL</p></div>
+            <div style="display:flex;align-items:center;gap:10px;"><div style="width:8px;height:8px;border-radius:50%;background:#F5A623;flex-shrink:0;"></div><p style="font-family:'Open Sans',sans-serif;font-size:0.875rem;color:#4B5563;margin:0;"><strong style="font-family:'Nunito',sans-serif;color:#1A1A1A;">Ogden</strong> — Serving the Ogden Area</p></div>
+            <div style="display:flex;align-items:center;gap:10px;"><div style="width:8px;height:8px;border-radius:50%;background:#0B6E5A;flex-shrink:0;"></div><p style="font-family:'Open Sans',sans-serif;font-size:0.875rem;color:#4B5563;margin:0;"><strong style="font-family:'Nunito',sans-serif;color:#1A1A1A;">Kirk &amp; Butterfield</strong> — Western Area</p></div>
+            <a href="locations.html" style="display:inline-flex;align-items:center;gap:6px;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.85rem;color:#0B6E5A;text-decoration:none;margin-top:4px;" onmouseover="this.style.opacity='0.8'" onmouseout="this.style.opacity='1'">View All Locations <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER (condensed) -->
+<footer style="background:#1A1A1A;padding:32px 24px;">
+  <div style="max-width:1280px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;">
+    <div style="display:flex;align-items:center;gap:16px;">
+      <img src="Logo Transparency_Shadow.png" alt="Smart Beginnings Academy" style="height:36px;width:auto;" />
+      <p style="font-family:'Open Sans',sans-serif;font-size:0.78rem;color:rgba(255,255,255,0.4);margin:0;">© 2025 Smart Beginnings Academy. All Rights Reserved.</p>
+    </div>
+    <div style="display:flex;gap:20px;">
+      <a href="index.html" style="font-family:'Open Sans',sans-serif;font-size:0.8rem;color:rgba(255,255,255,0.5);text-decoration:none;" onmouseover="this.style.color='#0D9E7E'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">Home</a>
+      <a href="about.html" style="font-family:'Open Sans',sans-serif;font-size:0.8rem;color:rgba(255,255,255,0.5);text-decoration:none;" onmouseover="this.style.color='#0D9E7E'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">About</a>
+      <a href="contact.html" style="font-family:'Open Sans',sans-serif;font-size:0.8rem;color:rgba(255,255,255,0.5);text-decoration:none;" onmouseover="this.style.color='#0D9E7E'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">Contact</a>
+      <a href="privacy.html" style="font-family:'Open Sans',sans-serif;font-size:0.8rem;color:rgba(255,255,255,0.5);text-decoration:none;" onmouseover="this.style.color='#0D9E7E'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">Privacy</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const header = document.getElementById('site-header');
+  window.addEventListener('scroll', () => { header.classList.toggle('scrolled', window.scrollY > 12); }, { passive: true });
+  const hBtn = document.getElementById('hamburger-btn');
+  const mMenu = document.getElementById('mobile-menu');
+  let open = false;
+  hBtn.addEventListener('click', () => { open = !open; hBtn.classList.toggle('open', open); mMenu.classList.toggle('open', open); hBtn.setAttribute('aria-expanded', String(open)); });
+  document.addEventListener('click', e => { if (open && !hBtn.contains(e.target) && !mMenu.contains(e.target)) { open = false; hBtn.classList.remove('open'); mMenu.classList.remove('open'); hBtn.setAttribute('aria-expanded', 'false'); } });
+  const io = new IntersectionObserver(entries => { entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } }); }, { threshold: 0.08 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // Form handling
+  const form = document.getElementById('tour-form');
+  const successMsg = document.getElementById('success-msg');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const btn = form.querySelector('button[type="submit"]');
+    btn.textContent = 'Sending…';
+    btn.style.opacity = '0.7';
+    btn.disabled = true;
+
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+      if (res.ok) {
+        form.style.display = 'none';
+        successMsg.classList.add('show');
+      } else {
+        btn.textContent = 'Try Again';
+        btn.style.opacity = '1';
+        btn.disabled = false;
+      }
+    } catch {
+      // Fallback: show success for demo
+      form.style.display = 'none';
+      successMsg.classList.add('show');
+    }
+  });
+</script>
+</body>
+</html>

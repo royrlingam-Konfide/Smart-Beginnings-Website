@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Health &amp; Safety | Smart Beginnings Academy</title>
+  <meta name="description" content="Physician-designed health and safety protocols at Smart Beginnings Academy. Learn how we keep your child safe, healthy, and thriving every day." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Open Sans', sans-serif; color: #2D2D2D; -webkit-font-smoothing: antialiased; margin: 0; }
+    h1,h2,h3,h4 { font-family: 'Nunito', sans-serif; }
+    #site-header { position: fixed; top: 0; left: 0; right: 0; z-index: 50; background: white; transition: box-shadow 0.3s; }
+    #site-header.scrolled { box-shadow: 0 2px 24px rgba(0,0,0,0.09); }
+    .mobile-menu { max-height: 0; overflow: hidden; transition: max-height 0.4s cubic-bezier(0.4,0,0.2,1); }
+    .mobile-menu.open { max-height: 600px; }
+    .hamburger-line { display: block; width: 22px; height: 2px; background: #2D2D2D; border-radius: 2px; transition: transform 0.3s, opacity 0.3s; }
+    .hamburger.open .line-1 { transform: translateY(8px) rotate(45deg); }
+    .hamburger.open .line-2 { opacity: 0; }
+    .hamburger.open .line-3 { transform: translateY(-8px) rotate(-45deg); }
+    .nav-dropdown { opacity: 0; visibility: hidden; transform: translateY(-8px); transition: opacity 0.2s, transform 0.2s, visibility 0.2s; }
+    .nav-item:hover .nav-dropdown, .nav-item:focus-within .nav-dropdown { opacity: 1; visibility: visible; transform: translateY(0); }
+    .nav-link { position: relative; font-family: 'Nunito', sans-serif; font-weight: 600; font-size: 0.92rem; color: #2D2D2D; text-decoration: none; transition: color 0.2s; }
+    .nav-link::after { content: ''; position: absolute; bottom: -3px; left: 0; width: 0; height: 2px; background: #0B6E5A; border-radius: 2px; transition: width 0.25s; }
+    .nav-link:hover { color: #0B6E5A; }
+    .nav-link:hover::after { width: 100%; }
+    .btn-amber { display: inline-flex; align-items: center; gap: 8px; background: #F5A623; color: white; font-family: 'Nunito', sans-serif; font-weight: 700; border-radius: 999px; text-decoration: none; border: none; transition: background 0.2s, transform 0.2s, box-shadow 0.2s; cursor: pointer; }
+    .btn-amber:hover { background: #E8950F; transform: translateY(-1px); box-shadow: 0 6px 24px rgba(245,166,35,0.4); }
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .delay-1 { transition-delay: 0.12s; }
+    .delay-2 { transition-delay: 0.24s; }
+    *:focus-visible { outline: 2px solid #F5A623; outline-offset: 3px; border-radius: 4px; }
+    .safety-card { background: white; border-radius: 20px; border: 1px solid #EBEBEB; box-shadow: 0 4px 20px rgba(11,110,90,0.07); padding: 32px; transition: transform 0.3s, box-shadow 0.3s; }
+    .safety-card:hover { transform: translateY(-4px); box-shadow: 0 12px 36px rgba(11,110,90,0.14); }
+    .section-label { display: inline-block; font-family: 'Nunito', sans-serif; font-weight: 700; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.12em; padding: 6px 16px; border-radius: 999px; background: #E1F5EE; color: #0B6E5A; margin-bottom: 16px; }
+    .check-item { display: flex; align-items: flex-start; gap: 12px; }
+    .check-icon { width: 22px; height: 22px; border-radius: 50%; background: #E1F5EE; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px; }
+  </style>
+</head>
+<body>
+
+<a href="#main-content" style="position:absolute;left:-9999px;top:4px;z-index:9999;background:#F5A623;color:white;padding:8px 20px;border-radius:999px;font-family:'Nunito',sans-serif;font-weight:700;text-decoration:none;" onfocus="this.style.left='16px'" onblur="this.style.left='-9999px'">Skip to main content</a>
+
+<header id="site-header">
+  <nav style="max-width:1280px;margin:0 auto;padding:0 24px;">
+    <div style="display:flex;align-items:center;justify-content:space-between;height:76px;">
+      <a href="index.html" style="flex-shrink:0;"><img src="Logo Transparency_Shadow.png" alt="Smart Beginnings Academy" style="height:54px;width:auto;" /></a>
+      <div style="display:flex;align-items:center;gap:32px;" class="hidden md:flex">
+        <div class="nav-item" style="position:relative;">
+          <a href="programs.html" class="nav-link">Programs</a>
+          <div class="nav-dropdown" style="position:absolute;top:calc(100% + 12px);left:0;width:220px;background:white;border-radius:16px;box-shadow:0 12px 40px rgba(0,0,0,0.12);border:1px solid #f0f0f0;padding:8px;z-index:100;">
+            <a href="programs-infants.html" style="display:block;padding:10px 14px;border-radius:10px;font-size:0.875rem;color:#2D2D2D;text-decoration:none;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='';this.style.color='#2D2D2D'">Infants (6 wks – 12 mo)</a>
+            <a href="programs-toddlers.html" style="display:block;padding:10px 14px;border-radius:10px;font-size:0.875rem;color:#2D2D2D;text-decoration:none;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='';this.style.color='#2D2D2D'">Toddlers (1 – 2 yrs)</a>
+            <a href="programs-preschool.html" style="display:block;padding:10px 14px;border-radius:10px;font-size:0.875rem;color:#2D2D2D;text-decoration:none;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='';this.style.color='#2D2D2D'">Preschool (3 yrs)</a>
+            <a href="programs-prek.html" style="display:block;padding:10px 14px;border-radius:10px;font-size:0.875rem;color:#2D2D2D;text-decoration:none;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='';this.style.color='#2D2D2D'">Pre-K (4 – 5 yrs)</a>
+          </div>
+        </div>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="health-safety.html" class="nav-link" style="color:#0B6E5A;">Health &amp; Safety</a>
+        <a href="locations.html" class="nav-link">Locations</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+      </div>
+      <div style="display:flex;align-items:center;gap:16px;">
+        <a href="schedule-tour.html" class="btn-amber hidden md:inline-flex" style="padding:11px 24px;font-size:0.9rem;">Schedule a Tour</a>
+        <button id="hamburger-btn" class="hamburger md:hidden" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu" style="display:flex;flex-direction:column;gap:6px;padding:8px;background:none;border:none;cursor:pointer;">
+          <span class="hamburger-line line-1"></span><span class="hamburger-line line-2"></span><span class="hamburger-line line-3"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <div id="mobile-menu" class="mobile-menu" style="background:white;border-top:1px solid #f0f0f0;">
+    <div style="max-width:1280px;margin:0 auto;padding:16px 24px 24px;display:flex;flex-direction:column;gap:4px;">
+      <a href="schedule-tour.html" class="btn-amber" style="padding:14px 24px;font-size:0.95rem;justify-content:center;margin-bottom:8px;">Schedule a Tour</a>
+      <a href="programs.html" style="display:block;padding:12px 16px;border-radius:12px;font-family:'Nunito',sans-serif;font-weight:600;font-size:0.95rem;color:#2D2D2D;text-decoration:none;" onmouseover="this.style.background='#E1F5EE'" onmouseout="this.style.background=''">Programs</a>
+      <a href="about.html" style="display:block;padding:12px 16px;border-radius:12px;font-family:'Nunito',sans-serif;font-weight:600;font-size:0.95rem;color:#2D2D2D;text-decoration:none;" onmouseover="this.style.background='#E1F5EE'" onmouseout="this.style.background=''">About</a>
+      <a href="health-safety.html" style="display:block;padding:12px 16px;border-radius:12px;font-family:'Nunito',sans-serif;font-weight:600;font-size:0.95rem;color:#0B6E5A;text-decoration:none;background:#E1F5EE;">Health &amp; Safety</a>
+      <a href="locations.html" style="display:block;padding:12px 16px;border-radius:12px;font-family:'Nunito',sans-serif;font-weight:600;font-size:0.95rem;color:#2D2D2D;text-decoration:none;" onmouseover="this.style.background='#E1F5EE'" onmouseout="this.style.background=''">Locations</a>
+    </div>
+  </div>
+</header>
+<div style="height:76px;"></div>
+
+<main id="main-content">
+
+  <!-- HERO -->
+  <section style="background:linear-gradient(135deg,#063D30 0%,#0B6E5A 60%,#0D7A63 100%);padding:64px 24px 88px;text-align:center;position:relative;overflow:hidden;">
+    <div aria-hidden="true" style="position:absolute;top:0;right:0;width:350px;height:350px;border-radius:50%;background:radial-gradient(circle,rgba(245,166,35,0.15) 0%,transparent 70%);pointer-events:none;transform:translate(30%,-30%);"></div>
+    <div style="position:relative;z-index:1;max-width:680px;margin:0 auto;">
+      <span style="display:inline-block;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.78rem;text-transform:uppercase;letter-spacing:0.12em;padding:6px 16px;border-radius:999px;background:rgba(255,255,255,0.18);color:white;margin-bottom:20px;">Safety First</span>
+      <h1 style="font-family:'Nunito',sans-serif;font-weight:900;font-size:clamp(2rem,4.5vw,3.2rem);color:white;letter-spacing:-0.03em;margin:0 0 14px;">Health &amp; Safety</h1>
+      <p style="font-family:'Open Sans',sans-serif;font-size:1.05rem;color:rgba(255,255,255,0.88);line-height:1.75;margin:0 auto;max-width:560px;">As physicians and parents, our founders built every safety protocol with medical-grade rigor. Your child's wellbeing is never an afterthought — it is the foundation.</p>
+    </div>
+    <div style="position:absolute;bottom:-2px;left:0;right:0;" aria-hidden="true">
+      <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="display:block;width:100%;"><path d="M0 60L720 20L1440 60V60H0V60Z" fill="white"/></svg>
+    </div>
+  </section>
+
+  <!-- FOUNDER REASSURANCE -->
+  <section style="padding:64px 24px;background:white;">
+    <div style="max-width:860px;margin:0 auto;" class="reveal">
+      <div style="background:linear-gradient(135deg,#0B6E5A 0%,#074A3D 100%);border-radius:24px;padding:48px;display:grid;grid-template-columns:auto 1fr;gap:24px;align-items:center;">
+        <div style="width:72px;height:72px;border-radius:50%;background:rgba(255,255,255,0.18);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2L3 7v5c0 5.25 3.75 10.15 9 11.35C17.25 22.15 21 17.25 21 12V7L12 2z" fill="#F5A623"/></svg>
+        </div>
+        <div>
+          <p style="font-family:'Nunito',sans-serif;font-weight:800;font-size:clamp(1rem,2.5vw,1.3rem);color:white;line-height:1.55;margin:0 0 12px;font-style:italic;">"As physicians, our founders built Smart Beginnings Academy with health and safety at its foundation. Every protocol, every policy, and every procedure exists for one reason: to ensure your child is safe, healthy, and thriving every single day."</p>
+          <p style="font-family:'Open Sans',sans-serif;font-size:0.875rem;color:rgba(255,255,255,0.65);margin:0;">— Dr. Roy Lingam &amp; Dr. Sinthuja Magaswaran, Co-Founders</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SAFETY SECTIONS -->
+  <section style="padding:24px 24px 96px;background:white;">
+    <div style="max-width:1100px;margin:0 auto;">
+      <div style="text-align:center;margin-bottom:52px;" class="reveal">
+        <span class="section-label">Our Protocols</span>
+        <h2 style="font-family:'Nunito',sans-serif;font-weight:900;font-size:clamp(1.8rem,3.5vw,2.5rem);color:#1A1A1A;letter-spacing:-0.025em;margin:0 0 16px;">Comprehensive Safety at Every Level</h2>
+        <p style="font-family:'Open Sans',sans-serif;font-size:1rem;color:#6B7280;line-height:1.75;max-width:520px;margin:0 auto;">Six pillars of safety — each designed by medical professionals to give you total peace of mind.</p>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px;">
+
+        <!-- 1. Secure Facility -->
+        <div class="safety-card reveal">
+          <div style="display:flex;align-items:center;gap:16px;margin-bottom:20px;">
+            <div style="width:52px;height:52px;border-radius:16px;background:linear-gradient(135deg,#E1F5EE,#B2E4D0);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" stroke="#0B6E5A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3 style="font-family:'Nunito',sans-serif;font-weight:800;font-size:1.15rem;color:#1A1A1A;margin:0;">Secure Facility</h3>
+          </div>
+          <p style="font-family:'Open Sans',sans-serif;font-size:0.9rem;color:#4B5563;line-height:1.75;margin:0 0 20px;">Our buildings are designed with your child's security as the top priority. Every point of entry is controlled and monitored throughout the day.</p>
+          <div style="display:flex;flex-direction:column;gap:10px;">
+            <div class="check-item"><div class="check-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4" stroke="#0B6E5A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><p style="font-family:'Open Sans',sans-serif;font-size:0.85rem;color:#4B5563;margin:0;">Keypad-secured entry at all access points</p></div>
+            <div class="check-item"><div class="check-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4" stroke="#0B6E5A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><p style="font-family:'Open Sans',sans-serif;font-size:0.85rem;color:#4B5563;margin:0;">ID verification for all adult visitors</p></div>
+            <div class="check-item"><div class="check-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4" stroke="#0B6E5A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><p style="font-family:'Open Sans',sans-serif;font-size:0.85rem;color:#4B5563;margin:0;">Authorized pickup lists strictly enforced</p></div>
+            <div class="check-item"><div class="check-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4" stroke="#0B6E5A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><p style="font-family:'Open Sans',sans-serif;font-size:0.85rem;color:#4B5563;margin:0;">Security cameras at all entry and common areas</p></div>
+          </div>
+        </div>
+
+        <!-- 2. Background Checks -->
+        <div class="safety-card reveal delay-1">
+          <div style="display:flex;align-items:center;gap:16px;margin-bottom:20px;">
+            <div style="width:52px;height:52px;border-radius:16px;background:linear-gradient(135deg,#FEF3D8,#FDE3A0);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="#E8950F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3 style="font-family:'Nunito',sans-serif;font-weight:800;font-size:1.15rem;color:#1A1A1A;margin:0;">Staff Background Checks</h3>
+          </div>
+          <p style="font-family:'Open Sans',sans-serif;font-size:0.9rem;color:#4B5563;line-height:1.75;margin:0 0 20px;">Every member of our team — from teachers to administrators — undergoes comprehensive background screening before joining our staff.</p>
+          <div style="display:flex;flex-direction:column;gap:10px;">
+            <div class="check-item"><div class="check-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4" stroke="#0B6E5A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><p style="font-family:'Open Sans',sans-serif;font-size:0.85rem;color:#4B5563;margin:0;">State and federal criminal background checks</p></div>
+            <div class="check-item"><div class="check-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4" stroke="#0B6E5A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><p style="font-family:'Open Sans',sans-serif;font-size:0.85rem;color:#4B5563;margin:0;">Child abuse and neglect registry checks</p></div>
+            <div class="check-item"><div class="check-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4" stroke="#0B6E5A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><p style="font-family:'Open Sans',sans-serif;font-size:0.85rem;color:#4B5563;margin:0;">Employment history and reference verification</p></div>
+            <div class="check-item"><div class="check-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4" stroke="#0B6E5A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><p style="font-family:'Open Sans',sans-serif;font-size:0.85rem;color:#4B5563;margin:0;">Ongoing training in child safety and mandated reporting</p></div>
+          </div>
+        </div>
+
+        <!-- 3. Health & Illness Policy -->
+        <div class="safety-card reveal delay-2">
+          <div style="display:flex;align-items:center;gap:16px;margin-bottom:20px;">
+            <div style="width:52px;height:52px;border-radius:16px;background:linear-gradient(135deg,#EBF5FF,#BFDBFF);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" stroke="#3B82F6" stroke-width="2" stroke-linejoin="round"/><path d="M9 12.5l2 2 4-4" stroke="#3B82F6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3 style="font-family:'Nunito',sans-serif;font-weight:800;font-size:1.15rem;color:#1A1A1A;margin:0;">Health &amp; Illness Policy</h3>
+          </div>
+          <p style="font-family:'Open Sans',sans-serif;font-size:0.9rem;color:#4B5563;line-height:1.75;margin:0 0 20px;">Our physician-designed illness policy protects all children while ensuring families have clear, compassionate guidance when their child is unwell.</p>
+          <div style="display:flex;flex-direction:column;gap:10px;">
+            <div class="check-item"><div class="check-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4" stroke="#0B6E5A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><p style="font-family:'Open Sans',sans-serif;font-size:0.85rem;color:#4B5563;margin:0;">Daily health screenings at drop-off</p></div>
+            <div class="check-item"><div class="check-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4" stroke="#0B6E5A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><p style="font-family:'Open Sans',sans-serif;font-size:0.85rem;color:#4B5563;margin:0;">Clear symptom exclusion guidelines (physician-authored)</p></div>
+            <div class="check-item"><div class="check-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4" stroke="#0B6E5A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><p style="font-family:'Open Sans',sans-serif;font-size:0.85rem;color:#4B5563;margin:0;">Immediate parent notification for any health concern</p></div>
+            <div class="check-item"><div class="check-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4" stroke="#0B6E5A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><p style="font-family:'Open Sans',sans-serif;font-size:0.85rem;color:#4B5563;margin:0;">Medication administration protocols with parent authorization</p></div>
+          </div>
+        </div>
+
+        <!-- 4. Sanitation Protocols -->
+        <div class="safety-card reveal">
+          <div style="display:flex;align-items:center;gap:16px;margin-bottom:20px;">
+            <div style="width:52px;height:52px;border-radius:16px;background:linear-gradient(135deg,#ECFDF5,#A7F3D0);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3 style="font-family:'Nunito',sans-serif;font-weight:800;font-size:1.15rem;color:#1A1A1A;margin:0;">Sanitation Protocols</h3>
+          </div>
+          <p style="font-family:'Open Sans',sans-serif;font-size:0.9rem;color:#4B5563;line-height:1.75;margin:0 0 20px;">Our cleaning standards are modeled on medical facility practices — because we believe the bar for cleanliness should be just as high in a preschool as in a clinic.</p>
+          <div style="display:flex;flex-direction:column;gap:10px;">
+            <div class="check-item"><div class="check-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4" stroke="#0B6E5A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><p style="font-family:'Open Sans',sans-serif;font-size:0.85rem;color:#4B5563;margin:0;">EPA-approved disinfectants used daily on all surfaces</p></div>
+            <div class="check-item"><div class="check-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4" stroke="#0B6E5A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><p style="font-family:'Open Sans',sans-serif;font-size:0.85rem;color:#4B5563;margin:0;">Toy and equipment sanitation between uses</p></div>
+            <div class="check-item"><div class="check-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4" stroke="#0B6E5A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><p style="font-family:'Open Sans',sans-serif;font-size:0.85rem;color:#4B5563;margin:0;">Handwashing routines reinforced throughout the day</p></div>
+            <div class="check-item"><div class="check-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4" stroke="#0B6E5A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><p style="font-family:'Open Sans',sans-serif;font-size:0.85rem;color:#4B5563;margin:0;">Deep cleaning every evening by professional staff</p></div>
+          </div>
+        </div>
+
+        <!-- 5. Emergency Procedures -->
+        <div class="safety-card reveal delay-1">
+          <div style="display:flex;align-items:center;gap:16px;margin-bottom:20px;">
+            <div style="width:52px;height:52px;border-radius:16px;background:linear-gradient(135deg,#F5F0FF,#DDD6FE);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" stroke="#9333EA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3 style="font-family:'Nunito',sans-serif;font-weight:800;font-size:1.15rem;color:#1A1A1A;margin:0;">Emergency Procedures</h3>
+          </div>
+          <p style="font-family:'Open Sans',sans-serif;font-size:0.9rem;color:#4B5563;line-height:1.75;margin:0 0 20px;">Every staff member is trained and prepared. Our emergency protocols are comprehensive, practiced regularly, and designed to ensure the fastest, safest response possible.</p>
+          <div style="display:flex;flex-direction:column;gap:10px;">
+            <div class="check-item"><div class="check-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4" stroke="#0B6E5A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><p style="font-family:'Open Sans',sans-serif;font-size:0.85rem;color:#4B5563;margin:0;">CPR and First Aid certified staff at all times</p></div>
+            <div class="check-item"><div class="check-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4" stroke="#0B6E5A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><p style="font-family:'Open Sans',sans-serif;font-size:0.85rem;color:#4B5563;margin:0;">Fire, severe weather, and lockdown drills practiced regularly</p></div>
+            <div class="check-item"><div class="check-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4" stroke="#0B6E5A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><p style="font-family:'Open Sans',sans-serif;font-size:0.85rem;color:#4B5563;margin:0;">Clear parent communication protocol during any incident</p></div>
+            <div class="check-item"><div class="check-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4" stroke="#0B6E5A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><p style="font-family:'Open Sans',sans-serif;font-size:0.85rem;color:#4B5563;margin:0;">Allergy and medical emergency action plans on file</p></div>
+          </div>
+        </div>
+
+        <!-- 6. Nutrition & Meals -->
+        <div class="safety-card reveal delay-2">
+          <div style="display:flex;align-items:center;gap:16px;margin-bottom:20px;">
+            <div style="width:52px;height:52px;border-radius:16px;background:linear-gradient(135deg,#FFF1F2,#FECDD3);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 11l19-9-9 19-2-8-8-2z" stroke="#F43F5E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3 style="font-family:'Nunito',sans-serif;font-weight:800;font-size:1.15rem;color:#1A1A1A;margin:0;">Nutrition &amp; Meals</h3>
+          </div>
+          <p style="font-family:'Open Sans',sans-serif;font-size:0.9rem;color:#4B5563;line-height:1.75;margin:0 0 20px;">Healthy development starts with healthy eating. Our nutrition guidelines are designed by professionals to support growing minds and bodies throughout the school day.</p>
+          <div style="display:flex;flex-direction:column;gap:10px;">
+            <div class="check-item"><div class="check-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4" stroke="#0B6E5A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><p style="font-family:'Open Sans',sans-serif;font-size:0.85rem;color:#4B5563;margin:0;">Nutritious snacks provided; no added sugars or artificial dyes</p></div>
+            <div class="check-item"><div class="check-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4" stroke="#0B6E5A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><p style="font-family:'Open Sans',sans-serif;font-size:0.85rem;color:#4B5563;margin:0;">Severe allergy awareness — nut-conscious environment</p></div>
+            <div class="check-item"><div class="check-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4" stroke="#0B6E5A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><p style="font-family:'Open Sans',sans-serif;font-size:0.85rem;color:#4B5563;margin:0;">Dietary restrictions and medical needs accommodated</p></div>
+            <div class="check-item"><div class="check-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4" stroke="#0B6E5A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><p style="font-family:'Open Sans',sans-serif;font-size:0.85rem;color:#4B5563;margin:0;">Hydration encouraged throughout the day</p></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section style="padding:80px 24px;background:#0B6E5A;text-align:center;position:relative;overflow:hidden;">
+    <div aria-hidden="true" style="position:absolute;top:0;right:0;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,0.08) 0%,transparent 70%);pointer-events:none;transform:translate(30%,-30%);"></div>
+    <div style="position:relative;max-width:600px;margin:0 auto;" class="reveal">
+      <h2 style="font-family:'Nunito',sans-serif;font-weight:900;font-size:clamp(1.8rem,3.5vw,2.5rem);color:white;letter-spacing:-0.03em;margin:0 0 14px;">See Our Safety Protocols in Person</h2>
+      <p style="font-family:'Open Sans',sans-serif;font-size:1rem;color:rgba(255,255,255,0.85);line-height:1.78;margin:0 auto 28px;max-width:460px;">Schedule a tour and we'll walk you through every safety measure we have in place. We want you to feel completely confident before your first day.</p>
+      <a href="schedule-tour.html" class="btn-amber" style="padding:16px 40px;font-size:1rem;box-shadow:0 8px 28px rgba(245,166,35,0.45);">Schedule a Free Tour <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </div>
+  </section>
+
+</main>
+
+<footer style="background:#1A1A1A;padding:32px 24px;">
+  <div style="max-width:1280px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;">
+    <div style="display:flex;align-items:center;gap:16px;"><img src="Logo Transparency_Shadow.png" alt="Smart Beginnings Academy" style="height:36px;width:auto;" /><p style="font-family:'Open Sans',sans-serif;font-size:0.78rem;color:rgba(255,255,255,0.4);margin:0;">© 2025 Smart Beginnings Academy.</p></div>
+    <div style="display:flex;gap:20px;"><a href="index.html" style="font-family:'Open Sans',sans-serif;font-size:0.8rem;color:rgba(255,255,255,0.5);text-decoration:none;" onmouseover="this.style.color='#0D9E7E'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">Home</a><a href="about.html" style="font-family:'Open Sans',sans-serif;font-size:0.8rem;color:rgba(255,255,255,0.5);text-decoration:none;" onmouseover="this.style.color='#0D9E7E'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">About</a><a href="contact.html" style="font-family:'Open Sans',sans-serif;font-size:0.8rem;color:rgba(255,255,255,0.5);text-decoration:none;" onmouseover="this.style.color='#0D9E7E'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">Contact</a></div>
+  </div>
+</footer>
+
+<script>
+  const header = document.getElementById('site-header');
+  window.addEventListener('scroll', () => { header.classList.toggle('scrolled', window.scrollY > 12); }, { passive: true });
+  const hBtn = document.getElementById('hamburger-btn'); const mMenu = document.getElementById('mobile-menu'); let open = false;
+  hBtn.addEventListener('click', () => { open = !open; hBtn.classList.toggle('open', open); mMenu.classList.toggle('open', open); hBtn.setAttribute('aria-expanded', String(open)); });
+  document.addEventListener('click', e => { if (open && !hBtn.contains(e.target) && !mMenu.contains(e.target)) { open = false; hBtn.classList.remove('open'); mMenu.classList.remove('open'); hBtn.setAttribute('aria-expanded', 'false'); } });
+  const io = new IntersectionObserver(entries => { entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } }); }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
