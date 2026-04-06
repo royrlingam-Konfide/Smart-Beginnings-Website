@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Leadership & Team | Smart Beginnings Academy</title>
+  <meta name="description" content="Meet the physician founders and leadership team behind Smart Beginnings Academy." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&family=Open+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Open Sans', sans-serif; color: #2D2D2D; -webkit-font-smoothing: antialiased; margin: 0; }
+    h1,h2,h3,h4 { font-family: 'Nunito', sans-serif; }
+    #site-header { position: fixed; top: 0; left: 0; right: 0; z-index: 50; background: white; transition: box-shadow 0.3s ease; }
+    #site-header.scrolled { box-shadow: 0 2px 24px rgba(0,0,0,0.09); }
+    .mobile-menu { max-height: 0; overflow: hidden; transition: max-height 0.4s cubic-bezier(0.4,0,0.2,1); background: white; }
+    .mobile-menu.open { max-height: 700px; }
+    .hamburger-line { display: block; width: 22px; height: 2px; background: #2D2D2D; border-radius: 2px; transition: transform 0.3s ease, opacity 0.3s ease; }
+    .hamburger.open .line-1 { transform: translateY(8px) rotate(45deg); }
+    .hamburger.open .line-2 { opacity: 0; }
+    .hamburger.open .line-3 { transform: translateY(-8px) rotate(-45deg); }
+    .nav-dropdown { opacity: 0; visibility: hidden; transform: translateY(-8px); transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease; }
+    .nav-item:hover .nav-dropdown, .nav-item:focus-within .nav-dropdown { opacity: 1; visibility: visible; transform: translateY(0); }
+    .nav-link { position: relative; font-family: 'Nunito', sans-serif; font-weight: 600; font-size: 0.92rem; color: #2D2D2D; text-decoration: none; transition: color 0.2s; }
+    .nav-link::after { content: ''; position: absolute; bottom: -3px; left: 0; width: 0; height: 2px; background: #0B6E5A; border-radius: 2px; transition: width 0.25s ease; }
+    .nav-link:hover { color: #0B6E5A; }
+    .nav-link:hover::after { width: 100%; }
+    .btn-amber { display: inline-flex; align-items: center; gap: 8px; background: #F5A623; color: white; font-family: 'Nunito', sans-serif; font-weight: 700; border-radius: 999px; text-decoration: none; cursor: pointer; border: none; transition: background 0.2s, transform 0.2s, box-shadow 0.2s; }
+    .btn-amber:hover { background: #E8950F; transform: translateY(-1px); box-shadow: 0 6px 24px rgba(245,166,35,0.4); }
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .delay-1 { transition-delay: 0.12s; }
+    .section-label { display: inline-block; font-family: 'Nunito', sans-serif; font-weight: 700; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.12em; padding: 6px 16px; border-radius: 999px; background: #E1F5EE; color: #0B6E5A; margin-bottom: 16px; }
+    *:focus-visible { outline: 2px solid #F5A623; outline-offset: 3px; border-radius: 4px; }
+    .founder-card { background: white; border-radius: 24px; overflow: hidden; box-shadow: 0 8px 40px rgba(11,110,90,0.12), 0 2px 8px rgba(11,110,90,0.06); }
+    @media (max-width: 767px) {
+      #site-header nav { padding: 0 20px !important; }
+      #site-header nav > div > div:last-child { gap: 10px !important; }
+      .site-logo { height: 52px !important; }
+      #site-header nav > div { height: 72px !important; }
+    }
+    @media (min-width: 768px) { .nav-cta { padding: 11px 24px !important; font-size: 0.9rem !important; } }
+    .desktop-nav { display: none !important; }
+    @media (min-width: 768px) { .desktop-nav { display: flex !important; } }
+    .hamburger { display: flex !important; }
+    @media (min-width: 768px) { .hamburger { display: none !important; } }
+  </style>
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+</head>
+<body>
+
+<a href="#main-content" style="position:absolute;left:-9999px;top:4px;z-index:9999;background:#F5A623;color:white;padding:8px 20px;border-radius:999px;font-family:'Nunito',sans-serif;font-weight:700;text-decoration:none;" onfocus="this.style.left='16px'" onblur="this.style.left='-9999px'">Skip to main content</a>
+
+<!-- NAV -->
+<header id="site-header">
+  <nav style="max-width:1280px;margin:0 auto;padding:0 24px;" aria-label="Main navigation">
+    <div style="display:flex;align-items:center;justify-content:space-between;height:76px;">
+      <a href="index.html" aria-label="Smart Beginnings Academy — Home" style="flex-shrink:0;">
+        <img src="Logo Transparency_Shadow.png" alt="Smart Beginnings Academy" class="site-logo" style="height:54px;width:auto;" />
+      </a>
+      <div class="desktop-nav" style="align-items:center;gap:32px;">
+        <div class="nav-item" style="position:relative;">
+          <a href="programs.html" class="nav-link">Programs</a>
+          <div class="nav-dropdown" style="position:absolute;top:calc(100% + 12px);left:0;width:220px;background:white;border-radius:16px;box-shadow:0 12px 40px rgba(0,0,0,0.12);border:1px solid #f0f0f0;padding:8px;z-index:100;">
+            <a href="programs-infants.html" style="display:block;padding:10px 14px;border-radius:10px;font-family:'Open Sans',sans-serif;font-size:0.875rem;color:#2D2D2D;text-decoration:none;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='transparent';this.style.color='#2D2D2D'">Infants (6 wks – 12 mo)</a>
+            <a href="programs-toddlers.html" style="display:block;padding:10px 14px;border-radius:10px;font-family:'Open Sans',sans-serif;font-size:0.875rem;color:#2D2D2D;text-decoration:none;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='transparent';this.style.color='#2D2D2D'">Toddlers (1 – 2 yrs)</a>
+            <a href="programs-preschool.html" style="display:block;padding:10px 14px;border-radius:10px;font-family:'Open Sans',sans-serif;font-size:0.875rem;color:#2D2D2D;text-decoration:none;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='transparent';this.style.color='#2D2D2D'">Preschool (3 yrs)</a>
+            <a href="programs-prek.html" style="display:block;padding:10px 14px;border-radius:10px;font-family:'Open Sans',sans-serif;font-size:0.875rem;color:#2D2D2D;text-decoration:none;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='transparent';this.style.color='#2D2D2D'">Pre-K (4 – 5 yrs)</a>
+          </div>
+        </div>
+        <div class="nav-item" style="position:relative;">
+          <span class="nav-link" style="cursor:default;display:inline-flex;align-items:center;gap:5px;color:#0B6E5A;">Our Story <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <div class="nav-dropdown" style="position:absolute;top:calc(100% + 12px);left:0;width:220px;background:white;border-radius:16px;box-shadow:0 12px 40px rgba(0,0,0,0.12);border:1px solid #f0f0f0;padding:8px;z-index:100;">
+            <a href="about.html" style="display:block;padding:10px 14px;border-radius:10px;font-family:'Open Sans',sans-serif;font-size:0.875rem;color:#2D2D2D;text-decoration:none;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='transparent';this.style.color='#2D2D2D'">Who We Are</a>
+            <a href="leadership.html" style="display:block;padding:10px 14px;border-radius:10px;font-family:'Open Sans',sans-serif;font-size:0.875rem;color:#0B6E5A;font-weight:600;text-decoration:none;background:#E1F5EE;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='#E1F5EE';this.style.color='#0B6E5A'">Our Leadership &amp; Team</a>
+          </div>
+        </div>
+        <a href="health-safety.html" class="nav-link">Health &amp; Safety</a>
+        <a href="locations.html" class="nav-link">Locations</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+      </div>
+      <div style="display:flex;align-items:center;gap:16px;">
+        <a href="schedule-tour.html" class="btn-amber nav-cta" style="padding:9px 16px;font-size:0.8rem;">Schedule a Tour</a>
+        <button id="hamburger-btn" class="hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu" style="flex-direction:column;gap:6px;padding:8px;background:none;border:none;cursor:pointer;">
+          <span class="hamburger-line line-1"></span>
+          <span class="hamburger-line line-2"></span>
+          <span class="hamburger-line line-3"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <div id="mobile-menu" class="mobile-menu" style="border-top:1px solid #f0f0f0;">
+    <div style="max-width:1280px;margin:0 auto;padding:20px 24px 28px;display:flex;flex-direction:column;gap:2px;">
+      <a href="programs.html" style="display:flex;align-items:center;justify-content:space-between;padding:13px 16px;border-radius:12px;font-family:'Nunito',sans-serif;font-weight:700;font-size:1rem;color:#2D2D2D;text-decoration:none;transition:background 0.15s;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='transparent';this.style.color='#2D2D2D'">Programs <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <div style="margin:0 0 4px 16px;display:flex;flex-direction:column;gap:1px;border-left:2px solid #E1F5EE;padding-left:14px;">
+        <a href="programs-infants.html" style="display:block;padding:9px 12px;border-radius:8px;font-family:'Open Sans',sans-serif;font-size:0.875rem;color:#4B5563;text-decoration:none;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='transparent';this.style.color='#4B5563'">Infants (6 wks – 12 mo)</a>
+        <a href="programs-toddlers.html" style="display:block;padding:9px 12px;border-radius:8px;font-family:'Open Sans',sans-serif;font-size:0.875rem;color:#4B5563;text-decoration:none;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='transparent';this.style.color='#4B5563'">Toddlers (1 – 2 yrs)</a>
+        <a href="programs-preschool.html" style="display:block;padding:9px 12px;border-radius:8px;font-family:'Open Sans',sans-serif;font-size:0.875rem;color:#4B5563;text-decoration:none;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='transparent';this.style.color='#4B5563'">Preschool (3 yrs)</a>
+        <a href="programs-prek.html" style="display:block;padding:9px 12px;border-radius:8px;font-family:'Open Sans',sans-serif;font-size:0.875rem;color:#4B5563;text-decoration:none;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='transparent';this.style.color='#4B5563'">Pre-K (4 – 5 yrs)</a>
+      </div>
+      <span style="display:flex;align-items:center;justify-content:space-between;padding:13px 16px;border-radius:12px;font-family:'Nunito',sans-serif;font-weight:700;font-size:1rem;color:#2D2D2D;cursor:default;">Our Story <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      <div style="margin:0 0 4px 16px;display:flex;flex-direction:column;gap:1px;border-left:2px solid #E1F5EE;padding-left:14px;">
+        <a href="about.html" style="display:block;padding:9px 12px;border-radius:8px;font-family:'Open Sans',sans-serif;font-size:0.875rem;color:#4B5563;text-decoration:none;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='transparent';this.style.color='#4B5563'">Who We Are</a>
+        <a href="leadership.html" style="display:block;padding:9px 12px;border-radius:8px;font-family:'Open Sans',sans-serif;font-size:0.875rem;color:#0B6E5A;font-weight:600;text-decoration:none;background:#E1F5EE;" onmouseover="this.style.background='#E1F5EE'" onmouseout="this.style.background='#E1F5EE'">Our Leadership &amp; Team</a>
+      </div>
+      <a href="health-safety.html" style="display:flex;align-items:center;justify-content:space-between;padding:13px 16px;border-radius:12px;font-family:'Nunito',sans-serif;font-weight:700;font-size:1rem;color:#2D2D2D;text-decoration:none;transition:background 0.15s;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='transparent';this.style.color='#2D2D2D'">Health &amp; Safety <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <a href="locations.html" style="display:flex;align-items:center;justify-content:space-between;padding:13px 16px;border-radius:12px;font-family:'Nunito',sans-serif;font-weight:700;font-size:1rem;color:#2D2D2D;text-decoration:none;transition:background 0.15s;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='transparent';this.style.color='#2D2D2D'">Locations <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <a href="testimonials.html" style="display:flex;align-items:center;justify-content:space-between;padding:13px 16px;border-radius:12px;font-family:'Nunito',sans-serif;font-weight:700;font-size:1rem;color:#2D2D2D;text-decoration:none;transition:background 0.15s;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='transparent';this.style.color='#2D2D2D'">Testimonials <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <a href="contact.html" style="display:flex;align-items:center;justify-content:space-between;padding:13px 16px;border-radius:12px;font-family:'Nunito',sans-serif;font-weight:700;font-size:1rem;color:#2D2D2D;text-decoration:none;transition:background 0.15s;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='transparent';this.style.color='#2D2D2D'">Contact <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <div style="height:1px;background:#f0f0f0;margin:12px 0;"></div>
+      <a href="schedule-tour.html" class="btn-amber" style="padding:15px 24px;font-size:0.95rem;justify-content:center;">Schedule a Tour <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </div>
+  </div>
+</header>
+
+<main id="main-content" style="padding-top:76px;">
+
+  <!-- HERO -->
+  <section style="background:linear-gradient(135deg,#063D30 0%,#0B6E5A 60%,#0D7A63 100%);padding:80px 24px 72px;text-align:center;position:relative;overflow:hidden;">
+    <div aria-hidden="true" style="position:absolute;top:0;right:0;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(245,166,35,0.15) 0%,transparent 70%);pointer-events:none;transform:translate(30%,-30%);"></div>
+    <div style="position:relative;z-index:1;max-width:720px;margin:0 auto;">
+      <span style="display:inline-block;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.78rem;text-transform:uppercase;letter-spacing:0.12em;padding:6px 16px;border-radius:999px;background:rgba(255,255,255,0.18);color:white;margin-bottom:20px;">Our Story</span>
+      <h1 style="font-family:'Nunito',sans-serif;font-weight:900;font-size:clamp(2.2rem,5vw,3.6rem);color:white;letter-spacing:-0.035em;margin:0 0 16px;line-height:1.1;">Our Leadership & Team</h1>
+      <p style="font-family:'Open Sans',sans-serif;font-size:1.05rem;color:rgba(255,255,255,0.88);line-height:1.75;margin:0 auto;max-width:560px;">The physicians and leaders who built Smart Beginnings Academy from the ground up — driven by a shared belief that every child deserves exceptional care.</p>
+    </div>
+    <div style="position:absolute;bottom:-2px;left:0;right:0;" aria-hidden="true">
+      <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="display:block;width:100%;"><path d="M0 60L720 20L1440 60V60H0V60Z" fill="white"/></svg>
+    </div>
+  </section>
+
+  <!-- MEET THE FOUNDERS -->
+  <section style="padding:88px 24px;background:white;">
+    <div style="max-width:1100px;margin:0 auto;">
+
+      <div style="text-align:center;margin-bottom:56px;" class="reveal">
+        <span class="section-label">Meet the Founders</span>
+        <h2 style="font-family:'Nunito',sans-serif;font-weight:900;font-size:clamp(2rem,4vw,2.8rem);color:#1A1A1A;letter-spacing:-0.025em;margin:0 0 16px;">The Physicians Behind the Vision</h2>
+        <p style="font-family:'Open Sans',sans-serif;font-size:1.05rem;color:#6B7280;line-height:1.75;max-width:540px;margin:0 auto;">Their medical training taught them to listen carefully, think holistically, and put the person first. They brought that same approach to early childhood education.</p>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(440px,1fr));gap:36px;">
+
+        <!-- Cindy Magas -->
+        <div class="founder-card reveal">
+          <div style="position:relative;overflow:hidden;">
+            <img src="Cindy Magas.jpeg" alt="Cindy Magas, M.D. — Founder of Smart Beginnings Academy" style="width:100%;height:420px;object-fit:cover;object-position:center top;display:block;" />
+            <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(7,74,61,0.85) 0%,transparent 50%);"></div>
+            <div style="position:absolute;bottom:0;left:0;right:0;padding:28px;">
+              <p style="font-family:'Nunito',sans-serif;font-weight:900;font-size:1.5rem;color:white;margin:0 0 4px;">Cindy Magas, M.D.</p>
+              <p style="font-family:'Open Sans',sans-serif;font-size:0.875rem;color:rgba(255,255,255,0.8);margin:0;">Founder</p>
+            </div>
+          </div>
+          <div style="padding:32px;">
+            <p style="font-family:'Open Sans',sans-serif;font-size:0.93rem;color:#4B5563;line-height:1.8;margin:0 0 20px;">Dr. Cindy Magas is the curriculum visionary behind Smart Beginnings Academy. A physician with a deep foundation in pediatric development, she shapes every program, policy, and learning experience at the school.</p>
+            <p style="font-family:'Open Sans',sans-serif;font-size:0.93rem;color:#4B5563;line-height:1.8;margin:0 0 24px;">Dr. Cindy believes that a child who feels safe, seen, and loved will always find their way to learning and that it is the teacher's job to build that bridge, not the child's job to cross it alone. Her approach blends medical insight with genuine compassion, ensuring that every child at Smart Beginnings is met exactly where they are.</p>
+            <div style="display:flex;flex-wrap:wrap;gap:10px;">
+              <span style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.75rem;padding:6px 14px;border-radius:999px;background:#E1F5EE;color:#0B6E5A;">Physician</span>
+              <span style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.75rem;padding:6px 14px;border-radius:999px;background:#E1F5EE;color:#0B6E5A;">Learning Visionary</span>
+              <span style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.75rem;padding:6px 14px;border-radius:999px;background:#FEF3D8;color:#E8950F;">Founder</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Roy Lingam -->
+        <div class="founder-card reveal delay-1">
+          <div style="position:relative;overflow:hidden;">
+            <img src="Roy Lingam.jpeg" alt="Roy Lingam, M.D. — Managing Partner of Smart Beginnings Academy" style="width:100%;height:420px;object-fit:cover;object-position:center top;display:block;" />
+            <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(7,74,61,0.85) 0%,transparent 50%);"></div>
+            <div style="position:absolute;bottom:0;left:0;right:0;padding:28px;">
+              <p style="font-family:'Nunito',sans-serif;font-weight:900;font-size:1.5rem;color:white;margin:0 0 4px;">Roy Lingam, M.D.</p>
+              <p style="font-family:'Open Sans',sans-serif;font-size:0.875rem;color:rgba(255,255,255,0.8);margin:0;">Managing Partner</p>
+            </div>
+          </div>
+          <div style="padding:32px;">
+            <p style="font-family:'Open Sans',sans-serif;font-size:0.93rem;color:#4B5563;line-height:1.8;margin:0 0 20px;">Dr. Roy Lingam is a physician and Managing Partner of Smart Beginnings Academy. With a career rooted in evidence-based medicine, he has trained more than 1,000 physicians through the United States Medical Licensing Examination, developing a deep expertise in how people learn and how to build systems that produce lasting results.</p>
+            <p style="font-family:'Open Sans',sans-serif;font-size:0.93rem;color:#4B5563;line-height:1.8;margin:0 0 24px;">Guided by his medical training, Dr. Lingam recognized the first five years of life as the most critical window for a child's cognitive, emotional, and social growth. He joined Smart Beginnings Academy to bring the same intentionality found in the best medical practice to early childhood education combining his clinical knowledge, understanding of child development, and business leadership to build a school families can truly trust.</p>
+            <div style="display:flex;flex-wrap:wrap;gap:10px;">
+              <span style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.75rem;padding:6px 14px;border-radius:999px;background:#E1F5EE;color:#0B6E5A;">Physician</span>
+              <span style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.75rem;padding:6px 14px;border-radius:999px;background:#E1F5EE;color:#0B6E5A;">Visionary Leader</span>
+              <span style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.75rem;padding:6px 14px;border-radius:999px;background:#FEF3D8;color:#E8950F;">Managing Partner</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section style="padding:88px 24px;background:#E1F5EE;text-align:center;position:relative;overflow:hidden;">
+    <div aria-hidden="true" style="position:absolute;top:0;right:0;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,#B2E4D0 0%,transparent 70%);opacity:0.5;pointer-events:none;transform:translate(30%,-30%);"></div>
+    <div style="position:relative;max-width:640px;margin:0 auto;" class="reveal">
+      <h2 style="font-family:'Nunito',sans-serif;font-weight:900;font-size:clamp(1.8rem,3.5vw,2.6rem);color:#1A1A1A;letter-spacing:-0.03em;margin:0 0 16px;">Come Meet Us in Person</h2>
+      <p style="font-family:'Open Sans',sans-serif;font-size:1rem;color:#4B5563;line-height:1.78;margin:0 auto 32px;max-width:480px;">There's no better way to understand what makes Smart Beginnings special than to visit. We'd love to show you around.</p>
+      <a href="schedule-tour.html" class="btn-amber" style="padding:16px 40px;font-size:1rem;box-shadow:0 8px 32px rgba(245,166,35,0.4);">
+        Schedule Your Free Tour
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer style="background:#1A1A1A;" aria-label="Site footer">
+  <div style="max-width:1280px;margin:0 auto;padding:48px 24px 32px;">
+    <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;">
+      <div style="display:flex;align-items:center;gap:16px;">
+        <img src="Logo Transparency_Shadow.png" alt="Smart Beginnings Academy" style="height:36px;width:auto;" />
+        <p style="font-family:'Open Sans',sans-serif;font-size:0.78rem;color:rgba(255,255,255,0.4);margin:0;">© 2025 Smart Beginnings Academy. All Rights Reserved.</p>
+      </div>
+      <div style="display:flex;gap:20px;">
+        <a href="index.html" style="font-family:'Open Sans',sans-serif;font-size:0.8rem;color:rgba(255,255,255,0.5);text-decoration:none;" onmouseover="this.style.color='#0D9E7E'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">Home</a>
+        <a href="about.html" style="font-family:'Open Sans',sans-serif;font-size:0.8rem;color:rgba(255,255,255,0.5);text-decoration:none;" onmouseover="this.style.color='#0D9E7E'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">Who We Are</a>
+        <a href="contact.html" style="font-family:'Open Sans',sans-serif;font-size:0.8rem;color:rgba(255,255,255,0.5);text-decoration:none;" onmouseover="this.style.color='#0D9E7E'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">Contact</a>
+        <a href="privacy.html" style="font-family:'Open Sans',sans-serif;font-size:0.8rem;color:rgba(255,255,255,0.5);text-decoration:none;" onmouseover="this.style.color='#0D9E7E'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">Privacy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const header = document.getElementById('site-header');
+  window.addEventListener('scroll', () => { header.classList.toggle('scrolled', window.scrollY > 12); }, { passive: true });
+  const hBtn = document.getElementById('hamburger-btn');
+  const mMenu = document.getElementById('mobile-menu');
+  let open = false;
+  function closeMenu() {
+    open = false; hBtn.classList.remove('open'); mMenu.classList.remove('open'); hBtn.setAttribute('aria-expanded', 'false');
+  }
+  hBtn.addEventListener('click', () => { open = !open; hBtn.classList.toggle('open', open); mMenu.classList.toggle('open', open); hBtn.setAttribute('aria-expanded', String(open)); });
+  mMenu.querySelectorAll('a').forEach(link => { link.addEventListener('click', closeMenu); });
+  document.addEventListener('click', e => { if (open && !hBtn.contains(e.target) && !mMenu.contains(e.target)) { closeMenu(); } });
+  const io = new IntersectionObserver(entries => { entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } }); }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
