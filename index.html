@@ -345,22 +345,28 @@
       </div>
 
       <!-- RIGHT: Photo stack — hidden on mobile -->
-      <div id="hero-photo-stack" style="flex-shrink:0;width:400px;height:480px;position:relative;display:none;">
+      <div id="hero-photo-stack" style="flex-shrink:0;width:420px;height:500px;position:relative;display:none;">
 
         <!-- Top-left: baby fireman -->
-        <div style="position:absolute;top:0;left:0;width:185px;height:225px;border-radius:22px;overflow:hidden;box-shadow:0 20px 56px rgba(0,0,0,0.45);border:3px solid rgba(255,255,255,0.25);transform:rotate(-3deg);z-index:2;">
+        <div style="position:absolute;top:0;left:0;width:180px;height:215px;border-radius:22px;overflow:hidden;box-shadow:0 20px 56px rgba(0,0,0,0.45);border:3px solid rgba(255,255,255,0.25);transform:rotate(-3deg);z-index:2;">
           <img src="kid-infant-fireman.jpeg" alt="Baby in firefighter costume at Smart Beginnings Academy" style="width:100%;height:100%;object-fit:cover;object-position:center top;">
           <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(6,61,48,0.35) 0%,transparent 55%);"></div>
         </div>
 
         <!-- Top-right: girl with snake -->
-        <div style="position:absolute;top:10px;right:0;width:185px;height:225px;border-radius:22px;overflow:hidden;box-shadow:0 20px 56px rgba(0,0,0,0.45);border:3px solid rgba(255,255,255,0.25);transform:rotate(3.5deg);z-index:2;">
+        <div style="position:absolute;top:10px;right:0;width:180px;height:215px;border-radius:22px;overflow:hidden;box-shadow:0 20px 56px rgba(0,0,0,0.45);border:3px solid rgba(255,255,255,0.25);transform:rotate(3.5deg);z-index:2;">
           <img src="kid-school-snake.jpeg" alt="Preschooler at Smart Beginnings Academy" style="width:100%;height:100%;object-fit:cover;object-position:center top;">
           <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(6,61,48,0.35) 0%,transparent 55%);"></div>
         </div>
 
-        <!-- Bottom center: laughing baby — large, overlapping both -->
-        <div style="position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:230px;height:290px;border-radius:28px;overflow:hidden;box-shadow:0 32px 80px rgba(0,0,0,0.55);border:4px solid rgba(255,255,255,0.35);z-index:3;">
+        <!-- Bottom-left: family trust photo -->
+        <div style="position:absolute;bottom:10px;left:8px;width:165px;height:200px;border-radius:22px;overflow:hidden;box-shadow:0 20px 56px rgba(0,0,0,0.4);border:3px solid rgba(255,255,255,0.25);transform:rotate(-2deg);z-index:2;">
+          <img src="kid-family-trust.jpeg" alt="Child at Smart Beginnings Academy" style="width:100%;height:100%;object-fit:cover;object-position:center top;">
+          <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(6,61,48,0.35) 0%,transparent 55%);"></div>
+        </div>
+
+        <!-- Bottom center: laughing baby — large, overlapping -->
+        <div style="position:absolute;bottom:0;left:50%;transform:translateX(-30%);width:220px;height:280px;border-radius:28px;overflow:hidden;box-shadow:0 32px 80px rgba(0,0,0,0.55);border:4px solid rgba(255,255,255,0.35);z-index:3;">
           <img src="kid-infant-laugh.jpeg" alt="Happy laughing baby at Smart Beginnings Academy" style="width:100%;height:100%;object-fit:cover;object-position:center top;">
           <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(6,61,48,0.35) 0%,transparent 55%);"></div>
           <div style="position:absolute;bottom:12px;left:12px;right:12px;display:flex;align-items:center;justify-content:center;gap:6px;background:rgba(255,255,255,0.95);backdrop-filter:blur(8px);border-radius:999px;padding:7px 12px;">
@@ -370,9 +376,9 @@
         </div>
 
         <!-- Floating trust badge -->
-        <div style="position:absolute;bottom:80px;right:-16px;background:white;border-radius:16px;padding:10px 14px;box-shadow:0 12px 32px rgba(0,0,0,0.25);z-index:4;display:flex;align-items:center;gap:10px;">
-          <div style="width:40px;height:40px;border-radius:12px;overflow:hidden;flex-shrink:0;border:2px solid #E1F5EE;">
-            <img src="kid-family-trust.jpeg" alt="Happy child at Smart Beginnings" style="width:100%;height:100%;object-fit:cover;object-position:center top;">
+        <div style="position:absolute;top:190px;right:-18px;background:white;border-radius:16px;padding:10px 14px;box-shadow:0 12px 32px rgba(0,0,0,0.25);z-index:4;display:flex;align-items:center;gap:10px;">
+          <div style="width:36px;height:36px;background:#E1F5EE;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 2L3 7v5c0 5.25 3.75 10.15 9 11.35C17.25 22.15 21 17.25 21 12V7L12 2z" fill="#0B6E5A"/></svg>
           </div>
           <div>
             <div style="font-family:'Nunito',sans-serif;font-weight:800;font-size:0.85rem;color:#1A1A1A;line-height:1.1;">Trusted by Families</div>
@@ -403,121 +409,107 @@
         <p style="font-family:'Open Sans',sans-serif;font-size:1.05rem;color:#6B7280;line-height:1.75;max-width:560px;margin:0 auto;">From their very first days to kindergarten readiness, we nurture every child with age-appropriate learning and unconditional care.</p>
       </div>
 
-      <!-- Cards: 2-column desktop — left 3 stacked vertically, right 3 evenly arranged -->
-      <div id="programs-layout" style="display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:40px;">
+      <!-- Cards: 3 top row + 3 bottom row -->
+      <div id="programs-layout" style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-bottom:40px;">
 
-        <!-- LEFT COLUMN: 3 cards stacked vertically -->
-        <div style="display:flex;flex-direction:column;gap:24px;">
+        <!-- ROW 1: Infants, Toddlers, Twos -->
 
-          <!-- Infants -->
-          <a href="programs-infants.html" class="program-card reveal" aria-label="Infants program — 6 weeks to 14 months" style="text-decoration:none;display:flex;flex-direction:row;height:120px;">
-            <div style="width:140px;flex-shrink:0;overflow:hidden;position:relative;border-radius:20px 0 0 20px;">
-              <img src="kid-infant-laugh.jpeg" alt="Happy infant at Smart Beginnings Academy" style="width:100%;height:100%;object-fit:cover;object-position:center top;transition:transform 0.4s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-              <div style="position:absolute;inset:0;background:linear-gradient(to right,transparent 50%,rgba(11,110,90,0.55));"></div>
-            </div>
-            <div style="flex:1;padding:16px 20px;display:flex;flex-direction:column;justify-content:center;border-radius:0 20px 20px 0;position:relative;">
-              <span style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.65rem;text-transform:uppercase;letter-spacing:0.1em;padding:2px 10px;border-radius:999px;background:#E1F5EE;color:#0B6E5A;display:inline-block;width:fit-content;margin-bottom:6px;">6 wks – 14 mo</span>
-              <h3 style="font-family:'Nunito',sans-serif;font-weight:800;font-size:1.05rem;color:#1A1A1A;margin:0 0 4px;">Infants</h3>
-              <p style="font-family:'Open Sans',sans-serif;font-size:0.8rem;color:#6B7280;line-height:1.55;margin:0 0 8px;">Gentle, responsive care in a warm, loving environment.</p>
-              <div style="display:flex;align-items:center;gap:5px;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.8rem;color:#0B6E5A;">Learn More <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-              <div style="position:absolute;left:0;top:16px;bottom:16px;width:4px;background:linear-gradient(180deg,#0B6E5A,#0D9E7E);border-radius:999px;"></div>
-            </div>
-          </a>
+        <!-- Infants -->
+        <a href="programs-infants.html" class="program-card reveal" aria-label="Infants program — 6 weeks to 14 months" style="text-decoration:none;">
+          <div style="height:200px;overflow:hidden;position:relative;border-radius:20px 20px 0 0;">
+            <img src="kid-infant-laugh.jpeg" alt="Happy infant at Smart Beginnings Academy" style="width:100%;height:100%;object-fit:cover;object-position:center top;transition:transform 0.4s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+            <div style="position:absolute;inset:0;background:linear-gradient(to bottom,transparent 40%,rgba(11,110,90,0.75));"></div>
+            <span style="position:absolute;bottom:12px;left:16px;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.72rem;text-transform:uppercase;letter-spacing:0.1em;padding:4px 12px;border-radius:999px;background:rgba(255,255,255,0.9);color:#0B6E5A;">6 wks – 14 mo</span>
+          </div>
+          <div style="padding:20px 24px 20px;">
+            <h3 style="font-family:'Nunito',sans-serif;font-weight:800;font-size:1.2rem;color:#1A1A1A;margin:0 0 8px;">Infants</h3>
+            <p style="font-family:'Open Sans',sans-serif;font-size:0.875rem;color:#6B7280;line-height:1.65;margin:0 0 16px;">Gentle, responsive care that nurtures your baby's first discoveries in a warm, loving environment.</p>
+            <div style="display:flex;align-items:center;gap:6px;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.875rem;color:#0B6E5A;">Learn More <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          </div>
+          <div style="height:4px;background:linear-gradient(90deg,#0B6E5A,#0D9E7E);border-radius:0 0 20px 20px;"></div>
+        </a>
 
-          <!-- Toddlers -->
-          <a href="programs-toddlers.html" class="program-card reveal delay-1" aria-label="Toddlers program — 15 to 23 months" style="text-decoration:none;display:flex;flex-direction:row;height:120px;">
-            <div style="width:140px;flex-shrink:0;overflow:hidden;position:relative;border-radius:20px 0 0 20px;">
-              <img src="kid-toddler-play.jpeg" alt="Toddlers playing at Smart Beginnings Academy" style="width:100%;height:100%;object-fit:cover;object-position:center top;transition:transform 0.4s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-              <div style="position:absolute;inset:0;background:linear-gradient(to right,transparent 50%,rgba(180,90,0,0.45));"></div>
-            </div>
-            <div style="flex:1;padding:16px 20px;display:flex;flex-direction:column;justify-content:center;border-radius:0 20px 20px 0;position:relative;">
-              <span style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.65rem;text-transform:uppercase;letter-spacing:0.1em;padding:2px 10px;border-radius:999px;background:#FEF3D8;color:#D97706;display:inline-block;width:fit-content;margin-bottom:6px;">15 – 23 mo</span>
-              <h3 style="font-family:'Nunito',sans-serif;font-weight:800;font-size:1.05rem;color:#1A1A1A;margin:0 0 4px;">Toddlers</h3>
-              <p style="font-family:'Open Sans',sans-serif;font-size:0.8rem;color:#6B7280;line-height:1.55;margin:0 0 8px;">Playful exploration that sparks curiosity and language growth.</p>
-              <div style="display:flex;align-items:center;gap:5px;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.8rem;color:#0B6E5A;">Learn More <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-              <div style="position:absolute;left:0;top:16px;bottom:16px;width:4px;background:linear-gradient(180deg,#F5A623,#E8950F);border-radius:999px;"></div>
-            </div>
-          </a>
+        <!-- Toddlers -->
+        <a href="programs-toddlers.html" class="program-card reveal delay-1" aria-label="Toddlers program — 15 to 23 months" style="text-decoration:none;">
+          <div style="height:200px;overflow:hidden;position:relative;border-radius:20px 20px 0 0;">
+            <img src="kid-toddler-play.jpeg" alt="Toddlers playing at Smart Beginnings Academy" style="width:100%;height:100%;object-fit:cover;object-position:center top;transition:transform 0.4s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+            <div style="position:absolute;inset:0;background:linear-gradient(to bottom,transparent 40%,rgba(180,90,0,0.65));"></div>
+            <span style="position:absolute;bottom:12px;left:16px;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.72rem;text-transform:uppercase;letter-spacing:0.1em;padding:4px 12px;border-radius:999px;background:rgba(255,255,255,0.9);color:#D97706;">15 – 23 mo</span>
+          </div>
+          <div style="padding:20px 24px 20px;">
+            <h3 style="font-family:'Nunito',sans-serif;font-weight:800;font-size:1.2rem;color:#1A1A1A;margin:0 0 8px;">Toddlers</h3>
+            <p style="font-family:'Open Sans',sans-serif;font-size:0.875rem;color:#6B7280;line-height:1.65;margin:0 0 16px;">Playful exploration that sparks curiosity, language growth, and early social connections.</p>
+            <div style="display:flex;align-items:center;gap:6px;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.875rem;color:#0B6E5A;">Learn More <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          </div>
+          <div style="height:4px;background:linear-gradient(90deg,#F5A623,#E8950F);border-radius:0 0 20px 20px;"></div>
+        </a>
 
-          <!-- Twos -->
-          <a href="programs-twos.html" class="program-card reveal delay-2" aria-label="Twos program — 24 to 35 months" style="text-decoration:none;display:flex;flex-direction:row;height:120px;">
-            <div style="width:140px;flex-shrink:0;overflow:hidden;position:relative;border-radius:20px 0 0 20px;">
-              <img src="kid-twos-halloween.jpeg" alt="Two-year-old at Smart Beginnings Academy" style="width:100%;height:100%;object-fit:cover;object-position:center top;transition:transform 0.4s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-              <div style="position:absolute;inset:0;background:linear-gradient(to right,transparent 50%,rgba(11,110,90,0.45));"></div>
-            </div>
-            <div style="flex:1;padding:16px 20px;display:flex;flex-direction:column;justify-content:center;border-radius:0 20px 20px 0;position:relative;">
-              <span style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.65rem;text-transform:uppercase;letter-spacing:0.1em;padding:2px 10px;border-radius:999px;background:#E1F5EE;color:#0B6E5A;display:inline-block;width:fit-content;margin-bottom:6px;">24 – 35 mo</span>
-              <h3 style="font-family:'Nunito',sans-serif;font-weight:800;font-size:1.05rem;color:#1A1A1A;margin:0 0 4px;">Twos</h3>
-              <p style="font-family:'Open Sans',sans-serif;font-size:0.8rem;color:#6B7280;line-height:1.55;margin:0 0 8px;">Independence blossoms and big personalities begin to shine.</p>
-              <div style="display:flex;align-items:center;gap:5px;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.8rem;color:#0B6E5A;">Learn More <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-              <div style="position:absolute;left:0;top:16px;bottom:16px;width:4px;background:linear-gradient(180deg,#10B981,#0B6E5A);border-radius:999px;"></div>
-            </div>
-          </a>
+        <!-- Twos -->
+        <a href="programs-twos.html" class="program-card reveal delay-2" aria-label="Twos program — 24 to 35 months" style="text-decoration:none;">
+          <div style="height:200px;overflow:hidden;position:relative;border-radius:20px 20px 0 0;">
+            <img src="kid-twos-halloween.jpeg" alt="Two-year-old at Smart Beginnings Academy" style="width:100%;height:100%;object-fit:cover;object-position:center top;transition:transform 0.4s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+            <div style="position:absolute;inset:0;background:linear-gradient(to bottom,transparent 40%,rgba(11,110,90,0.65));"></div>
+            <span style="position:absolute;bottom:12px;left:16px;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.72rem;text-transform:uppercase;letter-spacing:0.1em;padding:4px 12px;border-radius:999px;background:rgba(255,255,255,0.9);color:#0B6E5A;">24 – 35 mo</span>
+          </div>
+          <div style="padding:20px 24px 20px;">
+            <h3 style="font-family:'Nunito',sans-serif;font-weight:800;font-size:1.2rem;color:#1A1A1A;margin:0 0 8px;">Twos</h3>
+            <p style="font-family:'Open Sans',sans-serif;font-size:0.875rem;color:#6B7280;line-height:1.65;margin:0 0 16px;">Language-rich days where independence blossoms and big personalities begin to shine.</p>
+            <div style="display:flex;align-items:center;gap:6px;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.875rem;color:#0B6E5A;">Learn More <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          </div>
+          <div style="height:4px;background:linear-gradient(90deg,#10B981,#0B6E5A);border-radius:0 0 20px 20px;"></div>
+        </a>
 
-        </div>
+        <!-- ROW 2: Pre School, School Age, Summer Camp -->
 
-        <!-- RIGHT COLUMN: 3 cards evenly arranged (top 2 side by side, bottom 1 full width) -->
-        <div style="display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto auto;gap:24px;">
+        <!-- Pre School -->
+        <a href="programs-preschool.html" class="program-card reveal" aria-label="Pre School program — 3 to 5 years" style="text-decoration:none;">
+          <div style="height:200px;overflow:hidden;position:relative;border-radius:20px 20px 0 0;">
+            <img src="kid-school-snake.jpeg" alt="Preschooler at Smart Beginnings Academy" style="width:100%;height:100%;object-fit:cover;object-position:center top;transition:transform 0.4s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+            <div style="position:absolute;inset:0;background:linear-gradient(to bottom,transparent 40%,rgba(59,130,246,0.65));"></div>
+            <span style="position:absolute;bottom:12px;left:16px;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.72rem;text-transform:uppercase;letter-spacing:0.1em;padding:4px 12px;border-radius:999px;background:rgba(255,255,255,0.9);color:#3B82F6;">3 – 5 yrs</span>
+          </div>
+          <div style="padding:20px 24px 20px;">
+            <h3 style="font-family:'Nunito',sans-serif;font-weight:800;font-size:1.2rem;color:#1A1A1A;margin:0 0 8px;">Pre School</h3>
+            <p style="font-family:'Open Sans',sans-serif;font-size:0.875rem;color:#6B7280;line-height:1.65;margin:0 0 16px;">Creative play, early literacy, and friendships that lay the foundation for lifelong learning.</p>
+            <div style="display:flex;align-items:center;gap:6px;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.875rem;color:#0B6E5A;">Learn More <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          </div>
+          <div style="height:4px;background:linear-gradient(90deg,#3B82F6,#2563EB);border-radius:0 0 20px 20px;"></div>
+        </a>
 
-          <!-- Pre School -->
-          <a href="programs-preschool.html" class="program-card reveal" aria-label="Pre School program — 3 to 5 years" style="text-decoration:none;">
-            <div style="height:160px;overflow:hidden;position:relative;border-radius:20px 20px 0 0;">
-              <img src="kid-school-snake.jpeg" alt="Preschooler at Smart Beginnings Academy" style="width:100%;height:100%;object-fit:cover;object-position:center top;transition:transform 0.4s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-              <div style="position:absolute;inset:0;background:linear-gradient(to bottom,transparent 40%,rgba(59,130,246,0.65));"></div>
-              <span style="position:absolute;bottom:10px;left:12px;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.65rem;text-transform:uppercase;letter-spacing:0.1em;padding:3px 10px;border-radius:999px;background:rgba(255,255,255,0.9);color:#3B82F6;">3 – 5 yrs</span>
-            </div>
-            <div style="padding:16px 18px;">
-              <h3 style="font-family:'Nunito',sans-serif;font-weight:800;font-size:1rem;color:#1A1A1A;margin:0 0 6px;">Pre School</h3>
-              <p style="font-family:'Open Sans',sans-serif;font-size:0.8rem;color:#6B7280;line-height:1.6;margin:0 0 12px;">Early literacy and friendships that lay the foundation for lifelong learning.</p>
-              <div style="display:flex;align-items:center;gap:5px;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.8rem;color:#0B6E5A;">Learn More <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            </div>
-            <div style="height:4px;background:linear-gradient(90deg,#3B82F6,#2563EB);border-radius:0 0 20px 20px;"></div>
-          </a>
+        <!-- School Age -->
+        <a href="programs-school-age.html" class="program-card reveal delay-1" aria-label="School Age program — Kindergarten to 12th grade" style="text-decoration:none;">
+          <div style="height:200px;overflow:hidden;position:relative;border-radius:20px 20px 0 0;">
+            <img src="kid-school-library.jpeg" alt="School age child at Smart Beginnings Academy" style="width:100%;height:100%;object-fit:cover;object-position:center top;transition:transform 0.4s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+            <div style="position:absolute;inset:0;background:linear-gradient(to bottom,transparent 40%,rgba(15,52,96,0.7));"></div>
+            <span style="position:absolute;bottom:12px;left:16px;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.72rem;text-transform:uppercase;letter-spacing:0.1em;padding:4px 12px;border-radius:999px;background:rgba(255,255,255,0.9);color:#1e40af;">K – 12</span>
+          </div>
+          <div style="padding:20px 24px 20px;">
+            <h3 style="font-family:'Nunito',sans-serif;font-weight:800;font-size:1.2rem;color:#1A1A1A;margin:0 0 8px;">School Age</h3>
+            <p style="font-family:'Open Sans',sans-serif;font-size:0.875rem;color:#6B7280;line-height:1.65;margin:0 0 16px;">Before & after school care, homework help, and enrichment for K–12 students.</p>
+            <div style="display:flex;align-items:center;gap:6px;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.875rem;color:#0B6E5A;">Learn More <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          </div>
+          <div style="height:4px;background:linear-gradient(90deg,#1e40af,#0F3460);border-radius:0 0 20px 20px;"></div>
+        </a>
 
-          <!-- School Age -->
-          <a href="programs-school-age.html" class="program-card reveal delay-1" aria-label="School Age program — Kindergarten to 12th grade" style="text-decoration:none;">
-            <div style="height:160px;overflow:hidden;position:relative;border-radius:20px 20px 0 0;">
-              <img src="kid-school-library.jpeg" alt="School age child at Smart Beginnings Academy" style="width:100%;height:100%;object-fit:cover;object-position:center top;transition:transform 0.4s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-              <div style="position:absolute;inset:0;background:linear-gradient(to bottom,transparent 40%,rgba(15,52,96,0.7));"></div>
-              <span style="position:absolute;bottom:10px;left:12px;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.65rem;text-transform:uppercase;letter-spacing:0.1em;padding:3px 10px;border-radius:999px;background:rgba(255,255,255,0.9);color:#1e40af;">K – 12</span>
-            </div>
-            <div style="padding:16px 18px;">
-              <h3 style="font-family:'Nunito',sans-serif;font-weight:800;font-size:1rem;color:#1A1A1A;margin:0 0 6px;">School Age</h3>
-              <p style="font-family:'Open Sans',sans-serif;font-size:0.8rem;color:#6B7280;line-height:1.6;margin:0 0 12px;">Before & after school care and enrichment for K–12 students.</p>
-              <div style="display:flex;align-items:center;gap:5px;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.8rem;color:#0B6E5A;">Learn More <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            </div>
-            <div style="height:4px;background:linear-gradient(90deg,#1e40af,#0F3460);border-radius:0 0 20px 20px;"></div>
-          </a>
-
-          <!-- Summer Camp — spans full width of right column -->
-          <a href="programs-summer-camp.html" class="program-card reveal delay-2" aria-label="Summer Camp program" style="text-decoration:none;grid-column:1/-1;display:flex;flex-direction:row;">
-            <div style="width:200px;flex-shrink:0;overflow:hidden;position:relative;border-radius:20px 0 0 20px;">
-              <img src="kid-summer-foam.jpeg" alt="Kids at Summer Camp at Smart Beginnings Academy" style="width:100%;height:100%;object-fit:cover;object-position:center top;transition:transform 0.4s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-              <div style="position:absolute;inset:0;background:linear-gradient(to right,transparent 50%,rgba(146,64,14,0.5));"></div>
-            </div>
-            <div style="flex:1;padding:20px 24px;display:flex;flex-direction:column;justify-content:center;border-radius:0 20px 20px 0;position:relative;">
-              <span style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.65rem;text-transform:uppercase;letter-spacing:0.1em;padding:2px 10px;border-radius:999px;background:#FEF3D8;color:#D97706;display:inline-block;width:fit-content;margin-bottom:8px;">June – August</span>
-              <h3 style="font-family:'Nunito',sans-serif;font-weight:800;font-size:1.15rem;color:#1A1A1A;margin:0 0 6px;">Summer Camp</h3>
-              <p style="font-family:'Open Sans',sans-serif;font-size:0.85rem;color:#6B7280;line-height:1.6;margin:0 0 12px;">Weekly themes, outdoor adventures, and memories that last a lifetime all summer long.</p>
-              <div style="display:flex;align-items:center;gap:5px;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.85rem;color:#0B6E5A;">Learn More <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-              <div style="position:absolute;left:0;top:20px;bottom:20px;width:4px;background:linear-gradient(180deg,#F59E0B,#D97706);border-radius:999px;"></div>
-            </div>
-          </a>
-
-        </div>
+        <!-- Summer Camp -->
+        <a href="programs-summer-camp.html" class="program-card reveal delay-2" aria-label="Summer Camp program" style="text-decoration:none;">
+          <div style="height:200px;overflow:hidden;position:relative;border-radius:20px 20px 0 0;">
+            <img src="kid-summer-foam.jpeg" alt="Kids at Summer Camp at Smart Beginnings Academy" style="width:100%;height:100%;object-fit:cover;object-position:center top;transition:transform 0.4s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+            <div style="position:absolute;inset:0;background:linear-gradient(to bottom,transparent 40%,rgba(146,64,14,0.7));"></div>
+            <span style="position:absolute;bottom:12px;left:16px;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.72rem;text-transform:uppercase;letter-spacing:0.1em;padding:4px 12px;border-radius:999px;background:rgba(255,255,255,0.9);color:#D97706;">June – August</span>
+          </div>
+          <div style="padding:20px 24px 20px;">
+            <h3 style="font-family:'Nunito',sans-serif;font-weight:800;font-size:1.2rem;color:#1A1A1A;margin:0 0 8px;">Summer Camp</h3>
+            <p style="font-family:'Open Sans',sans-serif;font-size:0.875rem;color:#6B7280;line-height:1.65;margin:0 0 16px;">Weekly themes, outdoor adventures, and memories that last a lifetime all summer long.</p>
+            <div style="display:flex;align-items:center;gap:6px;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.875rem;color:#0B6E5A;">Learn More <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          </div>
+          <div style="height:4px;background:linear-gradient(90deg,#F59E0B,#D97706);border-radius:0 0 20px 20px;"></div>
+        </a>
 
       </div>
       <style>
-        @media (max-width: 768px) {
-          #programs-layout { grid-template-columns: 1fr !important; }
-          #programs-layout > div:last-child { grid-template-columns: 1fr !important; }
-          #programs-layout a[style*="flex-direction:row"] { flex-direction: column !important; height: auto !important; }
-          #programs-layout a[style*="flex-direction:row"] > div:first-child { width: 100% !important; height: 160px; border-radius: 20px 20px 0 0 !important; }
-          #programs-layout a[style*="flex-direction:row"] > div:last-child { border-radius: 0 0 20px 20px !important; }
-          #programs-layout a[style*="grid-column"] { flex-direction: column !important; }
-          #programs-layout a[style*="grid-column"] > div:first-child { width: 100% !important; height: 160px; border-radius: 20px 20px 0 0 !important; }
-          #programs-layout a[style*="grid-column"] > div:last-child { border-radius: 0 0 20px 20px !important; }
-        }
+        @media (max-width: 900px) { #programs-layout { grid-template-columns: repeat(2,1fr) !important; } }
+        @media (max-width: 580px) { #programs-layout { grid-template-columns: 1fr !important; } }
       </style>
 
       <div style="text-align:center;" class="reveal">
