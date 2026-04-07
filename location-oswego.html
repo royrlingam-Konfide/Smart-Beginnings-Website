@@ -345,11 +345,11 @@
 </footer>
 <script>
   const hdr=document.getElementById('site-header');
-  window.addEventListener('scroll',()=>{{hdr.classList.toggle('scrolled',window.scrollY>10);}},{{passive:true}});
+  window.addEventListener('scroll',()=>{hdr.classList.toggle('scrolled',window.scrollY>10);},{passive:true});
   const hBtn=document.getElementById('hamburger-btn');
   const mMenu=document.getElementById('mobile-menu');
-  hBtn.addEventListener('click',()=>{{const o=mMenu.classList.toggle('open');hBtn.classList.toggle('open',o);hBtn.setAttribute('aria-expanded',o);}});
-  const obs=new IntersectionObserver(entries=>{{entries.forEach(e=>{{if(e.isIntersecting){{e.target.classList.add('visible');obs.unobserve(e.target);}}}});}},{{threshold:0.1}});
+  hBtn.addEventListener('click',()=>{const o=mMenu.classList.toggle('open');hBtn.classList.toggle('open',o);hBtn.setAttribute('aria-expanded',o);});
+  const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});},{threshold:0.1});
   document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
 </script>
 </body>
