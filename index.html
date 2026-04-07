@@ -281,62 +281,106 @@
       <div style="position:absolute;top:18%;right:12%;width:120px;height:120px;border-radius:50%;border:1px solid rgba(255,255,255,0.05);"></div>
     </div>
 
-    <!-- Hero Content -->
-    <div style="position:relative;z-index:10;max-width:900px;margin:0 auto;padding:160px 24px 80px;text-align:center;width:100%;">
+    <!-- Hero Content — two-column on desktop -->
+    <div style="position:relative;z-index:10;max-width:1280px;margin:0 auto;padding:140px 24px 80px;width:100%;display:flex;align-items:center;gap:64px;justify-content:space-between;">
 
-      <!-- Trust pill -->
-      <div class="hero-in hero-in-1" style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.14);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.22);border-radius:999px;padding:8px 20px;margin-bottom:28px;">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="#F5A623" aria-hidden="true"><path d="M12 2L3 7v5c0 5.25 3.75 10.15 9 11.35C17.25 22.15 21 17.25 21 12V7L12 2z"/></svg>
-        <span style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.85rem;color:white;">Physician-Founded Preschool</span>
+      <!-- LEFT: Text -->
+      <div style="flex:1;min-width:0;">
+
+        <!-- Trust pill -->
+        <div class="hero-in hero-in-1" style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.14);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.22);border-radius:999px;padding:8px 20px;margin-bottom:28px;">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="#F5A623" aria-hidden="true"><path d="M12 2L3 7v5c0 5.25 3.75 10.15 9 11.35C17.25 22.15 21 17.25 21 12V7L12 2z"/></svg>
+          <span style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.85rem;color:white;">Physician-Founded Preschool</span>
+        </div>
+
+        <!-- Headline -->
+        <h1 class="hero-in hero-in-2" style="font-family:'Nunito',sans-serif;font-weight:900;color:white;line-height:1.05;letter-spacing:-0.035em;margin:0 0 20px;font-size:clamp(2rem,4vw,3.6rem);text-shadow:0 4px 24px rgba(0,0,0,0.2);">
+          Where Early Education<br />Meets Academic Excellence
+        </h1>
+
+        <!-- Subheadline -->
+        <p class="hero-in hero-in-3" style="font-family:'Open Sans',sans-serif;font-size:clamp(0.95rem,2vw,1.1rem);color:rgba(255,255,255,0.9);line-height:1.75;margin:0 0 36px;max-width:520px;">
+          Physician-founded early childhood education in the greater Chicago area. Enrolling now for Infants through Pre-K at our Oswego, Ogden, and Kirk &amp; Butterfield locations.
+        </p>
+
+        <!-- CTAs -->
+        <div class="hero-in hero-in-4" style="display:flex;flex-wrap:wrap;gap:16px;margin-bottom:48px;">
+          <a href="schedule-tour.html" class="btn-amber" style="padding:16px 36px;font-size:1.05rem;box-shadow:0 8px 32px rgba(245,166,35,0.45);">
+            Schedule a Tour
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="parent-stories.html" class="btn-outline-white" style="padding:16px 36px;font-size:1.05rem;">
+            Read Parent Stories
+          </a>
+        </div>
+
+        <!-- Trust Badges -->
+        <div class="hero-in hero-in-4" style="display:flex;flex-wrap:wrap;gap:16px 32px;">
+          <div style="display:flex;align-items:center;gap:10px;">
+            <div style="width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,0.18);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="#F5A623" aria-hidden="true"><path d="M12 2L3 7v5c0 5.25 3.75 10.15 9 11.35C17.25 22.15 21 17.25 21 12V7L12 2z"/></svg>
+            </div>
+            <span style="font-family:'Nunito',sans-serif;font-weight:600;font-size:0.875rem;color:rgba(255,255,255,0.93);">Physician-Founded</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;">
+            <div style="width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,0.18);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <span style="font-family:'Nunito',sans-serif;font-weight:600;font-size:0.875rem;color:rgba(255,255,255,0.93);">Licensed &amp; Accredited</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;">
+            <div style="width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,0.18);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="#F5A623" aria-hidden="true"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+            </div>
+            <span style="font-family:'Nunito',sans-serif;font-weight:600;font-size:0.875rem;color:rgba(255,255,255,0.93);">Loving Teachers</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;">
+            <div style="width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,0.18);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <span style="font-family:'Nunito',sans-serif;font-weight:600;font-size:0.875rem;color:rgba(255,255,255,0.93);">Safe Environment</span>
+          </div>
+        </div>
+
       </div>
 
-      <!-- Headline -->
-      <h1 class="hero-in hero-in-2" style="font-family:'Nunito',sans-serif;font-weight:900;color:white;line-height:1.05;letter-spacing:-0.035em;margin:0 0 20px;font-size:clamp(2rem,5vw,3.8rem);text-shadow:0 4px 24px rgba(0,0,0,0.2);">
-        Where Early Education<br />Meets Academic Excellence
-      </h1>
+      <!-- RIGHT: Photo stack — hidden on mobile -->
+      <div id="hero-photo-stack" style="flex-shrink:0;width:380px;height:460px;position:relative;display:none;">
 
-      <!-- Subheadline -->
-      <p class="hero-in hero-in-3" style="font-family:'Open Sans',sans-serif;font-size:clamp(1rem,2.5vw,1.2rem);color:rgba(255,255,255,0.9);line-height:1.75;margin:0 auto 36px;max-width:620px;">
-        Physician-founded early childhood education in the greater Chicago area. Enrolling now for Infants through Pre-K at our Oswego, Ogden, and Kirk &amp; Butterfield locations.
-      </p>
+        <!-- Back card — baby fireman, tilted left -->
+        <div style="position:absolute;top:0;right:0;width:220px;height:280px;border-radius:24px;overflow:hidden;box-shadow:0 32px 80px rgba(0,0,0,0.45);border:3px solid rgba(255,255,255,0.18);transform:rotate(-5deg) translateX(10px);z-index:1;">
+          <img src="kid-infant-fireman.jpeg" alt="Baby in firefighter costume at Smart Beginnings Academy" style="width:100%;height:100%;object-fit:cover;object-position:center top;">
+          <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(6,61,48,0.4) 0%,transparent 60%);"></div>
+        </div>
 
-      <!-- CTAs -->
-      <div class="hero-in hero-in-4" style="display:flex;flex-wrap:wrap;gap:16px;justify-content:center;margin-bottom:52px;">
-        <a href="schedule-tour.html" class="btn-amber" style="padding:16px 36px;font-size:1.05rem;box-shadow:0 8px 32px rgba(245,166,35,0.45);">
-          Schedule a Tour
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </a>
-        <a href="parent-stories.html" class="btn-outline-white" style="padding:16px 36px;font-size:1.05rem;">
-          Read Parent Stories
-        </a>
-      </div>
+        <!-- Main card — laughing baby, center -->
+        <div style="position:absolute;bottom:0;left:0;width:250px;height:310px;border-radius:28px;overflow:hidden;box-shadow:0 40px 100px rgba(0,0,0,0.55);border:4px solid rgba(255,255,255,0.28);z-index:3;">
+          <img src="kid-infant-laugh.jpeg" alt="Happy laughing baby at Smart Beginnings Academy" style="width:100%;height:100%;object-fit:cover;object-position:center top;">
+          <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(6,61,48,0.35) 0%,transparent 55%);"></div>
+          <!-- Emotion label -->
+          <div style="position:absolute;bottom:14px;left:14px;display:flex;align-items:center;gap:8px;background:rgba(255,255,255,0.95);backdrop-filter:blur(8px);border-radius:999px;padding:7px 14px;">
+            <span style="font-size:1rem;">❤️</span>
+            <span style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.78rem;color:#0B6E5A;">Pure Joy, Every Day</span>
+          </div>
+        </div>
 
-      <!-- Trust Badges -->
-      <div class="hero-in hero-in-4" style="display:flex;flex-wrap:wrap;justify-content:center;gap:20px 36px;">
-        <div style="display:flex;align-items:center;gap:10px;">
-          <div style="width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,0.18);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="#F5A623" aria-hidden="true"><path d="M12 2L3 7v5c0 5.25 3.75 10.15 9 11.35C17.25 22.15 21 17.25 21 12V7L12 2z"/></svg>
-          </div>
-          <span style="font-family:'Nunito',sans-serif;font-weight:600;font-size:0.875rem;color:rgba(255,255,255,0.93);">Physician-Founded</span>
+        <!-- Top card — girl with snake, top-right -->
+        <div style="position:absolute;top:20px;right:10px;width:170px;height:200px;border-radius:20px;overflow:hidden;box-shadow:0 20px 56px rgba(0,0,0,0.4);border:3px solid rgba(255,255,255,0.22);transform:rotate(4deg);z-index:2;">
+          <img src="kid-school-snake.jpeg" alt="Preschooler learning at Smart Beginnings Academy" style="width:100%;height:100%;object-fit:cover;object-position:center top;">
+          <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(6,61,48,0.4) 0%,transparent 55%);"></div>
         </div>
-        <div style="display:flex;align-items:center;gap:10px;">
-          <div style="width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,0.18);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+
+        <!-- Floating trust badge -->
+        <div style="position:absolute;bottom:80px;right:-16px;background:white;border-radius:16px;padding:12px 16px;box-shadow:0 12px 32px rgba(0,0,0,0.25);z-index:4;display:flex;align-items:center;gap:10px;">
+          <div style="width:36px;height:36px;background:#E1F5EE;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 2L3 7v5c0 5.25 3.75 10.15 9 11.35C17.25 22.15 21 17.25 21 12V7L12 2z" fill="#0B6E5A"/></svg>
           </div>
-          <span style="font-family:'Nunito',sans-serif;font-weight:600;font-size:0.875rem;color:rgba(255,255,255,0.93);">Licensed &amp; Accredited</span>
-        </div>
-        <div style="display:flex;align-items:center;gap:10px;">
-          <div style="width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,0.18);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="#F5A623" aria-hidden="true"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+          <div>
+            <div style="font-family:'Nunito',sans-serif;font-weight:800;font-size:0.85rem;color:#1A1A1A;line-height:1.1;">Trusted by Families</div>
+            <div style="font-family:'Open Sans',sans-serif;font-size:0.72rem;color:#6B7280;margin-top:1px;">Since 2018</div>
           </div>
-          <span style="font-family:'Nunito',sans-serif;font-weight:600;font-size:0.875rem;color:rgba(255,255,255,0.93);">Loving Teachers</span>
         </div>
-        <div style="display:flex;align-items:center;gap:10px;">
-          <div style="width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,0.18);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </div>
-          <span style="font-family:'Nunito',sans-serif;font-weight:600;font-size:0.875rem;color:rgba(255,255,255,0.93);">Safe Environment</span>
-        </div>
+
       </div>
 
     </div>
@@ -1118,6 +1162,14 @@
   }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
 
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // Hero photo stack — show on desktop only
+  (function(){
+    var stack = document.getElementById('hero-photo-stack');
+    function toggleStack(){ if(stack){ stack.style.display = window.innerWidth >= 1024 ? 'block' : 'none'; } }
+    toggleStack();
+    window.addEventListener('resize', toggleStack);
+  })();
 
   // Gallery grid responsive
   function setGalleryGrids() {
