@@ -240,6 +240,9 @@
   document.addEventListener('click',e=>{if(o&&!hb.contains(e.target)&&!mm.contains(e.target)){o=false;hb.classList.remove('open');mm.classList.remove('open');hb.setAttribute('aria-expanded','false')}});
   const io=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}})},{threshold:0.08,rootMargin:'0px 0px -40px 0px'});
   document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  // Show hero photo on wider screens
+  (function(){var p=document.getElementById('hero-photo');if(p&&window.innerWidth>=900){p.style.display='block';}window.addEventListener('resize',function(){if(p){p.style.display=window.innerWidth>=900?'block':'none';}});})();
 </script>
 </body>
 </html>

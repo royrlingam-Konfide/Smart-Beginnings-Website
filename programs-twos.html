@@ -174,6 +174,10 @@
         </div>
       </div>
     </div>
+    
+      <div style="position:absolute;right:32px;bottom:32px;width:220px;height:260px;border-radius:24px;overflow:hidden;box-shadow:0 24px 64px rgba(0,0,0,0.35);border:4px solid rgba(255,255,255,0.25);display:none;" id="hero-photo">
+        <img src="kid-twos-halloween.jpeg" alt="Two-year-old at Smart Beginnings Academy" style="width:100%;height:100%;object-fit:cover;object-position:center top;">
+      </div>
     <div style="position:absolute;bottom:-1px;left:0;right:0;overflow:hidden;line-height:0;">
       <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="width:100%;height:60px;display:block;"><path d="M0,40 C360,80 1080,0 1440,40 L1440,60 L0,60 Z" fill="#F7F7F7"/></svg>
     </div>
@@ -355,6 +359,9 @@
   if(window.innerWidth>=1024){fg.style.gridTemplateColumns='2fr 1fr 1fr 1fr';}
   else if(window.innerWidth>=768){fg.style.gridTemplateColumns='1fr 1fr';}
   window.addEventListener('resize',()=>{if(window.innerWidth>=1024){fg.style.gridTemplateColumns='2fr 1fr 1fr 1fr';}else if(window.innerWidth>=768){fg.style.gridTemplateColumns='1fr 1fr';}else{fg.style.gridTemplateColumns='1fr';}});
+
+  // Show hero photo on wider screens
+  (function(){var p=document.getElementById('hero-photo');if(p&&window.innerWidth>=900){p.style.display='block';}window.addEventListener('resize',function(){if(p){p.style.display=window.innerWidth>=900?'block':'none';}});})();
 </script>
 </body>
 </html>
