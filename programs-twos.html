@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Twos Program (24–35 mo) | Smart Beginnings Academy</title>
+  <meta name="description" content="Our Twos program helps 2-year-olds build language, independence, and social skills in a nurturing, structured environment. Physician-founded, loving caregivers." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    *,*::before,*::after{box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:'Open Sans',sans-serif;color:#2D2D2D;-webkit-font-smoothing:antialiased;margin:0}h1,h2,h3,h4{font-family:'Nunito',sans-serif}
+    #site-header{position:fixed;top:0;left:0;right:0;z-index:50;background:white;transition:box-shadow 0.3s}#site-header.scrolled{box-shadow:0 2px 24px rgba(0,0,0,0.09)}
+    .mobile-menu{max-height:0;overflow:hidden;transition:max-height 0.4s cubic-bezier(0.4,0,0.2,1)}.mobile-menu.open{max-height:900px}
+    .hamburger-line{display:block;width:22px;height:2px;background:#2D2D2D;border-radius:2px;transition:transform 0.3s,opacity 0.3s}
+    .hamburger.open .line-1{transform:translateY(8px) rotate(45deg)}.hamburger.open .line-2{opacity:0}.hamburger.open .line-3{transform:translateY(-8px) rotate(-45deg)}
+    .nav-link{position:relative;font-family:'Nunito',sans-serif;font-weight:600;font-size:0.92rem;color:#2D2D2D;text-decoration:none;transition:color 0.2s}
+    .nav-link::after{content:'';position:absolute;bottom:-3px;left:0;width:0;height:2px;background:#0B6E5A;border-radius:2px;transition:width 0.25s}
+    .nav-link:hover{color:#0B6E5A}.nav-link:hover::after{width:100%}
+    .btn-amber{display:inline-flex;align-items:center;gap:8px;background:#F5A623;color:white;font-family:'Nunito',sans-serif;font-weight:700;border-radius:999px;text-decoration:none;border:none;transition:background 0.2s,transform 0.2s,box-shadow 0.2s;cursor:pointer}
+    .btn-amber:hover{background:#E8950F;transform:translateY(-1px);box-shadow:0 6px 24px rgba(245,166,35,0.4)}
+    .reveal{opacity:0;transform:translateY(24px);transition:opacity 0.7s ease,transform 0.7s ease}.reveal.visible{opacity:1;transform:translateY(0)}
+    .delay-1{transition-delay:0.12s}.delay-2{transition-delay:0.24s}
+    *:focus-visible{outline:2px solid #F5A623;outline-offset:3px;border-radius:4px}
+    .check-li{display:flex;align-items:flex-start;gap:12px;font-family:'Open Sans',sans-serif;font-size:0.93rem;color:#4B5563;line-height:1.65}
+    .nav-dropdown{opacity:0;visibility:hidden;transform:translateY(-8px);transition:opacity 0.2s,transform 0.2s,visibility 0.2s}
+    .nav-item:hover .nav-dropdown,.nav-item:focus-within .nav-dropdown{opacity:1;visibility:visible;transform:translateY(0)}
+    @media (max-width: 767px) {
+      #site-header nav { padding: 0 20px !important; }
+      .site-logo { height: 52px !important; }
+      #site-header nav > div { height: 72px !important; }
+    }
+    @media (min-width: 768px) { .nav-cta { padding: 11px 24px !important; font-size: 0.9rem !important; } }
+    .desktop-nav { display: none !important; }
+    @media (min-width: 768px) { .desktop-nav { display: flex !important; } }
+    .hamburger { display: flex !important; }
+    @media (min-width: 768px) { .hamburger { display: none !important; } }
+  </style>
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+</head>
+<body>
+<a href="#main-content" style="position:absolute;left:-9999px;top:4px;z-index:9999;background:#F5A623;color:white;padding:8px 20px;border-radius:999px;font-family:'Nunito',sans-serif;font-weight:700;text-decoration:none;" onfocus="this.style.left='16px'" onblur="this.style.left='-9999px'">Skip to main content</a>
+<header id="site-header">
+  <nav style="max-width:1280px;margin:0 auto;padding:0 24px;">
+    <div style="display:flex;align-items:center;justify-content:space-between;height:76px;">
+      <a href="index.html" style="flex-shrink:0;"><img src="Logo Transparency_Shadow.png" class="site-logo" alt="Smart Beginnings Academy" style="height:54px;width:auto;" /></a>
+      <div class="desktop-nav" style="align-items:center;gap:32px;">
+        <div class="nav-item" style="position:relative;"><a href="programs.html" class="nav-link" style="color:#0B6E5A;">Programs</a>
+          <div class="nav-dropdown" style="position:absolute;top:calc(100% + 12px);left:0;width:230px;background:white;border-radius:16px;box-shadow:0 12px 40px rgba(0,0,0,0.12);border:1px solid #f0f0f0;padding:8px;z-index:100;">
+            <a href="programs-infants.html" style="display:block;padding:10px 14px;border-radius:10px;font-size:0.875rem;color:#2D2D2D;text-decoration:none;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='';this.style.color='#2D2D2D'">Infants (6 wks – 14 mo)</a>
+            <a href="programs-toddlers.html" style="display:block;padding:10px 14px;border-radius:10px;font-size:0.875rem;color:#2D2D2D;text-decoration:none;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='';this.style.color='#2D2D2D'">Toddlers (15 – 23 mo)</a>
+            <a href="programs-twos.html" style="display:block;padding:10px 14px;border-radius:10px;font-size:0.875rem;background:#E1F5EE;color:#0B6E5A;text-decoration:none;font-weight:700;">Twos (24 – 35 mo)</a>
+            <a href="programs-preschool.html" style="display:block;padding:10px 14px;border-radius:10px;font-size:0.875rem;color:#2D2D2D;text-decoration:none;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='';this.style.color='#2D2D2D'">Pre School (3 – 5 yrs)</a>
+            <a href="programs-school-age.html" style="display:block;padding:10px 14px;border-radius:10px;font-size:0.875rem;color:#2D2D2D;text-decoration:none;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='';this.style.color='#2D2D2D'">School Age (K – 12)</a>
+            <a href="programs-summer-camp.html" style="display:block;padding:10px 14px;border-radius:10px;font-size:0.875rem;color:#2D2D2D;text-decoration:none;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='';this.style.color='#2D2D2D'">Summer Camp</a>
+          </div>
+        </div>
+        <div class="nav-item" style="position:relative;">
+          <span class="nav-link" style="cursor:default;display:inline-flex;align-items:center;gap:5px;">Our Story <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <div class="nav-dropdown" style="position:absolute;top:calc(100% + 12px);left:0;width:200px;background:white;border-radius:16px;box-shadow:0 12px 40px rgba(0,0,0,0.12);border:1px solid #f0f0f0;padding:8px;z-index:100;">
+            <a href="about.html" style="display:block;padding:10px 14px;border-radius:10px;font-size:0.875rem;color:#2D2D2D;text-decoration:none;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='transparent';this.style.color='#2D2D2D'">Who We Are</a>
+            <a href="leadership.html" style="display:block;padding:10px 14px;border-radius:10px;font-size:0.875rem;color:#2D2D2D;text-decoration:none;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='transparent';this.style.color='#2D2D2D'">Our Leadership &amp; Team</a>
+            <a href="learning-approach.html" style="display:block;padding:10px 14px;border-radius:10px;font-size:0.875rem;color:#2D2D2D;text-decoration:none;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='transparent';this.style.color='#2D2D2D'">Our Learning Approach</a>
+          </div>
+        </div>
+        <a href="health-safety.html" class="nav-link">Health &amp; Safety</a>
+        <div class="nav-item" style="position:relative;">
+          <span class="nav-link" style="cursor:default;display:inline-flex;align-items:center;gap:5px;">Locations <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <div class="nav-dropdown" style="position:absolute;top:calc(100% + 12px);left:0;width:260px;background:white;border-radius:16px;box-shadow:0 12px 40px rgba(0,0,0,0.12);border:1px solid #f0f0f0;padding:8px;z-index:100;">
+            <a href="location-oswego.html" style="display:block;padding:12px 14px;border-radius:10px;text-decoration:none;margin-bottom:2px;" onmouseover="this.style.background='#E1F5EE'" onmouseout="this.style.background='transparent'">
+              <span style="display:block;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.88rem;color:#0B6E5A;margin-bottom:4px;">Oswego</span>
+              <span style="display:block;font-family:'Open Sans',sans-serif;font-size:0.75rem;color:#4B5563;line-height:1.4;">750 5th Street, Oswego IL 60543</span>
+            </a>
+            <div style="height:1px;background:#f0f0f0;margin:2px 0;"></div>
+            <a href="location-ogden.html" style="display:block;padding:12px 14px;border-radius:10px;text-decoration:none;margin-bottom:2px;" onmouseover="this.style.background='#E1F5EE'" onmouseout="this.style.background='transparent'">
+              <span style="display:block;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.88rem;color:#0B6E5A;margin-bottom:4px;">Ogden &amp; IL 59</span>
+              <span style="display:block;font-family:'Open Sans',sans-serif;font-size:0.75rem;color:#4B5563;line-height:1.4;">4105 Healthway Drive, Aurora IL</span>
+            </a>
+            <div style="height:1px;background:#f0f0f0;margin:2px 0;"></div>
+            <a href="location-kirk.html" style="display:block;padding:12px 14px;border-radius:10px;text-decoration:none;" onmouseover="this.style.background='#E1F5EE'" onmouseout="this.style.background='transparent'">
+              <span style="display:block;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.88rem;color:#0B6E5A;margin-bottom:4px;">Kirk &amp; Butterfield</span>
+              <span style="display:block;font-family:'Open Sans',sans-serif;font-size:0.75rem;color:#4B5563;line-height:1.4;">1555 Mesa Lane, Aurora IL 60502</span>
+            </a>
+          </div>
+        </div>
+        <a href="parent-stories.html" class="nav-link">Parent Stories</a>
+        <a href="blog.html" class="nav-link">Resources</a>
+      </div>
+      <div style="display:flex;align-items:center;gap:16px;">
+        <a href="schedule-tour.html" class="btn-amber nav-cta" style="padding:9px 16px;font-size:0.8rem;">Schedule a Tour</a>
+        <button id="hamburger-btn" class="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu" style="flex-direction:column;gap:6px;padding:8px;background:none;border:none;cursor:pointer;">
+          <span class="hamburger-line line-1"></span><span class="hamburger-line line-2"></span><span class="hamburger-line line-3"></span>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="mobile-menu" style="background:white;border-top:1px solid #f0f0f0;">
+      <div style="max-width:1280px;margin:0 auto;padding:20px 24px 28px;display:flex;flex-direction:column;gap:2px;">
+        <a href="programs.html" style="display:flex;align-items:center;justify-content:space-between;padding:13px 16px;border-radius:12px;font-family:'Nunito',sans-serif;font-weight:700;font-size:1rem;color:#2D2D2D;text-decoration:none;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='transparent';this.style.color='#2D2D2D'">Programs <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <div style="margin:0 0 4px 16px;display:flex;flex-direction:column;gap:1px;border-left:2px solid #E1F5EE;padding-left:14px;">
+          <a href="programs-infants.html" style="display:block;padding:9px 12px;border-radius:8px;font-family:'Open Sans',sans-serif;font-size:0.875rem;color:#4B5563;text-decoration:none;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='transparent';this.style.color='#4B5563'">Infants (6 wks – 14 mo)</a>
+          <a href="programs-toddlers.html" style="display:block;padding:9px 12px;border-radius:8px;font-family:'Open Sans',sans-serif;font-size:0.875rem;color:#4B5563;text-decoration:none;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='transparent';this.style.color='#4B5563'">Toddlers (15 – 23 mo)</a>
+          <a href="programs-twos.html" style="display:block;padding:9px 12px;border-radius:8px;font-family:'Open Sans',sans-serif;font-size:0.875rem;background:#E1F5EE;color:#0B6E5A;font-weight:600;text-decoration:none;">Twos (24 – 35 mo)</a>
+          <a href="programs-preschool.html" style="display:block;padding:9px 12px;border-radius:8px;font-family:'Open Sans',sans-serif;font-size:0.875rem;color:#4B5563;text-decoration:none;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='transparent';this.style.color='#4B5563'">Pre School (3 – 5 yrs)</a>
+          <a href="programs-school-age.html" style="display:block;padding:9px 12px;border-radius:8px;font-family:'Open Sans',sans-serif;font-size:0.875rem;color:#4B5563;text-decoration:none;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='transparent';this.style.color='#4B5563'">School Age (K – 12)</a>
+          <a href="programs-summer-camp.html" style="display:block;padding:9px 12px;border-radius:8px;font-family:'Open Sans',sans-serif;font-size:0.875rem;color:#4B5563;text-decoration:none;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='transparent';this.style.color='#4B5563'">Summer Camp</a>
+        </div>
+        <span style="display:flex;align-items:center;justify-content:space-between;padding:13px 16px;border-radius:12px;font-family:'Nunito',sans-serif;font-weight:700;font-size:1rem;color:#2D2D2D;cursor:default;">Our Story <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <div style="margin:0 0 4px 16px;display:flex;flex-direction:column;gap:1px;border-left:2px solid #E1F5EE;padding-left:14px;">
+          <a href="about.html" style="display:block;padding:9px 12px;border-radius:8px;font-family:'Open Sans',sans-serif;font-size:0.875rem;color:#4B5563;text-decoration:none;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='transparent';this.style.color='#4B5563'">Who We Are</a>
+          <a href="leadership.html" style="display:block;padding:9px 12px;border-radius:8px;font-family:'Open Sans',sans-serif;font-size:0.875rem;color:#4B5563;text-decoration:none;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='transparent';this.style.color='#4B5563'">Our Leadership &amp; Team</a>
+          <a href="learning-approach.html" style="display:block;padding:9px 12px;border-radius:8px;font-family:'Open Sans',sans-serif;font-size:0.875rem;color:#4B5563;text-decoration:none;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='transparent';this.style.color='#4B5563'">Our Learning Approach</a>
+        </div>
+        <a href="health-safety.html" style="display:flex;align-items:center;justify-content:space-between;padding:13px 16px;border-radius:12px;font-family:'Nunito',sans-serif;font-weight:700;font-size:1rem;color:#2D2D2D;text-decoration:none;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='transparent';this.style.color='#2D2D2D'">Health &amp; Safety <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <span style="display:flex;align-items:center;justify-content:space-between;padding:13px 16px;border-radius:12px;font-family:'Nunito',sans-serif;font-weight:700;font-size:1rem;color:#2D2D2D;cursor:default;">Locations <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <div style="margin:0 0 4px 16px;display:flex;flex-direction:column;gap:1px;border-left:2px solid #E1F5EE;padding-left:14px;">
+          <a href="location-oswego.html" style="display:block;padding:10px 12px;border-radius:8px;text-decoration:none;" onmouseover="this.style.background='#E1F5EE'" onmouseout="this.style.background='transparent'">
+            <span style="display:block;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.85rem;color:#0B6E5A;margin-bottom:3px;">Oswego</span>
+            <span style="display:block;font-family:'Open Sans',sans-serif;font-size:0.75rem;color:#4B5563;">750 5th Street, Oswego IL 60543</span>
+          </a>
+          <a href="location-ogden.html" style="display:block;padding:10px 12px;border-radius:8px;text-decoration:none;" onmouseover="this.style.background='#E1F5EE'" onmouseout="this.style.background='transparent'">
+            <span style="display:block;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.85rem;color:#0B6E5A;margin-bottom:3px;">Ogden &amp; IL 59</span>
+            <span style="display:block;font-family:'Open Sans',sans-serif;font-size:0.75rem;color:#4B5563;">4105 Healthway Drive, Aurora IL</span>
+          </a>
+          <a href="location-kirk.html" style="display:block;padding:10px 12px;border-radius:8px;text-decoration:none;" onmouseover="this.style.background='#E1F5EE'" onmouseout="this.style.background='transparent'">
+            <span style="display:block;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.85rem;color:#0B6E5A;margin-bottom:3px;">Kirk &amp; Butterfield</span>
+            <span style="display:block;font-family:'Open Sans',sans-serif;font-size:0.75rem;color:#4B5563;">1555 Mesa Lane, Aurora IL 60502</span>
+          </a>
+        </div>
+        <a href="parent-stories.html" style="display:flex;align-items:center;justify-content:space-between;padding:13px 16px;border-radius:12px;font-family:'Nunito',sans-serif;font-weight:700;font-size:1rem;color:#2D2D2D;text-decoration:none;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='transparent';this.style.color='#2D2D2D'">Parent Stories <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a href="blog.html" style="display:flex;align-items:center;justify-content:space-between;padding:13px 16px;border-radius:12px;font-family:'Nunito',sans-serif;font-weight:700;font-size:1rem;color:#2D2D2D;text-decoration:none;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='transparent';this.style.color='#2D2D2D'">Resources <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <div style="height:1px;background:#f0f0f0;margin:12px 0;"></div>
+        <a href="schedule-tour.html" class="btn-amber" style="padding:15px 24px;font-size:0.95rem;justify-content:center;">Schedule a Tour <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main id="main-content" style="padding-top:76px;">
+
+  <!-- Breadcrumb -->
+  <div style="background:#F7F7F7;border-bottom:1px solid #eee;">
+    <div style="max-width:1280px;margin:0 auto;padding:12px 24px;">
+      <nav aria-label="Breadcrumb" style="display:flex;align-items:center;gap:8px;font-size:0.85rem;font-family:'Open Sans',sans-serif;color:#6B7280;">
+        <a href="index.html" style="color:#0B6E5A;text-decoration:none;font-weight:600;">Home</a>
+        <span>›</span>
+        <a href="programs.html" style="color:#0B6E5A;text-decoration:none;font-weight:600;">Programs</a>
+        <span>›</span>
+        <span style="color:#0B6E5A;font-weight:600;">Twos</span>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <section style="background:linear-gradient(135deg,#064E3B 0%,#0B6E5A 40%,#10B981 100%);padding:80px 24px 100px;position:relative;overflow:hidden;">
+    <div style="position:absolute;inset:0;overflow:hidden;pointer-events:none;">
+      <div style="position:absolute;top:-60px;right:-60px;width:320px;height:320px;border-radius:50%;background:rgba(255,255,255,0.06);"></div>
+      <div style="position:absolute;bottom:-40px;left:10%;width:200px;height:200px;border-radius:50%;background:rgba(255,255,255,0.04);"></div>
+      <div style="position:absolute;top:30%;left:-30px;width:120px;height:120px;border-radius:50%;background:rgba(255,255,255,0.05);"></div>
+    </div>
+    <div style="max-width:1280px;margin:0 auto;position:relative;z-index:1;">
+      <div style="max-width:640px;">
+        <span style="display:inline-block;background:rgba(255,255,255,0.2);color:white;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.85rem;padding:6px 18px;border-radius:999px;margin-bottom:20px;letter-spacing:0.05em;">AGES 24 – 35 MONTHS</span>
+        <h1 style="font-family:'Nunito',sans-serif;font-weight:900;font-size:clamp(2rem,4vw,3rem);color:white;line-height:1.15;letter-spacing:-0.03em;margin:0 0 20px;">The Twos Program</h1>
+        <p style="font-family:'Open Sans',sans-serif;font-size:1.05rem;color:rgba(255,255,255,0.88);line-height:1.7;margin:0 0 32px;">Where curious, determined two-year-olds grow into confident communicators. We channel boundless energy into creative play, emerging literacy, and the joy of doing things "by myself!"</p>
+        <a href="schedule-tour.html" class="btn-amber" style="padding:14px 32px;font-size:1rem;">Schedule a Tour</a>
+      </div>
+      <div style="position:absolute;right:24px;top:50%;transform:translateY(-50%);">
+        <div style="background:rgba(255,255,255,0.12);backdrop-filter:blur(8px);border-radius:24px;padding:28px 32px;color:white;text-align:center;min-width:180px;">
+          <div style="font-size:2.5rem;margin-bottom:8px;">🌱</div>
+          <div style="font-family:'Nunito',sans-serif;font-weight:800;font-size:1.8rem;line-height:1;">6:1</div>
+          <div style="font-size:0.82rem;opacity:0.85;margin-top:4px;">Child-to-Teacher</div>
+          <div style="font-size:0.78rem;opacity:0.7;">Ratio</div>
+        </div>
+      </div>
+    </div>
+    <div style="position:absolute;bottom:-1px;left:0;right:0;overflow:hidden;line-height:0;">
+      <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="width:100%;height:60px;display:block;"><path d="M0,40 C360,80 1080,0 1440,40 L1440,60 L0,60 Z" fill="#F7F7F7"/></svg>
+    </div>
+  </section>
+
+  <!-- Overview + Daily Schedule -->
+  <section style="background:#F7F7F7;padding:80px 24px;">
+    <div style="max-width:1280px;margin:0 auto;">
+      <div style="display:grid;grid-template-columns:1fr;gap:48px;" id="content-grid">
+
+        <!-- What They'll Experience -->
+        <div class="reveal">
+          <span style="display:inline-block;background:#E1F5EE;color:#0B6E5A;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.8rem;padding:5px 14px;border-radius:999px;letter-spacing:0.06em;margin-bottom:16px;">WHAT THEY'LL EXPERIENCE</span>
+          <h2 style="font-family:'Nunito',sans-serif;font-weight:800;font-size:1.75rem;color:#1A1A1A;margin:0 0 8px;">Big Feelings, Bigger Discoveries</h2>
+          <p style="font-family:'Open Sans',sans-serif;color:#4B5563;line-height:1.7;margin:0 0 28px;font-size:0.95rem;">Two-year-olds are wired to explore — and to push boundaries. Our Twos classroom meets them exactly where they are, with patient teachers who guide them through big emotions, first friendships, and blossoming language.</p>
+          <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px;">
+            <li style="display:flex;align-items:flex-start;gap:12px;font-family:'Open Sans',sans-serif;font-size:0.93rem;color:#4B5563;line-height:1.65;"><span style="width:24px;height:24px;background:#E1F5EE;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:#0B6E5A;font-size:0.8rem;font-weight:700;margin-top:1px;">✓</span><span><strong style="color:#1A1A1A;">Language explosion</strong> — songs, stories, and rich conversation expand vocabularies daily</span></li>
+            <li style="display:flex;align-items:flex-start;gap:12px;font-family:'Open Sans',sans-serif;font-size:0.93rem;color:#4B5563;line-height:1.65;"><span style="width:24px;height:24px;background:#E1F5EE;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:#0B6E5A;font-size:0.8rem;font-weight:700;margin-top:1px;">✓</span><span><strong style="color:#1A1A1A;">Self-help skills</strong> — hand-washing, dressing, tidying up build real independence</span></li>
+            <li style="display:flex;align-items:flex-start;gap:12px;font-family:'Open Sans',sans-serif;font-size:0.93rem;color:#4B5563;line-height:1.65;"><span style="width:24px;height:24px;background:#E1F5EE;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:#0B6E5A;font-size:0.8rem;font-weight:700;margin-top:1px;">✓</span><span><strong style="color:#1A1A1A;">Sensory & art play</strong> — painting, water tables, playdough fuel creativity and fine-motor growth</span></li>
+            <li style="display:flex;align-items:flex-start;gap:12px;font-family:'Open Sans',sans-serif;font-size:0.93rem;color:#4B5563;line-height:1.65;"><span style="width:24px;height:24px;background:#E1F5EE;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:#0B6E5A;font-size:0.8rem;font-weight:700;margin-top:1px;">✓</span><span><strong style="color:#1A1A1A;">Social foundations</strong> — turn-taking, sharing, and first friendships blossom in a caring community</span></li>
+            <li style="display:flex;align-items:flex-start;gap:12px;font-family:'Open Sans',sans-serif;font-size:0.93rem;color:#4B5563;line-height:1.65;"><span style="width:24px;height:24px;background:#E1F5EE;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:#0B6E5A;font-size:0.8rem;font-weight:700;margin-top:1px;">✓</span><span><strong style="color:#1A1A1A;">Outdoor exploration</strong> — daily outdoor play builds gross-motor skills and healthy bodies</span></li>
+            <li style="display:flex;align-items:flex-start;gap:12px;font-family:'Open Sans',sans-serif;font-size:0.93rem;color:#4B5563;line-height:1.65;"><span style="width:24px;height:24px;background:#E1F5EE;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:#0B6E5A;font-size:0.8rem;font-weight:700;margin-top:1px;">✓</span><span><strong style="color:#1A1A1A;">ProCare daily updates</strong> — real-time photos and milestones sent straight to your phone</span></li>
+          </ul>
+        </div>
+
+        <!-- Daily Schedule -->
+        <div class="reveal delay-1">
+          <span style="display:inline-block;background:#E1F5EE;color:#0B6E5A;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.8rem;padding:5px 14px;border-radius:999px;letter-spacing:0.06em;margin-bottom:16px;">SAMPLE DAILY SCHEDULE</span>
+          <h2 style="font-family:'Nunito',sans-serif;font-weight:800;font-size:1.75rem;color:#1A1A1A;margin:0 0 24px;">Predictable Routines, Endless Discovery</h2>
+          <div style="display:flex;flex-direction:column;gap:0;">
+            <div style="display:flex;gap:20px;align-items:flex-start;padding:16px 0;border-bottom:1px solid #E1F5EE;">
+              <div style="width:80px;flex-shrink:0;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.85rem;color:#0B6E5A;">7:00–8:30</div>
+              <div><div style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.95rem;color:#1A1A1A;margin-bottom:3px;">Arrival & Free Play</div><div style="font-size:0.85rem;color:#6B7280;">Greet friends, choose activities, settle in</div></div>
+            </div>
+            <div style="display:flex;gap:20px;align-items:flex-start;padding:16px 0;border-bottom:1px solid #E1F5EE;">
+              <div style="width:80px;flex-shrink:0;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.85rem;color:#0B6E5A;">8:30–9:00</div>
+              <div><div style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.95rem;color:#1A1A1A;margin-bottom:3px;">Morning Circle</div><div style="font-size:0.85rem;color:#6B7280;">Songs, calendar, weather, and morning meeting</div></div>
+            </div>
+            <div style="display:flex;gap:20px;align-items:flex-start;padding:16px 0;border-bottom:1px solid #E1F5EE;">
+              <div style="width:80px;flex-shrink:0;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.85rem;color:#0B6E5A;">9:00–10:00</div>
+              <div><div style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.95rem;color:#1A1A1A;margin-bottom:3px;">Learning Centers</div><div style="font-size:0.85rem;color:#6B7280;">Art, sensory, blocks, dramatic play, books</div></div>
+            </div>
+            <div style="display:flex;gap:20px;align-items:flex-start;padding:16px 0;border-bottom:1px solid #E1F5EE;">
+              <div style="width:80px;flex-shrink:0;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.85rem;color:#0B6E5A;">10:00–10:45</div>
+              <div><div style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.95rem;color:#1A1A1A;margin-bottom:3px;">Outdoor Play</div><div style="font-size:0.85rem;color:#6B7280;">Running, climbing, and exploring nature</div></div>
+            </div>
+            <div style="display:flex;gap:20px;align-items:flex-start;padding:16px 0;border-bottom:1px solid #E1F5EE;">
+              <div style="width:80px;flex-shrink:0;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.85rem;color:#0B6E5A;">10:45–11:30</div>
+              <div><div style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.95rem;color:#1A1A1A;margin-bottom:3px;">Story Time & Lunch</div><div style="font-size:0.85rem;color:#6B7280;">Read-aloud, handwashing, and a nutritious lunch</div></div>
+            </div>
+            <div style="display:flex;gap:20px;align-items:flex-start;padding:16px 0;border-bottom:1px solid #E1F5EE;">
+              <div style="width:80px;flex-shrink:0;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.85rem;color:#0B6E5A;">11:30–2:30</div>
+              <div><div style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.95rem;color:#1A1A1A;margin-bottom:3px;">Rest Time</div><div style="font-size:0.85rem;color:#6B7280;">Cots provided; quiet activities for non-sleepers</div></div>
+            </div>
+            <div style="display:flex;gap:20px;align-items:flex-start;padding:16px 0;">
+              <div style="width:80px;flex-shrink:0;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.85rem;color:#0B6E5A;">2:30–6:00</div>
+              <div><div style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.95rem;color:#1A1A1A;margin-bottom:3px;">Afternoon Play & Pickup</div><div style="font-size:0.85rem;color:#6B7280;">Snack, centers, outdoor time, and dismissal</div></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Teachers & CTA cards -->
+  <section style="background:white;padding:0 24px 80px;">
+    <div style="max-width:1280px;margin:0 auto;">
+      <div style="display:grid;grid-template-columns:1fr;gap:24px;" id="cards-grid">
+
+        <div class="reveal" style="background:#F7F7F7;border-radius:24px;padding:40px;">
+          <div style="width:48px;height:48px;background:#E1F5EE;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;margin-bottom:20px;">👩‍🏫</div>
+          <h3 style="font-family:'Nunito',sans-serif;font-weight:800;font-size:1.3rem;color:#1A1A1A;margin:0 0 12px;">Our Twos Teachers</h3>
+          <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px;">
+            <li class="check-li"><span style="color:#0B6E5A;font-size:1rem;flex-shrink:0;">✓</span><span>Early Childhood Education degree or credential</span></li>
+            <li class="check-li"><span style="color:#0B6E5A;font-size:1rem;flex-shrink:0;">✓</span><span>CPR &amp; first aid certified — renewed annually</span></li>
+            <li class="check-li"><span style="color:#0B6E5A;font-size:1rem;flex-shrink:0;">✓</span><span>Positive behavior guidance &amp; social-emotional training</span></li>
+            <li class="check-li"><span style="color:#0B6E5A;font-size:1rem;flex-shrink:0;">✓</span><span>Fingerprint background cleared</span></li>
+            <li class="check-li"><span style="color:#0B6E5A;font-size:1rem;flex-shrink:0;">✓</span><span>Ongoing professional development in language development and play-based learning</span></li>
+          </ul>
+        </div>
+
+        <div class="reveal delay-1" style="background:linear-gradient(135deg,#064E3B 0%,#0B6E5A 100%);border-radius:24px;padding:40px;color:white;">
+          <div style="font-size:2rem;margin-bottom:16px;">🌟</div>
+          <h3 style="font-family:'Nunito',sans-serif;font-weight:800;font-size:1.3rem;color:white;margin:0 0 12px;">Ready to Enroll?</h3>
+          <p style="font-family:'Open Sans',sans-serif;font-size:0.95rem;color:rgba(255,255,255,0.88);line-height:1.6;margin:0 0 24px;">Twos spots are in high demand. Schedule a tour and come see the magic happening in our classroom.</p>
+          <a href="schedule-tour.html" class="btn-amber" style="padding:13px 28px;font-size:0.95rem;background:white;color:#0B6E5A;">Schedule a Tour →</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Program Navigation -->
+  <div style="background:#F7F7F7;border-top:1px solid #eee;padding:24px;">
+    <div style="max-width:1280px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;">
+      <a href="programs.html" style="display:inline-flex;align-items:center;gap:8px;font-family:'Nunito',sans-serif;font-weight:700;color:#0B6E5A;text-decoration:none;font-size:0.95rem;">← All Programs</a>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;">
+        <a href="programs-toddlers.html" style="display:inline-flex;align-items:center;gap:6px;font-family:'Nunito',sans-serif;font-weight:700;color:#6B7280;text-decoration:none;font-size:0.9rem;">← Toddlers</a>
+        <a href="programs-preschool.html" style="display:inline-flex;align-items:center;gap:6px;font-family:'Nunito',sans-serif;font-weight:700;color:#0B6E5A;text-decoration:none;font-size:0.9rem;">Pre School →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tour CTA Strip -->
+  <section style="background:#0B6E5A;padding:64px 24px;text-align:center;">
+    <div style="max-width:640px;margin:0 auto;">
+      <div style="font-size:2.5rem;margin-bottom:16px;">🏡</div>
+      <h2 style="font-family:'Nunito',sans-serif;font-weight:900;font-size:1.75rem;color:white;margin:0 0 12px;">Come See Our Twos Classroom</h2>
+      <p style="font-family:'Open Sans',sans-serif;color:rgba(255,255,255,0.85);line-height:1.7;margin:0 0 28px;">Every corner is designed for curious, active two-year-olds. We'd love to show you around.</p>
+      <a href="schedule-tour.html" class="btn-amber" style="padding:15px 36px;font-size:1rem;">Schedule Your Tour Today</a>
+    </div>
+  </section>
+
+</main>
+
+<!-- Footer -->
+<footer style="background:#1A1A1A;color:white;padding:64px 24px 32px;">
+  <div style="max-width:1280px;margin:0 auto;">
+    <div style="display:grid;grid-template-columns:1fr;gap:40px;margin-bottom:48px;" id="footer-grid">
+      <div>
+        <img src="Logo Transparency_Shadow.png" alt="Smart Beginnings Academy" style="height:52px;width:auto;margin-bottom:16px;filter:brightness(0) invert(1);" />
+        <p style="font-size:0.88rem;color:rgba(255,255,255,0.6);line-height:1.7;margin:0 0 20px;">A physician-founded preschool where every child's learning journey begins with care, science, and heart.</p>
+      </div>
+      <div>
+        <h4 style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.85rem;color:rgba(255,255,255,0.5);letter-spacing:0.1em;margin:0 0 16px;">PROGRAMS</h4>
+        <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px;">
+          <li><a href="programs-infants.html" style="color:rgba(255,255,255,0.75);text-decoration:none;font-size:0.9rem;">Infants (6 wks – 14 mo)</a></li>
+          <li><a href="programs-toddlers.html" style="color:rgba(255,255,255,0.75);text-decoration:none;font-size:0.9rem;">Toddlers (15 – 23 mo)</a></li>
+          <li><a href="programs-twos.html" style="color:#F5A623;text-decoration:none;font-size:0.9rem;font-weight:600;">Twos (24 – 35 mo)</a></li>
+          <li><a href="programs-preschool.html" style="color:rgba(255,255,255,0.75);text-decoration:none;font-size:0.9rem;">Pre School (3 – 5 yrs)</a></li>
+          <li><a href="programs-school-age.html" style="color:rgba(255,255,255,0.75);text-decoration:none;font-size:0.9rem;">School Age (K – 12)</a></li>
+          <li><a href="programs-summer-camp.html" style="color:rgba(255,255,255,0.75);text-decoration:none;font-size:0.9rem;">Summer Camp</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.85rem;color:rgba(255,255,255,0.5);letter-spacing:0.1em;margin:0 0 16px;">QUICK LINKS</h4>
+        <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px;">
+          <li><a href="about.html" style="color:rgba(255,255,255,0.75);text-decoration:none;font-size:0.9rem;">About Us</a></li>
+          <li><a href="health-safety.html" style="color:rgba(255,255,255,0.75);text-decoration:none;font-size:0.9rem;">Health &amp; Safety</a></li>
+          <li><a href="locations.html" style="color:rgba(255,255,255,0.75);text-decoration:none;font-size:0.9rem;">Locations</a></li>
+          <li><a href="schedule-tour.html" style="color:rgba(255,255,255,0.75);text-decoration:none;font-size:0.9rem;">Schedule a Tour</a></li>
+          <li><a href="contact.html" style="color:rgba(255,255,255,0.75);text-decoration:none;font-size:0.9rem;">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.85rem;color:rgba(255,255,255,0.5);letter-spacing:0.1em;margin:0 0 16px;">CONTACT</h4>
+        <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px;font-size:0.9rem;color:rgba(255,255,255,0.75);">
+          <li>📞 <a href="tel:+16305551234" style="color:rgba(255,255,255,0.75);text-decoration:none;">(630) 555-1234</a></li>
+          <li>✉️ <a href="mailto:hello@smartbeginningsacademy.com" style="color:rgba(255,255,255,0.75);text-decoration:none;">hello@smartbeginningsacademy.com</a></li>
+          <li>📍 Oswego · Ogden · Kirk &amp; Butterfield</li>
+        </ul>
+      </div>
+    </div>
+    <div style="border-top:1px solid rgba(255,255,255,0.1);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;">
+      <p style="margin:0;font-size:0.82rem;color:rgba(255,255,255,0.4);">© 2025 Smart Beginnings Academy. All rights reserved.</p>
+      <div style="display:flex;gap:16px;">
+        <a href="privacy.html" style="font-size:0.82rem;color:rgba(255,255,255,0.4);text-decoration:none;">Privacy Policy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const hdr=document.getElementById('site-header');
+  window.addEventListener('scroll',()=>{hdr.classList.toggle('scrolled',window.scrollY>10)},{passive:true});
+  const hBtn=document.getElementById('hamburger-btn');
+  const mMenu=document.getElementById('mobile-menu');
+  hBtn.addEventListener('click',()=>{const o=mMenu.classList.toggle('open');hBtn.classList.toggle('open',o);hBtn.setAttribute('aria-expanded',o);});
+  const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});},{threshold:0.12});
+  document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+  const grid=document.getElementById('content-grid');
+  if(window.innerWidth>=1024){grid.style.gridTemplateColumns='1fr 1fr';}
+  window.addEventListener('resize',()=>{if(window.innerWidth>=1024){grid.style.gridTemplateColumns='1fr 1fr';}else{grid.style.gridTemplateColumns='1fr';}});
+  const cg=document.getElementById('cards-grid');
+  if(window.innerWidth>=768){cg.style.gridTemplateColumns='1fr 1fr';}
+  window.addEventListener('resize',()=>{if(window.innerWidth>=768){cg.style.gridTemplateColumns='1fr 1fr';}else{cg.style.gridTemplateColumns='1fr';}});
+  const fg=document.getElementById('footer-grid');
+  if(window.innerWidth>=1024){fg.style.gridTemplateColumns='2fr 1fr 1fr 1fr';}
+  else if(window.innerWidth>=768){fg.style.gridTemplateColumns='1fr 1fr';}
+  window.addEventListener('resize',()=>{if(window.innerWidth>=1024){fg.style.gridTemplateColumns='2fr 1fr 1fr 1fr';}else if(window.innerWidth>=768){fg.style.gridTemplateColumns='1fr 1fr';}else{fg.style.gridTemplateColumns='1fr';}});
+</script>
+</body>
+</html>
