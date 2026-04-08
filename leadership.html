@@ -61,14 +61,19 @@
       .director-card {
         flex-direction: column !important;
         align-items: stretch !important;
+        display: flex !important;
       }
       /* Photo block: full width, tall enough to show the face */
+      .director-card > .dir-photo,
       .director-card .dir-photo {
         width: 100% !important;
+        min-width: 0 !important;
         height: 260px !important;
         flex-shrink: 0 !important;
       }
       .director-card .dir-photo img {
+        height: 100% !important;
+        object-fit: cover !important;
         object-position: center 10% !important;
       }
       /* Replace side-to-side gradient with bottom fade on mobile */
@@ -78,6 +83,7 @@
       /* Tighter padding on text block */
       .director-card .dir-body {
         padding: 20px 20px 24px !important;
+        width: 100% !important;
       }
       /* Campus divider pill — shrink text for small screens */
       .campus-pill {
@@ -417,7 +423,7 @@
 
           <!-- Dee Deshada McCaster -->
           <div class="director-card" style="background:white;border-radius:24px;overflow:hidden;box-shadow:0 8px 40px rgba(11,110,90,0.10),0 2px 8px rgba(0,0,0,0.04);transition:transform 0.3s,box-shadow 0.3s;display:flex;align-items:stretch;" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 20px 56px rgba(11,110,90,0.16),0 4px 16px rgba(0,0,0,0.06)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 8px 40px rgba(11,110,90,0.10),0 2px 8px rgba(0,0,0,0.04)'">
-            <div class="dir-photo" style="width:180px;flex-shrink:0;position:relative;">
+            <div class="dir-photo" style="flex-shrink:0;position:relative;width:180px;">
               <img src="Dee.jpg" alt="Dee Deshada McCaster" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;" />
               <div class="dir-overlay" style="position:absolute;inset:0;background:linear-gradient(to right,transparent 70%,white);"></div>
             </div>
