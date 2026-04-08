@@ -445,7 +445,15 @@
   const header = document.getElementById('site-header');
   window.addEventListener('scroll', () => { header.classList.toggle('scrolled', window.scrollY > 12); }, { passive: true });
   const hBtn = document.getElementById('hamburger-btn'); const mMenu = document.getElementById('mobile-menu'); let open = false;
-    function closeMenu() {
+  
+  function toggleMobSection(id) {
+    var el = document.getElementById(id);
+    var icon = document.getElementById(id + '-icon');
+    var isOpen = el.style.display !== 'none';
+    el.style.display = isOpen ? 'none' : 'block';
+    if (icon) icon.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(180deg)';
+  }
+  function closeMenu() {
     open = false;
     hBtn.classList.remove('open');
     mMenu.classList.remove('open');

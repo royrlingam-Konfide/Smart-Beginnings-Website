@@ -402,6 +402,15 @@
 </footer>
 
 <script>
+
+  function toggleMobSection(id) {
+    var el = document.getElementById(id);
+    var icon = document.getElementById(id + '-icon');
+    var isOpen = el.style.display !== 'none';
+    el.style.display = isOpen ? 'none' : 'block';
+    if (icon) icon.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(180deg)';
+  }
+
   const hdr=document.getElementById('site-header');
   window.addEventListener('scroll',()=>{hdr.classList.toggle('scrolled',window.scrollY>10)},{passive:true});
   const hBtn=document.getElementById('hamburger-btn');

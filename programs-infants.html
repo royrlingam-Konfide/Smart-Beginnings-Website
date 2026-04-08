@@ -330,6 +330,15 @@
   </div>
 </footer>
 <script>
+
+  function toggleMobSection(id) {
+    var el = document.getElementById(id);
+    var icon = document.getElementById(id + '-icon');
+    var isOpen = el.style.display !== 'none';
+    el.style.display = isOpen ? 'none' : 'block';
+    if (icon) icon.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(180deg)';
+  }
+
   const h=document.getElementById('site-header');window.addEventListener('scroll',()=>{h.classList.toggle('scrolled',window.scrollY>12)},{passive:true});
   const hb=document.getElementById('hamburger-btn'),mm=document.getElementById('mobile-menu');let o=false;
   hb.addEventListener('click',()=>{o=!o;hb.classList.toggle('open',o);mm.classList.toggle('open',o);hb.setAttribute('aria-expanded',String(o))});
