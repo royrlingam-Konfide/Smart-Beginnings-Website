@@ -226,18 +226,14 @@
       <!-- Form -->
       <div class="reveal" style="background:white;border-radius:24px;padding:40px;box-shadow:0 8px 40px rgba(11,110,90,0.10);border:1px solid #f0f0f0;">
         <h2 style="font-family:'Nunito',sans-serif;font-weight:900;font-size:1.6rem;color:#1A1A1A;margin:0 0 8px;">Book My Tour</h2>
-        <p style="font-family:'Open Sans',sans-serif;font-size:0.875rem;color:#6B7280;line-height:1.6;margin:0 0 28px;">Fill out the form below and we'll reach out within 1 business day to confirm your tour time.</p>
+        <p style="font-family:'Open Sans',sans-serif;font-size:0.875rem;color:#6B7280;line-height:1.6;margin:0 0 24px;">Fill out the form below and we'll reach out within 1 business day to confirm your tour time.</p>
 
-        <!-- Success Message -->
-        <div id="success-msg" style="background:#E1F5EE;border:1.5px solid #0B6E5A;border-radius:16px;padding:24px;margin-bottom:24px;text-align:center;">
-          <div style="width:48px;height:48px;border-radius:50%;background:#0B6E5A;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </div>
-          <h3 style="font-family:'Nunito',sans-serif;font-weight:800;color:#0B6E5A;font-size:1.1rem;margin:0 0 8px;">Thank You!</h3>
-          <p style="font-family:'Open Sans',sans-serif;font-size:0.875rem;color:#4B5563;margin:0;line-height:1.6;">We'll reach out within 1 business day to confirm your tour. We can't wait to meet your family!</p>
-        </div>
+        <iframe id="JotFormIFrame-260975356597071" title="Schedule a Tour — Smart Beginnings Academy" src="https://form.jotform.com/260975356597071" allowtransparency="true" allow="geolocation; microphone; camera; fullscreen" style="width:100%;min-height:800px;border:none;border-radius:12px;" scrolling="yes" frameborder="0"></iframe>
+        <script src="https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js"></script>
+        <script>window.jotformEmbedHandler("iframe[id='JotFormIFrame-260975356597071']","https://form.jotform.com/")</script>
 
-        <form id="tour-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
+        <!-- keep a hidden placeholder so page JS doesn't break -->
+        <form id="tour-form" style="display:none;" action="#" method="POST" novalidate>
           <!-- Parent & Child 1 -->
           <div class="form-row" style="display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:18px;">
             <div>
