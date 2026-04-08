@@ -10,7 +10,7 @@
   <style>
     *,*::before,*::after{box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:'Open Sans',sans-serif;color:#2D2D2D;-webkit-font-smoothing:antialiased;margin:0}h1,h2,h3,h4{font-family:'Nunito',sans-serif}
     #site-header{position:fixed;top:0;left:0;right:0;z-index:50;background:white;transition:box-shadow 0.3s}#site-header.scrolled{box-shadow:0 2px 24px rgba(0,0,0,0.09)}
-    .mobile-menu{max-height:0;overflow:hidden;transition:max-height 0.4s cubic-bezier(0.4,0,0.2,1)}.mobile-menu.open{max-height:900px}
+    .mobile-menu{max-height:0;overflow:hidden;transition:max-height 0.4s cubic-bezier(0.4,0,0.2,1)}.mobile-menu.open{max-height:100dvh;overflow-y:auto;}
     .hamburger-line{display:block;width:22px;height:2px;background:#2D2D2D;border-radius:2px;transition:transform 0.3s,opacity 0.3s}
     .hamburger.open .line-1{transform:translateY(8px) rotate(45deg)}.hamburger.open .line-2{opacity:0}.hamburger.open .line-3{transform:translateY(-8px) rotate(-45deg)}
     .nav-link{position:relative;font-family:'Nunito',sans-serif;font-weight:600;font-size:0.92rem;color:#2D2D2D;text-decoration:none;transition:color 0.2s}
