@@ -49,11 +49,41 @@
     @media (min-width: 768px) { .hamburger { display: none !important; } }
   
     /* ── MOBILE RESPONSIVE ── */
-    @media (max-width: 600px) {
-      .director-card { flex-direction: column !important; }
-      .director-card > div:first-child { width: 100% !important; height: 220px !important; }
-      .director-card > div:first-child img { object-position: center top !important; }
-      .director-card > div:first-child div { background: linear-gradient(to bottom, transparent 60%, white) !important; }
+
+    /* Founder cards — single column on mobile, portrait layout */
+    @media (max-width: 767px) {
+      .founders-grid { grid-template-columns: 1fr !important; }
+      .founder-card img { height: 340px !important; object-position: center 15% !important; }
+    }
+
+    /* Director cards — portrait stack on mobile */
+    @media (max-width: 767px) {
+      .director-card {
+        flex-direction: column !important;
+        align-items: stretch !important;
+      }
+      /* Photo block: full width, tall enough to show the face */
+      .director-card .dir-photo {
+        width: 100% !important;
+        height: 260px !important;
+        flex-shrink: 0 !important;
+      }
+      .director-card .dir-photo img {
+        object-position: center 10% !important;
+      }
+      /* Replace side-to-side gradient with bottom fade on mobile */
+      .director-card .dir-photo .dir-overlay {
+        background: linear-gradient(to bottom, transparent 55%, rgba(7,74,61,0.5)) !important;
+      }
+      /* Tighter padding on text block */
+      .director-card .dir-body {
+        padding: 20px 20px 24px !important;
+      }
+      /* Campus divider pill — shrink text for small screens */
+      .campus-pill {
+        font-size: 0.78rem !important;
+        padding: 8px 16px !important;
+      }
     }
   </style>
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
@@ -227,7 +257,7 @@
         <p style="font-family:'Open Sans',sans-serif;font-size:1.05rem;color:#6B7280;line-height:1.75;max-width:540px;margin:0 auto;">Their medical training taught them to listen carefully, think holistically, and put the person first. They brought that same approach to early childhood education.</p>
       </div>
 
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(440px,1fr));gap:36px;">
+      <div class="founders-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(440px,1fr));gap:36px;">
 
         <!-- Cindy Magas -->
         <div class="founder-card reveal">
@@ -293,7 +323,7 @@
           <div style="height:2px;flex:1;background:linear-gradient(90deg,#0B6E5A,transparent);"></div>
           <div style="display:inline-flex;align-items:center;gap:10px;background:linear-gradient(135deg,#063D30,#0B6E5A);border-radius:999px;padding:10px 24px;flex-shrink:0;">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" stroke="white" stroke-width="2.5"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" stroke="white" stroke-width="2.5"/></svg>
-            <span style="font-family:'Nunito',sans-serif;font-weight:800;font-size:0.85rem;color:white;letter-spacing:0.06em;">Kirk &amp; Butterfield Campus</span>
+            <span class="campus-pill" style="font-family:'Nunito',sans-serif;font-weight:800;font-size:0.85rem;color:white;letter-spacing:0.06em;">Kirk &amp; Butterfield Campus</span>
           </div>
           <div style="height:2px;flex:1;background:linear-gradient(90deg,transparent,#0B6E5A);"></div>
         </div>
@@ -301,11 +331,11 @@
 
           <!-- Lori Bloomfield -->
           <div class="director-card" style="background:white;border-radius:24px;overflow:hidden;box-shadow:0 8px 40px rgba(11,110,90,0.10),0 2px 8px rgba(0,0,0,0.04);transition:transform 0.3s,box-shadow 0.3s;display:flex;align-items:stretch;" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 20px 56px rgba(11,110,90,0.16),0 4px 16px rgba(0,0,0,0.06)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 8px 40px rgba(11,110,90,0.10),0 2px 8px rgba(0,0,0,0.04)'">
-            <div style="width:180px;flex-shrink:0;position:relative;">
+            <div class="dir-photo" style="width:180px;flex-shrink:0;position:relative;">
               <img src="STAFFLori-1416_pp.jpg" alt="Lori Bloomfield" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;" />
-              <div style="position:absolute;inset:0;background:linear-gradient(to right,transparent 70%,white);"></div>
+              <div class="dir-overlay" style="position:absolute;inset:0;background:linear-gradient(to right,transparent 70%,white);"></div>
             </div>
-            <div style="padding:28px 24px;flex:1;">
+            <div class="dir-body" style="padding:28px 24px;flex:1;">
               <span style="display:inline-block;background:#F5A623;color:white;font-family:'Nunito',sans-serif;font-weight:800;font-size:0.68rem;text-transform:uppercase;letter-spacing:0.08em;padding:3px 10px;border-radius:999px;margin-bottom:10px;">Director</span>
               <h3 style="font-family:'Nunito',sans-serif;font-weight:900;font-size:1.15rem;color:#1A1A1A;margin:0 0 4px;">Lori Bloomfield</h3>
               <div style="width:36px;height:3px;background:linear-gradient(90deg,#0B6E5A,#F5A623);border-radius:2px;margin-bottom:14px;"></div>
@@ -315,11 +345,11 @@
 
           <!-- Marina Jaquez -->
           <div class="director-card" style="background:white;border-radius:24px;overflow:hidden;box-shadow:0 8px 40px rgba(11,110,90,0.10),0 2px 8px rgba(0,0,0,0.04);transition:transform 0.3s,box-shadow 0.3s;display:flex;align-items:stretch;" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 20px 56px rgba(11,110,90,0.16),0 4px 16px rgba(0,0,0,0.06)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 8px 40px rgba(11,110,90,0.10),0 2px 8px rgba(0,0,0,0.04)'">
-            <div style="width:180px;flex-shrink:0;position:relative;">
+            <div class="dir-photo" style="width:180px;flex-shrink:0;position:relative;">
               <img src="STAFFMarina-1386_pp.jpg" alt="Marina Jaquez" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;" />
-              <div style="position:absolute;inset:0;background:linear-gradient(to right,transparent 70%,white);"></div>
+              <div class="dir-overlay" style="position:absolute;inset:0;background:linear-gradient(to right,transparent 70%,white);"></div>
             </div>
-            <div style="padding:28px 24px;flex:1;">
+            <div class="dir-body" style="padding:28px 24px;flex:1;">
               <span style="display:inline-block;background:#F5A623;color:white;font-family:'Nunito',sans-serif;font-weight:800;font-size:0.68rem;text-transform:uppercase;letter-spacing:0.08em;padding:3px 10px;border-radius:999px;margin-bottom:10px;">Director</span>
               <h3 style="font-family:'Nunito',sans-serif;font-weight:900;font-size:1.15rem;color:#1A1A1A;margin:0 0 4px;">Marina Jaquez</h3>
               <div style="width:36px;height:3px;background:linear-gradient(90deg,#0B6E5A,#F5A623);border-radius:2px;margin-bottom:14px;"></div>
@@ -336,7 +366,7 @@
           <div style="height:2px;flex:1;background:linear-gradient(90deg,#0B6E5A,transparent);"></div>
           <div style="display:inline-flex;align-items:center;gap:10px;background:linear-gradient(135deg,#063D30,#0B6E5A);border-radius:999px;padding:10px 24px;flex-shrink:0;">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" stroke="white" stroke-width="2.5"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" stroke="white" stroke-width="2.5"/></svg>
-            <span style="font-family:'Nunito',sans-serif;font-weight:800;font-size:0.85rem;color:white;letter-spacing:0.06em;">Oswego Campus</span>
+            <span class="campus-pill" style="font-family:'Nunito',sans-serif;font-weight:800;font-size:0.85rem;color:white;letter-spacing:0.06em;">Oswego Campus</span>
           </div>
           <div style="height:2px;flex:1;background:linear-gradient(90deg,transparent,#0B6E5A);"></div>
         </div>
@@ -344,11 +374,11 @@
 
           <!-- Ambreen Demani-Ali -->
           <div class="director-card" style="background:white;border-radius:24px;overflow:hidden;box-shadow:0 8px 40px rgba(11,110,90,0.10),0 2px 8px rgba(0,0,0,0.04);transition:transform 0.3s,box-shadow 0.3s;display:flex;align-items:stretch;" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 20px 56px rgba(11,110,90,0.16),0 4px 16px rgba(0,0,0,0.06)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 8px 40px rgba(11,110,90,0.10),0 2px 8px rgba(0,0,0,0.04)'">
-            <div style="width:180px;flex-shrink:0;position:relative;">
+            <div class="dir-photo" style="width:180px;flex-shrink:0;position:relative;">
               <img src="Ambreen.jpeg" alt="Ambreen Demani-Ali" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;" />
-              <div style="position:absolute;inset:0;background:linear-gradient(to right,transparent 70%,white);"></div>
+              <div class="dir-overlay" style="position:absolute;inset:0;background:linear-gradient(to right,transparent 70%,white);"></div>
             </div>
-            <div style="padding:28px 24px;flex:1;">
+            <div class="dir-body" style="padding:28px 24px;flex:1;">
               <span style="display:inline-block;background:#F5A623;color:white;font-family:'Nunito',sans-serif;font-weight:800;font-size:0.68rem;text-transform:uppercase;letter-spacing:0.08em;padding:3px 10px;border-radius:999px;margin-bottom:10px;">Director</span>
               <h3 style="font-family:'Nunito',sans-serif;font-weight:900;font-size:1.15rem;color:#1A1A1A;margin:0 0 4px;">Ambreen Demani-Ali</h3>
               <div style="width:36px;height:3px;background:linear-gradient(90deg,#0B6E5A,#F5A623);border-radius:2px;margin-bottom:14px;"></div>
@@ -358,11 +388,11 @@
 
           <!-- Brittney Lundeen -->
           <div class="director-card" style="background:white;border-radius:24px;overflow:hidden;box-shadow:0 8px 40px rgba(11,110,90,0.10),0 2px 8px rgba(0,0,0,0.04);transition:transform 0.3s,box-shadow 0.3s;display:flex;align-items:stretch;" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 20px 56px rgba(11,110,90,0.16),0 4px 16px rgba(0,0,0,0.06)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 8px 40px rgba(11,110,90,0.10),0 2px 8px rgba(0,0,0,0.04)'">
-            <div style="width:180px;flex-shrink:0;position:relative;">
+            <div class="dir-photo" style="width:180px;flex-shrink:0;position:relative;">
               <img src="Brittney.jpeg" alt="Brittney Lundeen" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;" />
-              <div style="position:absolute;inset:0;background:linear-gradient(to right,transparent 70%,white);"></div>
+              <div class="dir-overlay" style="position:absolute;inset:0;background:linear-gradient(to right,transparent 70%,white);"></div>
             </div>
-            <div style="padding:28px 24px;flex:1;">
+            <div class="dir-body" style="padding:28px 24px;flex:1;">
               <span style="display:inline-block;background:#F5A623;color:white;font-family:'Nunito',sans-serif;font-weight:800;font-size:0.68rem;text-transform:uppercase;letter-spacing:0.08em;padding:3px 10px;border-radius:999px;margin-bottom:10px;">Director</span>
               <h3 style="font-family:'Nunito',sans-serif;font-weight:900;font-size:1.15rem;color:#1A1A1A;margin:0 0 4px;">Brittney Lundeen</h3>
               <div style="width:36px;height:3px;background:linear-gradient(90deg,#0B6E5A,#F5A623);border-radius:2px;margin-bottom:14px;"></div>
@@ -379,7 +409,7 @@
           <div style="height:2px;flex:1;background:linear-gradient(90deg,#0B6E5A,transparent);"></div>
           <div style="display:inline-flex;align-items:center;gap:10px;background:linear-gradient(135deg,#063D30,#0B6E5A);border-radius:999px;padding:10px 24px;flex-shrink:0;">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" stroke="white" stroke-width="2.5"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" stroke="white" stroke-width="2.5"/></svg>
-            <span style="font-family:'Nunito',sans-serif;font-weight:800;font-size:0.85rem;color:white;letter-spacing:0.06em;">Ogden &amp; IL 59 Campus</span>
+            <span class="campus-pill" style="font-family:'Nunito',sans-serif;font-weight:800;font-size:0.85rem;color:white;letter-spacing:0.06em;">Ogden &amp; IL 59 Campus</span>
           </div>
           <div style="height:2px;flex:1;background:linear-gradient(90deg,transparent,#0B6E5A);"></div>
         </div>
@@ -387,11 +417,11 @@
 
           <!-- Dee Deshada McCaster -->
           <div style="background:white;border-radius:24px;overflow:hidden;box-shadow:0 8px 40px rgba(11,110,90,0.10),0 2px 8px rgba(0,0,0,0.04);transition:transform 0.3s,box-shadow 0.3s;display:flex;align-items:stretch;max-width:560px;width:100%;" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 20px 56px rgba(11,110,90,0.16),0 4px 16px rgba(0,0,0,0.06)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 8px 40px rgba(11,110,90,0.10),0 2px 8px rgba(0,0,0,0.04)'">
-            <div style="width:200px;flex-shrink:0;position:relative;">
+            <div class="dir-photo" style="width:200px;flex-shrink:0;position:relative;">
               <img src="Dee.jpg" alt="Dee Deshada McCaster" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;" />
-              <div style="position:absolute;inset:0;background:linear-gradient(to right,transparent 70%,white);"></div>
+              <div class="dir-overlay" style="position:absolute;inset:0;background:linear-gradient(to right,transparent 70%,white);"></div>
             </div>
-            <div style="padding:28px 24px;flex:1;">
+            <div class="dir-body" style="padding:28px 24px;flex:1;">
               <span style="display:inline-block;background:#F5A623;color:white;font-family:'Nunito',sans-serif;font-weight:800;font-size:0.68rem;text-transform:uppercase;letter-spacing:0.08em;padding:3px 10px;border-radius:999px;margin-bottom:10px;">Director</span>
               <h3 style="font-family:'Nunito',sans-serif;font-weight:900;font-size:1.15rem;color:#1A1A1A;margin:0 0 4px;">"Dee" Deshada McCaster</h3>
               <div style="width:36px;height:3px;background:linear-gradient(90deg,#0B6E5A,#F5A623);border-radius:2px;margin-bottom:14px;"></div>
