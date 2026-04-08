@@ -26,8 +26,18 @@
     .nav-dropdown{opacity:0;visibility:hidden;transform:translateY(-8px);transition:opacity 0.2s,transform 0.2s,visibility 0.2s}
     .nav-item:hover .nav-dropdown,.nav-item:focus-within .nav-dropdown{opacity:1;visibility:visible;transform:translateY(0)}
     .star{color:#F5A623;font-size:0.95rem;}
-    .story-card{background:white;border-radius:24px;padding:36px;box-shadow:0 4px 24px rgba(0,0,0,0.06);transition:transform 0.3s,box-shadow 0.3s;}
-    .story-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,0.1);}
+    .story-card{background:white;border-radius:20px;padding:28px 24px;box-shadow:0 2px 16px rgba(11,110,90,0.07);transition:transform 0.3s,box-shadow 0.3s;border:1px solid #EEF7F3;}
+    .story-card:hover{transform:translateY(-3px);box-shadow:0 10px 32px rgba(11,110,90,0.12);}
+    .review-section-heading{display:flex;align-items:center;gap:14px;margin-bottom:28px;}
+    .review-section-heading h2{font-family:'Nunito',sans-serif;font-weight:900;font-size:1.25rem;color:#1A1A1A;margin:0;white-space:nowrap;}
+    .review-section-heading::after{content:'';flex:1;height:2px;background:linear-gradient(90deg,#D4E8E2,transparent);}
+    .stars{display:flex;gap:2px;margin-bottom:12px;}
+    .stars span{color:#F5A623;font-size:0.88rem;}
+    .review-tag{display:inline-block;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.7rem;text-transform:uppercase;letter-spacing:0.08em;padding:3px 10px;border-radius:999px;margin-bottom:14px;}
+    .reviewer-avatar{width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Nunito',sans-serif;font-weight:800;font-size:0.85rem;flex-shrink:0;}
+    @media(max-width:639px){
+      .reviews-grid{grid-template-columns:1fr !important;}
+    }
     @media (max-width: 767px) {
       #site-header nav { padding: 0 20px !important; }
       #site-header nav > div > div:last-child { gap: 10px !important; }
@@ -148,8 +158,8 @@
 
 <main id="main-content" style="padding-top:76px;">
 
-  <!-- Hero -->
-  <section style="background:linear-gradient(135deg,#063D30 0%,#0B6E5A 60%,#0D7A63 100%);padding:80px 24px 100px;position:relative;overflow:hidden;">
+  <!-- HERO -->
+  <section style="background:linear-gradient(135deg,#063D30 0%,#0B6E5A 60%,#0D7A63 100%);padding:72px 24px 88px;position:relative;overflow:hidden;">
     <div style="position:absolute;inset:0;pointer-events:none;">
       <div style="position:absolute;top:-40px;right:-60px;width:280px;height:280px;border-radius:50%;background:rgba(255,255,255,0.05);"></div>
       <div style="position:absolute;bottom:-30px;left:5%;width:180px;height:180px;border-radius:50%;background:rgba(255,255,255,0.04);"></div>
@@ -182,233 +192,279 @@
     </div>
   </section>
 
-  <!-- Featured Story -->
-  <section style="background:#F7F7F7;padding:80px 24px 40px;">
-    <div style="max-width:900px;margin:0 auto;" class="reveal">
-      <div style="background:linear-gradient(135deg,#063D30 0%,#0B6E5A 100%);border-radius:28px;padding:52px;position:relative;overflow:hidden;">
-        <div style="position:absolute;top:-20px;left:32px;font-size:8rem;color:rgba(255,255,255,0.08);font-family:'Nunito',sans-serif;line-height:1;pointer-events:none;">"</div>
-        <div style="position:relative;z-index:1;">
-          <div style="display:flex;gap:4px;margin-bottom:20px;">
-            <span style="color:#F5A623;font-size:1.1rem;">★</span><span style="color:#F5A623;font-size:1.1rem;">★</span><span style="color:#F5A623;font-size:1.1rem;">★</span><span style="color:#F5A623;font-size:1.1rem;">★</span><span style="color:#F5A623;font-size:1.1rem;">★</span>
-          </div>
-          <p style="font-family:'Nunito',sans-serif;font-size:clamp(1.1rem,2vw,1.35rem);color:white;font-weight:600;line-height:1.65;margin:0 0 28px;">"As parents ourselves, we searched everywhere for a childcare center that matched our values. When we learned the founders were physicians — and saw how thoughtfully everything was designed for child development — we knew immediately. Our son has flourished here beyond anything we imagined. He comes home every day talking about what he learned, the friends he made, and how much he loves his teachers."</p>
-          <div style="display:flex;align-items:center;gap:16px;">
-            <div style="width:48px;height:48px;border-radius:50%;background:rgba(245,166,35,0.3);display:flex;align-items:center;justify-content:center;font-family:'Nunito',sans-serif;font-weight:800;font-size:1.1rem;color:#F5A623;">JM</div>
-            <div>
-              <div style="font-family:'Nunito',sans-serif;font-weight:800;color:white;font-size:1rem;">Jennifer M.</div>
-              <div style="font-size:0.85rem;color:rgba(255,255,255,0.65);">Parent of Pre-K student · Oswego</div>
+  <!-- REVIEWS CONTENT -->
+  <section style="background:#F7F7F7;padding:56px 24px 80px;">
+    <div style="max-width:1100px;margin:0 auto;">
+
+      <!-- ─── A Place Parents Trust ─── -->
+      <div style="margin-bottom:56px;" class="reveal">
+        <div class="review-section-heading">
+          <span style="font-size:1.4rem;">🏡</span>
+          <h2>A Place Parents Trust</h2>
+        </div>
+        <div class="reviews-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;">
+
+          <div class="story-card reveal">
+            <div class="stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+            <span class="review-tag" style="background:#E1F5EE;color:#0B6E5A;">Oswego</span>
+            <p style="font-family:'Open Sans',sans-serif;font-size:0.9rem;color:#374151;line-height:1.72;margin:0 0 18px;">"We could attend daycare closer to home but choose to drive further for this center. All three of my girls have benefited from their programming and we never have to worry about the level of care they receive."</p>
+            <div style="display:flex;align-items:center;gap:10px;">
+              <div class="reviewer-avatar" style="background:#E1F5EE;color:#0B6E5A;">ML</div>
+              <div>
+                <div style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.88rem;color:#1A1A1A;">Michelle Lawler</div>
+                <div style="font-size:0.75rem;color:#9CA3AF;">Parent of 3 · Oswego</div>
+              </div>
             </div>
           </div>
+
+          <div class="story-card reveal delay-1">
+            <div class="stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+            <span class="review-tag" style="background:#E1F5EE;color:#0B6E5A;">Oswego</span>
+            <p style="font-family:'Open Sans',sans-serif;font-size:0.9rem;color:#374151;line-height:1.72;margin:0 0 18px;">"The teachers are amazing — I can see how much my babies have learned since they started! I feel completely comfortable leaving them here knowing they're in good hands. Highly recommend!"</p>
+            <div style="display:flex;align-items:center;gap:10px;">
+              <div class="reviewer-avatar" style="background:#FEF3D8;color:#E8950F;">TD</div>
+              <div>
+                <div style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.88rem;color:#1A1A1A;">Tatiana Davis</div>
+                <div style="font-size:0.75rem;color:#9CA3AF;">Parent · Oswego</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="story-card reveal delay-2">
+            <div class="stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+            <span class="review-tag" style="background:#E1F5EE;color:#0B6E5A;">Kirk &amp; Butterfield</span>
+            <p style="font-family:'Open Sans',sans-serif;font-size:0.9rem;color:#374151;line-height:1.72;margin:0 0 18px;">"Best decision when we moved out here. Two kids over 2+ years — from infant through preschool. The staff is engaged, friendly, and makes our kids feel truly safe and cared for."</p>
+            <div style="display:flex;align-items:center;gap:10px;">
+              <div class="reviewer-avatar" style="background:#E1F5EE;color:#0B6E5A;">KA</div>
+              <div>
+                <div style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.88rem;color:#1A1A1A;">Kelly Adams</div>
+                <div style="font-size:0.75rem;color:#9CA3AF;">Parent of 2 · Kirk &amp; Butterfield</div>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
+
+      <!-- ─── First-Time Parents ─── -->
+      <div style="margin-bottom:56px;" class="reveal">
+        <div class="review-section-heading">
+          <span style="font-size:1.4rem;">👶</span>
+          <h2>First-Time Parents</h2>
+        </div>
+        <div class="reviews-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;">
+
+          <div class="story-card reveal">
+            <div class="stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+            <span class="review-tag" style="background:#FEF3D8;color:#E8950F;">First-Time Parents</span>
+            <p style="font-family:'Open Sans',sans-serif;font-size:0.9rem;color:#374151;line-height:1.72;margin:0 0 18px;">"As first-time parents, we were anxious. The staff made us feel comfortable right away — friendly, professional, and transparent. The ProCare app with daily updates and photos gave us real peace of mind."</p>
+            <div style="display:flex;align-items:center;gap:10px;">
+              <div class="reviewer-avatar" style="background:#FEF3D8;color:#E8950F;">JD</div>
+              <div>
+                <div style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.88rem;color:#1A1A1A;">Jason Detrick</div>
+                <div style="font-size:0.75rem;color:#9CA3AF;">First-time parent · Oswego</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="story-card reveal delay-1">
+            <div class="stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+            <span class="review-tag" style="background:#FEF3D8;color:#E8950F;">First-Time Parents</span>
+            <p style="font-family:'Open Sans',sans-serif;font-size:0.9rem;color:#374151;line-height:1.72;margin:0 0 18px;">"This daycare truly exceeds our expectations. The staff remembered our child's name from day one and made us feel like family right away. Our little one feels safe, loved, and excited to go every morning."</p>
+            <div style="display:flex;align-items:center;gap:10px;">
+              <div class="reviewer-avatar" style="background:#FEF3D8;color:#E8950F;">EA</div>
+              <div>
+                <div style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.88rem;color:#1A1A1A;">Erika Almatiin-Cotton-Drane</div>
+                <div style="font-size:0.75rem;color:#9CA3AF;">First-time parent</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="story-card reveal delay-2">
+            <div class="stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+            <span class="review-tag" style="background:#FEF3D8;color:#E8950F;">First-Time Parents</span>
+            <p style="font-family:'Open Sans',sans-serif;font-size:0.9rem;color:#374151;line-height:1.72;margin:0 0 18px;">"I was nervous starting my daughter in daycare for the first time. This has been the best thing for our family. She comes home excited to talk about what she learned — and they even taught her to write her name!"</p>
+            <div style="display:flex;align-items:center;gap:10px;">
+              <div class="reviewer-avatar" style="background:#FEF3D8;color:#E8950F;">KJ</div>
+              <div>
+                <div style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.88rem;color:#1A1A1A;">Khrystal Jaquez</div>
+                <div style="font-size:0.75rem;color:#9CA3AF;">First-time parent · Kirk &amp; Butterfield</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ─── Total Peace of Mind ─── -->
+      <div style="margin-bottom:56px;" class="reveal">
+        <div class="review-section-heading">
+          <span style="font-size:1.4rem;">📱</span>
+          <h2>Total Peace of Mind</h2>
+        </div>
+        <div class="reviews-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;">
+
+          <div class="story-card reveal">
+            <div class="stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+            <span class="review-tag" style="background:#E1F5EE;color:#0B6E5A;">Oswego</span>
+            <p style="font-family:'Open Sans',sans-serif;font-size:0.9rem;color:#374151;line-height:1.72;margin:0 0 18px;">"The regular updates and photos through ProCare give us such peace of mind throughout the day. My children have grown so much socially and academically. I feel completely confident leaving them here."</p>
+            <div style="display:flex;align-items:center;gap:10px;">
+              <div class="reviewer-avatar" style="background:#E1F5EE;color:#0B6E5A;">IA</div>
+              <div>
+                <div style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.88rem;color:#1A1A1A;">Imran Ali</div>
+                <div style="font-size:0.75rem;color:#9CA3AF;">Parent · Oswego</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="story-card reveal delay-1">
+            <div class="stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+            <span class="review-tag" style="background:#E1F5EE;color:#0B6E5A;">Kirk &amp; Butterfield</span>
+            <p style="font-family:'Open Sans',sans-serif;font-size:0.9rem;color:#374151;line-height:1.72;margin:0 0 18px;">"The ProCare app updates with pics are heartwarming — especially when you're at work and just want to see your child's face. They're quick to communicate and go above and beyond every single day."</p>
+            <div style="display:flex;align-items:center;gap:10px;">
+              <div class="reviewer-avatar" style="background:#E1F5EE;color:#0B6E5A;">BL</div>
+              <div>
+                <div style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.88rem;color:#1A1A1A;">Brygette Lopez</div>
+                <div style="font-size:0.75rem;color:#9CA3AF;">Parent · Kirk &amp; Butterfield</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="story-card reveal delay-2">
+            <div class="stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+            <span class="review-tag" style="background:#E1F5EE;color:#0B6E5A;">Kirk &amp; Butterfield</span>
+            <p style="font-family:'Open Sans',sans-serif;font-size:0.9rem;color:#374151;line-height:1.72;margin:0 0 18px;">"Smart Beginnings goes above and beyond. The ProCare app keeps you updated with photos all day. They also host movie nights, trunk-or-treats, and events where the kids are truly spoiled. I feel beyond blessed."</p>
+            <div style="display:flex;align-items:center;gap:10px;">
+              <div class="reviewer-avatar" style="background:#E1F5EE;color:#0B6E5A;">MY</div>
+              <div>
+                <div style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.88rem;color:#1A1A1A;">Mary Young</div>
+                <div style="font-size:0.75rem;color:#9CA3AF;">Parent · Kirk &amp; Butterfield</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ─── They Grow So Fast ─── -->
+      <div style="margin-bottom:56px;" class="reveal">
+        <div class="review-section-heading">
+          <span style="font-size:1.4rem;">🌱</span>
+          <h2>They Grow So Fast</h2>
+        </div>
+        <div class="reviews-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;">
+
+          <div class="story-card reveal">
+            <div class="stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+            <span class="review-tag" style="background:#E1F5EE;color:#0B6E5A;">Oswego</span>
+            <p style="font-family:'Open Sans',sans-serif;font-size:0.9rem;color:#374151;line-height:1.72;margin:0 0 18px;">"My daughter's growth in just 2 months really speaks to the program and staff. She is excited every single day to go to school. We love seeing her development. So happy we found Smart Beginnings!"</p>
+            <div style="display:flex;align-items:center;gap:10px;">
+              <div class="reviewer-avatar" style="background:#E1F5EE;color:#0B6E5A;">LH</div>
+              <div>
+                <div style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.88rem;color:#1A1A1A;">Lauren Harper</div>
+                <div style="font-size:0.75rem;color:#9CA3AF;">Parent · Oswego</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="story-card reveal delay-1">
+            <div class="stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+            <span class="review-tag" style="background:#E1F5EE;color:#0B6E5A;">Oswego</span>
+            <p style="font-family:'Open Sans',sans-serif;font-size:0.9rem;color:#374151;line-height:1.72;margin:0 0 18px;">"Our twin boys adapted so much faster than we expected, thanks to their patient and creative teachers. Even our picky eaters started trying new foods! The daily app updates are clear and we love seeing what they're up to."</p>
+            <div style="display:flex;align-items:center;gap:10px;">
+              <div class="reviewer-avatar" style="background:#FEF3D8;color:#E8950F;">JK</div>
+              <div>
+                <div style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.88rem;color:#1A1A1A;">Janapati Kalpana</div>
+                <div style="font-size:0.75rem;color:#9CA3AF;">Parent of twins · Oswego</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="story-card reveal delay-2">
+            <div class="stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+            <span class="review-tag" style="background:#E1F5EE;color:#0B6E5A;">Kirk &amp; Butterfield</span>
+            <p style="font-family:'Open Sans',sans-serif;font-size:0.9rem;color:#374151;line-height:1.72;margin:0 0 18px;">"My son LOVES school. The activities are so engaging he never wants to leave! My oldest went until kindergarten, and my youngest is in preschool now. They treat us like family. I couldn't ask for better care."</p>
+            <div style="display:flex;align-items:center;gap:10px;">
+              <div class="reviewer-avatar" style="background:#E1F5EE;color:#0B6E5A;">KD</div>
+              <div>
+                <div style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.88rem;color:#1A1A1A;">Kayla Dudgeon</div>
+                <div style="font-size:0.75rem;color:#9CA3AF;">Parent · Kirk &amp; Butterfield</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ─── Summer Camp Families ─── -->
+      <div style="margin-bottom:16px;" class="reveal">
+        <div class="review-section-heading">
+          <span style="font-size:1.4rem;">☀️</span>
+          <h2>Summer Camp Families</h2>
+        </div>
+        <div class="reviews-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;">
+
+          <div class="story-card reveal">
+            <div class="stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+            <span class="review-tag" style="background:#FFFBEB;color:#D97706;">Summer Camp</span>
+            <p style="font-family:'Open Sans',sans-serif;font-size:0.9rem;color:#374151;line-height:1.72;margin:0 0 18px;">"My daughter was excited every morning and came home full of stories. As working parents, it's such a relief knowing she's in a loving, clean environment. We'll definitely be back for school breaks!"</p>
+            <div style="display:flex;align-items:center;gap:10px;">
+              <div class="reviewer-avatar" style="background:#FFFBEB;color:#D97706;">DA</div>
+              <div>
+                <div style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.88rem;color:#1A1A1A;">Daniella Argueta</div>
+                <div style="font-size:0.75rem;color:#9CA3AF;">Summer Camp Parent</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="story-card reveal delay-1">
+            <div class="stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+            <span class="review-tag" style="background:#FFFBEB;color:#D97706;">Summer Camp</span>
+            <p style="font-family:'Open Sans',sans-serif;font-size:0.9rem;color:#374151;line-height:1.72;margin:0 0 18px;">"My daughter went every day with so much joy — she even cried on the last day because she didn't want it to end! All the teachers are incredibly kind and always came up with fun, engaging activities."</p>
+            <div style="display:flex;align-items:center;gap:10px;">
+              <div class="reviewer-avatar" style="background:#FFFBEB;color:#D97706;">KS</div>
+              <div>
+                <div style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.88rem;color:#1A1A1A;">Karyna Sych</div>
+                <div style="font-size:0.75rem;color:#9CA3AF;">Summer Camp Parent</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="story-card reveal delay-2">
+            <div class="stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+            <span class="review-tag" style="background:#FFFBEB;color:#D97706;">Summer Camp</span>
+            <p style="font-family:'Open Sans',sans-serif;font-size:0.9rem;color:#374151;line-height:1.72;margin:0 0 18px;">"My son was so happy all summer — trips to the baseball game, the movies, and the park. The kids enjoyed every activity. I highly recommend this wonderful place and we hope to come back next year!"</p>
+            <div style="display:flex;align-items:center;gap:10px;">
+              <div class="reviewer-avatar" style="background:#FFFBEB;color:#D97706;">AH</div>
+              <div>
+                <div style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.88rem;color:#1A1A1A;">Anna Hrabar</div>
+                <div style="font-size:0.75rem;color:#9CA3AF;">Summer Camp Parent</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
     </div>
   </section>
 
-  <!-- Stories Grid -->
-  <section style="background:#F7F7F7;padding:40px 24px 80px;">
-    <div style="max-width:1280px;margin:0 auto;">
-
-      <!-- Filter Tabs -->
-      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:40px;justify-content:center;" class="reveal">
-        <button onclick="filterCards('all',this)" style="padding:9px 22px;border-radius:999px;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.88rem;border:2px solid #0B6E5A;background:#0B6E5A;color:white;cursor:pointer;transition:all 0.2s;" id="btn-all">All Stories</button>
-        <button onclick="filterCards('infant',this)" style="padding:9px 22px;border-radius:999px;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.88rem;border:2px solid #e5e7eb;background:white;color:#4B5563;cursor:pointer;transition:all 0.2s;" id="btn-infant">Infants</button>
-        <button onclick="filterCards('toddler',this)" style="padding:9px 22px;border-radius:999px;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.88rem;border:2px solid #e5e7eb;background:white;color:#4B5563;cursor:pointer;transition:all 0.2s;" id="btn-toddler">Toddlers</button>
-        <button onclick="filterCards('preschool',this)" style="padding:9px 22px;border-radius:999px;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.88rem;border:2px solid #e5e7eb;background:white;color:#4B5563;cursor:pointer;transition:all 0.2s;" id="btn-preschool">Preschool</button>
-        <button onclick="filterCards('prek',this)" style="padding:9px 22px;border-radius:999px;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.88rem;border:2px solid #e5e7eb;background:white;color:#4B5563;cursor:pointer;transition:all 0.2s;" id="btn-prek">Pre-K</button>
-      </div>
-
-      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:24px;" id="stories-grid">
-
-        <!-- Infant Stories -->
-        <div class="story-card reveal" data-cat="infant">
-          <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:16px;">
-            <div style="display:flex;gap:3px;"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
-            <span style="background:#E1F5EE;color:#0B6E5A;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.75rem;padding:4px 12px;border-radius:999px;">Infants</span>
-          </div>
-          <div style="font-size:1.6rem;color:rgba(11,110,90,0.15);font-family:'Nunito',sans-serif;line-height:1;margin-bottom:8px;">"</div>
-          <p style="font-size:0.93rem;color:#374151;line-height:1.7;margin:0 0 20px;">Leaving my 8-week-old felt impossible — until we found Smart Beginnings. The ratio is incredible and my daughter's caregivers send photos and updates all day through ProCare. I can actually focus at work knowing she's in safe, loving hands.</p>
-          <div style="display:flex;align-items:center;gap:12px;">
-            <div style="width:40px;height:40px;border-radius:50%;background:#E1F5EE;display:flex;align-items:center;justify-content:center;font-family:'Nunito',sans-serif;font-weight:800;font-size:0.9rem;color:#0B6E5A;">AS</div>
-            <div>
-              <div style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.92rem;color:#1A1A1A;">Amanda S.</div>
-              <div style="font-size:0.8rem;color:#9CA3AF;">Oswego location</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="story-card reveal delay-1" data-cat="infant">
-          <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:16px;">
-            <div style="display:flex;gap:3px;"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
-            <span style="background:#E1F5EE;color:#0B6E5A;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.75rem;padding:4px 12px;border-radius:999px;">Infants</span>
-          </div>
-          <div style="font-size:1.6rem;color:rgba(11,110,90,0.15);font-family:'Nunito',sans-serif;line-height:1;margin-bottom:8px;">"</div>
-          <p style="font-size:0.93rem;color:#374151;line-height:1.7;margin:0 0 20px;">The physician-founded aspect made a huge difference for us. You can tell the health and safety protocols are designed by people who truly understand child development and medicine. My son thrived from 3 months old and we've never looked back.</p>
-          <div style="display:flex;align-items:center;gap:12px;">
-            <div style="width:40px;height:40px;border-radius:50%;background:#E1F5EE;display:flex;align-items:center;justify-content:center;font-family:'Nunito',sans-serif;font-weight:800;font-size:0.9rem;color:#0B6E5A;">DP</div>
-            <div>
-              <div style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.92rem;color:#1A1A1A;">David P.</div>
-              <div style="font-size:0.8rem;color:#9CA3AF;">Kirk &amp; Butterfield location</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Toddler Stories -->
-        <div class="story-card reveal delay-2" data-cat="toddler">
-          <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:16px;">
-            <div style="display:flex;gap:3px;"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
-            <span style="background:#FFF8EE;color:#D97706;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.75rem;padding:4px 12px;border-radius:999px;">Toddlers</span>
-          </div>
-          <div style="font-size:1.6rem;color:rgba(245,166,35,0.2);font-family:'Nunito',sans-serif;line-height:1;margin-bottom:8px;">"</div>
-          <p style="font-size:0.93rem;color:#374151;line-height:1.7;margin:0 0 20px;">My daughter was very clingy and I worried about the transition. Within two weeks she was running in happily every morning. The toddler teachers have so much patience and clearly love what they do. Her vocabulary has literally doubled since starting here.</p>
-          <div style="display:flex;align-items:center;gap:12px;">
-            <div style="width:40px;height:40px;border-radius:50%;background:#FFF8EE;display:flex;align-items:center;justify-content:center;font-family:'Nunito',sans-serif;font-weight:800;font-size:0.9rem;color:#D97706;">MR</div>
-            <div>
-              <div style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.92rem;color:#1A1A1A;">Maria R.</div>
-              <div style="font-size:0.8rem;color:#9CA3AF;">Ogden location</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="story-card reveal" data-cat="toddler">
-          <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:16px;">
-            <div style="display:flex;gap:3px;"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
-            <span style="background:#FFF8EE;color:#D97706;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.75rem;padding:4px 12px;border-radius:999px;">Toddlers</span>
-          </div>
-          <div style="font-size:1.6rem;color:rgba(245,166,35,0.2);font-family:'Nunito',sans-serif;line-height:1;margin-bottom:8px;">"</div>
-          <p style="font-size:0.93rem;color:#374151;line-height:1.7;margin:0 0 20px;">We chose Smart Beginnings because of the physician founders — that credibility meant everything. The sensory play program is phenomenal, and our son's fine motor skills and language development have been remarkable. Best decision we ever made for him.</p>
-          <div style="display:flex;align-items:center;gap:12px;">
-            <div style="width:40px;height:40px;border-radius:50%;background:#FFF8EE;display:flex;align-items:center;justify-content:center;font-family:'Nunito',sans-serif;font-weight:800;font-size:0.9rem;color:#D97706;">TK</div>
-            <div>
-              <div style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.92rem;color:#1A1A1A;">Thomas K.</div>
-              <div style="font-size:0.8rem;color:#9CA3AF;">Oswego location</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Preschool Stories -->
-        <div class="story-card reveal delay-1" data-cat="preschool">
-          <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:16px;">
-            <div style="display:flex;gap:3px;"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
-            <span style="background:#EEF2FF;color:#2563EB;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.75rem;padding:4px 12px;border-radius:999px;">Preschool</span>
-          </div>
-          <div style="font-size:1.6rem;color:rgba(37,99,235,0.15);font-family:'Nunito',sans-serif;line-height:1;margin-bottom:8px;">"</div>
-          <p style="font-size:0.93rem;color:#374151;line-height:1.7;margin:0 0 20px;">My 3-year-old can already identify most letters and counts to 30. More importantly, she loves school. I asked her what her favorite part of the day is and she said "all of it." That says everything. The curriculum is outstanding and the teachers are gold.</p>
-          <div style="display:flex;align-items:center;gap:12px;">
-            <div style="width:40px;height:40px;border-radius:50%;background:#EEF2FF;display:flex;align-items:center;justify-content:center;font-family:'Nunito',sans-serif;font-weight:800;font-size:0.9rem;color:#2563EB;">LC</div>
-            <div>
-              <div style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.92rem;color:#1A1A1A;">Lauren C.</div>
-              <div style="font-size:0.8rem;color:#9CA3AF;">Kirk &amp; Butterfield location</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="story-card reveal delay-2" data-cat="preschool">
-          <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:16px;">
-            <div style="display:flex;gap:3px;"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
-            <span style="background:#EEF2FF;color:#2563EB;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.75rem;padding:4px 12px;border-radius:999px;">Preschool</span>
-          </div>
-          <div style="font-size:1.6rem;color:rgba(37,99,235,0.15);font-family:'Nunito',sans-serif;line-height:1;margin-bottom:8px;">"</div>
-          <p style="font-size:0.93rem;color:#374151;line-height:1.7;margin:0 0 20px;">We toured five centers before choosing Smart Beginnings. The facilities, the ratios, and the staff credentials were head and shoulders above everywhere else. A year in, our daughter has a best friend, a favorite book, and confidence that makes my heart burst.</p>
-          <div style="display:flex;align-items:center;gap:12px;">
-            <div style="width:40px;height:40px;border-radius:50%;background:#EEF2FF;display:flex;align-items:center;justify-content:center;font-family:'Nunito',sans-serif;font-weight:800;font-size:0.9rem;color:#2563EB;">NW</div>
-            <div>
-              <div style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.92rem;color:#1A1A1A;">Nicole W.</div>
-              <div style="font-size:0.8rem;color:#9CA3AF;">Oswego location</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Pre-K Stories -->
-        <div class="story-card reveal" data-cat="prek">
-          <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:16px;">
-            <div style="display:flex;gap:3px;"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
-            <span style="background:#F5F3FF;color:#7C3AED;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.75rem;padding:4px 12px;border-radius:999px;">Pre-K</span>
-          </div>
-          <div style="font-size:1.6rem;color:rgba(124,58,237,0.15);font-family:'Nunito',sans-serif;line-height:1;margin-bottom:8px;">"</div>
-          <p style="font-size:0.93rem;color:#374151;line-height:1.7;margin:0 0 20px;">My son's kindergarten teacher pulled me aside on day one to say he was "exceptionally prepared." I cried happy tears. Smart Beginnings gave him not just academic skills but the confidence and emotional tools to thrive. This program is transformative.</p>
-          <div style="display:flex;align-items:center;gap:12px;">
-            <div style="width:40px;height:40px;border-radius:50%;background:#F5F3FF;display:flex;align-items:center;justify-content:center;font-family:'Nunito',sans-serif;font-weight:800;font-size:0.9rem;color:#7C3AED;">RB</div>
-            <div>
-              <div style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.92rem;color:#1A1A1A;">Rachel B.</div>
-              <div style="font-size:0.8rem;color:#9CA3AF;">Ogden location</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="story-card reveal delay-1" data-cat="prek">
-          <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:16px;">
-            <div style="display:flex;gap:3px;"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
-            <span style="background:#F5F3FF;color:#7C3AED;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.75rem;padding:4px 12px;border-radius:999px;">Pre-K</span>
-          </div>
-          <div style="font-size:1.6rem;color:rgba(124,58,237,0.15);font-family:'Nunito',sans-serif;line-height:1;margin-bottom:8px;">"</div>
-          <p style="font-size:0.93rem;color:#374151;line-height:1.7;margin:0 0 20px;">Four years — two kids, infant through Pre-K — all at Smart Beginnings. Every year gets better. The teachers know our family by name, ask about siblings, and genuinely invest in each child as an individual. This isn't childcare. It's family.</p>
-          <div style="display:flex;align-items:center;gap:12px;">
-            <div style="width:40px;height:40px;border-radius:50%;background:#F5F3FF;display:flex;align-items:center;justify-content:center;font-family:'Nunito',sans-serif;font-weight:800;font-size:0.9rem;color:#7C3AED;">KH</div>
-            <div>
-              <div style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.92rem;color:#1A1A1A;">Karen H.</div>
-              <div style="font-size:0.8rem;color:#9CA3AF;">Oswego location · 4-year family</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="story-card reveal delay-2" data-cat="prek">
-          <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:16px;">
-            <div style="display:flex;gap:3px;"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
-            <span style="background:#F5F3FF;color:#7C3AED;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.75rem;padding:4px 12px;border-radius:999px;">Pre-K</span>
-          </div>
-          <div style="font-size:1.6rem;color:rgba(124,58,237,0.15);font-family:'Nunito',sans-serif;line-height:1;margin-bottom:8px;">"</div>
-          <p style="font-size:0.93rem;color:#374151;line-height:1.7;margin:0 0 20px;">The daily ProCare updates are a game-changer for working parents. I see photos of my daughter learning, playing, and laughing all day. The STEM activities in Pre-K are genuinely impressive — she built a "bridge" last week and explained why it worked. At 4!</p>
-          <div style="display:flex;align-items:center;gap:12px;">
-            <div style="width:40px;height:40px;border-radius:50%;background:#F5F3FF;display:flex;align-items:center;justify-content:center;font-family:'Nunito',sans-serif;font-weight:800;font-size:0.9rem;color:#7C3AED;">SL</div>
-            <div>
-              <div style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.92rem;color:#1A1A1A;">Sarah L.</div>
-              <div style="font-size:0.8rem;color:#9CA3AF;">Kirk &amp; Butterfield location</div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Google Reviews CTA -->
-  <section style="background:white;padding:0 24px 80px;">
-    <div style="max-width:1280px;margin:0 auto;">
-      <div style="background:#F7F7F7;border-radius:24px;padding:48px;text-align:center;" class="reveal">
-        <div style="font-size:2.8rem;margin-bottom:16px;line-height:1;">💬</div>
-        <h2 style="font-family:'Nunito',sans-serif;font-weight:900;font-size:1.6rem;color:#1A1A1A;margin:0 0 12px;">Love Our Academy? Share Your Story</h2>
-        <p style="font-family:'Open Sans',sans-serif;color:#4B5563;line-height:1.7;margin:0 0 32px;max-width:520px;margin-left:auto;margin-right:auto;">Your review helps other families find the right place for their child. Choose your location below and share your experience on Google.</p>
-        <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
-          <a href="https://maps.app.goo.gl/F2fnKtrdUBHqyKNM8" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;background:#4285F4;color:white;font-family:'Nunito',sans-serif;font-weight:700;border-radius:999px;padding:12px 22px;font-size:0.88rem;text-decoration:none;transition:background 0.2s,transform 0.2s;" onmouseover="this.style.background='#2b6ee0';this.style.transform='translateY(-2px)'" onmouseout="this.style.background='#4285F4';this.style.transform='translateY(0)'">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-            Review Oswego
-          </a>
-          <a href="https://maps.app.goo.gl/xqv4vHo26gUC2m4fA" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;background:#4285F4;color:white;font-family:'Nunito',sans-serif;font-weight:700;border-radius:999px;padding:12px 22px;font-size:0.88rem;text-decoration:none;transition:background 0.2s,transform 0.2s;" onmouseover="this.style.background='#2b6ee0';this.style.transform='translateY(-2px)'" onmouseout="this.style.background='#4285F4';this.style.transform='translateY(0)'">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-            Review Ogden &amp; IL 59
-          </a>
-          <a href="https://maps.app.goo.gl/3785k4AwKfSTaZVbA" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;background:#4285F4;color:white;font-family:'Nunito',sans-serif;font-weight:700;border-radius:999px;padding:12px 22px;font-size:0.88rem;text-decoration:none;transition:background 0.2s,transform 0.2s;" onmouseover="this.style.background='#2b6ee0';this.style.transform='translateY(-2px)'" onmouseout="this.style.background='#4285F4';this.style.transform='translateY(0)'">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-            Review Kirk &amp; Butterfield
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Tour CTA -->
-  <section style="background:#0B6E5A;padding:64px 24px;text-align:center;">
-    <div style="max-width:640px;margin:0 auto;">
-      <h2 style="font-family:'Nunito',sans-serif;font-weight:900;font-size:1.75rem;color:white;margin:0 0 12px;">Ready to Join Our Family?</h2>
-      <p style="font-family:'Open Sans',sans-serif;color:rgba(255,255,255,0.85);line-height:1.7;margin:0 0 28px;">Come experience the warmth and quality that our families rave about. Tours are available at all three locations.</p>
+  <!-- CTA -->
+  <section style="background:linear-gradient(135deg,#052e22 0%,#0B6E5A 100%);padding:72px 24px;text-align:center;">
+    <div style="max-width:580px;margin:0 auto;" class="reveal">
+      <div style="font-size:2rem;margin-bottom:12px;">🏫</div>
+      <h2 style="font-family:'Nunito',sans-serif;font-weight:900;font-size:clamp(1.6rem,3vw,2.2rem);color:white;letter-spacing:-0.025em;margin:0 0 12px;">Ready to Join Our Family?</h2>
+      <p style="font-family:'Open Sans',sans-serif;font-size:0.95rem;color:rgba(255,255,255,0.8);line-height:1.75;margin:0 0 28px;">Come see for yourself why hundreds of families trust Smart Beginnings. Tours are free and available at all three locations.</p>
       <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
-        <a href="schedule-tour.html" class="btn-amber" style="padding:15px 36px;font-size:1rem;">Schedule a Tour</a>
-        <a href="contact.html" style="display:inline-flex;align-items:center;gap:8px;background:transparent;color:white;border:2px solid rgba(255,255,255,0.5);font-family:'Nunito',sans-serif;font-weight:700;border-radius:999px;text-decoration:none;padding:15px 36px;font-size:1rem;transition:background 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.15)'" onmouseout="this.style.background='transparent'">Ask a Question</a>
+        <a href="schedule-tour.html" class="btn-amber" style="padding:15px 36px;font-size:1rem;box-shadow:0 8px 28px rgba(245,166,35,0.4);">Schedule a Free Tour</a>
+        <a href="contact.html" style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.12);color:white;border:1.5px solid rgba(255,255,255,0.3);font-family:'Nunito',sans-serif;font-weight:700;border-radius:999px;text-decoration:none;padding:15px 28px;font-size:0.95rem;transition:background 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.2)'" onmouseout="this.style.background='rgba(255,255,255,0.12)'">Ask a Question</a>
       </div>
     </div>
   </section>
 
 </main>
+
+
 
 <!-- Footer -->
 <footer style="background:#1A1A1A;color:white;padding:64px 24px 32px;">
