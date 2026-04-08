@@ -104,6 +104,15 @@
       .iels-foot { padding: 12px 20px; }
       .domain-cell { padding: 15px 13px; }
     }
+  
+    /* ── MOBILE RESPONSIVE ── */
+    @media (max-width: 639px) {
+      #la-stats { grid-template-columns: repeat(2,1fr) !important; }
+      .section-band { flex-direction: column !important; align-items: flex-start !important; }
+      .domain-grid { grid-template-columns: 1fr 1fr !important; }
+      .how-band { flex-direction: column !important; gap: 10px !important; }
+      .filter-pill { padding: 7px 13px !important; font-size: 12px !important; }
+    }
   </style>
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png" />
@@ -283,7 +292,7 @@
     <div style="max-width:1100px;margin:0 auto;">
 
       <!-- STATS STRIP -->
-      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:44px;" class="reveal">
+      <div id="la-stats" style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:44px;" class="reveal">
         <div style="background:white;border:1px solid #D4E8E2;border-radius:16px;padding:22px 16px;text-align:center;box-shadow:0 2px 12px rgba(11,110,90,0.06);">
           <div style="font-family:'Nunito',sans-serif;font-size:2rem;font-weight:900;color:#0B6E5A;line-height:1;">6</div>
           <div style="font-family:'Open Sans',sans-serif;font-size:12px;color:#6B7280;margin-top:6px;font-weight:600;">Age-Specific Programs</div>

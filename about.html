@@ -59,6 +59,11 @@
     @media (min-width: 768px) { .desktop-nav { display: flex !important; } }
     .hamburger { display: flex !important; }
     @media (min-width: 768px) { .hamburger { display: none !important; } }
+  
+    /* ── MOBILE RESPONSIVE ── */
+    @media (max-width: 767px) {
+      .story-layout { grid-template-columns: 1fr !important; gap: 40px !important; }
+    }
   </style>
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png" />
@@ -207,7 +212,7 @@
   <!-- STORY SECTION -->
   <section style="padding:80px 24px;background:white;">
     <div style="max-width:1100px;margin:0 auto;">
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;" class="md:grid-cols-2">
+      <div class="story-layout" style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;" class="md:grid-cols-2">
 
         <!-- Story Text -->
         <div class="reveal">
