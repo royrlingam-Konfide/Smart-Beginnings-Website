@@ -229,44 +229,58 @@
   </nav>
 
   <!-- Mobile Menu -->
-  <div id="mobile-menu" class="mobile-menu" style="border-top:1px solid #f0f0f0;">
-    <div style="max-width:1280px;margin:0 auto;padding:20px 24px 28px;display:flex;flex-direction:column;gap:2px;">
-      <a href="programs.html" style="display:flex;align-items:center;justify-content:space-between;padding:13px 16px;border-radius:12px;font-family:'Nunito',sans-serif;font-weight:700;font-size:1rem;color:#2D2D2D;text-decoration:none;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='transparent';this.style.color='#2D2D2D'">Programs <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-      <div style="margin:0 0 4px 16px;display:flex;flex-direction:column;gap:1px;border-left:2px solid #E1F5EE;padding-left:14px;">
+  <div id="mobile-menu" class="mobile-menu" style="border-top:1px solid #f0f0f0;background:white;">
+    <div style="padding:12px 20px 24px;display:flex;flex-direction:column;gap:2px;">
+
+      <!-- Programs accordion -->
+      <button onclick="toggleMobSection('ms-prog')" style="display:flex;align-items:center;justify-content:space-between;width:100%;padding:12px 14px;border-radius:10px;background:none;border:none;cursor:pointer;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.95rem;color:#2D2D2D;text-align:left;">
+        Programs <svg id="ms-prog-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" style="transition:transform 0.25s;flex-shrink:0;"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div id="ms-prog" style="display:none;padding:4px 0 8px 14px;border-left:2px solid #E1F5EE;margin-left:14px;">
         <a href="programs-infants.html" style="display:block;padding:9px 12px;border-radius:8px;font-family:'Open Sans',sans-serif;font-size:0.875rem;color:#4B5563;text-decoration:none;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='transparent';this.style.color='#4B5563'">Infants (6 wks – 14 mo)</a>
         <a href="programs-toddlers.html" style="display:block;padding:9px 12px;border-radius:8px;font-family:'Open Sans',sans-serif;font-size:0.875rem;color:#4B5563;text-decoration:none;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='transparent';this.style.color='#4B5563'">Toddlers (15 – 23 mo)</a>
         <a href="programs-twos.html" style="display:block;padding:9px 12px;border-radius:8px;font-family:'Open Sans',sans-serif;font-size:0.875rem;color:#4B5563;text-decoration:none;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='transparent';this.style.color='#4B5563'">Twos (24 – 35 mo)</a>
-        <a href="programs-preschool.html" style="display:block;padding:9px 12px;border-radius:8px;font-family:'Open Sans',sans-serif;font-size:0.875rem;color:#4B5563;text-decoration:none;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='transparent';this.style.color='#4B5563'">Pre School (3 – 5 yrs)</a>
-        <a href="programs-school-age.html" style="display:block;padding:9px 12px;border-radius:8px;font-family:'Open Sans',sans-serif;font-size:0.875rem;color:#4B5563;text-decoration:none;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='transparent';this.style.color='#4B5563'">School Age (K – 12)</a>
+        <a href="programs-preschool.html" style="display:block;padding:9px 12px;border-radius:8px;font-family:'Open Sans',sans-serif;font-size:0.875rem;color:#4B5563;text-decoration:none;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='transparent';this.style.color='#4B5563'">Preschool (3 – 5 yrs)</a>
+        <a href="programs-school-age.html" style="display:block;padding:9px 12px;border-radius:8px;font-family:'Open Sans',sans-serif;font-size:0.875rem;color:#4B5563;text-decoration:none;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='transparent';this.style.color='#4B5563'">School Age</a>
         <a href="programs-summer-camp.html" style="display:block;padding:9px 12px;border-radius:8px;font-family:'Open Sans',sans-serif;font-size:0.875rem;color:#4B5563;text-decoration:none;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='transparent';this.style.color='#4B5563'">Summer Camp</a>
       </div>
-      <span style="display:flex;align-items:center;justify-content:space-between;padding:13px 16px;border-radius:12px;font-family:'Nunito',sans-serif;font-weight:700;font-size:1rem;color:#2D2D2D;cursor:default;">Our Story <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-      <div style="margin:0 0 4px 16px;display:flex;flex-direction:column;gap:1px;border-left:2px solid #E1F5EE;padding-left:14px;">
+
+      <!-- Our Story accordion -->
+      <button onclick="toggleMobSection('ms-story')" style="display:flex;align-items:center;justify-content:space-between;width:100%;padding:12px 14px;border-radius:10px;background:none;border:none;cursor:pointer;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.95rem;color:#2D2D2D;text-align:left;">
+        Our Story <svg id="ms-story-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" style="transition:transform 0.25s;flex-shrink:0;"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div id="ms-story" style="display:none;padding:4px 0 8px 14px;border-left:2px solid #E1F5EE;margin-left:14px;">
         <a href="about.html" style="display:block;padding:9px 12px;border-radius:8px;font-family:'Open Sans',sans-serif;font-size:0.875rem;color:#4B5563;text-decoration:none;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='transparent';this.style.color='#4B5563'">Who We Are</a>
-        <a href="leadership.html" style="display:block;padding:9px 12px;border-radius:8px;font-family:'Open Sans',sans-serif;font-size:0.875rem;color:#4B5563;text-decoration:none;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='transparent';this.style.color='#4B5563'">Our Leadership &amp; Team</a>
-        <a href="learning-approach.html" style="display:block;padding:9px 12px;border-radius:8px;font-family:'Open Sans',sans-serif;font-size:0.875rem;color:#4B5563;text-decoration:none;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='transparent';this.style.color='#4B5563'">Our Learning Approach</a>
+        <a href="leadership.html" style="display:block;padding:9px 12px;border-radius:8px;font-family:'Open Sans',sans-serif;font-size:0.875rem;color:#4B5563;text-decoration:none;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='transparent';this.style.color='#4B5563'">Leadership &amp; Team</a>
+        <a href="learning-approach.html" style="display:block;padding:9px 12px;border-radius:8px;font-family:'Open Sans',sans-serif;font-size:0.875rem;color:#4B5563;text-decoration:none;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='transparent';this.style.color='#4B5563'">Learning Approach</a>
       </div>
-      <a href="health-safety.html" style="display:flex;align-items:center;justify-content:space-between;padding:13px 16px;border-radius:12px;font-family:'Nunito',sans-serif;font-weight:700;font-size:1rem;color:#2D2D2D;text-decoration:none;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='transparent';this.style.color='#2D2D2D'">Health &amp; Safety <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-      <span style="display:flex;align-items:center;justify-content:space-between;padding:13px 16px;border-radius:12px;font-family:'Nunito',sans-serif;font-weight:700;font-size:1rem;color:#2D2D2D;cursor:default;">Locations <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-      <div style="margin:0 0 4px 16px;display:flex;flex-direction:column;gap:1px;border-left:2px solid #E1F5EE;padding-left:14px;">
-        <a href="location-oswego.html" style="display:block;padding:10px 12px;border-radius:8px;text-decoration:none;" onmouseover="this.style.background='#E1F5EE'" onmouseout="this.style.background='transparent'">
-          <span style="display:block;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.85rem;color:#0B6E5A;margin-bottom:3px;">Oswego</span>
-          <span style="display:block;font-family:'Open Sans',sans-serif;font-size:0.75rem;color:#4B5563;">750 5th Street, Oswego IL 60543</span>
+
+      <a href="health-safety.html" style="display:flex;align-items:center;justify-content:space-between;padding:12px 14px;border-radius:10px;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.95rem;color:#2D2D2D;text-decoration:none;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='transparent';this.style.color='#2D2D2D'">Health &amp; Safety</a>
+
+      <!-- Locations accordion -->
+      <button onclick="toggleMobSection('ms-loc')" style="display:flex;align-items:center;justify-content:space-between;width:100%;padding:12px 14px;border-radius:10px;background:none;border:none;cursor:pointer;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.95rem;color:#2D2D2D;text-align:left;">
+        Locations <svg id="ms-loc-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" style="transition:transform 0.25s;flex-shrink:0;"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div id="ms-loc" style="display:none;padding:4px 0 8px 14px;border-left:2px solid #E1F5EE;margin-left:14px;">
+        <a href="location-oswego.html" style="display:block;padding:9px 12px;border-radius:8px;text-decoration:none;" onmouseover="this.style.background='#E1F5EE'" onmouseout="this.style.background='transparent'">
+          <span style="display:block;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.85rem;color:#0B6E5A;">Oswego</span>
+          <span style="font-family:'Open Sans',sans-serif;font-size:0.75rem;color:#6B7280;">750 5th Street, Oswego IL 60543</span>
         </a>
-        <a href="location-ogden.html" style="display:block;padding:10px 12px;border-radius:8px;text-decoration:none;" onmouseover="this.style.background='#E1F5EE'" onmouseout="this.style.background='transparent'">
-          <span style="display:block;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.85rem;color:#0B6E5A;margin-bottom:3px;">Ogden &amp; IL 59</span>
-          <span style="display:block;font-family:'Open Sans',sans-serif;font-size:0.75rem;color:#4B5563;">4105 Healthway Drive, Aurora IL</span>
+        <a href="location-kirk.html" style="display:block;padding:9px 12px;border-radius:8px;text-decoration:none;" onmouseover="this.style.background='#E1F5EE'" onmouseout="this.style.background='transparent'">
+          <span style="display:block;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.85rem;color:#0B6E5A;">Kirk &amp; Butterfield</span>
+          <span style="font-family:'Open Sans',sans-serif;font-size:0.75rem;color:#6B7280;">1555 Mesa Lane, Aurora IL 60502</span>
         </a>
-        <a href="location-kirk.html" style="display:block;padding:10px 12px;border-radius:8px;text-decoration:none;" onmouseover="this.style.background='#E1F5EE'" onmouseout="this.style.background='transparent'">
-          <span style="display:block;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.85rem;color:#0B6E5A;margin-bottom:3px;">Kirk &amp; Butterfield</span>
-          <span style="display:block;font-family:'Open Sans',sans-serif;font-size:0.75rem;color:#4B5563;">1555 Mesa Lane, Aurora IL 60502</span>
+        <a href="location-ogden.html" style="display:block;padding:9px 12px;border-radius:8px;text-decoration:none;" onmouseover="this.style.background='#E1F5EE'" onmouseout="this.style.background='transparent'">
+          <span style="display:block;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.85rem;color:#0B6E5A;">Ogden &amp; IL-59</span>
+          <span style="font-family:'Open Sans',sans-serif;font-size:0.75rem;color:#6B7280;">4105 Healthway Drive, Aurora IL 60504</span>
         </a>
       </div>
-      <a href="parent-stories.html" style="display:flex;align-items:center;justify-content:space-between;padding:13px 16px;border-radius:12px;font-family:'Nunito',sans-serif;font-weight:700;font-size:1rem;color:#2D2D2D;text-decoration:none;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='transparent';this.style.color='#2D2D2D'">Parent Stories <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-      <div style="height:1px;background:#f0f0f0;margin:12px 0;"></div>
-      <a href="schedule-tour.html" class="btn-amber" style="padding:15px 24px;font-size:0.95rem;justify-content:center;">Schedule a Tour <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+
+      <a href="parent-stories.html" style="display:flex;align-items:center;justify-content:space-between;padding:12px 14px;border-radius:10px;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.95rem;color:#2D2D2D;text-decoration:none;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='transparent';this.style.color='#2D2D2D'">Parent Stories</a>
+
+      <div style="height:1px;background:#f0f0f0;margin:10px 0;"></div>
+      <a href="schedule-tour.html" class="btn-amber" style="padding:14px 24px;font-size:0.95rem;justify-content:center;border-radius:12px;">Schedule a Tour &#8594;</a>
     </div>
-  </div>
   </div>
 </header>
 
