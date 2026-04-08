@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Is My Child on Track? Key Milestones Ages 2–5 | Smart Beginnings Academy</title>
+  <meta name="description" content="A simple guide to developmental milestones ages 2–5 from the physician-founded team at Smart Beginnings Academy." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&family=Open+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Open Sans', sans-serif; color: #2D2D2D; -webkit-font-smoothing: antialiased; margin: 0; }
+    h1,h2,h3,h4 { font-family: 'Nunito', sans-serif; }
+    #site-header { position: fixed; top: 0; left: 0; right: 0; z-index: 50; background: white; box-shadow: 0 2px 24px rgba(0,0,0,0.07); }
+    .mobile-menu { max-height: 0; overflow: hidden; transition: max-height 0.4s cubic-bezier(0.4,0,0.2,1); background: white; }
+    .mobile-menu.open { max-height: 100dvh; overflow-y: auto; }
+    .hamburger-line { display: block; width: 22px; height: 2px; background: #2D2D2D; border-radius: 2px; transition: transform 0.3s ease, opacity 0.3s ease; }
+    .hamburger.open .line-1 { transform: translateY(8px) rotate(45deg); }
+    .hamburger.open .line-2 { opacity: 0; }
+    .hamburger.open .line-3 { transform: translateY(-8px) rotate(-45deg); }
+    .nav-dropdown { opacity: 0; visibility: hidden; transform: translateY(-8px); transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease; }
+    .nav-item:hover .nav-dropdown, .nav-item:focus-within .nav-dropdown { opacity: 1; visibility: visible; transform: translateY(0); }
+    .nav-link { position: relative; font-family: 'Nunito', sans-serif; font-weight: 600; font-size: 0.92rem; color: #2D2D2D; text-decoration: none; transition: color 0.2s; }
+    .nav-link::after { content: ''; position: absolute; bottom: -3px; left: 0; width: 0; height: 2px; background: #0B6E5A; border-radius: 2px; transition: width 0.25s ease; }
+    .nav-link:hover { color: #0B6E5A; }
+    .nav-link:hover::after { width: 100%; }
+    .btn-amber { display: inline-flex; align-items: center; gap: 8px; background: #F5A623; color: white; font-family: 'Nunito', sans-serif; font-weight: 700; border-radius: 999px; text-decoration: none; cursor: pointer; border: none; transition: background 0.2s, transform 0.2s; }
+    .btn-amber:hover { background: #E8950F; transform: translateY(-1px); }
+    .desktop-nav { display: none !important; }
+    @media (min-width: 768px) { .desktop-nav { display: flex !important; } }
+    .hamburger { display: flex !important; }
+    @media (min-width: 768px) { .hamburger { display: none !important; } }
+    .article-body h2 { font-family: 'Nunito', sans-serif; font-weight: 900; font-size: 1.4rem; color: #1A1A1A; letter-spacing: -0.02em; margin: 40px 0 14px; line-height: 1.2; }
+    .article-body p { font-family: 'Open Sans', sans-serif; font-size: 1rem; color: #374151; line-height: 1.82; margin: 0 0 20px; }
+    .article-body ul { padding-left: 0; margin: 0 0 20px; list-style: none; }
+    .article-body ul li { font-family: 'Open Sans', sans-serif; font-size: 0.95rem; color: #374151; line-height: 1.7; padding: 6px 0 6px 24px; position: relative; }
+    .article-body ul li::before { content: '✓'; position: absolute; left: 0; color: #0B6E5A; font-weight: 900; font-size: 0.85rem; top: 8px; }
+    .tip-box { background: linear-gradient(135deg, #E1F5EE, #C7EBE0); border-left: 4px solid #0B6E5A; border-radius: 12px; padding: 20px 24px; margin: 28px 0; }
+    .tip-box p { margin: 0; color: #085041; }
+    .age-card { background: white; border-radius: 16px; border: 1px solid #D4E8E2; padding: 24px 28px; margin: 0 0 20px; box-shadow: 0 2px 12px rgba(11,110,90,0.07); }
+    .tag { display: inline-flex; align-items: center; gap: 5px; font-family: 'Nunito', sans-serif; font-weight: 700; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; border-radius: 999px; padding: 4px 12px; }
+    @media (max-width: 639px) {
+      footer { padding: 40px 16px 0 !important; }
+      footer > div:first-child > div:first-child { grid-template-columns: 1fr 1fr !important; gap: 24px !important; padding-bottom: 32px !important; }
+      footer > div:first-child > div:first-child > div:first-child { grid-column: 1 / -1 !important; }
+      footer > div:first-child > div:first-child > div:last-child { grid-column: 1 / -1 !important; }
+      footer > div:last-child > div { flex-direction: column !important; align-items: flex-start !important; gap: 6px !important; padding: 16px !important; }
+      .footer-loc-list { display: grid !important; grid-template-columns: 1fr 1fr !important; gap: 10px 16px !important; }
+    }
+  </style>
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
+</head>
+<body>
+<header id="site-header">
+  <nav style="max-width:1280px;margin:0 auto;padding:0 24px;" aria-label="Main navigation">
+    <div style="display:flex;align-items:center;justify-content:space-between;height:76px;">
+      <a href="index.html" style="flex-shrink:0;"><img src="Logo Transparency_Shadow.png" alt="Smart Beginnings Academy" style="height:54px;width:auto;" /></a>
+      <div class="desktop-nav" style="align-items:center;gap:32px;">
+        <div class="nav-item" style="position:relative;"><span class="nav-link" style="cursor:default;display:inline-flex;align-items:center;gap:5px;">Programs <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div class="nav-dropdown" style="position:absolute;top:calc(100% + 12px);left:0;width:230px;background:white;border-radius:16px;box-shadow:0 12px 40px rgba(0,0,0,0.12);border:1px solid #f0f0f0;padding:8px;z-index:100;"><a href="programs-infants.html" style="display:block;padding:10px 14px;border-radius:10px;font-size:0.875rem;color:#2D2D2D;text-decoration:none;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='';this.style.color='#2D2D2D'">Infants (6 wks – 14 mo)</a><a href="programs-toddlers.html" style="display:block;padding:10px 14px;border-radius:10px;font-size:0.875rem;color:#2D2D2D;text-decoration:none;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='';this.style.color='#2D2D2D'">Toddlers (15 – 23 mo)</a><a href="programs-twos.html" style="display:block;padding:10px 14px;border-radius:10px;font-size:0.875rem;color:#2D2D2D;text-decoration:none;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='';this.style.color='#2D2D2D'">Twos (24 – 35 mo)</a><a href="programs-preschool.html" style="display:block;padding:10px 14px;border-radius:10px;font-size:0.875rem;color:#2D2D2D;text-decoration:none;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='';this.style.color='#2D2D2D'">Pre-School (3 – 5 yrs)</a><a href="programs-school-age.html" style="display:block;padding:10px 14px;border-radius:10px;font-size:0.875rem;color:#2D2D2D;text-decoration:none;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='';this.style.color='#2D2D2D'">School Age (K – 12)</a><a href="programs-summer-camp.html" style="display:block;padding:10px 14px;border-radius:10px;font-size:0.875rem;color:#2D2D2D;text-decoration:none;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='';this.style.color='#2D2D2D'">Summer Camp</a></div></div>
+        <a href="health-safety.html" class="nav-link">Health &amp; Safety</a>
+        <a href="parent-stories.html" class="nav-link">Parent Stories</a>
+        <div class="nav-item" style="position:relative;"><span class="nav-link" style="cursor:default;display:inline-flex;align-items:center;gap:5px;color:#0B6E5A;">Resources <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div class="nav-dropdown" style="position:absolute;top:calc(100% + 12px);right:0;left:auto;width:160px;background:white;border-radius:16px;box-shadow:0 12px 40px rgba(0,0,0,0.12);border:1px solid #f0f0f0;padding:8px;z-index:100;"><a href="blog.html" style="display:block;padding:10px 14px;border-radius:10px;font-family:'Open Sans',sans-serif;font-size:0.875rem;color:#0B6E5A;font-weight:600;text-decoration:none;background:#E1F5EE;">Blog</a></div></div>
+      </div>
+      <div style="display:flex;align-items:center;gap:16px;">
+        <a href="schedule-tour.html" class="btn-amber" style="padding:9px 16px;font-size:0.8rem;">Schedule a Tour</a>
+        <button id="hamburger-btn" class="hamburger" style="position:relative;z-index:60;flex-direction:column;gap:6px;padding:8px;background:none;border:none;cursor:pointer;" aria-expanded="false" aria-controls="mobile-menu"><span class="hamburger-line line-1"></span><span class="hamburger-line line-2"></span><span class="hamburger-line line-3"></span></button>
+      </div>
+    </div>
+  </nav>
+  <div id="mobile-menu" class="mobile-menu" style="background:white;border-top:1px solid #f0f0f0;">
+    <div style="padding:12px 20px 24px;display:flex;flex-direction:column;gap:2px;">
+      <a href="blog.html" style="display:flex;align-items:center;padding:12px 14px;border-radius:10px;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.95rem;color:#2D2D2D;text-decoration:none;" onmouseover="this.style.background='#E1F5EE'" onmouseout="this.style.background='transparent'">&#8592; Back to Blog</a>
+      <div style="height:1px;background:#f0f0f0;margin:10px 0;"></div>
+      <a href="schedule-tour.html" class="btn-amber" style="padding:14px 24px;font-size:0.95rem;justify-content:center;border-radius:12px;">Schedule a Tour &#8594;</a>
+    </div>
+  </div>
+</header>
+
+<main style="padding-top:76px;">
+
+  <!-- ARTICLE HERO -->
+  <section style="background:linear-gradient(135deg,#063D30 0%,#0B6E5A 55%,#0D8A6E 100%);padding:56px 24px 64px;position:relative;overflow:hidden;">
+    <div aria-hidden="true" style="position:absolute;top:-40px;right:-40px;width:300px;height:300px;border-radius:50%;background:rgba(245,166,35,0.12);pointer-events:none;"></div>
+    <div style="max-width:760px;margin:0 auto;position:relative;">
+      <a href="blog.html" style="display:inline-flex;align-items:center;gap:6px;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.8rem;color:rgba(255,255,255,0.7);text-decoration:none;margin-bottom:20px;" onmouseover="this.style.color='white'" onmouseout="this.style.color='rgba(255,255,255,0.7)'">&#8592; Back to Blog</a>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px;">
+        <span style="display:inline-flex;align-items:center;gap:5px;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.72rem;text-transform:uppercase;letter-spacing:0.08em;border-radius:999px;padding:4px 12px;background:rgba(255,255,255,0.15);color:white;">🧒 Child Development</span>
+        <span style="display:inline-flex;align-items:center;gap:5px;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.72rem;text-transform:uppercase;letter-spacing:0.08em;border-radius:999px;padding:4px 12px;background:rgba(255,255,255,0.15);color:white;">📅 Ages 2–5</span>
+        <span style="display:inline-flex;align-items:center;gap:5px;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.72rem;text-transform:uppercase;letter-spacing:0.08em;border-radius:999px;padding:4px 12px;background:rgba(245,166,35,0.25);color:#FDE3A0;">💡 Parent Tip</span>
+      </div>
+      <h1 style="font-family:'Nunito',sans-serif;font-weight:900;font-size:clamp(1.8rem,4vw,2.8rem);color:white;letter-spacing:-0.035em;margin:0 0 16px;line-height:1.1;">Is My Child on Track? Key Milestones to Watch Ages 2–5</h1>
+      <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;">
+        <div style="display:flex;align-items:center;gap:8px;">
+          <div style="width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,0.2);display:flex;align-items:center;justify-content:center;font-size:14px;">👩‍⚕️</div>
+          <span style="font-family:'Open Sans',sans-serif;font-size:0.82rem;color:rgba(255,255,255,0.8);">Smart Beginnings Academy</span>
+        </div>
+        <span style="font-family:'Open Sans',sans-serif;font-size:0.8rem;color:rgba(255,255,255,0.55);">5 min read · Child Development</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARTICLE BODY -->
+  <section style="background:#FAFAFA;padding:56px 24px 80px;">
+    <div style="max-width:760px;margin:0 auto;">
+      <div class="article-body">
+
+        <p style="font-size:1.1rem;color:#1A1A1A;font-weight:600;line-height:1.75;margin-bottom:28px;">Every parent has wondered it at some point: <em>Is my child developing the way they should?</em> The good news is that children grow in their own rhythm — and understanding typical milestones gives you the knowledge to support them confidently.</p>
+
+        <p>At Smart Beginnings Academy, our physician-founded approach means we pay close attention to the whole child — social, emotional, physical, and cognitive. Here's a simple guide to help you understand what to look for.</p>
+
+        <h2>🍼 Age 2: The Age of 'No' and New Words</h2>
+        <p>At two, your toddler is beginning to assert independence. Expect rapid vocabulary growth — most two-year-olds use 50+ words and begin combining two-word phrases like "more juice" or "daddy go."</p>
+        <div class="age-card">
+          <div style="font-family:'Nunito',sans-serif;font-weight:800;font-size:0.8rem;text-transform:uppercase;letter-spacing:0.08em;color:#0B6E5A;margin-bottom:12px;">What to look for at age 2</div>
+          <ul>
+            <li>Points to 2–4 body parts when asked</li>
+            <li>Follows simple two-step instructions</li>
+            <li>Begins pretend play (feeding a doll, driving a toy car)</li>
+            <li>Shows affection to familiar people</li>
+          </ul>
+        </div>
+        <div class="tip-box">
+          <p><strong>💡 Parent Tip:</strong> Read together daily. Naming objects in picture books is one of the most powerful things you can do for language development at this age.</p>
+        </div>
+
+        <h2>🔬 Age 3: Questions, Questions, Questions</h2>
+        <p>Three-year-olds are little scientists. They ask "why" constantly — and that curiosity is exactly what you want to see. Speech should now be understandable to unfamiliar adults about 75% of the time.</p>
+        <div class="age-card">
+          <div style="font-family:'Nunito',sans-serif;font-weight:800;font-size:0.8rem;text-transform:uppercase;letter-spacing:0.08em;color:#0B6E5A;margin-bottom:12px;">What to look for at age 3</div>
+          <ul>
+            <li>Uses 3–4 word sentences</li>
+            <li>Can identify colors and sort by shape</li>
+            <li>Engages in simple back-and-forth conversation</li>
+            <li>Shows interest in other children and basic sharing</li>
+          </ul>
+        </div>
+
+        <h2>🎒 Age 4–5: Ready for the Big Leap</h2>
+        <p>By preschool age, children are beginning to count to 10, write some letters, and tell simple stories. They understand rules, follow multi-step directions, and show empathy toward friends.</p>
+        <div class="age-card">
+          <div style="font-family:'Nunito',sans-serif;font-weight:800;font-size:0.8rem;text-transform:uppercase;letter-spacing:0.08em;color:#0B6E5A;margin-bottom:12px;">What to look for at age 4–5</div>
+          <ul>
+            <li>Speaks in full sentences (5–6 words or more)</li>
+            <li>Recognizes some letters, especially in their name</li>
+            <li>Manages basic self-care (washing hands, using utensils)</li>
+            <li>Separates from caregivers without major distress</li>
+          </ul>
+        </div>
+
+        <h2>🩺 When to Talk to a Professional</h2>
+        <p>Every child is unique — but if you notice significant delays in speech, movement, or social interaction, an early conversation with your pediatrician is always worthwhile. Early support makes the biggest difference.</p>
+        <div class="tip-box">
+          <p><strong>At Smart Beginnings Academy,</strong> our staff are trained to observe development daily and partner with families when questions arise. You are never alone in this.</p>
+        </div>
+
+      </div>
+
+      <!-- Back + CTA -->
+      <div style="margin-top:48px;padding-top:32px;border-top:1px solid #E5E7EB;display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;">
+        <a href="blog.html" style="display:inline-flex;align-items:center;gap:6px;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.9rem;color:#0B6E5A;text-decoration:none;" onmouseover="this.style.gap='10px'" onmouseout="this.style.gap='6px'">&#8592; All Articles</a>
+        <a href="schedule-tour.html" class="btn-amber" style="padding:12px 28px;font-size:0.9rem;">Schedule a Free Tour</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer style="background:#1A1A1A;color:white;padding:64px 24px 0;">
+  <div style="max-width:1280px;margin:0 auto;">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:48px;padding-bottom:56px;">
+      <div><a href="index.html" style="display:inline-block;margin-bottom:16px;"><img src="Logo Transparency_Shadow.png" alt="Smart Beginnings Academy" style="height:52px;width:auto;filter:brightness(0) invert(1);" /></a><p style="font-family:'Open Sans',sans-serif;font-size:0.85rem;color:rgba(255,255,255,0.55);line-height:1.72;margin:0;">A physician-founded preschool where every child's learning journey begins with care, science, and heart.</p></div>
+      <div><h4 style="font-family:'Nunito',sans-serif;font-weight:700;color:white;font-size:0.8rem;text-transform:uppercase;letter-spacing:0.12em;margin:0 0 20px;">Quick Links</h4><ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;"><li><a href="index.html" style="font-family:'Open Sans',sans-serif;font-size:0.875rem;color:rgba(255,255,255,0.55);text-decoration:none;" onmouseover="this.style.color='#0D9E7E'" onmouseout="this.style.color='rgba(255,255,255,0.55)'">Home</a></li><li><a href="about.html" style="font-family:'Open Sans',sans-serif;font-size:0.875rem;color:rgba(255,255,255,0.55);text-decoration:none;" onmouseover="this.style.color='#0D9E7E'" onmouseout="this.style.color='rgba(255,255,255,0.55)'">About Us</a></li><li><a href="blog.html" style="font-family:'Open Sans',sans-serif;font-size:0.875rem;color:rgba(255,255,255,0.55);text-decoration:none;" onmouseover="this.style.color='#0D9E7E'" onmouseout="this.style.color='rgba(255,255,255,0.55)'">Blog</a></li><li><a href="schedule-tour.html" style="font-family:'Open Sans',sans-serif;font-size:0.875rem;color:rgba(255,255,255,0.55);text-decoration:none;" onmouseover="this.style.color='#0D9E7E'" onmouseout="this.style.color='rgba(255,255,255,0.55)'">Schedule a Tour</a></li></ul></div>
+      <div><h4 style="font-family:'Nunito',sans-serif;font-weight:700;color:white;font-size:0.8rem;text-transform:uppercase;letter-spacing:0.12em;margin:0 0 20px;">More Articles</h4><ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;"><li><a href="blog-kindergarten.html" style="font-family:'Open Sans',sans-serif;font-size:0.875rem;color:rgba(255,255,255,0.55);text-decoration:none;" onmouseover="this.style.color='#0D9E7E'" onmouseout="this.style.color='rgba(255,255,255,0.55)'">5 Things That Predict Kindergarten Success</a></li><li><a href="blog-feeding.html" style="font-family:'Open Sans',sans-serif;font-size:0.875rem;color:rgba(255,255,255,0.55);text-decoration:none;" onmouseover="this.style.color='#0D9E7E'" onmouseout="this.style.color='rgba(255,255,255,0.55)'">Feeding Little Learners</a></li></ul></div>
+    </div>
+  </div>
+  <div style="border-top:1px solid rgba(255,255,255,0.07);"><div style="max-width:1280px;margin:0 auto;padding:20px 24px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;"><p style="font-family:'Open Sans',sans-serif;font-size:0.78rem;color:rgba(255,255,255,0.35);margin:0;">&#169; 2026 Smart Beginnings Academy. All Rights Reserved.</p><a href="privacy.html" style="font-family:'Open Sans',sans-serif;font-size:0.78rem;color:rgba(255,255,255,0.35);text-decoration:none;" onmouseover="this.style.color='#0D9E7E'" onmouseout="this.style.color='rgba(255,255,255,0.35)'">Privacy Policy</a></div></div>
+</footer>
+
+<script>
+  const hamburgerBtn = document.getElementById('hamburger-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  let menuOpen = false;
+  hamburgerBtn.addEventListener('click', () => {
+    menuOpen = !menuOpen;
+    hamburgerBtn.classList.toggle('open', menuOpen);
+    mobileMenu.classList.toggle('open', menuOpen);
+    hamburgerBtn.setAttribute('aria-expanded', String(menuOpen));
+  });
+</script>
+</body>
+</html>
