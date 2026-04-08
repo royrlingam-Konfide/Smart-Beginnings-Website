@@ -282,7 +282,7 @@
     </div>
 
     <!-- Hero Content — two-column on desktop -->
-    <div style="position:relative;z-index:10;max-width:1280px;margin:0 auto;padding:140px 24px 80px;width:100%;display:flex;align-items:center;gap:64px;justify-content:space-between;">
+    <div style="position:relative;z-index:10;max-width:1280px;margin:0 auto;padding:140px 24px 80px;width:100%;display:flex;align-items:center;gap:64px;justify-content:space-between;flex-wrap:wrap;">
 
       <!-- LEFT: Text -->
       <div style="flex:1;min-width:0;">
@@ -388,6 +388,28 @@
           </div>
         </div>
 
+      </div>
+
+      <!-- Mobile photo strip — hidden on desktop, shown on mobile -->
+      <div id="hero-mobile-photos" style="display:none;width:100%;padding:0 0 12px;">
+        <div style="display:flex;gap:10px;overflow-x:auto;padding:0 4px;scrollbar-width:none;-ms-overflow-style:none;">
+          <div style="flex-shrink:0;width:140px;height:170px;border-radius:18px;overflow:hidden;box-shadow:0 12px 32px rgba(0,0,0,0.4);border:2px solid rgba(255,255,255,0.25);">
+            <img src="kid-infant-fireman.jpeg" alt="Dress Up Day" style="width:100%;height:100%;object-fit:cover;object-position:center top;">
+            <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(6,61,48,0.45) 0%,transparent 55%);"></div>
+          </div>
+          <div style="flex-shrink:0;width:165px;height:170px;border-radius:18px;overflow:hidden;box-shadow:0 12px 32px rgba(0,0,0,0.4);border:2px solid rgba(255,255,255,0.25);position:relative;">
+            <img src="kid-infant-laugh.jpeg" alt="Happy baby at Smart Beginnings" style="width:100%;height:100%;object-fit:cover;object-position:center top;">
+            <div style="position:absolute;bottom:8px;left:8px;right:8px;background:rgba(255,255,255,0.92);border-radius:999px;padding:4px 10px;text-align:center;">
+              <span style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.62rem;color:#0B6E5A;">❤️ Pure Joy, Every Day</span>
+            </div>
+          </div>
+          <div style="flex-shrink:0;width:140px;height:170px;border-radius:18px;overflow:hidden;box-shadow:0 12px 32px rgba(0,0,0,0.4);border:2px solid rgba(255,255,255,0.25);">
+            <img src="kid-school-snake.jpeg" alt="Preschooler at Smart Beginnings" style="width:100%;height:100%;object-fit:cover;object-position:center top;">
+          </div>
+          <div style="flex-shrink:0;width:140px;height:170px;border-radius:18px;overflow:hidden;box-shadow:0 12px 32px rgba(0,0,0,0.4);border:2px solid rgba(255,255,255,0.25);">
+            <img src="kid-family-trust.jpeg" alt="Science experiment at Smart Beginnings" style="width:100%;height:100%;object-fit:cover;object-position:center top;">
+          </div>
+        </div>
       </div>
 
     </div>
@@ -1222,10 +1244,16 @@
 
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
-  // Hero photo stack — show on desktop only
+  // Hero photo stack — show on desktop only; mobile strip on small screens
   (function(){
     var stack = document.getElementById('hero-photo-stack');
-    function toggleStack(){ if(stack){ stack.style.display = window.innerWidth >= 1024 ? 'block' : 'none'; } }
+    var mobileStrip = document.getElementById('hero-mobile-photos');
+    // Also make the hero content row wrap on mobile
+    function toggleStack(){
+      var isDesktop = window.innerWidth >= 1024;
+      if(stack){ stack.style.display = isDesktop ? 'block' : 'none'; }
+      if(mobileStrip){ mobileStrip.style.display = isDesktop ? 'none' : 'block'; }
+    }
     toggleStack();
     window.addEventListener('resize', toggleStack);
   })();
