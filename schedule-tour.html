@@ -238,6 +238,7 @@
         </div>
 
         <form id="tour-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
+          <!-- Parent & Child 1 -->
           <div class="form-row" style="display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:18px;">
             <div>
               <label for="parent-name" class="form-label">Parent Name <span style="color:#F43F5E;">*</span></label>
@@ -254,6 +255,55 @@
             <input type="date" id="child-dob" name="child_dob" class="form-input" required />
           </div>
 
+          <!-- Add Child 2 -->
+          <div id="child2-block" style="display:none;margin-bottom:18px;padding:18px;background:#F7FAF9;border-radius:14px;border:1px dashed #B2E4D0;">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;">
+              <span style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.85rem;color:#0B6E5A;">Child #2</span>
+              <button type="button" onclick="removeChild(2)" style="background:none;border:none;cursor:pointer;font-size:0.8rem;color:#9CA3AF;font-family:'Open Sans',sans-serif;">Remove</button>
+            </div>
+            <div class="form-row" style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
+              <div>
+                <label class="form-label" style="font-size:0.82rem;">Name</label>
+                <input type="text" name="child2_name" class="form-input" placeholder="Sam Smith" />
+              </div>
+              <div>
+                <label class="form-label" style="font-size:0.82rem;">Date of Birth</label>
+                <input type="date" name="child2_dob" class="form-input" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Add Child 3 -->
+          <div id="child3-block" style="display:none;margin-bottom:18px;padding:18px;background:#F7FAF9;border-radius:14px;border:1px dashed #B2E4D0;">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;">
+              <span style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.85rem;color:#0B6E5A;">Child #3</span>
+              <button type="button" onclick="removeChild(3)" style="background:none;border:none;cursor:pointer;font-size:0.8rem;color:#9CA3AF;font-family:'Open Sans',sans-serif;">Remove</button>
+            </div>
+            <div class="form-row" style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
+              <div>
+                <label class="form-label" style="font-size:0.82rem;">Name</label>
+                <input type="text" name="child3_name" class="form-input" placeholder="Jordan Smith" />
+              </div>
+              <div>
+                <label class="form-label" style="font-size:0.82rem;">Date of Birth</label>
+                <input type="date" name="child3_dob" class="form-input" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Add child buttons -->
+          <div id="add-child-btns" style="margin-bottom:18px;display:flex;gap:10px;flex-wrap:wrap;">
+            <button type="button" id="add-child2-btn" onclick="addChild(2)" style="display:inline-flex;align-items:center;gap:6px;padding:9px 18px;border-radius:999px;border:1.5px solid #0B6E5A;background:white;color:#0B6E5A;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.82rem;cursor:pointer;transition:background 0.2s,color 0.2s;" onmouseover="this.style.background='#E1F5EE'" onmouseout="this.style.background='white'">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+              Add Child #2
+            </button>
+            <button type="button" id="add-child3-btn" onclick="addChild(3)" style="display:none;align-items:center;gap:6px;padding:9px 18px;border-radius:999px;border:1.5px solid #0B6E5A;background:white;color:#0B6E5A;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.82rem;cursor:pointer;transition:background 0.2s,color 0.2s;" onmouseover="this.style.background='#E1F5EE'" onmouseout="this.style.background='white'">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+              Add Child #3
+            </button>
+          </div>
+
+          <!-- Contact -->
           <div class="form-row" style="display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:18px;">
             <div>
               <label for="email" class="form-label">Email <span style="color:#F43F5E;">*</span></label>
@@ -265,16 +315,18 @@
             </div>
           </div>
 
+          <!-- Preferred Location -->
           <div style="margin-bottom:18px;">
             <label for="location" class="form-label">Preferred Location <span style="color:#F43F5E;">*</span></label>
             <select id="location" name="location" class="form-input" required>
               <option value="" disabled selected>Select a location…</option>
-              <option value="oswego">Oswego</option>
-              <option value="ogden">Ogden</option>
-              <option value="kirk-butterfield">Kirk &amp; Butterfield</option>
+              <option value="oswego">Oswego — 750 5th Street, Oswego, IL 60543</option>
+              <option value="kirk-butterfield">Kirk &amp; Butterfield — 1555 Mesa Lane, Aurora, IL 60502</option>
+              <option value="ogden">Ogden &amp; IL‑59 — 4105 Healthway Drive, Aurora, IL 60504</option>
             </select>
           </div>
 
+          <!-- Date & Time -->
           <div class="form-row" style="display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:18px;">
             <div>
               <label for="pref-date" class="form-label">Preferred Date <span style="color:#F43F5E;">*</span></label>
@@ -284,11 +336,33 @@
               <label for="pref-time" class="form-label">Preferred Time <span style="color:#F43F5E;">*</span></label>
               <select id="pref-time" name="preferred_time" class="form-input" required>
                 <option value="" disabled selected>Select a time…</option>
-                <option value="morning">Morning (9 AM – 11 AM)</option>
-                <option value="midday">Midday (11 AM – 1 PM)</option>
-                <option value="afternoon">Afternoon (1 PM – 4 PM)</option>
+                <option value="9:30 AM">9:30 AM</option>
+                <option value="10:30 AM">10:30 AM</option>
+                <option value="11:30 AM">11:30 AM</option>
+                <option value="12:30 PM">12:30 PM</option>
+                <option value="1:30 PM">1:30 PM</option>
+                <option value="2:30 PM">2:30 PM</option>
+                <option value="3:30 PM">3:30 PM</option>
+                <option value="4:00 PM">4:00 PM</option>
+                <option value="5:00 PM">5:00 PM</option>
               </select>
             </div>
+          </div>
+
+          <!-- How did you hear about us -->
+          <div style="margin-bottom:18px;">
+            <label for="referral" class="form-label">How Did You Hear About Us? <span style="color:#9CA3AF;font-weight:400;">(optional)</span></label>
+            <select id="referral" name="referral_source" class="form-input">
+              <option value="" disabled selected>Select one…</option>
+              <option value="google">Google Search</option>
+              <option value="google-maps">Google Maps</option>
+              <option value="facebook">Facebook</option>
+              <option value="instagram">Instagram</option>
+              <option value="friend-family">Friend or Family Referral</option>
+              <option value="driving-by">Drove By / Saw the Sign</option>
+              <option value="current-parent">Current SBA Parent</option>
+              <option value="other">Other</option>
+            </select>
           </div>
 
           <div style="margin-bottom:28px;">
@@ -458,6 +532,24 @@
   document.addEventListener('click', e => { if (open && !hBtn.contains(e.target) && !mMenu.contains(e.target)) { closeMenu(); } });
   const io = new IntersectionObserver(entries => { entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } }); }, { threshold: 0.08 });
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // Add / remove extra children
+  function addChild(n) {
+    document.getElementById('child' + n + '-block').style.display = 'block';
+    document.getElementById('add-child' + n + '-btn').style.display = 'none';
+    if (n === 2) {
+      document.getElementById('add-child3-btn').style.display = 'inline-flex';
+    }
+  }
+  function removeChild(n) {
+    document.getElementById('child' + n + '-block').style.display = 'none';
+    document.getElementById('add-child' + n + '-btn').style.display = 'inline-flex';
+    if (n === 2) {
+      // also hide child 3 if it was shown
+      document.getElementById('child3-block').style.display = 'none';
+      document.getElementById('add-child3-btn').style.display = 'none';
+    }
+  }
 
   // Form handling
   const form = document.getElementById('tour-form');
