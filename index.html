@@ -390,25 +390,50 @@
 
       </div>
 
-      <!-- Mobile photo strip — hidden on desktop, shown on mobile -->
-      <div id="hero-mobile-photos" style="display:none;width:100%;padding:0 0 12px;">
-        <div style="display:flex;gap:10px;overflow-x:auto;padding:0 4px;scrollbar-width:none;-ms-overflow-style:none;">
-          <div style="flex-shrink:0;width:140px;height:170px;border-radius:18px;overflow:hidden;box-shadow:0 12px 32px rgba(0,0,0,0.4);border:2px solid rgba(255,255,255,0.25);">
+      <!-- Mobile photo grid — hidden on desktop, shown on mobile -->
+      <div id="hero-mobile-photos" style="display:none;width:100%;padding:0 0 16px;">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+
+          <!-- Top-left: Dress Up Day -->
+          <div style="position:relative;border-radius:18px;overflow:hidden;aspect-ratio:3/4;box-shadow:0 12px 32px rgba(0,0,0,0.4);border:2px solid rgba(255,255,255,0.25);">
             <img src="kid-infant-fireman.jpeg" alt="Dress Up Day" style="width:100%;height:100%;object-fit:cover;object-position:center top;">
-            <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(6,61,48,0.45) 0%,transparent 55%);"></div>
-          </div>
-          <div style="flex-shrink:0;width:165px;height:170px;border-radius:18px;overflow:hidden;box-shadow:0 12px 32px rgba(0,0,0,0.4);border:2px solid rgba(255,255,255,0.25);position:relative;">
-            <img src="kid-infant-laugh.jpeg" alt="Happy baby at Smart Beginnings" style="width:100%;height:100%;object-fit:cover;object-position:center top;">
-            <div style="position:absolute;bottom:8px;left:8px;right:8px;background:rgba(255,255,255,0.92);border-radius:999px;padding:4px 10px;text-align:center;">
-              <span style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.62rem;color:#0B6E5A;">❤️ Pure Joy, Every Day</span>
+            <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(6,61,48,0.55) 0%,transparent 55%);"></div>
+            <div style="position:absolute;bottom:10px;left:8px;right:8px;display:flex;align-items:center;justify-content:center;gap:4px;background:rgba(255,255,255,0.93);backdrop-filter:blur(6px);border-radius:999px;padding:5px 8px;">
+              <span style="font-size:0.75rem;">🚒</span>
+              <span style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.6rem;color:#0B6E5A;">Dress Up Day</span>
             </div>
           </div>
-          <div style="flex-shrink:0;width:140px;height:170px;border-radius:18px;overflow:hidden;box-shadow:0 12px 32px rgba(0,0,0,0.4);border:2px solid rgba(255,255,255,0.25);">
-            <img src="kid-school-snake.jpeg" alt="Preschooler at Smart Beginnings" style="width:100%;height:100%;object-fit:cover;object-position:center top;">
+
+          <!-- Top-right: Pure Joy -->
+          <div style="position:relative;border-radius:18px;overflow:hidden;aspect-ratio:3/4;box-shadow:0 12px 32px rgba(0,0,0,0.4);border:2px solid rgba(255,255,255,0.25);">
+            <img src="kid-infant-laugh.jpeg" alt="Happy baby at Smart Beginnings" style="width:100%;height:100%;object-fit:cover;object-position:center top;">
+            <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(6,61,48,0.55) 0%,transparent 55%);"></div>
+            <div style="position:absolute;bottom:10px;left:8px;right:8px;display:flex;align-items:center;justify-content:center;gap:4px;background:rgba(255,255,255,0.93);backdrop-filter:blur(6px);border-radius:999px;padding:5px 8px;">
+              <span style="font-size:0.75rem;">❤️</span>
+              <span style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.6rem;color:#0B6E5A;">Pure Joy, Every Day</span>
+            </div>
           </div>
-          <div style="flex-shrink:0;width:140px;height:170px;border-radius:18px;overflow:hidden;box-shadow:0 12px 32px rgba(0,0,0,0.4);border:2px solid rgba(255,255,255,0.25);">
+
+          <!-- Bottom-left: Science Experiment -->
+          <div style="position:relative;border-radius:18px;overflow:hidden;aspect-ratio:3/4;box-shadow:0 12px 32px rgba(0,0,0,0.4);border:2px solid rgba(255,255,255,0.25);">
             <img src="kid-family-trust.jpeg" alt="Science experiment at Smart Beginnings" style="width:100%;height:100%;object-fit:cover;object-position:center top;">
+            <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(6,61,48,0.55) 0%,transparent 55%);"></div>
+            <div style="position:absolute;bottom:10px;left:8px;right:8px;display:flex;align-items:center;justify-content:center;gap:4px;background:rgba(255,255,255,0.93);backdrop-filter:blur(6px);border-radius:999px;padding:5px 8px;">
+              <span style="font-size:0.75rem;">🔬</span>
+              <span style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.6rem;color:#0B6E5A;">Science Experiment</span>
+            </div>
           </div>
+
+          <!-- Bottom-right: Snake girl -->
+          <div style="position:relative;border-radius:18px;overflow:hidden;aspect-ratio:3/4;box-shadow:0 12px 32px rgba(0,0,0,0.4);border:2px solid rgba(255,255,255,0.25);">
+            <img src="kid-school-snake.jpeg" alt="Preschooler at Smart Beginnings" style="width:100%;height:100%;object-fit:cover;object-position:center top;">
+            <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(6,61,48,0.35) 0%,transparent 55%);"></div>
+            <div style="position:absolute;bottom:10px;left:8px;right:8px;display:flex;align-items:center;justify-content:center;gap:4px;background:rgba(255,255,255,0.93);backdrop-filter:blur(6px);border-radius:999px;padding:5px 8px;">
+              <span style="font-size:0.75rem;">🌿</span>
+              <span style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.6rem;color:#0B6E5A;">Nature Discovery</span>
+            </div>
+          </div>
+
         </div>
       </div>
 
