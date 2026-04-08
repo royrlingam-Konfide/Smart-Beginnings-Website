@@ -107,11 +107,7 @@
   
     /* ── MOBILE RESPONSIVE ── */
     @media (max-width: 639px) {
-      #la-stats { grid-template-columns: repeat(2,1fr) !important; }
-      .section-band { flex-direction: column !important; align-items: flex-start !important; }
-      .domain-grid { grid-template-columns: 1fr 1fr !important; }
-      .how-band { flex-direction: column !important; gap: 10px !important; }
-      .filter-pill { padding: 7px 13px !important; font-size: 12px !important; }
+      .prog-grid { grid-template-columns: 1fr !important; }
     }
   
     @media (max-width: 639px) {
@@ -281,523 +277,148 @@
     </div>
   </section>
 
-  <!-- FILTER NAV -->
-  <div style="background:white;border-bottom:1px solid #E8F4EF;padding:14px 24px;position:sticky;top:76px;z-index:40;overflow-x:auto;">
-    <div style="max-width:1100px;margin:0 auto;display:flex;gap:8px;min-width:max-content;">
-      <button class="filter-pill active" data-target="all" onclick="setFilter('all')">
-        <span class="filter-dot" style="background:#0B6E5A;"></span> All Programs
-      </button>
-      <button class="filter-pill" data-target="infant" onclick="setFilter('infant')">
-        <span class="filter-dot" style="background:#0B6E5A;"></span> Infants
-      </button>
-      <button class="filter-pill" data-target="toddler" onclick="setFilter('toddler')">
-        <span class="filter-dot" style="background:#185FA5;"></span> Toddlers
-      </button>
-      <button class="filter-pill" data-target="twos" onclick="setFilter('twos')">
-        <span class="filter-dot" style="background:#B45309;"></span> Twos
-      </button>
-      <button class="filter-pill" data-target="preschool" onclick="setFilter('preschool')">
-        <span class="filter-dot" style="background:#3B6D11;"></span> Preschool
-      </button>
-      <button class="filter-pill" data-target="schoolage" onclick="setFilter('schoolage')">
-        <span class="filter-dot" style="background:#6D28D9;"></span> School Age
-      </button>
-      <button class="filter-pill" data-target="summer" onclick="setFilter('summer')">
-        <span class="filter-dot" style="background:#D97706;"></span> Summer Camp
-      </button>
-    </div>
-  </div>
-
-  <!-- MAIN CONTENT -->
-  <section style="background:#F7FBFA;padding:48px 24px 72px;">
+  <!-- CURRICULUM CARDS -->
+  <section style="background:#F7FBFA;padding:56px 24px 80px;">
     <div style="max-width:1100px;margin:0 auto;">
 
-      <!-- STATS STRIP -->
-      <div id="la-stats" style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:44px;" class="reveal">
-        <div style="background:white;border:1px solid #D4E8E2;border-radius:16px;padding:22px 16px;text-align:center;box-shadow:0 2px 12px rgba(11,110,90,0.06);">
-          <div style="font-family:'Nunito',sans-serif;font-size:2rem;font-weight:900;color:#0B6E5A;line-height:1;">6</div>
-          <div style="font-family:'Open Sans',sans-serif;font-size:12px;color:#6B7280;margin-top:6px;font-weight:600;">Age-Specific Programs</div>
-        </div>
-        <div style="background:white;border:1px solid #D4E8E2;border-radius:16px;padding:22px 16px;text-align:center;box-shadow:0 2px 12px rgba(11,110,90,0.06);">
-          <div style="font-family:'Nunito',sans-serif;font-size:2rem;font-weight:900;color:#0B6E5A;line-height:1;">5</div>
-          <div style="font-family:'Open Sans',sans-serif;font-size:12px;color:#6B7280;margin-top:6px;font-weight:600;">Developmental Domains</div>
-        </div>
-        <div style="background:white;border:1px solid #D4E8E2;border-radius:16px;padding:22px 16px;text-align:center;box-shadow:0 2px 12px rgba(11,110,90,0.06);">
-          <div style="font-family:'Nunito',sans-serif;font-size:2rem;font-weight:900;color:#0B6E5A;line-height:1;">100%</div>
-          <div style="font-family:'Open Sans',sans-serif;font-size:12px;color:#6B7280;margin-top:6px;font-weight:600;">IELS Aligned</div>
-        </div>
-        <div style="background:white;border:1px solid #D4E8E2;border-radius:16px;padding:22px 16px;text-align:center;box-shadow:0 2px 12px rgba(11,110,90,0.06);">
-          <div style="font-family:'Nunito',sans-serif;font-size:2rem;font-weight:900;color:#0B6E5A;line-height:1;">3</div>
-          <div style="font-family:'Open Sans',sans-serif;font-size:12px;color:#6B7280;margin-top:6px;font-weight:600;">Locations Near You</div>
-        </div>
+      <div style="text-align:center;margin-bottom:48px;" class="reveal">
+        <span class="section-label">By Age Group</span>
+        <h2 style="font-family:'Nunito',sans-serif;font-weight:900;font-size:clamp(1.6rem,3vw,2.2rem);color:#1A1A1A;letter-spacing:-0.03em;margin:0 0 12px;line-height:1.2;">What Your Child Will Learn</h2>
+        <p style="font-family:'Open Sans',sans-serif;font-size:1rem;color:#4B5563;line-height:1.72;max-width:520px;margin:0 auto;">Each program is thoughtfully designed for your child's exact stage — always the right challenge, never overwhelming.</p>
       </div>
 
-      <!-- IELS EXPLAINER -->
-      <div style="background:white;border:1px solid #D4E8E2;border-radius:20px;padding:28px 32px;margin-bottom:36px;display:flex;align-items:flex-start;gap:20px;box-shadow:0 2px 12px rgba(11,110,90,0.06);" class="reveal">
-        <div style="width:48px;height:48px;border-radius:14px;background:#E1F5EE;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.5rem;">📋</div>
-        <div>
-          <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;flex-wrap:wrap;">
-            <span style="font-family:'Nunito',sans-serif;font-weight:900;font-size:1rem;color:#1A1A1A;">What is IELS?</span>
-            <span style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.72rem;text-transform:uppercase;letter-spacing:0.1em;background:#0B6E5A;color:white;padding:3px 10px;border-radius:6px;">Illinois Early Learning Standards</span>
+      <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:20px;" class="prog-grid reveal">
+
+        <!-- Infants -->
+        <div style="background:white;border-radius:20px;border:1px solid #D4E8E2;overflow:hidden;box-shadow:0 4px 20px rgba(11,110,90,0.07);display:flex;flex-direction:column;">
+          <div style="background:linear-gradient(135deg,#F0FAF7 0%,#C7EBE0 100%);padding:22px 24px 18px;display:flex;align-items:center;gap:14px;">
+            <div style="width:52px;height:52px;border-radius:14px;background:white;display:flex;align-items:center;justify-content:center;font-size:22px;box-shadow:0 2px 8px rgba(11,110,90,0.12);flex-shrink:0;">🍼</div>
+            <div>
+              <div style="font-family:'Open Sans',sans-serif;font-size:0.7rem;font-weight:600;color:#085041;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:2px;">6 wks – 14 months</div>
+              <h3 style="font-family:'Nunito',sans-serif;font-weight:900;font-size:1.15rem;color:#1A1A1A;margin:0;letter-spacing:-0.02em;">Infants</h3>
+            </div>
           </div>
-          <p style="font-family:'Open Sans',sans-serif;font-size:0.9rem;color:#4B5563;line-height:1.75;margin:0;">The <strong style="color:#1A1A1A;">Illinois Early Learning and Development Standards (IELS)</strong> are the state's official guidelines for what children should know and be able to do from birth through kindergarten. Think of them as a research-backed roadmap — covering five key areas of development: <em>how children learn, physical growth, language and literacy, thinking and reasoning, and social-emotional health</em>. Every activity and lesson at Smart Beginnings is intentionally designed around these standards, so you can be confident your child is building the right foundations at exactly the right time.</p>
+          <div style="padding:18px 24px 22px;flex:1;display:flex;flex-direction:column;">
+            <p style="font-family:'Open Sans',sans-serif;font-size:0.875rem;color:#4B5563;line-height:1.7;margin:0 0 16px;">Warm, nurturing care that builds trust, secure attachment, and the brain foundations for all future learning.</p>
+            <div style="display:flex;flex-wrap:wrap;gap:7px;margin-bottom:18px;">
+              <span style="font-family:'Nunito',sans-serif;font-size:0.76rem;font-weight:700;background:#E1F5EE;color:#085041;border-radius:999px;padding:5px 12px;">Secure Attachment</span>
+              <span style="font-family:'Nunito',sans-serif;font-size:0.76rem;font-weight:700;background:#E1F5EE;color:#085041;border-radius:999px;padding:5px 12px;">Sensory Exploration</span>
+              <span style="font-family:'Nunito',sans-serif;font-size:0.76rem;font-weight:700;background:#E1F5EE;color:#085041;border-radius:999px;padding:5px 12px;">Motor Milestones</span>
+              <span style="font-family:'Nunito',sans-serif;font-size:0.76rem;font-weight:700;background:#E1F5EE;color:#085041;border-radius:999px;padding:5px 12px;">Early Language</span>
+            </div>
+            <a href="programs-infants.html" style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.85rem;color:#0B6E5A;text-decoration:none;display:inline-flex;align-items:center;gap:5px;margin-top:auto;" onmouseover="this.style.gap='9px'" onmouseout="this.style.gap='5px'">Explore Program <span style="transition:margin 0.2s;">→</span></a>
+          </div>
         </div>
+
+        <!-- Toddlers -->
+        <div style="background:white;border-radius:20px;border:1px solid #C5DCF5;overflow:hidden;box-shadow:0 4px 20px rgba(24,95,165,0.07);display:flex;flex-direction:column;">
+          <div style="background:linear-gradient(135deg,#EEF4FB 0%,#B5D4F4 100%);padding:22px 24px 18px;display:flex;align-items:center;gap:14px;">
+            <div style="width:52px;height:52px;border-radius:14px;background:white;display:flex;align-items:center;justify-content:center;font-size:22px;box-shadow:0 2px 8px rgba(24,95,165,0.12);flex-shrink:0;">👟</div>
+            <div>
+              <div style="font-family:'Open Sans',sans-serif;font-size:0.7rem;font-weight:600;color:#0C447C;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:2px;">15 – 23 months</div>
+              <h3 style="font-family:'Nunito',sans-serif;font-weight:900;font-size:1.15rem;color:#1A1A1A;margin:0;letter-spacing:-0.02em;">Toddlers</h3>
+            </div>
+          </div>
+          <div style="padding:18px 24px 22px;flex:1;display:flex;flex-direction:column;">
+            <p style="font-family:'Open Sans',sans-serif;font-size:0.875rem;color:#4B5563;line-height:1.7;margin:0 0 16px;">Honoring the drive for independence while gently building social, language, and cognitive foundations.</p>
+            <div style="display:flex;flex-wrap:wrap;gap:7px;margin-bottom:18px;">
+              <span style="font-family:'Nunito',sans-serif;font-size:0.76rem;font-weight:700;background:#DCEEF9;color:#0C447C;border-radius:999px;padding:5px 12px;">First Words</span>
+              <span style="font-family:'Nunito',sans-serif;font-size:0.76rem;font-weight:700;background:#DCEEF9;color:#0C447C;border-radius:999px;padding:5px 12px;">Motor Skills</span>
+              <span style="font-family:'Nunito',sans-serif;font-size:0.76rem;font-weight:700;background:#DCEEF9;color:#0C447C;border-radius:999px;padding:5px 12px;">Curiosity &amp; Exploration</span>
+              <span style="font-family:'Nunito',sans-serif;font-size:0.76rem;font-weight:700;background:#DCEEF9;color:#0C447C;border-radius:999px;padding:5px 12px;">Emotional Growth</span>
+            </div>
+            <a href="programs-toddlers.html" style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.85rem;color:#185FA5;text-decoration:none;display:inline-flex;align-items:center;gap:5px;margin-top:auto;" onmouseover="this.style.gap='9px'" onmouseout="this.style.gap='5px'">Explore Program <span>→</span></a>
+          </div>
+        </div>
+
+        <!-- Twos -->
+        <div style="background:white;border-radius:20px;border:1px solid #F2D9A0;overflow:hidden;box-shadow:0 4px 20px rgba(180,83,9,0.07);display:flex;flex-direction:column;">
+          <div style="background:linear-gradient(135deg,#FDF8F0 0%,#FAC775 100%);padding:22px 24px 18px;display:flex;align-items:center;gap:14px;">
+            <div style="width:52px;height:52px;border-radius:14px;background:white;display:flex;align-items:center;justify-content:center;font-size:22px;box-shadow:0 2px 8px rgba(180,83,9,0.12);flex-shrink:0;">✌️</div>
+            <div>
+              <div style="font-family:'Open Sans',sans-serif;font-size:0.7rem;font-weight:600;color:#633806;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:2px;">24 – 35 months</div>
+              <h3 style="font-family:'Nunito',sans-serif;font-weight:900;font-size:1.15rem;color:#1A1A1A;margin:0;letter-spacing:-0.02em;">Twos</h3>
+            </div>
+          </div>
+          <div style="padding:18px 24px 22px;flex:1;display:flex;flex-direction:column;">
+            <p style="font-family:'Open Sans',sans-serif;font-size:0.875rem;color:#4B5563;line-height:1.7;margin:0 0 16px;">Language explodes, imagination soars, and your child's first real friendships begin to form.</p>
+            <div style="display:flex;flex-wrap:wrap;gap:7px;margin-bottom:18px;">
+              <span style="font-family:'Nunito',sans-serif;font-size:0.76rem;font-weight:700;background:#FAE9C8;color:#633806;border-radius:999px;padding:5px 12px;">Language Explosion</span>
+              <span style="font-family:'Nunito',sans-serif;font-size:0.76rem;font-weight:700;background:#FAE9C8;color:#633806;border-radius:999px;padding:5px 12px;">Imaginative Play</span>
+              <span style="font-family:'Nunito',sans-serif;font-size:0.76rem;font-weight:700;background:#FAE9C8;color:#633806;border-radius:999px;padding:5px 12px;">Self-Confidence</span>
+              <span style="font-family:'Nunito',sans-serif;font-size:0.76rem;font-weight:700;background:#FAE9C8;color:#633806;border-radius:999px;padding:5px 12px;">First Friendships</span>
+            </div>
+            <a href="programs-twos.html" style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.85rem;color:#B45309;text-decoration:none;display:inline-flex;align-items:center;gap:5px;margin-top:auto;" onmouseover="this.style.gap='9px'" onmouseout="this.style.gap='5px'">Explore Program <span>→</span></a>
+          </div>
+        </div>
+
+        <!-- Preschool -->
+        <div style="background:white;border-radius:20px;border:1px solid #C5DDA5;overflow:hidden;box-shadow:0 4px 20px rgba(59,109,17,0.07);display:flex;flex-direction:column;">
+          <div style="background:linear-gradient(135deg,#F3F9ED 0%,#C0DD97 100%);padding:22px 24px 18px;display:flex;align-items:center;gap:14px;">
+            <div style="width:52px;height:52px;border-radius:14px;background:white;display:flex;align-items:center;justify-content:center;font-size:22px;box-shadow:0 2px 8px rgba(59,109,17,0.12);flex-shrink:0;">🎨</div>
+            <div>
+              <div style="font-family:'Open Sans',sans-serif;font-size:0.7rem;font-weight:600;color:#27500A;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:2px;">3 – 5 years</div>
+              <h3 style="font-family:'Nunito',sans-serif;font-weight:900;font-size:1.15rem;color:#1A1A1A;margin:0;letter-spacing:-0.02em;">Preschool</h3>
+            </div>
+          </div>
+          <div style="padding:18px 24px 22px;flex:1;display:flex;flex-direction:column;">
+            <p style="font-family:'Open Sans',sans-serif;font-size:0.875rem;color:#4B5563;line-height:1.7;margin:0 0 16px;">Child-led inquiry, creativity, and social confidence take center stage in a rich, joyful learning community.</p>
+            <div style="display:flex;flex-wrap:wrap;gap:7px;margin-bottom:18px;">
+              <span style="font-family:'Nunito',sans-serif;font-size:0.76rem;font-weight:700;background:#E2F0D2;color:#27500A;border-radius:999px;padding:5px 12px;">Letters &amp; Numbers</span>
+              <span style="font-family:'Nunito',sans-serif;font-size:0.76rem;font-weight:700;background:#E2F0D2;color:#27500A;border-radius:999px;padding:5px 12px;">Creative Arts</span>
+              <span style="font-family:'Nunito',sans-serif;font-size:0.76rem;font-weight:700;background:#E2F0D2;color:#27500A;border-radius:999px;padding:5px 12px;">Social Skills</span>
+              <span style="font-family:'Nunito',sans-serif;font-size:0.76rem;font-weight:700;background:#E2F0D2;color:#27500A;border-radius:999px;padding:5px 12px;">School Readiness</span>
+            </div>
+            <a href="programs-preschool.html" style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.85rem;color:#3B6D11;text-decoration:none;display:inline-flex;align-items:center;gap:5px;margin-top:auto;" onmouseover="this.style.gap='9px'" onmouseout="this.style.gap='5px'">Explore Program <span>→</span></a>
+          </div>
+        </div>
+
+        <!-- School Age -->
+        <div style="background:white;border-radius:20px;border:1px solid #C4B5F9;overflow:hidden;box-shadow:0 4px 20px rgba(109,40,217,0.07);display:flex;flex-direction:column;">
+          <div style="background:linear-gradient(135deg,#F3F0FD 0%,#C4B5F9 100%);padding:22px 24px 18px;display:flex;align-items:center;gap:14px;">
+            <div style="width:52px;height:52px;border-radius:14px;background:white;display:flex;align-items:center;justify-content:center;font-size:22px;box-shadow:0 2px 8px rgba(109,40,217,0.12);flex-shrink:0;">📚</div>
+            <div>
+              <div style="font-family:'Open Sans',sans-serif;font-size:0.7rem;font-weight:600;color:#3B1A8E;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:2px;">Kindergarten – Grade 5</div>
+              <h3 style="font-family:'Nunito',sans-serif;font-weight:900;font-size:1.15rem;color:#1A1A1A;margin:0;letter-spacing:-0.02em;">School Age</h3>
+            </div>
+          </div>
+          <div style="padding:18px 24px 22px;flex:1;display:flex;flex-direction:column;">
+            <p style="font-family:'Open Sans',sans-serif;font-size:0.875rem;color:#4B5563;line-height:1.7;margin:0 0 16px;">Before &amp; after-school care with enrichment activities, homework support, and meaningful friendships.</p>
+            <div style="display:flex;flex-wrap:wrap;gap:7px;margin-bottom:18px;">
+              <span style="font-family:'Nunito',sans-serif;font-size:0.76rem;font-weight:700;background:#EDE9FE;color:#3B1A8E;border-radius:999px;padding:5px 12px;">Homework Support</span>
+              <span style="font-family:'Nunito',sans-serif;font-size:0.76rem;font-weight:700;background:#EDE9FE;color:#3B1A8E;border-radius:999px;padding:5px 12px;">STEM Enrichment</span>
+              <span style="font-family:'Nunito',sans-serif;font-size:0.76rem;font-weight:700;background:#EDE9FE;color:#3B1A8E;border-radius:999px;padding:5px 12px;">Teamwork</span>
+              <span style="font-family:'Nunito',sans-serif;font-size:0.76rem;font-weight:700;background:#EDE9FE;color:#3B1A8E;border-radius:999px;padding:5px 12px;">Leadership</span>
+            </div>
+            <a href="programs-school-age.html" style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.85rem;color:#6D28D9;text-decoration:none;display:inline-flex;align-items:center;gap:5px;margin-top:auto;" onmouseover="this.style.gap='9px'" onmouseout="this.style.gap='5px'">Explore Program <span>→</span></a>
+          </div>
+        </div>
+
+        <!-- Summer Camp -->
+        <div style="background:white;border-radius:20px;border:1px solid #FCD34D;overflow:hidden;box-shadow:0 4px 20px rgba(217,119,6,0.08);display:flex;flex-direction:column;">
+          <div style="background:linear-gradient(135deg,#FFFBEB 0%,#FCD34D 100%);padding:22px 24px 18px;display:flex;align-items:center;gap:14px;">
+            <div style="width:52px;height:52px;border-radius:14px;background:white;display:flex;align-items:center;justify-content:center;font-size:22px;box-shadow:0 2px 8px rgba(217,119,6,0.12);flex-shrink:0;">☀️</div>
+            <div>
+              <div style="font-family:'Open Sans',sans-serif;font-size:0.7rem;font-weight:600;color:#78350F;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:2px;">Ages 5 – 12</div>
+              <h3 style="font-family:'Nunito',sans-serif;font-weight:900;font-size:1.15rem;color:#1A1A1A;margin:0;letter-spacing:-0.02em;">Summer Camp</h3>
+            </div>
+          </div>
+          <div style="padding:18px 24px 22px;flex:1;display:flex;flex-direction:column;">
+            <p style="font-family:'Open Sans',sans-serif;font-size:0.875rem;color:#4B5563;line-height:1.7;margin:0 0 16px;">A summer of exploration, creativity, and adventure — in a safe, structured, and fun environment.</p>
+            <div style="display:flex;flex-wrap:wrap;gap:7px;margin-bottom:18px;">
+              <span style="font-family:'Nunito',sans-serif;font-size:0.76rem;font-weight:700;background:#FEF3C7;color:#78350F;border-radius:999px;padding:5px 12px;">Outdoor Adventures</span>
+              <span style="font-family:'Nunito',sans-serif;font-size:0.76rem;font-weight:700;background:#FEF3C7;color:#78350F;border-radius:999px;padding:5px 12px;">STEM Projects</span>
+              <span style="font-family:'Nunito',sans-serif;font-size:0.76rem;font-weight:700;background:#FEF3C7;color:#78350F;border-radius:999px;padding:5px 12px;">Creative Arts</span>
+              <span style="font-family:'Nunito',sans-serif;font-size:0.76rem;font-weight:700;background:#FEF3C7;color:#78350F;border-radius:999px;padding:5px 12px;">New Friendships</span>
+            </div>
+            <a href="programs-summer-camp.html" style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.85rem;color:#D97706;text-decoration:none;display:inline-flex;align-items:center;gap:5px;margin-top:auto;" onmouseover="this.style.gap='9px'" onmouseout="this.style.gap='5px'">Explore Program <span>→</span></a>
+          </div>
+        </div>
+
       </div>
 
-      <!-- ── INFANTS ── -->
-      <section class="age-section visible" id="sec-infant">
-        <div class="section-band" style="background:linear-gradient(135deg,#F0FAF7 0%,#E1F5EE 100%);">
-          <div class="band-icon" style="background:#C7EBE0;">
-            <span>🍼</span>
-            <span class="age-range" style="color:#085041;">6 wk – 14 mo</span>
-          </div>
-          <div class="band-info">
-            <h2>Infants</h2>
-            <p>Warm, responsive care that builds trust, secure attachment, and the brain architecture for all future learning.</p>
-          </div>
-          </div>
-        </div>
-        <div class="domain-grid">
-          <div class="domain-cell">
-            <div class="domain-icon-wrap" style="background:#E1F5EE;">🔍</div>
-            <div class="domain-name">Approaches to Learning</div>
-            <ul class="domain-list">
-              <li>Curiosity &amp; sustained attention</li>
-              <li>Exploring with all senses</li>
-              <li>Responding to new experiences</li>
-            </ul>
-          </div>
-          <div class="domain-cell">
-            <div class="domain-icon-wrap" style="background:#E1F5EE;">🤸</div>
-            <div class="domain-name">Physical Development</div>
-            <ul class="domain-list">
-              <li>Rolling, sitting &amp; grasping</li>
-              <li>Crawling milestones</li>
-              <li>Building strength via tummy time</li>
-            </ul>
-          </div>
-          <div class="domain-cell">
-            <div class="domain-icon-wrap" style="background:#E1F5EE;">💬</div>
-            <div class="domain-name">Language &amp; Literacy</div>
-            <ul class="domain-list">
-              <li>Listening &amp; babbling</li>
-              <li>Recognizing caregiver voices</li>
-              <li>Early interest in books</li>
-            </ul>
-          </div>
-          <div class="domain-cell">
-            <div class="domain-icon-wrap" style="background:#E1F5EE;">🧠</div>
-            <div class="domain-name">Cognitive Development</div>
-            <ul class="domain-list">
-              <li>Cause-and-effect discovery</li>
-              <li>Object permanence</li>
-              <li>Recognizing daily routines</li>
-            </ul>
-          </div>
-          <div class="domain-cell">
-            <div class="domain-icon-wrap" style="background:#E1F5EE;">❤️</div>
-            <div class="domain-name">Social &amp; Emotional</div>
-            <ul class="domain-list">
-              <li>Secure attachment &amp; trust</li>
-              <li>Comfort-seeking behavior</li>
-              <li>Beginning emotional expression</li>
-            </ul>
-          </div>
-        </div>
-        <div class="how-band">
-          <div class="how-label">How We Teach</div>
-          <div class="how-tags">
-            <span class="how-tag">Tummy time &amp; sensory play</span>
-            <span class="how-tag">Songs, stories &amp; face-to-face interaction</span>
-            <span class="how-tag">Safe floor exploration</span>
-            <span class="how-tag">Consistent nurturing routines</span>
-          </div>
-        </div>
-        <div class="iels-foot">
-          <span class="iels-badge">IELS Aligned</span>
-          <span class="iels-text">Domains 1–5 · Approaches to Learning · Physical Development · Language · Cognition · Social-Emotional</span>
-        </div>
-      </section>
-
-      <!-- ── TODDLERS ── -->
-      <section class="age-section visible" id="sec-toddler">
-        <div class="section-band" style="background:linear-gradient(135deg,#EEF4FB 0%,#DCEEF9 100%);">
-          <div class="band-icon" style="background:#B5D4F4;">
-            <span>👟</span>
-            <span class="age-range" style="color:#0C447C;">15 – 23 mo</span>
-          </div>
-          <div class="band-info">
-            <h2>Toddlers</h2>
-            <p>Honoring the drive for independence while gently building social, language, and cognitive foundations.</p>
-          </div>
-          </div>
-        </div>
-        <div class="domain-grid">
-          <div class="domain-cell">
-            <div class="domain-icon-wrap" style="background:#E6F1FB;">🔍</div>
-            <div class="domain-name">Approaches to Learning</div>
-            <ul class="domain-list">
-              <li>Curiosity &amp; independence</li>
-              <li>Persistence in new tasks</li>
-              <li>Self-directed exploration</li>
-            </ul>
-          </div>
-          <div class="domain-cell">
-            <div class="domain-icon-wrap" style="background:#E6F1FB;">🤸</div>
-            <div class="domain-name">Physical Development</div>
-            <ul class="domain-list">
-              <li>Walking, climbing &amp; stacking</li>
-              <li>Self-feeding skills</li>
-              <li>Growing fine motor control</li>
-            </ul>
-          </div>
-          <div class="domain-cell">
-            <div class="domain-icon-wrap" style="background:#E6F1FB;">💬</div>
-            <div class="domain-name">Language &amp; Literacy</div>
-            <ul class="domain-list">
-              <li>First words &amp; simple phrases</li>
-              <li>Following simple directions</li>
-              <li>Singing songs &amp; loving books</li>
-            </ul>
-          </div>
-          <div class="domain-cell">
-            <div class="domain-icon-wrap" style="background:#E6F1FB;">🧠</div>
-            <div class="domain-name">Cognitive Development</div>
-            <ul class="domain-list">
-              <li>Sorting &amp; matching objects</li>
-              <li>Beginning pretend play</li>
-              <li>Simple problem-solving</li>
-            </ul>
-          </div>
-          <div class="domain-cell">
-            <div class="domain-icon-wrap" style="background:#E6F1FB;">❤️</div>
-            <div class="domain-name">Social &amp; Emotional</div>
-            <ul class="domain-list">
-              <li>Parallel play with peers</li>
-              <li>Sharing with adult support</li>
-              <li>Labeling &amp; expressing emotions</li>
-            </ul>
-          </div>
-        </div>
-        <div class="how-band">
-          <div class="how-label">How We Teach</div>
-          <div class="how-tags">
-            <span class="how-tag">Hands-on play centers</span>
-            <span class="how-tag">Music &amp; story time</span>
-            <span class="how-tag">Outdoor gross-motor play</span>
-            <span class="how-tag">Guided social interaction</span>
-            <span class="how-tag">Choice-based learning</span>
-          </div>
-        </div>
-        <div class="iels-foot">
-          <span class="iels-badge">IELS Aligned</span>
-          <span class="iels-text">IELS 1.A · 1.B · 2.A · 2.B · 2.D · 3.A · 4.C · 5.A · 5.B</span>
-        </div>
-      </section>
-
-      <!-- ── TWOS ── -->
-      <section class="age-section visible" id="sec-twos">
-        <div class="section-band" style="background:linear-gradient(135deg,#FDF8F0 0%,#FAE9C8 100%);">
-          <div class="band-icon" style="background:#FAC775;">
-            <span>✌️</span>
-            <span class="age-range" style="color:#633806;">24 – 35 mo</span>
-          </div>
-          <div class="band-info">
-            <h2>Twos</h2>
-            <p>Language explodes, imagination soars, and your child's first real friendships begin to form.</p>
-          </div>
-          </div>
-        </div>
-        <div class="domain-grid">
-          <div class="domain-cell">
-            <div class="domain-icon-wrap" style="background:#FDF0D8;">🔍</div>
-            <div class="domain-name">Approaches to Learning</div>
-            <ul class="domain-list">
-              <li>Longer sustained attention</li>
-              <li>Growing curiosity &amp; confidence</li>
-              <li>Willing to try new challenges</li>
-            </ul>
-          </div>
-          <div class="domain-cell">
-            <div class="domain-icon-wrap" style="background:#FDF0D8;">🤸</div>
-            <div class="domain-name">Physical Development</div>
-            <ul class="domain-list">
-              <li>Running, jumping &amp; climbing</li>
-              <li>Building towers &amp; structures</li>
-              <li>Growing self-care independence</li>
-            </ul>
-          </div>
-          <div class="domain-cell">
-            <div class="domain-icon-wrap" style="background:#FDF0D8;">💬</div>
-            <div class="domain-name">Language &amp; Literacy</div>
-            <ul class="domain-list">
-              <li>2–4 word sentences</li>
-              <li>Singing &amp; answering questions</li>
-              <li>Deep love of books &amp; stories</li>
-            </ul>
-          </div>
-          <div class="domain-cell">
-            <div class="domain-icon-wrap" style="background:#FDF0D8;">🧠</div>
-            <div class="domain-name">Cognitive Development</div>
-            <ul class="domain-list">
-              <li>Sorting colors &amp; shapes</li>
-              <li>Counting small sets</li>
-              <li>Pretend play &amp; problem-solving</li>
-            </ul>
-          </div>
-          <div class="domain-cell">
-            <div class="domain-icon-wrap" style="background:#FDF0D8;">❤️</div>
-            <div class="domain-name">Social &amp; Emotional</div>
-            <ul class="domain-list">
-              <li>Taking turns with peers</li>
-              <li>Naming feelings accurately</li>
-              <li>Building first friendships</li>
-            </ul>
-          </div>
-        </div>
-        <div class="how-band">
-          <div class="how-label">How We Teach</div>
-          <div class="how-tags">
-            <span class="how-tag">Hands-on learning centers</span>
-            <span class="how-tag">Pretend &amp; dramatic play</span>
-            <span class="how-tag">Music, movement &amp; story time</span>
-            <span class="how-tag">Outdoor gross-motor play</span>
-            <span class="how-tag">Guided sharing &amp; social skills</span>
-          </div>
-        </div>
-        <div class="iels-foot">
-          <span class="iels-badge">IELS Aligned</span>
-          <span class="iels-text">IELS 1.A · 1.B · 1.C · 2.A · 2.B · 3.A · 3.B · 4.A · 4.B · 5.A · 5.B</span>
-        </div>
-      </section>
-
-      <!-- ── PRESCHOOL ── -->
-      <section class="age-section visible" id="sec-preschool">
-        <div class="section-band" style="background:linear-gradient(135deg,#F3F9ED 0%,#E2F0D2 100%);">
-          <div class="band-icon" style="background:#C0DD97;">
-            <span>🎨</span>
-            <span class="age-range" style="color:#27500A;">3 – 5 yrs</span>
-          </div>
-          <div class="band-info">
-            <h2>Preschool</h2>
-            <p>Child-led inquiry, creativity, and social confidence take center stage in a rich, joyful learning community.</p>
-          </div>
-          </div>
-        </div>
-        <div class="domain-grid">
-          <div class="domain-cell">
-            <div class="domain-icon-wrap" style="background:#E8F3DC;">🔍</div>
-            <div class="domain-name">Approaches to Learning</div>
-            <ul class="domain-list">
-              <li>Following multi-step routines</li>
-              <li>Trying new activities eagerly</li>
-              <li>Increasing focus &amp; attention</li>
-            </ul>
-          </div>
-          <div class="domain-cell">
-            <div class="domain-icon-wrap" style="background:#E8F3DC;">🤸</div>
-            <div class="domain-name">Physical Development</div>
-            <ul class="domain-list">
-              <li>Running, balancing &amp; jumping</li>
-              <li>Cutting with scissors</li>
-              <li>Drawing shapes &amp; simple figures</li>
-            </ul>
-          </div>
-          <div class="domain-cell">
-            <div class="domain-icon-wrap" style="background:#E8F3DC;">💬</div>
-            <div class="domain-name">Language &amp; Literacy</div>
-            <ul class="domain-list">
-              <li>Speaking in full sentences</li>
-              <li>Recognizing letters &amp; sounds</li>
-              <li>Storytelling &amp; book enjoyment</li>
-            </ul>
-          </div>
-          <div class="domain-cell">
-            <div class="domain-icon-wrap" style="background:#E8F3DC;">🧠</div>
-            <div class="domain-name">Cognitive Development</div>
-            <ul class="domain-list">
-              <li>Counting to 10+</li>
-              <li>Colors, shapes &amp; patterns</li>
-              <li>Simple science discovery</li>
-            </ul>
-          </div>
-          <div class="domain-cell">
-            <div class="domain-icon-wrap" style="background:#E8F3DC;">❤️</div>
-            <div class="domain-name">Social &amp; Emotional</div>
-            <ul class="domain-list">
-              <li>Sharing &amp; taking turns</li>
-              <li>Expressing &amp; regulating feelings</li>
-              <li>Cooperative play &amp; friendships</li>
-            </ul>
-          </div>
-        </div>
-        <div class="how-band">
-          <div class="how-label">How We Teach</div>
-          <div class="how-tags">
-            <span class="how-tag">Learning centers &amp; hands-on play</span>
-            <span class="how-tag">Music, movement &amp; story time</span>
-            <span class="how-tag">Art &amp; sensory exploration</span>
-            <span class="how-tag">Outdoor gross-motor play</span>
-            <span class="how-tag">Small-group social learning</span>
-          </div>
-        </div>
-        <div class="iels-foot">
-          <span class="iels-badge">IELS Aligned</span>
-          <span class="iels-text">IELS 1.A · 1.B · 1.D · 2.A · 2.B · 3.A · 3.C · 3.D · 4.A · 5.B · 5.C</span>
-        </div>
-      </section>
-
-      <!-- ── SCHOOL AGE ── -->
-      <section class="age-section visible" id="sec-schoolage">
-        <div class="section-band" style="background:linear-gradient(135deg,#F3F0FD 0%,#E5DEFA 100%);">
-          <div class="band-icon" style="background:#C4B5F9;">
-            <span>📚</span>
-            <span class="age-range" style="color:#3B1A8E;">K – 12</span>
-          </div>
-          <div class="band-info">
-            <h2>School Age</h2>
-            <p>Before and after-school care that extends the day with enrichment, homework support, and meaningful friendships.</p>
-          </div>
-          </div>
-        </div>
-        <div class="domain-grid">
-          <div class="domain-cell">
-            <div class="domain-icon-wrap" style="background:#EDE9FE;">🔍</div>
-            <div class="domain-name">Approaches to Learning</div>
-            <ul class="domain-list">
-              <li>Independent goal-setting</li>
-              <li>Perseverance through challenges</li>
-              <li>Self-directed projects</li>
-            </ul>
-          </div>
-          <div class="domain-cell">
-            <div class="domain-icon-wrap" style="background:#EDE9FE;">🤸</div>
-            <div class="domain-name">Physical Development</div>
-            <ul class="domain-list">
-              <li>Coordination &amp; team sports</li>
-              <li>Fine motor for art &amp; building</li>
-              <li>Healthy activity habits</li>
-            </ul>
-          </div>
-          <div class="domain-cell">
-            <div class="domain-icon-wrap" style="background:#EDE9FE;">💬</div>
-            <div class="domain-name">Language &amp; Literacy</div>
-            <ul class="domain-list">
-              <li>Reading comprehension</li>
-              <li>Writing &amp; self-expression</li>
-              <li>Research &amp; presentation skills</li>
-            </ul>
-          </div>
-          <div class="domain-cell">
-            <div class="domain-icon-wrap" style="background:#EDE9FE;">🧠</div>
-            <div class="domain-name">Cognitive Development</div>
-            <ul class="domain-list">
-              <li>Math &amp; science concepts</li>
-              <li>Critical &amp; creative thinking</li>
-              <li>Homework support &amp; study skills</li>
-            </ul>
-          </div>
-          <div class="domain-cell">
-            <div class="domain-icon-wrap" style="background:#EDE9FE;">❤️</div>
-            <div class="domain-name">Social &amp; Emotional</div>
-            <ul class="domain-list">
-              <li>Leadership &amp; teamwork</li>
-              <li>Conflict resolution skills</li>
-              <li>Self-advocacy &amp; confidence</li>
-            </ul>
-          </div>
-        </div>
-        <div class="how-band">
-          <div class="how-label">How We Teach</div>
-          <div class="how-tags">
-            <span class="how-tag">Homework help &amp; study time</span>
-            <span class="how-tag">STEM enrichment activities</span>
-            <span class="how-tag">Arts, crafts &amp; creative projects</span>
-            <span class="how-tag">Outdoor &amp; team sports</span>
-            <span class="how-tag">Leadership opportunities</span>
-          </div>
-        </div>
-        <div class="iels-foot">
-          <span class="iels-badge">IELS Aligned</span>
-          <span class="iels-text">IELS 1.C · 1.D · 2.C · 3.A · 3.D · 4.B · 4.C · 5.A · 5.C · 5.D</span>
-        </div>
-      </section>
-
-      <!-- ── SUMMER CAMP ── -->
-      <section class="age-section visible" id="sec-summer">
-        <div class="section-band" style="background:linear-gradient(135deg,#FFFBEB 0%,#FDE9A2 100%);">
-          <div class="band-icon" style="background:#FCD34D;">
-            <span>☀️</span>
-            <span class="age-range" style="color:#78350F;">Ages 5–12</span>
-          </div>
-          <div class="band-info">
-            <h2>Summer Camp</h2>
-            <p>An unforgettable summer of exploration, creativity, friendship, and adventure — all in a safe, structured environment.</p>
-          </div>
-          </div>
-        </div>
-        <div class="domain-grid">
-          <div class="domain-cell">
-            <div class="domain-icon-wrap" style="background:#FEF3C7;">🔍</div>
-            <div class="domain-name">Approaches to Learning</div>
-            <ul class="domain-list">
-              <li>Creative exploration &amp; STEM</li>
-              <li>Trying new activities bravely</li>
-              <li>Problem-solving through play</li>
-            </ul>
-          </div>
-          <div class="domain-cell">
-            <div class="domain-icon-wrap" style="background:#FEF3C7;">🤸</div>
-            <div class="domain-name">Physical Development</div>
-            <ul class="domain-list">
-              <li>Active outdoor adventures</li>
-              <li>Team games &amp; sports</li>
-              <li>Nature walks &amp; exploration</li>
-            </ul>
-          </div>
-          <div class="domain-cell">
-            <div class="domain-icon-wrap" style="background:#FEF3C7;">💬</div>
-            <div class="domain-name">Language &amp; Literacy</div>
-            <ul class="domain-list">
-              <li>Storytelling &amp; drama</li>
-              <li>Reading for fun &amp; discovery</li>
-              <li>Group discussions &amp; sharing</li>
-            </ul>
-          </div>
-          <div class="domain-cell">
-            <div class="domain-icon-wrap" style="background:#FEF3C7;">🧠</div>
-            <div class="domain-name">Cognitive Development</div>
-            <ul class="domain-list">
-              <li>Science experiments &amp; STEM</li>
-              <li>Art projects &amp; design thinking</li>
-              <li>Engineering challenges</li>
-            </ul>
-          </div>
-          <div class="domain-cell">
-            <div class="domain-icon-wrap" style="background:#FEF3C7;">❤️</div>
-            <div class="domain-name">Social &amp; Emotional</div>
-            <ul class="domain-list">
-              <li>Deep friendship building</li>
-              <li>Teamwork &amp; group challenges</li>
-              <li>Confidence &amp; independence</li>
-            </ul>
-          </div>
-        </div>
-        <div class="how-band">
-          <div class="how-label">How We Teach</div>
-          <div class="how-tags">
-            <span class="how-tag">Themed weekly adventures</span>
-            <span class="how-tag">Science &amp; engineering projects</span>
-            <span class="how-tag">Arts, crafts &amp; performance</span>
-            <span class="how-tag">Outdoor exploration &amp; games</span>
-            <span class="how-tag">Cooperative team challenges</span>
-          </div>
-        </div>
-        <div class="iels-foot">
-          <span class="iels-badge">Summer Enrichment</span>
-          <span class="iels-text">Designed around active learning, curiosity, creativity, and building lifelong friendships</span>
-        </div>
-      </section>
+      <!-- IELS note -->
+      <p style="font-family:'Open Sans',sans-serif;font-size:0.8rem;color:#9CA3AF;text-align:center;margin-top:32px;">All programs are aligned with the <strong style="color:#6B7280;">Illinois Early Learning and Development Standards (IELS)</strong> — the state's research-backed roadmap for child development from birth through kindergarten.</p>
 
     </div>
   </section>
