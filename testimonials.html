@@ -53,6 +53,7 @@
       footer > div:first-child > div:first-child > div:first-child { grid-column: 1 / -1 !important; }
       footer > div:first-child > div:first-child > div:last-child { grid-column: 1 / -1 !important; }
       footer > div:last-child > div { flex-direction: column !important; align-items: flex-start !important; gap: 6px !important; padding: 16px !important; }
+      .footer-loc-list { display: grid !important; grid-template-columns: 1fr 1fr !important; gap: 10px 16px !important; }
     }
   </style>
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
@@ -465,29 +466,29 @@
       <!-- Locations -->
       <div>
         <h4 style="font-family:'Nunito',sans-serif;font-weight:700;color:white;font-size:0.8rem;text-transform:uppercase;letter-spacing:0.12em;margin:0 0 20px;">Our Locations</h4>
-        <div style="display:flex;flex-direction:column;gap:20px;">
+        <div class="footer-loc-list" style="display:flex;flex-direction:column;gap:16px;">
 
-          <a href="location-oswego.html" style="display:flex;gap:10px;align-items:flex-start;text-decoration:none;group;" onmouseover="this.querySelector('span').style.color='#0D9E7E'" onmouseout="this.querySelector('span').style.color='white'">
+          <a href="location-oswego.html" style="display:flex;gap:8px;align-items:flex-start;text-decoration:none;" onmouseover="this.querySelector('span').style.color='#0D9E7E'" onmouseout="this.querySelector('span').style.color='white'">
             <svg style="flex-shrink:0;margin-top:3px;" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" stroke="#0D9E7E" stroke-width="2"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" stroke="#0D9E7E" stroke-width="2"/></svg>
             <div>
-              <span style="display:block;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.85rem;color:white;margin-bottom:2px;transition:color 0.2s;">Oswego</span>
-              <span style="font-family:'Open Sans',sans-serif;font-size:0.78rem;color:rgba(255,255,255,0.45);line-height:1.5;">750 5th Street<br/>Oswego, IL 60543</span>
+              <span style="display:block;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.82rem;color:white;margin-bottom:1px;transition:color 0.2s;">Oswego</span>
+              <span style="font-family:'Open Sans',sans-serif;font-size:0.73rem;color:rgba(255,255,255,0.45);line-height:1.4;">750 5th St, Oswego IL</span>
             </div>
           </a>
 
-          <a href="location-kirk.html" style="display:flex;gap:10px;align-items:flex-start;text-decoration:none;" onmouseover="this.querySelector('span').style.color='#0D9E7E'" onmouseout="this.querySelector('span').style.color='white'">
+          <a href="location-kirk.html" style="display:flex;gap:8px;align-items:flex-start;text-decoration:none;" onmouseover="this.querySelector('span').style.color='#0D9E7E'" onmouseout="this.querySelector('span').style.color='white'">
             <svg style="flex-shrink:0;margin-top:3px;" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" stroke="#0D9E7E" stroke-width="2"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" stroke="#0D9E7E" stroke-width="2"/></svg>
             <div>
-              <span style="display:block;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.85rem;color:white;margin-bottom:2px;transition:color 0.2s;">Kirk &amp; Butterfield</span>
-              <span style="font-family:'Open Sans',sans-serif;font-size:0.78rem;color:rgba(255,255,255,0.45);line-height:1.5;">1555 Mesa Lane<br/>Aurora, IL 60502</span>
+              <span style="display:block;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.82rem;color:white;margin-bottom:1px;transition:color 0.2s;">Kirk &amp; Butterfield</span>
+              <span style="font-family:'Open Sans',sans-serif;font-size:0.73rem;color:rgba(255,255,255,0.45);line-height:1.4;">1555 Mesa Ln, Aurora IL</span>
             </div>
           </a>
 
-          <a href="location-ogden.html" style="display:flex;gap:10px;align-items:flex-start;text-decoration:none;" onmouseover="this.querySelector('span').style.color='#0D9E7E'" onmouseout="this.querySelector('span').style.color='white'">
+          <a href="location-ogden.html" style="display:flex;gap:8px;align-items:flex-start;text-decoration:none;" onmouseover="this.querySelector('span').style.color='#0D9E7E'" onmouseout="this.querySelector('span').style.color='white'">
             <svg style="flex-shrink:0;margin-top:3px;" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" stroke="#0D9E7E" stroke-width="2"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" stroke="#0D9E7E" stroke-width="2"/></svg>
             <div>
-              <span style="display:block;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.85rem;color:white;margin-bottom:2px;transition:color 0.2s;">Ogden &amp; IL&#8209;59</span>
-              <span style="font-family:'Open Sans',sans-serif;font-size:0.78rem;color:rgba(255,255,255,0.45);line-height:1.5;">4105 Healthway Drive<br/>Aurora, IL 60504</span>
+              <span style="display:block;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.82rem;color:white;margin-bottom:1px;transition:color 0.2s;">Ogden &amp; IL&#8209;59</span>
+              <span style="font-family:'Open Sans',sans-serif;font-size:0.73rem;color:rgba(255,255,255,0.45);line-height:1.4;">4105 Healthway Dr, Aurora IL</span>
             </div>
           </a>
 
