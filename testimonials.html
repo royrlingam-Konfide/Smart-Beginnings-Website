@@ -49,7 +49,9 @@
   
     @media (max-width: 639px) {
       footer { padding: 40px 16px 0 !important; }
-      footer > div:first-child > div:first-child { gap: 28px !important; padding-bottom: 36px !important; }
+      footer > div:first-child > div:first-child { grid-template-columns: 1fr 1fr !important; gap: 24px !important; padding-bottom: 32px !important; }
+      footer > div:first-child > div:first-child > div:first-child { grid-column: 1 / -1 !important; }
+      footer > div:first-child > div:first-child > div:last-child { grid-column: 1 / -1 !important; }
       footer > div:last-child > div { flex-direction: column !important; align-items: flex-start !important; gap: 6px !important; padding: 16px !important; }
     }
   </style>
