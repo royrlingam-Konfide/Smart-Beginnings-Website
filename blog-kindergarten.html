@@ -40,6 +40,11 @@
     .tip-box p { margin: 0; color: #1E3A8A; }
     .skill-card { background: white; border-radius: 16px; border: 1px solid #C5DCF5; padding: 24px 28px; margin: 20px 0; box-shadow: 0 2px 12px rgba(37,99,235,0.07); display: flex; gap: 16px; align-items: flex-start; }
     .skill-num { width: 40px; height: 40px; border-radius: 12px; background: linear-gradient(135deg,#1D4ED8,#3B82F6); color: white; font-family: 'Nunito', sans-serif; font-weight: 900; font-size: 1.1rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    @media (max-width: 767px) {
+      #blog-hero { padding: 40px 20px 48px !important; }
+      #blog-hero h1 { font-size: 1.6rem !important; }
+      #blog-hero br { display: none !important; }
+    }
     @media (max-width: 639px) {
       footer { padding: 40px 16px 0 !important; }
       footer > div:first-child > div:first-child { grid-template-columns: 1fr 1fr !important; gap: 24px !important; padding-bottom: 32px !important; }
@@ -77,7 +82,7 @@
 
 <main style="padding-top:76px;">
 
-  <section style="position:relative;overflow:hidden;padding:56px 24px 64px;">
+  <section id="blog-hero" style="position:relative;overflow:hidden;padding:56px 24px 64px;">
     <div style="position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=1400&h=500&q=80');background-size:cover;background-position:center;"></div>
     <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(26,58,107,0.9) 0%,rgba(37,99,235,0.82) 65%,rgba(59,130,246,0.78) 100%);"></div>
     <div style="max-width:760px;margin:0 auto;position:relative;">

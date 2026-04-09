@@ -27,6 +27,8 @@
       #site-header nav { padding: 0 20px !important; }
       .site-logo { height: 52px !important; }
       #site-header nav > div { height: 72px !important; }
+      #hero-float-card { display: none !important; }
+      #hero-section { padding: 48px 20px 72px !important; }
     }
     @media (min-width: 768px) { .nav-cta { padding: 11px 24px !important; font-size: 0.9rem !important; } }
     .desktop-nav { display: none !important; }
@@ -175,7 +177,7 @@
   </div>
 
   <!-- Hero -->
-  <section style="background:linear-gradient(135deg,#92400E 0%,#D97706 50%,#F59E0B 100%);padding:80px 24px 100px;position:relative;overflow:hidden;">
+  <section id="hero-section" style="background:linear-gradient(135deg,#92400E 0%,#D97706 50%,#F59E0B 100%);padding:80px 24px 100px;position:relative;overflow:hidden;">
     <div style="position:absolute;inset:0;overflow:hidden;pointer-events:none;">
       <div style="position:absolute;top:-60px;right:-60px;width:320px;height:320px;border-radius:50%;background:rgba(255,255,255,0.08);"></div>
       <div style="position:absolute;bottom:-40px;left:10%;width:200px;height:200px;border-radius:50%;background:rgba(255,255,255,0.05);"></div>
@@ -188,7 +190,7 @@
         <p style="font-family:'Open Sans',sans-serif;font-size:1.05rem;color:rgba(255,255,255,0.92);line-height:1.7;margin:0 0 32px;">The best summer of their lives — guaranteed. Weekly themes, creative projects, outdoor adventures, and friendships that last a lifetime. All at Smart Beginnings Academy.</p>
         <a href="schedule-tour.html" class="btn-amber" style="padding:14px 32px;font-size:1rem;background:white;color:#D97706;">Register for Summer Camp</a>
       </div>
-      <div style="position:absolute;right:24px;top:50%;transform:translateY(-50%);">
+      <div id="hero-float-card" style="position:absolute;right:24px;top:50%;transform:translateY(-50%);">
         <div style="background:rgba(255,255,255,0.15);backdrop-filter:blur(8px);border-radius:24px;padding:28px 32px;color:white;text-align:center;min-width:180px;">
           <div style="font-size:2.5rem;margin-bottom:8px;">☀️</div>
           <div style="font-family:'Nunito',sans-serif;font-weight:800;font-size:1.4rem;line-height:1;">All Summer</div>
