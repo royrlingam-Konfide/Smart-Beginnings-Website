@@ -342,11 +342,16 @@
 </div>
 
 <script>
-  // Slide in banner after 1.5s
-  setTimeout(function(){
-    var b = document.getElementById('open-house-banner');
-    if(b){ b.style.pointerEvents='auto'; b.style.transform='translateY(0)'; b.style.opacity='1'; }
-  }, 1500);
+  // Show banner only through April 11 2026
+  (function(){
+    var expiry = new Date('2026-04-12T00:00:00'); // hides on April 12
+    if(new Date() < expiry){
+      setTimeout(function(){
+        var b = document.getElementById('open-house-banner');
+        if(b){ b.style.pointerEvents='auto'; b.style.transform='translateY(0)'; b.style.opacity='1'; }
+      }, 1500);
+    }
+  })();
 </script>
 
 <!-- ═══════════════════════════ MAIN ═══════════════════════════ -->
