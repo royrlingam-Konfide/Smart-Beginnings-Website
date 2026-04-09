@@ -142,62 +142,59 @@
 <main style="padding-top:84px;">
 
   <!-- HERO -->
-  <section style="position:relative;min-height:88vh;display:flex;align-items:center;overflow:hidden;">
-    <!-- Background photo -->
-    <div style="position:absolute;inset:0;">
-      <img src="https://images.unsplash.com/photo-1544776193-352d25ca82cd?auto=format&fit=crop&w=1600&h=900&q=80" alt="" aria-hidden="true" style="width:100%;height:100%;object-fit:cover;object-position:center 30%;" />
-      <div style="position:absolute;inset:0;background:linear-gradient(110deg,rgba(6,61,48,0.93) 0%,rgba(11,110,90,0.82) 55%,rgba(11,110,90,0.55) 100%);"></div>
-    </div>
+  <section style="background:linear-gradient(135deg,#E1F5EE 0%,#B2E4D0 100%);padding:72px 24px;position:relative;overflow:hidden;">
+    <div aria-hidden="true" style="position:absolute;top:0;right:0;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(11,110,90,0.12) 0%,transparent 70%);pointer-events:none;transform:translate(30%,-30%);"></div>
+    <div aria-hidden="true" style="position:absolute;bottom:0;left:0;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(245,166,35,0.1) 0%,transparent 70%);pointer-events:none;transform:translate(-30%,30%);"></div>
 
-    <!-- Decorative circles -->
-    <div aria-hidden="true" style="position:absolute;top:-80px;right:-80px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(245,166,35,0.15) 0%,transparent 70%);pointer-events:none;"></div>
-    <div aria-hidden="true" style="position:absolute;bottom:-60px;left:-60px;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,0.06) 0%,transparent 70%);pointer-events:none;"></div>
+    <div style="position:relative;z-index:1;max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;">
 
-    <!-- Content -->
-    <div style="position:relative;z-index:10;max-width:1280px;margin:0 auto;padding:80px 24px;width:100%;">
-      <div style="max-width:680px;">
+      <!-- Left: Text -->
+      <div>
+        <span style="display:inline-block;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.72rem;text-transform:uppercase;letter-spacing:0.12em;padding:6px 14px;border-radius:999px;background:#0B6E5A;color:white;margin-bottom:16px;">Join Our Team</span>
+        <h1 style="font-family:'Nunito',sans-serif;font-weight:900;font-size:clamp(2rem,4vw,3rem);color:#1A1A1A;letter-spacing:-0.03em;margin:0 0 16px;line-height:1.1;">Join Our Team</h1>
+        <p style="font-family:'Nunito',sans-serif;font-weight:700;font-size:clamp(1.1rem,2.5vw,1.4rem);color:#0B6E5A;line-height:1.3;margin:0 0 20px;">Some jobs fill your time.<br>This one fills your purpose.</p>
+        <p style="font-family:'Open Sans',sans-serif;font-size:1.05rem;color:#4B5563;line-height:1.78;margin:0 0 32px;max-width:480px;">At Smart Beginnings Academy, we believe the adults in a child's world matter just as much as the lessons they learn. We're looking for educators who show up with their whole heart — and stay because the work truly means something.</p>
 
-        <!-- Eyebrow -->
-        <div style="display:inline-flex;align-items:center;gap:10px;margin-bottom:28px;">
-          <div style="width:30px;height:1px;background:rgba(245,166,35,0.5);"></div>
-          <span style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.75rem;text-transform:uppercase;letter-spacing:0.14em;color:#F5A623;">Join Our Team</span>
-          <div style="width:30px;height:1px;background:rgba(245,166,35,0.5);"></div>
-        </div>
-
-        <!-- Headline -->
-        <h1 style="font-family:'Lora',Georgia,serif;font-weight:600;font-style:italic;font-size:clamp(2rem,4.5vw,3.4rem);color:white;line-height:1.2;letter-spacing:-0.01em;margin:0 0 24px;">
-          Some jobs fill your time.<br>
-          This one fills <span style="color:#F5A623;font-style:italic;">your purpose.</span>
-        </h1>
-
-        <!-- Body -->
-        <p style="font-family:'Open Sans',sans-serif;font-size:clamp(0.95rem,2vw,1.1rem);color:rgba(255,255,255,0.85);line-height:1.85;margin:0 0 40px;max-width:560px;">
-          At Smart Beginnings Academy, we believe the adults in a child's world matter just as much as the lessons they learn. We're looking for educators who show up with their whole heart — and stay because the work truly means something.
-        </p>
-
-        <!-- Trust stats -->
-        <div style="display:flex;flex-wrap:wrap;gap:0;margin-bottom:44px;">
-          <div style="display:flex;flex-direction:column;align-items:flex-start;padding-right:32px;border-right:1px solid rgba(255,255,255,0.2);">
-            <span style="font-family:'Nunito',sans-serif;font-weight:900;font-size:2rem;color:#F5A623;line-height:1;">3</span>
-            <span style="font-family:'Open Sans',sans-serif;font-size:0.72rem;text-transform:uppercase;letter-spacing:0.08em;color:rgba(255,255,255,0.5);margin-top:4px;">Locations</span>
+        <!-- Trust badges -->
+        <div style="display:flex;flex-wrap:wrap;gap:12px;margin-bottom:32px;">
+          <div style="display:inline-flex;align-items:center;gap:10px;background:white;border:1px solid #D1EDE4;border-radius:16px;padding:12px 20px;box-shadow:0 2px 12px rgba(11,110,90,0.08);">
+            <div style="width:32px;height:32px;border-radius:8px;background:#F5A623;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 2L3 7v5c0 5.25 3.75 10.15 9 11.35C17.25 22.15 21 17.25 21 12V7L12 2z" fill="white"/></svg>
+            </div>
+            <div><p style="font-family:'Nunito',sans-serif;font-weight:800;font-size:0.88rem;color:#1A1A1A;margin:0;line-height:1.2;">Mission-Driven</p><p style="font-family:'Open Sans',sans-serif;font-size:0.7rem;color:#6B7280;margin:0;">Built by physicians, for families</p></div>
           </div>
-          <div style="display:flex;flex-direction:column;align-items:flex-start;padding:0 32px;border-right:1px solid rgba(255,255,255,0.2);">
-            <span style="font-family:'Nunito',sans-serif;font-weight:900;font-size:2rem;color:#F5A623;line-height:1;">MD</span>
-            <span style="font-family:'Open Sans',sans-serif;font-size:0.72rem;text-transform:uppercase;letter-spacing:0.08em;color:rgba(255,255,255,0.5);margin-top:4px;">Founded</span>
+          <div style="display:inline-flex;align-items:center;gap:10px;background:white;border:1px solid #D1EDE4;border-radius:16px;padding:12px 20px;box-shadow:0 2px 12px rgba(11,110,90,0.08);">
+            <div style="width:32px;height:32px;border-radius:8px;background:#E1F5EE;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" stroke="#0B6E5A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div><p style="font-family:'Nunito',sans-serif;font-weight:800;font-size:0.88rem;color:#1A1A1A;margin:0;line-height:1.2;">3 Locations</p><p style="font-family:'Open Sans',sans-serif;font-size:0.7rem;color:#6B7280;margin:0;">Oswego, Ogden &amp; Kirk</p></div>
           </div>
-          <div style="display:flex;flex-direction:column;align-items:flex-start;padding-left:32px;">
-            <span style="font-family:'Nunito',sans-serif;font-weight:900;font-size:2rem;color:#F5A623;line-height:1;">100%</span>
-            <span style="font-family:'Open Sans',sans-serif;font-size:0.72rem;text-transform:uppercase;letter-spacing:0.08em;color:rgba(255,255,255,0.5);margin-top:4px;">Mission-driven</span>
+          <div style="display:inline-flex;align-items:center;gap:10px;background:white;border:1px solid #D1EDE4;border-radius:16px;padding:12px 20px;box-shadow:0 2px 12px rgba(11,110,90,0.08);">
+            <div style="width:32px;height:32px;border-radius:8px;background:#E1F5EE;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" stroke="#0B6E5A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div><p style="font-family:'Nunito',sans-serif;font-weight:800;font-size:0.88rem;color:#1A1A1A;margin:0;line-height:1.2;">Heart-First Culture</p><p style="font-family:'Open Sans',sans-serif;font-size:0.7rem;color:#6B7280;margin:0;">Where educators are valued</p></div>
           </div>
         </div>
 
-        <!-- CTA -->
-        <a href="#apply" class="btn-amber" style="padding:16px 40px;font-size:1rem;box-shadow:0 8px 32px rgba(245,166,35,0.4);">
+        <a href="#apply" class="btn-amber" style="padding:15px 36px;font-size:0.95rem;box-shadow:0 6px 24px rgba(245,166,35,0.4);">
           Apply Now
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
-
       </div>
+
+      <!-- Right: Photo -->
+      <div style="position:relative;">
+        <div style="border-radius:24px;overflow:hidden;box-shadow:0 20px 60px rgba(11,110,90,0.18);">
+          <img src="https://images.unsplash.com/photo-1607453998774-d533f65dac99?auto=format&fit=crop&w=800&h=640&q=80" alt="Teacher working with young children in a classroom" style="width:100%;height:480px;object-fit:cover;object-position:center top;display:block;" />
+        </div>
+        <!-- Floating badge -->
+        <div style="position:absolute;bottom:-20px;left:-20px;background:white;border-radius:16px;padding:16px 20px;box-shadow:0 8px 32px rgba(11,110,90,0.15);border:1px solid #D1EDE4;">
+          <p style="font-family:'Nunito',sans-serif;font-weight:900;font-size:1.5rem;color:#0B6E5A;margin:0;line-height:1;">100%</p>
+          <p style="font-family:'Open Sans',sans-serif;font-size:0.72rem;color:#6B7280;margin:0;text-transform:uppercase;letter-spacing:0.06em;">Mission-Driven</p>
+        </div>
+      </div>
+
     </div>
   </section>
 
