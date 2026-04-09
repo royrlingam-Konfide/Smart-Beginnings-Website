@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Careers | Smart Beginnings Academy</title>
+  <meta name="description" content="Join the Smart Beginnings Academy team. We're looking for educators who show up with their whole heart — and stay because the work truly means something." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Open+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Lora:ital,wght@1,600&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Open Sans', sans-serif; color: #2D2D2D; -webkit-font-smoothing: antialiased; margin: 0; background: #F7F8F6; }
+    h1,h2,h3,h4 { font-family: 'Nunito', sans-serif; }
+    #site-header { position: fixed; top: 0; left: 0; right: 0; z-index: 50; background: white; box-shadow: 0 2px 24px rgba(0,0,0,0.07); }
+    .mobile-menu { max-height: 0; overflow: hidden; transition: max-height 0.4s cubic-bezier(0.4,0,0.2,1); background: white; }
+    .mobile-menu.open { max-height: 100dvh; overflow-y: auto; }
+    .hamburger-line { display: block; width: 22px; height: 2px; background: #2D2D2D; border-radius: 2px; transition: transform 0.3s ease, opacity 0.3s ease; }
+    .hamburger.open .line-1 { transform: translateY(8px) rotate(45deg); }
+    .hamburger.open .line-2 { opacity: 0; }
+    .hamburger.open .line-3 { transform: translateY(-8px) rotate(-45deg); }
+    .nav-dropdown { opacity: 0; visibility: hidden; transform: translateY(-8px); transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease; }
+    .nav-item:hover .nav-dropdown, .nav-item:focus-within .nav-dropdown { opacity: 1; visibility: visible; transform: translateY(0); }
+    .nav-link { position: relative; font-family: 'Nunito', sans-serif; font-weight: 600; font-size: 0.92rem; color: #2D2D2D; text-decoration: none; transition: color 0.2s; }
+    .nav-link::after { content: ''; position: absolute; bottom: -3px; left: 0; width: 0; height: 2px; background: #0B6E5A; border-radius: 2px; transition: width 0.25s ease; }
+    .nav-link:hover { color: #0B6E5A; }
+    .nav-link:hover::after { width: 100%; }
+    .btn-amber { display: inline-flex; align-items: center; gap: 8px; background: #F5A623; color: white; font-family: 'Nunito', sans-serif; font-weight: 700; border-radius: 999px; text-decoration: none; cursor: pointer; border: none; transition: background 0.2s, transform 0.2s; }
+    .btn-amber:hover { background: #E8950F; transform: translateY(-1px); }
+    .desktop-nav { display: none !important; }
+    @media (min-width: 768px) { .desktop-nav { display: flex !important; } }
+    .hamburger { display: flex !important; }
+    @media (min-width: 768px) { .hamburger { display: none !important; } }
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .delay-1 { transition-delay: 0.12s; }
+    .delay-2 { transition-delay: 0.24s; }
+    .perk-card { background: white; border: 1px solid rgba(11,110,90,0.12); border-radius: 16px; padding: 24px; transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s; }
+    .perk-card:hover { border-color: rgba(11,110,90,0.3); transform: translateY(-3px); box-shadow: 0 12px 36px rgba(11,110,90,0.1); }
+    @media (max-width: 639px) {
+      footer { padding: 40px 16px 0 !important; }
+      footer > div:first-child > div:first-child { grid-template-columns: 1fr 1fr !important; gap: 24px !important; padding-bottom: 32px !important; }
+      footer > div:first-child > div:first-child > div:first-child { grid-column: 1 / -1 !important; }
+      footer > div:first-child > div:first-child > div:last-child { grid-column: 1 / -1 !important; }
+      footer > div:last-child > div { flex-direction: column !important; align-items: flex-start !important; gap: 6px !important; padding: 16px !important; }
+      .footer-loc-list { display: grid !important; grid-template-columns: 1fr 1fr !important; gap: 10px 16px !important; }
+    }
+    @media (max-width: 767px) {
+      #site-header nav { padding: 0 20px !important; }
+      #site-header nav > div { height: 72px !important; }
+    }
+    @media (min-width: 768px) { .nav-cta { padding: 11px 24px !important; font-size: 0.9rem !important; } }
+  </style>
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<header id="site-header">
+  <nav style="max-width:1280px;margin:0 auto;padding:0 24px;" aria-label="Main navigation">
+    <div style="display:flex;align-items:center;justify-content:space-between;height:84px;">
+      <a href="index.html" style="flex-shrink:0;"><img src="Logo Transparency_Shadow.png" alt="Smart Beginnings Academy" style="height:68px;width:auto;" /></a>
+      <div class="desktop-nav" style="align-items:center;gap:32px;">
+        <div class="nav-item" style="position:relative;">
+          <span class="nav-link" style="cursor:default;display:inline-flex;align-items:center;gap:5px;">Programs <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <div class="nav-dropdown" style="position:absolute;top:calc(100% + 12px);left:0;width:230px;background:white;border-radius:16px;box-shadow:0 12px 40px rgba(0,0,0,0.12);border:1px solid #f0f0f0;padding:8px;z-index:100;">
+            <a href="programs-infants.html" style="display:block;padding:10px 14px;border-radius:10px;font-size:0.875rem;color:#2D2D2D;text-decoration:none;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='';this.style.color='#2D2D2D'">Infants (6 wks – 14 mo)</a>
+            <a href="programs-toddlers.html" style="display:block;padding:10px 14px;border-radius:10px;font-size:0.875rem;color:#2D2D2D;text-decoration:none;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='';this.style.color='#2D2D2D'">Toddlers (15 – 23 mo)</a>
+            <a href="programs-twos.html" style="display:block;padding:10px 14px;border-radius:10px;font-size:0.875rem;color:#2D2D2D;text-decoration:none;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='';this.style.color='#2D2D2D'">Twos (24 – 35 mo)</a>
+            <a href="programs-preschool.html" style="display:block;padding:10px 14px;border-radius:10px;font-size:0.875rem;color:#2D2D2D;text-decoration:none;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='';this.style.color='#2D2D2D'">Pre School (3 – 5 yrs)</a>
+            <a href="programs-school-age.html" style="display:block;padding:10px 14px;border-radius:10px;font-size:0.875rem;color:#2D2D2D;text-decoration:none;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='';this.style.color='#2D2D2D'">School Age (K – 12)</a>
+            <a href="programs-summer-camp.html" style="display:block;padding:10px 14px;border-radius:10px;font-size:0.875rem;color:#2D2D2D;text-decoration:none;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='';this.style.color='#2D2D2D'">Summer Camp</a>
+          </div>
+        </div>
+        <div class="nav-item" style="position:relative;">
+          <span class="nav-link" style="cursor:default;display:inline-flex;align-items:center;gap:5px;">Our Story <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <div class="nav-dropdown" style="position:absolute;top:calc(100% + 12px);left:0;width:200px;background:white;border-radius:16px;box-shadow:0 12px 40px rgba(0,0,0,0.12);border:1px solid #f0f0f0;padding:8px;z-index:100;">
+            <a href="about.html" style="display:block;padding:10px 14px;border-radius:10px;font-family:'Open Sans',sans-serif;font-size:0.875rem;color:#2D2D2D;text-decoration:none;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='transparent';this.style.color='#2D2D2D'">Who We Are</a>
+            <a href="leadership.html" style="display:block;padding:10px 14px;border-radius:10px;font-family:'Open Sans',sans-serif;font-size:0.875rem;color:#2D2D2D;text-decoration:none;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='transparent';this.style.color='#2D2D2D'">Our Leadership &amp; Team</a>
+            <a href="learning-approach.html" style="display:block;padding:10px 14px;border-radius:10px;font-family:'Open Sans',sans-serif;font-size:0.875rem;color:#2D2D2D;text-decoration:none;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='transparent';this.style.color='#2D2D2D'">Our Learning Approach</a>
+          </div>
+        </div>
+        <a href="health-safety.html" class="nav-link">Health &amp; Safety</a>
+        <div class="nav-item" style="position:relative;">
+          <span class="nav-link" style="cursor:default;display:inline-flex;align-items:center;gap:5px;">Locations <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <div class="nav-dropdown" style="position:absolute;top:calc(100% + 12px);left:0;width:260px;background:white;border-radius:16px;box-shadow:0 12px 40px rgba(0,0,0,0.12);border:1px solid #f0f0f0;padding:8px;z-index:100;">
+            <a href="location-oswego.html" style="display:block;padding:12px 14px;border-radius:10px;text-decoration:none;margin-bottom:2px;" onmouseover="this.style.background='#E1F5EE'" onmouseout="this.style.background='transparent'"><span style="display:block;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.88rem;color:#0B6E5A;margin-bottom:4px;">Oswego</span><span style="display:block;font-family:'Open Sans',sans-serif;font-size:0.75rem;color:#4B5563;line-height:1.4;">750 5th Street, Oswego IL 60543</span></a>
+            <div style="height:1px;background:#f0f0f0;margin:2px 0;"></div>
+            <a href="location-ogden.html" style="display:block;padding:12px 14px;border-radius:10px;text-decoration:none;margin-bottom:2px;" onmouseover="this.style.background='#E1F5EE'" onmouseout="this.style.background='transparent'"><span style="display:block;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.88rem;color:#0B6E5A;margin-bottom:4px;">Ogden &amp; IL 59</span><span style="display:block;font-family:'Open Sans',sans-serif;font-size:0.75rem;color:#4B5563;line-height:1.4;">4105 Healthway Drive, Aurora IL</span></a>
+            <div style="height:1px;background:#f0f0f0;margin:2px 0;"></div>
+            <a href="location-kirk.html" style="display:block;padding:12px 14px;border-radius:10px;text-decoration:none;" onmouseover="this.style.background='#E1F5EE'" onmouseout="this.style.background='transparent'"><span style="display:block;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.88rem;color:#0B6E5A;margin-bottom:4px;">Kirk &amp; Butterfield</span><span style="display:block;font-family:'Open Sans',sans-serif;font-size:0.75rem;color:#4B5563;line-height:1.4;">1555 Mesa Lane, Aurora IL 60502</span></a>
+          </div>
+        </div>
+        <a href="parent-stories.html" class="nav-link">Parent Stories</a>
+        <div class="nav-item" style="position:relative;"><span class="nav-link" style="cursor:default;display:inline-flex;align-items:center;gap:5px;">Resources <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div class="nav-dropdown" style="position:absolute;top:calc(100% + 12px);right:0;left:auto;width:160px;background:white;border-radius:16px;box-shadow:0 12px 40px rgba(0,0,0,0.12);border:1px solid #f0f0f0;padding:8px;z-index:100;"><a href="blog.html" style="display:block;padding:10px 14px;border-radius:10px;font-family:'Open Sans',sans-serif;font-size:0.875rem;color:#2D2D2D;text-decoration:none;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='transparent';this.style.color='#2D2D2D'">Blog</a></div></div>
+        <a href="careers.html" class="nav-link" style="color:#0B6E5A;font-weight:700;">Careers</a>
+      </div>
+      <div style="display:flex;align-items:center;gap:16px;">
+        <a href="schedule-tour.html" class="btn-amber nav-cta" style="padding:9px 16px;font-size:0.8rem;">Schedule a Tour</a>
+        <button id="hamburger-btn" class="hamburger" aria-label="Open navigation menu" style="position:relative;z-index:60;flex-direction:column;gap:6px;padding:8px;background:none;border:none;cursor:pointer;" aria-expanded="false" aria-controls="mobile-menu">
+          <span class="hamburger-line line-1"></span>
+          <span class="hamburger-line line-2"></span>
+          <span class="hamburger-line line-3"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="mobile-menu" style="border-top:1px solid #f0f0f0;background:white;">
+    <div style="padding:12px 20px 24px;display:flex;flex-direction:column;gap:2px;">
+      <button onclick="toggleMobSection('ms-prog')" style="display:flex;align-items:center;justify-content:space-between;width:100%;padding:12px 14px;border-radius:10px;background:none;border:none;cursor:pointer;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.95rem;color:#2D2D2D;text-align:left;">Programs <svg id="ms-prog-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" style="transition:transform 0.25s;flex-shrink:0;"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <div id="ms-prog" style="display:none;padding:4px 0 8px 14px;border-left:2px solid #E1F5EE;margin-left:14px;">
+        <a href="programs-infants.html" style="display:block;padding:9px 12px;border-radius:8px;font-family:'Open Sans',sans-serif;font-size:0.875rem;color:#4B5563;text-decoration:none;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='transparent';this.style.color='#4B5563'">Infants (6 wks – 14 mo)</a>
+        <a href="programs-toddlers.html" style="display:block;padding:9px 12px;border-radius:8px;font-family:'Open Sans',sans-serif;font-size:0.875rem;color:#4B5563;text-decoration:none;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='transparent';this.style.color='#4B5563'">Toddlers (15 – 23 mo)</a>
+        <a href="programs-twos.html" style="display:block;padding:9px 12px;border-radius:8px;font-family:'Open Sans',sans-serif;font-size:0.875rem;color:#4B5563;text-decoration:none;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='transparent';this.style.color='#4B5563'">Twos (24 – 35 mo)</a>
+        <a href="programs-preschool.html" style="display:block;padding:9px 12px;border-radius:8px;font-family:'Open Sans',sans-serif;font-size:0.875rem;color:#4B5563;text-decoration:none;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='transparent';this.style.color='#4B5563'">Preschool (3 – 5 yrs)</a>
+        <a href="programs-school-age.html" style="display:block;padding:9px 12px;border-radius:8px;font-family:'Open Sans',sans-serif;font-size:0.875rem;color:#4B5563;text-decoration:none;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='transparent';this.style.color='#4B5563'">School Age</a>
+        <a href="programs-summer-camp.html" style="display:block;padding:9px 12px;border-radius:8px;font-family:'Open Sans',sans-serif;font-size:0.875rem;color:#4B5563;text-decoration:none;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='transparent';this.style.color='#4B5563'">Summer Camp</a>
+      </div>
+      <button onclick="toggleMobSection('ms-story')" style="display:flex;align-items:center;justify-content:space-between;width:100%;padding:12px 14px;border-radius:10px;background:none;border:none;cursor:pointer;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.95rem;color:#2D2D2D;text-align:left;">Our Story <svg id="ms-story-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" style="transition:transform 0.25s;flex-shrink:0;"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <div id="ms-story" style="display:none;padding:4px 0 8px 14px;border-left:2px solid #E1F5EE;margin-left:14px;">
+        <a href="about.html" style="display:block;padding:9px 12px;border-radius:8px;font-family:'Open Sans',sans-serif;font-size:0.875rem;color:#4B5563;text-decoration:none;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='transparent';this.style.color='#4B5563'">Who We Are</a>
+        <a href="leadership.html" style="display:block;padding:9px 12px;border-radius:8px;font-family:'Open Sans',sans-serif;font-size:0.875rem;color:#4B5563;text-decoration:none;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='transparent';this.style.color='#4B5563'">Leadership &amp; Team</a>
+        <a href="learning-approach.html" style="display:block;padding:9px 12px;border-radius:8px;font-family:'Open Sans',sans-serif;font-size:0.875rem;color:#4B5563;text-decoration:none;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='transparent';this.style.color='#4B5563'">Learning Approach</a>
+      </div>
+      <a href="health-safety.html" style="display:flex;align-items:center;justify-content:space-between;padding:12px 14px;border-radius:10px;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.95rem;color:#2D2D2D;text-decoration:none;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='transparent';this.style.color='#2D2D2D'">Health &amp; Safety</a>
+      <button onclick="toggleMobSection('ms-loc')" style="display:flex;align-items:center;justify-content:space-between;width:100%;padding:12px 14px;border-radius:10px;background:none;border:none;cursor:pointer;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.95rem;color:#2D2D2D;text-align:left;">Locations <svg id="ms-loc-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" style="transition:transform 0.25s;flex-shrink:0;"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <div id="ms-loc" style="display:none;padding:4px 0 8px 14px;border-left:2px solid #E1F5EE;margin-left:14px;">
+        <a href="location-oswego.html" style="display:block;padding:9px 12px;border-radius:8px;text-decoration:none;" onmouseover="this.style.background='#E1F5EE'" onmouseout="this.style.background='transparent'"><span style="display:block;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.85rem;color:#0B6E5A;">Oswego</span><span style="font-family:'Open Sans',sans-serif;font-size:0.75rem;color:#6B7280;">750 5th Street, Oswego IL 60543</span></a>
+        <a href="location-kirk.html" style="display:block;padding:9px 12px;border-radius:8px;text-decoration:none;" onmouseover="this.style.background='#E1F5EE'" onmouseout="this.style.background='transparent'"><span style="display:block;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.85rem;color:#0B6E5A;">Kirk &amp; Butterfield</span><span style="font-family:'Open Sans',sans-serif;font-size:0.75rem;color:#6B7280;">1555 Mesa Lane, Aurora IL 60502</span></a>
+        <a href="location-ogden.html" style="display:block;padding:9px 12px;border-radius:8px;text-decoration:none;" onmouseover="this.style.background='#E1F5EE'" onmouseout="this.style.background='transparent'"><span style="display:block;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.85rem;color:#0B6E5A;">Ogden &amp; IL-59</span><span style="font-family:'Open Sans',sans-serif;font-size:0.75rem;color:#6B7280;">4105 Healthway Drive, Aurora IL 60504</span></a>
+      </div>
+      <a href="parent-stories.html" style="display:flex;align-items:center;justify-content:space-between;padding:12px 14px;border-radius:10px;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.95rem;color:#2D2D2D;text-decoration:none;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='transparent';this.style.color='#2D2D2D'">Parent Stories</a>
+      <a href="careers.html" style="display:flex;align-items:center;justify-content:space-between;padding:12px 14px;border-radius:10px;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.95rem;color:#0B6E5A;text-decoration:none;" onmouseover="this.style.background='#E1F5EE'" onmouseout="this.style.background='transparent'">Careers</a>
+      <div style="height:1px;background:#f0f0f0;margin:10px 0;"></div>
+      <a href="schedule-tour.html" class="btn-amber" style="padding:14px 24px;font-size:0.95rem;justify-content:center;border-radius:12px;">Schedule a Tour &#8594;</a>
+    </div>
+  </div>
+</header>
+
+<main style="padding-top:84px;">
+
+  <!-- HERO -->
+  <section style="position:relative;min-height:88vh;display:flex;align-items:center;overflow:hidden;">
+    <!-- Background photo -->
+    <div style="position:absolute;inset:0;">
+      <img src="https://images.unsplash.com/photo-1544776193-352d25ca82cd?auto=format&fit=crop&w=1600&h=900&q=80" alt="" aria-hidden="true" style="width:100%;height:100%;object-fit:cover;object-position:center 30%;" />
+      <div style="position:absolute;inset:0;background:linear-gradient(110deg,rgba(6,61,48,0.93) 0%,rgba(11,110,90,0.82) 55%,rgba(11,110,90,0.55) 100%);"></div>
+    </div>
+
+    <!-- Decorative circles -->
+    <div aria-hidden="true" style="position:absolute;top:-80px;right:-80px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(245,166,35,0.15) 0%,transparent 70%);pointer-events:none;"></div>
+    <div aria-hidden="true" style="position:absolute;bottom:-60px;left:-60px;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,0.06) 0%,transparent 70%);pointer-events:none;"></div>
+
+    <!-- Content -->
+    <div style="position:relative;z-index:10;max-width:1280px;margin:0 auto;padding:80px 24px;width:100%;">
+      <div style="max-width:680px;">
+
+        <!-- Eyebrow -->
+        <div style="display:inline-flex;align-items:center;gap:10px;margin-bottom:28px;">
+          <div style="width:30px;height:1px;background:rgba(245,166,35,0.5);"></div>
+          <span style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.75rem;text-transform:uppercase;letter-spacing:0.14em;color:#F5A623;">Join Our Team</span>
+          <div style="width:30px;height:1px;background:rgba(245,166,35,0.5);"></div>
+        </div>
+
+        <!-- Headline -->
+        <h1 style="font-family:'Lora',Georgia,serif;font-weight:600;font-style:italic;font-size:clamp(2rem,4.5vw,3.4rem);color:white;line-height:1.2;letter-spacing:-0.01em;margin:0 0 24px;">
+          Some jobs fill your time.<br>
+          This one fills <span style="color:#F5A623;font-style:italic;">your purpose.</span>
+        </h1>
+
+        <!-- Body -->
+        <p style="font-family:'Open Sans',sans-serif;font-size:clamp(0.95rem,2vw,1.1rem);color:rgba(255,255,255,0.85);line-height:1.85;margin:0 0 40px;max-width:560px;">
+          At Smart Beginnings Academy, we believe the adults in a child's world matter just as much as the lessons they learn. We're looking for educators who show up with their whole heart — and stay because the work truly means something.
+        </p>
+
+        <!-- Trust stats -->
+        <div style="display:flex;flex-wrap:wrap;gap:0;margin-bottom:44px;">
+          <div style="display:flex;flex-direction:column;align-items:flex-start;padding-right:32px;border-right:1px solid rgba(255,255,255,0.2);">
+            <span style="font-family:'Nunito',sans-serif;font-weight:900;font-size:2rem;color:#F5A623;line-height:1;">3</span>
+            <span style="font-family:'Open Sans',sans-serif;font-size:0.72rem;text-transform:uppercase;letter-spacing:0.08em;color:rgba(255,255,255,0.5);margin-top:4px;">Locations</span>
+          </div>
+          <div style="display:flex;flex-direction:column;align-items:flex-start;padding:0 32px;border-right:1px solid rgba(255,255,255,0.2);">
+            <span style="font-family:'Nunito',sans-serif;font-weight:900;font-size:2rem;color:#F5A623;line-height:1;">MD</span>
+            <span style="font-family:'Open Sans',sans-serif;font-size:0.72rem;text-transform:uppercase;letter-spacing:0.08em;color:rgba(255,255,255,0.5);margin-top:4px;">Founded</span>
+          </div>
+          <div style="display:flex;flex-direction:column;align-items:flex-start;padding-left:32px;">
+            <span style="font-family:'Nunito',sans-serif;font-weight:900;font-size:2rem;color:#F5A623;line-height:1;">100%</span>
+            <span style="font-family:'Open Sans',sans-serif;font-size:0.72rem;text-transform:uppercase;letter-spacing:0.08em;color:rgba(255,255,255,0.5);margin-top:4px;">Mission-driven</span>
+          </div>
+        </div>
+
+        <!-- CTA -->
+        <a href="#apply" class="btn-amber" style="padding:16px 40px;font-size:1rem;box-shadow:0 8px 32px rgba(245,166,35,0.4);">
+          Apply Now
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOUNDED BY -->
+  <section style="background:white;padding:64px 24px;">
+    <div style="max-width:900px;margin:0 auto;">
+      <div class="reveal" style="display:flex;gap:24px;align-items:flex-start;background:#F7FAF9;border:1px solid rgba(11,110,90,0.12);border-radius:20px;padding:36px;">
+        <div style="width:56px;height:56px;border-radius:50%;background:#0B6E5A;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:26px;">🩺</div>
+        <div>
+          <h3 style="font-family:'Nunito',sans-serif;font-weight:800;font-size:1.1rem;color:#1A1A1A;margin:0 0 10px;">Founded by two physicians, built on science.</h3>
+          <p style="font-family:'Open Sans',sans-serif;font-size:0.95rem;color:#4B5563;line-height:1.8;margin:0;">Smart Beginnings Academy was founded by Dr. Roy Lingam and Dr. Sinthuja Magaswaran — not as a daycare, but as a developmental environment grounded in how children's brains actually grow. When you join our team, you're not just teaching. You're part of something that started with a very high bar — and keeps it there.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY WORK HERE -->
+  <section style="background:#F7F8F6;padding:72px 24px 80px;">
+    <div style="max-width:1100px;margin:0 auto;">
+      <div style="text-align:center;margin-bottom:52px;" class="reveal">
+        <span style="display:inline-block;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.78rem;text-transform:uppercase;letter-spacing:0.12em;padding:6px 16px;border-radius:999px;background:#E1F5EE;color:#0B6E5A;margin-bottom:16px;">Why Smart Beginnings</span>
+        <h2 style="font-family:'Nunito',sans-serif;font-weight:900;font-size:clamp(1.8rem,3.5vw,2.4rem);color:#1A1A1A;letter-spacing:-0.025em;margin:0;">A place where educators are proud to work</h2>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;" class="perks-grid">
+        <div class="perk-card reveal">
+          <span style="font-size:1.75rem;display:block;margin-bottom:14px;">🌱</span>
+          <h3 style="font-family:'Nunito',sans-serif;font-weight:800;font-size:1rem;color:#1A1A1A;margin:0 0 8px;">Mission-driven culture</h3>
+          <p style="font-family:'Open Sans',sans-serif;font-size:0.875rem;color:#6B7280;line-height:1.7;margin:0;">You'll feel the difference from day one — this is a team that genuinely cares about children, families, and each other.</p>
+        </div>
+        <div class="perk-card reveal delay-1">
+          <span style="font-size:1.75rem;display:block;margin-bottom:14px;">📚</span>
+          <h3 style="font-family:'Nunito',sans-serif;font-weight:800;font-size:1rem;color:#1A1A1A;margin:0 0 8px;">Professional growth</h3>
+          <p style="font-family:'Open Sans',sans-serif;font-size:0.875rem;color:#6B7280;line-height:1.7;margin:0;">Ongoing training, coaching, and support so you can keep growing as an educator — not just clock in and clock out.</p>
+        </div>
+        <div class="perk-card reveal delay-2">
+          <span style="font-size:1.75rem;display:block;margin-bottom:14px;">🤝</span>
+          <h3 style="font-family:'Nunito',sans-serif;font-weight:800;font-size:1rem;color:#1A1A1A;margin:0 0 8px;">Respected &amp; supported</h3>
+          <p style="font-family:'Open Sans',sans-serif;font-size:0.875rem;color:#6B7280;line-height:1.7;margin:0;">Leadership that listens. Staff that have each other's backs. You won't feel invisible here.</p>
+        </div>
+        <div class="perk-card reveal">
+          <span style="font-size:1.75rem;display:block;margin-bottom:14px;">🏡</span>
+          <h3 style="font-family:'Nunito',sans-serif;font-weight:800;font-size:1rem;color:#1A1A1A;margin:0 0 8px;">Multiple locations</h3>
+          <p style="font-family:'Open Sans',sans-serif;font-size:0.875rem;color:#6B7280;line-height:1.7;margin:0;">Opportunities across our Oswego, Ogden, and Kirk &amp; Butterfield campuses — we're growing, and so is your career.</p>
+        </div>
+        <div class="perk-card reveal delay-1">
+          <span style="font-size:1.75rem;display:block;margin-bottom:14px;">👨‍👩‍👧</span>
+          <h3 style="font-family:'Nunito',sans-serif;font-weight:800;font-size:1rem;color:#1A1A1A;margin:0 0 8px;">Families who value you</h3>
+          <p style="font-family:'Open Sans',sans-serif;font-size:0.875rem;color:#6B7280;line-height:1.7;margin:0;">We attract families who are invested in their children's development — they notice and appreciate great educators.</p>
+        </div>
+        <div class="perk-card reveal delay-2">
+          <span style="font-size:1.75rem;display:block;margin-bottom:14px;">✨</span>
+          <h3 style="font-family:'Nunito',sans-serif;font-weight:800;font-size:1rem;color:#1A1A1A;margin:0 0 8px;">High standards, high reward</h3>
+          <p style="font-family:'Open Sans',sans-serif;font-size:0.875rem;color:#6B7280;line-height:1.7;margin:0;">We hold ourselves to a higher bar — and that's what makes the work meaningful when you look back on it.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PHOTO BREAK -->
+  <section style="position:relative;height:380px;overflow:hidden;">
+    <img src="https://images.unsplash.com/photo-1587654780291-39c9404d746b?auto=format&fit=crop&w=1600&h=500&q=80" alt="Teacher with children in classroom" style="width:100%;height:100%;object-fit:cover;object-position:center 40%;" />
+    <div style="position:absolute;inset:0;background:linear-gradient(to right,rgba(6,61,48,0.7) 0%,rgba(6,61,48,0.2) 60%,transparent 100%);display:flex;align-items:center;">
+      <div style="max-width:1100px;margin:0 auto;padding:0 24px;width:100%;">
+        <p style="font-family:'Lora',Georgia,serif;font-style:italic;font-size:clamp(1.3rem,3vw,2rem);color:white;max-width:520px;line-height:1.5;text-shadow:0 2px 16px rgba(0,0,0,0.3);">"The work you do in the first five years of a child's life echoes for a lifetime."</p>
+        <p style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.85rem;color:rgba(255,255,255,0.7);margin-top:14px;letter-spacing:0.04em;">— Dr. Roy Lingam &amp; Dr. Sinthuja Magaswaran</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT WE LOOK FOR -->
+  <section style="background:white;padding:72px 24px 80px;">
+    <div style="max-width:900px;margin:0 auto;">
+      <div style="margin-bottom:40px;" class="reveal">
+        <span style="display:inline-block;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.78rem;text-transform:uppercase;letter-spacing:0.12em;padding:6px 16px;border-radius:999px;background:#E1F5EE;color:#0B6E5A;margin-bottom:16px;">What We Look For</span>
+        <h2 style="font-family:'Nunito',sans-serif;font-weight:900;font-size:clamp(1.8rem,3.5vw,2.4rem);color:#1A1A1A;letter-spacing:-0.025em;margin:0;">We're clear about what great looks like</h2>
+      </div>
+      <div class="reveal" style="background:#F7FAF9;border:1px solid rgba(11,110,90,0.12);border-radius:20px;padding:36px;">
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:20px;">
+          <li style="display:flex;gap:16px;align-items:flex-start;">
+            <div style="width:26px;height:26px;border-radius:50%;background:#0B6E5A;flex-shrink:0;display:flex;align-items:center;justify-content:center;margin-top:2px;"><svg viewBox="0 0 12 12" fill="none" width="12" height="12"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <p style="font-family:'Open Sans',sans-serif;font-size:0.95rem;color:#4B5563;line-height:1.75;margin:0;"><strong style="font-family:'Nunito',sans-serif;color:#1A1A1A;">Warmth and reliability.</strong> Children thrive on consistency. We need educators who show up — emotionally and physically — every day.</p>
+          </li>
+          <li style="display:flex;gap:16px;align-items:flex-start;">
+            <div style="width:26px;height:26px;border-radius:50%;background:#0B6E5A;flex-shrink:0;display:flex;align-items:center;justify-content:center;margin-top:2px;"><svg viewBox="0 0 12 12" fill="none" width="12" height="12"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <p style="font-family:'Open Sans',sans-serif;font-size:0.95rem;color:#4B5563;line-height:1.75;margin:0;"><strong style="font-family:'Nunito',sans-serif;color:#1A1A1A;">Patience and adaptability.</strong> Every child is different. We look for educators who flex their approach, not their expectations.</p>
+          </li>
+          <li style="display:flex;gap:16px;align-items:flex-start;">
+            <div style="width:26px;height:26px;border-radius:50%;background:#0B6E5A;flex-shrink:0;display:flex;align-items:center;justify-content:center;margin-top:2px;"><svg viewBox="0 0 12 12" fill="none" width="12" height="12"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <p style="font-family:'Open Sans',sans-serif;font-size:0.95rem;color:#4B5563;line-height:1.75;margin:0;"><strong style="font-family:'Nunito',sans-serif;color:#1A1A1A;">A team-first mindset.</strong> You collaborate, communicate, and lift the room — not just your own corner of it.</p>
+          </li>
+          <li style="display:flex;gap:16px;align-items:flex-start;">
+            <div style="width:26px;height:26px;border-radius:50%;background:#0B6E5A;flex-shrink:0;display:flex;align-items:center;justify-content:center;margin-top:2px;"><svg viewBox="0 0 12 12" fill="none" width="12" height="12"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <p style="font-family:'Open Sans',sans-serif;font-size:0.95rem;color:#4B5563;line-height:1.75;margin:0;"><strong style="font-family:'Nunito',sans-serif;color:#1A1A1A;">Commitment to child safety.</strong> DCFS standards are our floor, not our ceiling. We take licensing, ratios, and safety seriously.</p>
+          </li>
+          <li style="display:flex;gap:16px;align-items:flex-start;">
+            <div style="width:26px;height:26px;border-radius:50%;background:#0B6E5A;flex-shrink:0;display:flex;align-items:center;justify-content:center;margin-top:2px;"><svg viewBox="0 0 12 12" fill="none" width="12" height="12"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <p style="font-family:'Open Sans',sans-serif;font-size:0.95rem;color:#4B5563;line-height:1.75;margin:0;"><strong style="font-family:'Nunito',sans-serif;color:#1A1A1A;">Professionalism with heart.</strong> We want people who are kind to families, respectful of boundaries, and proud of what they do.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- APPLY CTA -->
+  <section id="apply" style="background:linear-gradient(135deg,#063D30 0%,#0B6E5A 100%);padding:80px 24px;">
+    <div style="max-width:760px;margin:0 auto;text-align:center;" class="reveal">
+      <h2 style="font-family:'Lora',Georgia,serif;font-weight:600;font-style:italic;font-size:clamp(1.8rem,3.5vw,2.6rem);color:white;margin:0 0 16px;line-height:1.25;">Ready to grow with us?</h2>
+      <p style="font-family:'Open Sans',sans-serif;font-size:1rem;color:rgba(255,255,255,0.8);line-height:1.8;margin:0 0 40px;max-width:500px;margin-left:auto;margin-right:auto;">Send us your resume and a few lines about why early childhood education matters to you. We read every application — and we'll get back to you.</p>
+      <a href="mailto:careers@smartbeginningsacademy.com" class="btn-amber" style="padding:18px 48px;font-size:1.05rem;box-shadow:0 8px 32px rgba(245,166,35,0.45);">
+        Apply Now →
+      </a>
+      <p style="font-family:'Open Sans',sans-serif;font-size:0.8rem;color:rgba(255,255,255,0.4);margin-top:20px;">Serving Oswego, Ogden &amp; IL-59, and Kirk &amp; Butterfield, IL</p>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer style="background:#1A1A1A;color:white;padding:64px 24px 0;">
+  <div style="max-width:1280px;margin:0 auto;">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:48px;padding-bottom:56px;">
+      <div>
+        <a href="index.html" style="display:inline-block;margin-bottom:16px;"><img src="Logo Transparency_Shadow.png" alt="Smart Beginnings Academy" style="height:52px;width:auto;filter:brightness(0) invert(1);" /></a>
+        <p style="font-family:'Open Sans',sans-serif;font-size:0.85rem;color:rgba(255,255,255,0.55);line-height:1.72;margin:0 0 20px;">A physician-founded preschool where every child's learning journey begins with care, science, and heart.</p>
+        <div style="display:flex;gap:10px;">
+          <a href="#" aria-label="Facebook" style="width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;transition:background 0.2s;" onmouseover="this.style.background='#0B6E5A'" onmouseout="this.style.background='rgba(255,255,255,0.1)'"><svg width="15" height="15" viewBox="0 0 24 24" fill="white" aria-hidden="true"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+          <a href="#" aria-label="Instagram" style="width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;transition:background 0.2s;" onmouseover="this.style.background='#0B6E5A'" onmouseout="this.style.background='rgba(255,255,255,0.1)'"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4 style="font-family:'Nunito',sans-serif;font-weight:700;color:white;font-size:0.8rem;text-transform:uppercase;letter-spacing:0.12em;margin:0 0 20px;">Quick Links</h4>
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;">
+          <li><a href="index.html" style="font-family:'Open Sans',sans-serif;font-size:0.875rem;color:rgba(255,255,255,0.55);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#0D9E7E'" onmouseout="this.style.color='rgba(255,255,255,0.55)'">Home</a></li>
+          <li><a href="about.html" style="font-family:'Open Sans',sans-serif;font-size:0.875rem;color:rgba(255,255,255,0.55);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#0D9E7E'" onmouseout="this.style.color='rgba(255,255,255,0.55)'">About Us</a></li>
+          <li><a href="learning-approach.html" style="font-family:'Open Sans',sans-serif;font-size:0.875rem;color:rgba(255,255,255,0.55);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#0D9E7E'" onmouseout="this.style.color='rgba(255,255,255,0.55)'">Our Approach</a></li>
+          <li><a href="health-safety.html" style="font-family:'Open Sans',sans-serif;font-size:0.875rem;color:rgba(255,255,255,0.55);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#0D9E7E'" onmouseout="this.style.color='rgba(255,255,255,0.55)'">Health &amp; Safety</a></li>
+          <li><a href="parent-stories.html" style="font-family:'Open Sans',sans-serif;font-size:0.875rem;color:rgba(255,255,255,0.55);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#0D9E7E'" onmouseout="this.style.color='rgba(255,255,255,0.55)'">Parent Stories</a></li>
+          <li><a href="careers.html" style="font-family:'Open Sans',sans-serif;font-size:0.875rem;color:rgba(255,255,255,0.55);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#0D9E7E'" onmouseout="this.style.color='rgba(255,255,255,0.55)'">Careers</a></li>
+          <li><a href="schedule-tour.html" style="font-family:'Open Sans',sans-serif;font-size:0.875rem;color:rgba(255,255,255,0.55);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#0D9E7E'" onmouseout="this.style.color='rgba(255,255,255,0.55)'">Schedule a Tour</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 style="font-family:'Nunito',sans-serif;font-weight:700;color:white;font-size:0.8rem;text-transform:uppercase;letter-spacing:0.12em;margin:0 0 20px;">Programs</h4>
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;">
+          <li><a href="programs-infants.html" style="font-family:'Open Sans',sans-serif;font-size:0.875rem;color:rgba(255,255,255,0.55);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#0D9E7E'" onmouseout="this.style.color='rgba(255,255,255,0.55)'">Infants (6 wks – 12 mo)</a></li>
+          <li><a href="programs-toddlers.html" style="font-family:'Open Sans',sans-serif;font-size:0.875rem;color:rgba(255,255,255,0.55);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#0D9E7E'" onmouseout="this.style.color='rgba(255,255,255,0.55)'">Toddlers (12 – 24 mo)</a></li>
+          <li><a href="programs-twos.html" style="font-family:'Open Sans',sans-serif;font-size:0.875rem;color:rgba(255,255,255,0.55);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#0D9E7E'" onmouseout="this.style.color='rgba(255,255,255,0.55)'">Twos (2 – 3 yrs)</a></li>
+          <li><a href="programs-preschool.html" style="font-family:'Open Sans',sans-serif;font-size:0.875rem;color:rgba(255,255,255,0.55);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#0D9E7E'" onmouseout="this.style.color='rgba(255,255,255,0.55)'">Preschool (3 – 5 yrs)</a></li>
+          <li><a href="programs-school-age.html" style="font-family:'Open Sans',sans-serif;font-size:0.875rem;color:rgba(255,255,255,0.55);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#0D9E7E'" onmouseout="this.style.color='rgba(255,255,255,0.55)'">School Age</a></li>
+          <li><a href="programs-summer-camp.html" style="font-family:'Open Sans',sans-serif;font-size:0.875rem;color:rgba(255,255,255,0.55);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#0D9E7E'" onmouseout="this.style.color='rgba(255,255,255,0.55)'">Summer Camp</a></li>
+        </ul>
+      </div>
+      <!-- Locations -->
+      <div>
+        <h4 style="font-family:'Nunito',sans-serif;font-weight:700;color:white;font-size:0.8rem;text-transform:uppercase;letter-spacing:0.12em;margin:0 0 20px;">Our Locations</h4>
+        <div class="footer-loc-list" style="display:flex;flex-direction:column;gap:16px;">
+          <a href="location-oswego.html" style="display:flex;gap:8px;align-items:flex-start;text-decoration:none;" onmouseover="this.querySelector('span').style.color='#0D9E7E'" onmouseout="this.querySelector('span').style.color='white'">
+            <svg style="flex-shrink:0;margin-top:2px;" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" stroke="#0D9E7E" stroke-width="2"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" stroke="#0D9E7E" stroke-width="2"/></svg>
+            <div><span style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.82rem;color:white;transition:color 0.2s;">Oswego</span><span style="font-family:'Open Sans',sans-serif;font-size:0.73rem;color:rgba(255,255,255,0.45);margin-left:6px;">750 5th St, Oswego IL</span><a href="https://www.facebook.com/profile.php?id=61564022137902" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;font-family:'Open Sans',sans-serif;font-size:0.7rem;color:#60C3A8;text-decoration:none;margin-top:4px;transition:opacity 0.2s;" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'"><svg width="11" height="11" viewBox="0 0 24 24" fill="#60C3A8" aria-hidden="true"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg> Facebook</a></div>
+          </a>
+          <a href="location-kirk.html" style="display:flex;gap:8px;align-items:flex-start;text-decoration:none;" onmouseover="this.querySelector('span').style.color='#0D9E7E'" onmouseout="this.querySelector('span').style.color='white'">
+            <svg style="flex-shrink:0;margin-top:2px;" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" stroke="#0D9E7E" stroke-width="2"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" stroke="#0D9E7E" stroke-width="2"/></svg>
+            <div><span style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.82rem;color:white;transition:color 0.2s;">Kirk &amp; Butterfield</span><span style="font-family:'Open Sans',sans-serif;font-size:0.73rem;color:rgba(255,255,255,0.45);margin-left:6px;">1555 Mesa Ln, Aurora IL</span><a href="https://www.facebook.com/Smartbeginningsofkirkandbutterfield" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;font-family:'Open Sans',sans-serif;font-size:0.7rem;color:#60C3A8;text-decoration:none;margin-top:4px;transition:opacity 0.2s;" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'"><svg width="11" height="11" viewBox="0 0 24 24" fill="#60C3A8" aria-hidden="true"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg> Facebook</a></div>
+          </a>
+          <a href="location-ogden.html" style="display:flex;gap:8px;align-items:flex-start;text-decoration:none;" onmouseover="this.querySelector('span').style.color='#0D9E7E'" onmouseout="this.querySelector('span').style.color='white'">
+            <svg style="flex-shrink:0;margin-top:2px;" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" stroke="#0D9E7E" stroke-width="2"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" stroke="#0D9E7E" stroke-width="2"/></svg>
+            <div><span style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.82rem;color:white;transition:color 0.2s;">Ogden &amp; IL&#8209;59</span><span style="font-family:'Open Sans',sans-serif;font-size:0.73rem;color:rgba(255,255,255,0.45);margin-left:6px;">4105 Healthway Dr, Aurora IL</span><a href="https://www.facebook.com/smartbeginningsofogdenandIL59/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;font-family:'Open Sans',sans-serif;font-size:0.7rem;color:#60C3A8;text-decoration:none;margin-top:4px;transition:opacity 0.2s;" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'"><svg width="11" height="11" viewBox="0 0 24 24" fill="#60C3A8" aria-hidden="true"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg> Facebook</a></div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="border-top:1px solid rgba(255,255,255,0.07);">
+    <div style="max-width:1280px;margin:0 auto;padding:20px 24px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;">
+      <p style="font-family:'Open Sans',sans-serif;font-size:0.78rem;color:rgba(255,255,255,0.35);margin:0;">&#169; 2026 Smart Beginnings Academy. All Rights Reserved.</p>
+      <a href="privacy.html" style="font-family:'Open Sans',sans-serif;font-size:0.78rem;color:rgba(255,255,255,0.35);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#0D9E7E'" onmouseout="this.style.color='rgba(255,255,255,0.35)'">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Header scroll shadow
+  const header = document.getElementById('site-header');
+  window.addEventListener('scroll', () => { header.style.boxShadow = window.scrollY > 12 ? '0 2px 24px rgba(0,0,0,0.09)' : '0 2px 24px rgba(0,0,0,0.07)'; }, { passive: true });
+
+  // Hamburger
+  const hBtn = document.getElementById('hamburger-btn');
+  const mMenu = document.getElementById('mobile-menu');
+  let open = false;
+  hBtn.addEventListener('click', () => {
+    open = !open;
+    hBtn.classList.toggle('open', open);
+    mMenu.classList.toggle('open', open);
+    hBtn.setAttribute('aria-expanded', String(open));
+  });
+
+  // Mobile accordion
+  function toggleMobSection(id) {
+    var el = document.getElementById(id);
+    var icon = document.getElementById(id + '-icon');
+    var isOpen = el.style.display !== 'none';
+    el.style.display = isOpen ? 'none' : 'block';
+    if (icon) icon.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(180deg)';
+  }
+
+  // Scroll reveal
+  const revealEls = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  revealEls.forEach(el => observer.observe(el));
+
+  // Perk grid responsive
+  const perksGrid = document.querySelector('.perks-grid');
+  function updatePerksGrid() {
+    if (perksGrid) perksGrid.style.gridTemplateColumns = window.innerWidth < 640 ? '1fr' : window.innerWidth < 900 ? 'repeat(2,1fr)' : 'repeat(3,1fr)';
+  }
+  updatePerksGrid();
+  window.addEventListener('resize', updatePerksGrid);
+</script>
+</body>
+</html>
