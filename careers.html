@@ -52,6 +52,11 @@
       #site-header nav > div { height: 72px !important; }
     }
     @media (min-width: 768px) { .nav-cta { padding: 11px 24px !important; font-size: 0.9rem !important; } }
+    @media (max-width: 767px) {
+      .quote-grid { grid-template-columns: 1fr !important; }
+      .quote-grid > div:first-child { min-height: 260px !important; }
+      .quote-text-col { padding: 40px 28px !important; }
+    }
   </style>
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
 </head>
@@ -253,13 +258,22 @@
     </div>
   </section>
 
-  <!-- PHOTO BREAK -->
-  <section style="position:relative;height:380px;overflow:hidden;">
-    <img src="https://images.unsplash.com/photo-1587654780291-39c9404d746b?auto=format&fit=crop&w=1600&h=500&q=80" alt="Teacher with children in classroom" style="width:100%;height:100%;object-fit:cover;object-position:center 40%;" />
-    <div style="position:absolute;inset:0;background:linear-gradient(to right,rgba(6,61,48,0.7) 0%,rgba(6,61,48,0.2) 60%,transparent 100%);display:flex;align-items:center;">
-      <div style="max-width:1100px;margin:0 auto;padding:0 24px;width:100%;">
-        <p style="font-family:'Lora',Georgia,serif;font-style:italic;font-size:clamp(1.3rem,3vw,2rem);color:white;max-width:520px;line-height:1.5;text-shadow:0 2px 16px rgba(0,0,0,0.3);">"The work you do in the first five years of a child's life echoes for a lifetime."</p>
-        <p style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.85rem;color:rgba(255,255,255,0.7);margin-top:14px;letter-spacing:0.04em;">— Dr. Roy Lingam &amp; Dr. Cindy Magas</p>
+  <!-- PHOTO BREAK — 2 column quote -->
+  <section style="background:#063D30;padding:0;overflow:hidden;">
+    <div class="quote-grid" style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;">
+      <!-- Left: Photo -->
+      <div style="position:relative;min-height:420px;">
+        <img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=800&h=600&q=80" alt="Teacher reading with young children" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;" />
+        <div style="position:absolute;inset:0;background:linear-gradient(to right,transparent 60%,#063D30 100%);"></div>
+      </div>
+      <!-- Right: Quote -->
+      <div class="quote-text-col" style="display:flex;flex-direction:column;justify-content:center;padding:64px 56px;background:#063D30;">
+        <div style="width:48px;height:4px;background:#F5A623;border-radius:2px;margin-bottom:32px;"></div>
+        <p style="font-family:'Nunito',sans-serif;font-weight:800;font-size:clamp(1.4rem,2.5vw,2rem);color:white;line-height:1.45;letter-spacing:-0.02em;margin:0 0 28px;">"The work you do in the first five years of a child's life echoes for a lifetime."</p>
+        <div style="display:flex;align-items:center;gap:14px;">
+          <div style="width:36px;height:1px;background:rgba(255,255,255,0.3);"></div>
+          <p style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.85rem;color:#60C3A8;letter-spacing:0.06em;text-transform:uppercase;margin:0;">Dr. Roy Lingam &amp; Dr. Cindy Magas</p>
+        </div>
       </div>
     </div>
   </section>
