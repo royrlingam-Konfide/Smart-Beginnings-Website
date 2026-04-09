@@ -1,0 +1,23 @@
+{
+  "name": "smart-beginnings-website",
+  "version": "1.0.0",
+  "description": "Smart Beginnings Academy - Preschool & Childcare Website",
+  "scripts": {
+    "dev": "node serve.mjs",
+    "serve": "node serve.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/royrlingam-Konfide/Smart-Beginnings-Website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/royrlingam-Konfide/Smart-Beginnings-Website/issues"
+  },
+  "homepage": "https://github.com/royrlingam-Konfide/Smart-Beginnings-Website#readme",
+  "dependencies": {
+    "@vercel/analytics": "^2.0.1"
+  }
+}
