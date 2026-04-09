@@ -242,14 +242,14 @@
 
   <!-- Form Section -->
   <section style="padding:72px 24px;background:#F7F7F7;">
-    <div class="tour-layout" style="max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;" class="md:grid-cols-2">
+    <div class="tour-layout" style="max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:stretch;" class="md:grid-cols-2">
 
       <!-- Form -->
-      <div class="reveal" style="background:white;border-radius:24px;padding:40px;box-shadow:0 8px 40px rgba(11,110,90,0.10);border:1px solid #f0f0f0;">
+      <div class="reveal" style="background:white;border-radius:24px;padding:40px;box-shadow:0 8px 40px rgba(11,110,90,0.10);border:1px solid #f0f0f0;display:flex;flex-direction:column;">
         <h2 style="font-family:'Nunito',sans-serif;font-weight:900;font-size:1.6rem;color:#1A1A1A;margin:0 0 8px;">Book My Tour</h2>
         <p style="font-family:'Open Sans',sans-serif;font-size:0.875rem;color:#6B7280;line-height:1.6;margin:0 0 24px;">Fill out the form below and we'll reach out within 1 business day to confirm your tour time.</p>
 
-        <iframe id="JotFormIFrame-260975356597071" title="Schedule a Tour — Smart Beginnings Academy" src="https://form.jotform.com/260975356597071" allowtransparency="true" allow="geolocation; microphone; camera; fullscreen" style="width:100%;height:580px;border:none;border-radius:12px;" scrolling="yes" frameborder="0"></iframe>
+        <iframe id="JotFormIFrame-260975356597071" title="Schedule a Tour — Smart Beginnings Academy" src="https://form.jotform.com/260975356597071" allowtransparency="true" allow="geolocation; microphone; camera; fullscreen" style="width:100%;flex:1;min-height:580px;border:none;border-radius:12px;" scrolling="yes" frameborder="0"></iframe>
 
         <!-- keep a hidden placeholder so page JS doesn't break -->
         <form id="tour-form" style="display:none;" action="#" method="POST" novalidate>
@@ -395,7 +395,7 @@
       </div>
 
       <!-- Trust sidebar -->
-      <div class="reveal delay-1" style="display:flex;flex-direction:column;gap:24px;">
+      <div class="reveal delay-1" style="display:flex;flex-direction:column;gap:24px;height:100%;">
 
         <!-- What to expect -->
         <div style="background:white;border-radius:20px;padding:32px;box-shadow:0 4px 20px rgba(11,110,90,0.08);border:1px solid #f0f0f0;">
@@ -431,7 +431,7 @@
         </div>
 
         <!-- Locations quick ref -->
-        <div style="background:white;border-radius:20px;padding:28px;box-shadow:0 4px 20px rgba(11,110,90,0.08);border:1px solid #f0f0f0;">
+        <div style="background:white;border-radius:20px;padding:28px;box-shadow:0 4px 20px rgba(11,110,90,0.08);border:1px solid #f0f0f0;flex:1;">
           <h3 style="font-family:'Nunito',sans-serif;font-weight:800;font-size:1rem;color:#1A1A1A;margin:0 0 16px;">Our Locations</h3>
           <div style="display:flex;flex-direction:column;gap:16px;">
 
