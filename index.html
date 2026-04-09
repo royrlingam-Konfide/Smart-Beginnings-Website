@@ -370,35 +370,43 @@
       </div>
 
       <!-- RIGHT: Blended cinematic photos -->
-      <div id="hero-photo-stack" style="flex-shrink:0;width:460px;height:540px;position:relative;display:none;">
+      <div id="hero-photo-stack" style="flex-shrink:0;width:580px;height:660px;position:relative;display:none;margin-right:-32px;">
 
-        <!-- Main photo — Khrystak and Aly (top-right, bleeds into background) -->
-        <div style="position:absolute;top:0;right:-24px;width:300px;height:380px;overflow:hidden;z-index:1;">
+        <!-- Main photo — Khrystak and Aly — full panel, bleeds seamlessly -->
+        <div style="position:absolute;top:0;right:0;left:60px;bottom:0;overflow:hidden;">
           <img src="Khrystak and Aly.jpeg" alt="Teachers and children at Smart Beginnings Academy" style="width:100%;height:100%;object-fit:cover;object-position:center top;">
-          <!-- Blend all edges into hero background -->
-          <div style="position:absolute;inset:0;background:linear-gradient(to right,#0D2B55 0%,transparent 35%);"></div>
-          <div style="position:absolute;inset:0;background:linear-gradient(to bottom,#0D2B55 0%,transparent 20%,transparent 65%,#1565C0 100%);"></div>
-          <div style="position:absolute;inset:0;background:linear-gradient(to top,transparent 60%,#0D2B55 100%);opacity:0.6;"></div>
+          <!-- Heavy left fade into hero gradient -->
+          <div style="position:absolute;inset:0;background:linear-gradient(to right,#0D2B55 0%,rgba(13,43,85,0.9) 15%,rgba(21,101,192,0.35) 40%,transparent 65%);"></div>
+          <!-- Top fade -->
+          <div style="position:absolute;inset:0;background:linear-gradient(to bottom,#0D2B55 0%,transparent 22%);"></div>
+          <!-- Bottom fade -->
+          <div style="position:absolute;inset:0;background:linear-gradient(to top,#1565C0 0%,transparent 30%);"></div>
+          <!-- Right soft edge -->
+          <div style="position:absolute;inset:0;background:linear-gradient(to left,rgba(33,150,243,0.4) 0%,transparent 18%);"></div>
+        </div>
+
+        <!-- Secondary photo — Infant — lower-left, blended in -->
+        <div style="position:absolute;bottom:60px;left:0;width:260px;height:340px;overflow:hidden;z-index:2;">
+          <img src="Infant.jpeg" alt="Teacher and baby at Smart Beginnings Academy" style="width:100%;height:100%;object-fit:cover;object-position:center top;">
+          <!-- Blend right edge into main photo -->
+          <div style="position:absolute;inset:0;background:linear-gradient(to left,rgba(13,43,85,0.9) 0%,transparent 55%);"></div>
+          <!-- Blend top -->
+          <div style="position:absolute;inset:0;background:linear-gradient(to bottom,#0D2B55 0%,transparent 28%);"></div>
+          <!-- Blend bottom -->
+          <div style="position:absolute;inset:0;background:linear-gradient(to top,#1565C0 0%,transparent 35%);"></div>
+          <!-- Left edge soft -->
+          <div style="position:absolute;inset:0;background:linear-gradient(to right,rgba(13,43,85,0.6) 0%,transparent 30%);"></div>
         </div>
 
         <!-- Floating trust badge -->
-        <div style="position:absolute;bottom:24px;right:0;z-index:5;display:flex;align-items:center;gap:10px;background:rgba(13,43,85,0.75);backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,0.15);border-radius:999px;padding:10px 20px 10px 12px;">
+        <div style="position:absolute;bottom:16px;right:40px;z-index:5;display:flex;align-items:center;gap:10px;background:rgba(13,43,85,0.75);backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,0.15);border-radius:999px;padding:10px 20px 10px 12px;">
           <div style="width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,#1565C0,#2196F3);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M12 2L3 7v5c0 5.25 3.75 10.15 9 11.35C17.25 22.15 21 17.25 21 12V7L12 2z" fill="white"/></svg>
           </div>
           <div>
-            <div style="font-family:'Nunito',sans-serif;font-weight:800;font-size:0.82rem;color:white;line-height:1.1;">Trusted by 400+ Families</div>
+            <div style="font-family:'Nunito',sans-serif;font-weight:800;font-size:0.82rem;color:white;line-height:1.1;">Trusted by 500+ Families</div>
             <div style="font-family:'Open Sans',sans-serif;font-size:0.68rem;color:rgba(255,255,255,0.6);margin-top:1px;">Since 2014</div>
           </div>
-        </div>
-
-        <!-- Secondary photo — Infant (bottom-left, bleeds into background) -->
-        <div style="position:absolute;bottom:-20px;left:0;width:240px;height:320px;overflow:hidden;z-index:2;">
-          <img src="Infant.jpeg" alt="Teacher and baby at Smart Beginnings Academy" style="width:100%;height:100%;object-fit:cover;object-position:center top;">
-          <!-- Blend edges -->
-          <div style="position:absolute;inset:0;background:linear-gradient(to left,transparent 30%,#0D2B55 100%);"></div>
-          <div style="position:absolute;inset:0;background:linear-gradient(to bottom,#0D2B55 0%,transparent 25%,transparent 60%,#2196F3 100%);"></div>
-          <div style="position:absolute;inset:0;background:linear-gradient(to top,transparent 50%,#0D2B55 100%);opacity:0.5;"></div>
         </div>
 
       </div>
