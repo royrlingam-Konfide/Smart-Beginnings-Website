@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Screen Time Before Age 3: What the Research Actually Says | Smart Beginnings Academy</title>
+  <meta name="description" content="Evidence-based guidance on screen time for infants, toddlers, and two-year-olds — from Smart Beginnings Academy's physician-founded team." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&family=Open+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Open Sans', sans-serif; color: #2D2D2D; -webkit-font-smoothing: antialiased; margin: 0; }
+    h1,h2,h3,h4 { font-family: 'Nunito', sans-serif; }
+    #site-header { position: fixed; top: 0; left: 0; right: 0; z-index: 50; background: white; box-shadow: 0 2px 24px rgba(0,0,0,0.07); }
+    .mobile-menu { max-height: 0; overflow: hidden; transition: max-height 0.4s cubic-bezier(0.4,0,0.2,1); background: white; }
+    .mobile-menu.open { max-height: 100dvh; overflow-y: auto; }
+    .hamburger-line { display: block; width: 22px; height: 2px; background: #2D2D2D; border-radius: 2px; transition: transform 0.3s ease, opacity 0.3s ease; }
+    .hamburger.open .line-1 { transform: translateY(8px) rotate(45deg); }
+    .hamburger.open .line-2 { opacity: 0; }
+    .hamburger.open .line-3 { transform: translateY(-8px) rotate(-45deg); }
+    .nav-dropdown { opacity: 0; visibility: hidden; transform: translateY(-8px); transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease; }
+    .nav-item:hover .nav-dropdown, .nav-item:focus-within .nav-dropdown { opacity: 1; visibility: visible; transform: translateY(0); }
+    .nav-link { position: relative; font-family: 'Nunito', sans-serif; font-weight: 600; font-size: 0.92rem; color: #2D2D2D; text-decoration: none; transition: color 0.2s; }
+    .nav-link:hover { color: #0B6E5A; }
+    .btn-amber { display: inline-flex; align-items: center; gap: 8px; background: #F5A623; color: white; font-family: 'Nunito', sans-serif; font-weight: 700; border-radius: 999px; text-decoration: none; cursor: pointer; border: none; transition: background 0.2s, transform 0.2s; }
+    .btn-amber:hover { background: #E8950F; transform: translateY(-1px); }
+    .desktop-nav { display: none !important; }
+    @media (min-width: 768px) { .desktop-nav { display: flex !important; } }
+    .hamburger { display: flex !important; }
+    @media (min-width: 768px) { .hamburger { display: none !important; } }
+    .article-body h2 { font-family: 'Nunito', sans-serif; font-weight: 900; font-size: 1.35rem; color: #1A1A1A; letter-spacing: -0.02em; margin: 40px 0 12px; line-height: 1.2; }
+    .article-body p { font-family: 'Open Sans', sans-serif; font-size: 1rem; color: #374151; line-height: 1.82; margin: 0 0 20px; }
+    .article-body ul { padding-left: 0; margin: 0 0 20px; list-style: none; }
+    .article-body ul li { font-family: 'Open Sans', sans-serif; font-size: 0.95rem; color: #374151; line-height: 1.7; padding: 6px 0 6px 24px; position: relative; }
+    .article-body ul li::before { content: '✓'; position: absolute; left: 0; color: #0B6E5A; font-weight: 900; font-size: 0.85rem; top: 8px; }
+    .tip-box { background: linear-gradient(135deg, #E1F5EE, #C7EBE0); border-left: 4px solid #0B6E5A; border-radius: 12px; padding: 20px 24px; margin: 28px 0; }
+    .tip-box p { margin: 0; color: #074D3A; }
+    .age-card { background: white; border-radius: 16px; border: 1px solid #D4E8E2; padding: 20px 24px; margin: 16px 0; box-shadow: 0 2px 12px rgba(11,110,90,0.07); }
+    .age-card-label { font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em; color: #0B6E5A; margin-bottom: 8px; }
+    .stat-box { background: linear-gradient(135deg, #EEF2FF, #E0E7FF); border-left: 4px solid #4F46E5; border-radius: 12px; padding: 20px 24px; margin: 28px 0; }
+    .stat-box p { margin: 0; color: #1E1B4B; }
+    @media (max-width: 639px) {
+      footer { padding: 40px 16px 0 !important; }
+      footer > div:first-child > div:first-child { grid-template-columns: 1fr 1fr !important; gap: 24px !important; padding-bottom: 32px !important; }
+      footer > div:first-child > div:first-child > div:first-child { grid-column: 1 / -1 !important; }
+      footer > div:last-child > div { flex-direction: column !important; align-items: flex-start !important; gap: 6px !important; padding: 16px !important; }
+    }
+  </style>
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
+</head>
+<body>
+<header id="site-header">
+  <nav style="max-width:1280px;margin:0 auto;padding:0 24px;" aria-label="Main navigation">
+    <div style="display:flex;align-items:center;justify-content:space-between;height:76px;">
+      <a href="index.html" style="flex-shrink:0;"><img src="Logo Transparency_Shadow.png" alt="Smart Beginnings Academy" style="height:54px;width:auto;" /></a>
+      <div class="desktop-nav" style="align-items:center;gap:32px;">
+        <div class="nav-item" style="position:relative;"><span class="nav-link" style="cursor:default;display:inline-flex;align-items:center;gap:5px;">Programs <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div class="nav-dropdown" style="position:absolute;top:calc(100% + 12px);left:0;width:230px;background:white;border-radius:16px;box-shadow:0 12px 40px rgba(0,0,0,0.12);border:1px solid #f0f0f0;padding:8px;z-index:100;"><a href="programs-infants.html" style="display:block;padding:10px 14px;border-radius:10px;font-size:0.875rem;color:#2D2D2D;text-decoration:none;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='';this.style.color='#2D2D2D'">Infants (6 wks – 14 mo)</a><a href="programs-toddlers.html" style="display:block;padding:10px 14px;border-radius:10px;font-size:0.875rem;color:#2D2D2D;text-decoration:none;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='';this.style.color='#2D2D2D'">Toddlers (15 – 23 mo)</a><a href="programs-preschool.html" style="display:block;padding:10px 14px;border-radius:10px;font-size:0.875rem;color:#2D2D2D;text-decoration:none;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='';this.style.color='#2D2D2D'">Pre-School (3 – 5 yrs)</a><a href="programs-summer-camp.html" style="display:block;padding:10px 14px;border-radius:10px;font-size:0.875rem;color:#2D2D2D;text-decoration:none;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='';this.style.color='#2D2D2D'">Summer Camp</a></div></div>
+        <a href="parent-stories.html" class="nav-link">Parent Stories</a>
+        <div class="nav-item" style="position:relative;"><span class="nav-link" style="cursor:default;display:inline-flex;align-items:center;gap:5px;color:#0B6E5A;">Resources <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div class="nav-dropdown" style="position:absolute;top:calc(100% + 12px);right:0;left:auto;width:160px;background:white;border-radius:16px;box-shadow:0 12px 40px rgba(0,0,0,0.12);border:1px solid #f0f0f0;padding:8px;z-index:100;"><a href="blog.html" style="display:block;padding:10px 14px;border-radius:10px;font-family:'Open Sans',sans-serif;font-size:0.875rem;color:#0B6E5A;font-weight:600;text-decoration:none;background:#E1F5EE;">Blog</a></div></div>
+      </div>
+      <div style="display:flex;align-items:center;gap:16px;">
+        <a href="schedule-tour.html" class="btn-amber" style="padding:9px 16px;font-size:0.8rem;">Schedule a Tour</a>
+        <button id="hamburger-btn" class="hamburger" style="position:relative;z-index:60;flex-direction:column;gap:6px;padding:8px;background:none;border:none;cursor:pointer;" aria-expanded="false" aria-controls="mobile-menu"><span class="hamburger-line line-1"></span><span class="hamburger-line line-2"></span><span class="hamburger-line line-3"></span></button>
+      </div>
+    </div>
+  </nav>
+  <div id="mobile-menu" class="mobile-menu" style="background:white;border-top:1px solid #f0f0f0;">
+    <div style="padding:12px 20px 24px;display:flex;flex-direction:column;gap:2px;">
+      <a href="blog.html" style="display:flex;align-items:center;padding:12px 14px;border-radius:10px;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.95rem;color:#2D2D2D;text-decoration:none;" onmouseover="this.style.background='#E1F5EE'" onmouseout="this.style.background='transparent'">&#8592; Back to Blog</a>
+      <a href="careers.html" style="display:flex;align-items:center;justify-content:space-between;padding:12px 14px;border-radius:10px;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.95rem;color:#0B6E5A;text-decoration:none;" onmouseover="this.style.background='#E1F5EE'" onmouseout="this.style.background='transparent'">Careers</a>
+      <div style="height:1px;background:#f0f0f0;margin:10px 0;"></div>
+      <a href="schedule-tour.html" class="btn-amber" style="padding:14px 24px;font-size:0.95rem;justify-content:center;border-radius:12px;">Schedule a Tour &#8594;</a>
+    </div>
+  </div>
+</header>
+
+<main style="padding-top:76px;">
+
+  <!-- HERO -->
+  <section style="position:relative;overflow:hidden;padding:56px 24px 64px;">
+    <div style="position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=1400&h=500&q=80');background-size:cover;background-position:center top;"></div>
+    <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(7,37,65,0.92) 0%,rgba(11,110,90,0.86) 55%,rgba(13,138,110,0.82) 100%);"></div>
+    <div style="max-width:760px;margin:0 auto;position:relative;">
+      <a href="blog.html" style="display:inline-flex;align-items:center;gap:6px;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.8rem;color:rgba(255,255,255,0.7);text-decoration:none;margin-bottom:20px;" onmouseover="this.style.color='white'" onmouseout="this.style.color='rgba(255,255,255,0.7)'">&#8592; Back to Blog</a>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px;">
+        <span style="display:inline-flex;align-items:center;gap:5px;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.72rem;text-transform:uppercase;letter-spacing:0.08em;border-radius:999px;padding:4px 12px;background:rgba(255,255,255,0.15);color:white;">📱 Screen Time</span>
+        <span style="display:inline-flex;align-items:center;gap:5px;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.72rem;text-transform:uppercase;letter-spacing:0.08em;border-radius:999px;padding:4px 12px;background:rgba(255,255,255,0.15);color:white;">🧠 Child Development</span>
+        <span style="display:inline-flex;align-items:center;gap:5px;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.72rem;text-transform:uppercase;letter-spacing:0.08em;border-radius:999px;padding:4px 12px;background:rgba(255,255,255,0.2);color:white;">👶 Ages 0–3</span>
+      </div>
+      <h1 style="font-family:'Nunito',sans-serif;font-weight:900;font-size:clamp(1.8rem,4vw,2.8rem);color:white;letter-spacing:-0.035em;margin:0 0 16px;line-height:1.1;">Screen Time Before Age 3: What the Research Actually Says</h1>
+      <p style="font-family:'Open Sans',sans-serif;font-size:1rem;color:rgba(255,255,255,0.8);line-height:1.7;margin:0 0 20px;">Evidence-based guidance for parents of infants, toddlers, and two-year-olds</p>
+      <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;">
+        <div style="display:flex;align-items:center;gap:8px;"><div style="width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,0.2);display:flex;align-items:center;justify-content:center;font-size:14px;">👩‍⚕️</div><span style="font-family:'Open Sans',sans-serif;font-size:0.82rem;color:rgba(255,255,255,0.85);">Smart Beginnings Academy</span></div>
+        <span style="font-family:'Open Sans',sans-serif;font-size:0.8rem;color:rgba(255,255,255,0.6);">6 min read · Screen Time &amp; Child Development</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARTICLE BODY -->
+  <section style="background:#FAFAFA;padding:56px 24px 80px;">
+    <div style="max-width:760px;margin:0 auto;">
+      <div class="article-body">
+
+        <p style="font-size:1.1rem;color:#1A1A1A;font-weight:600;line-height:1.75;margin-bottom:28px;">Every parent has handed a phone to a fussy toddler and felt a pang of guilt about it. And with headlines swinging between "screens are ruining childhood" and "educational apps boost development," it's hard to know what to believe.</p>
+
+        <p>So let's set aside the noise and look at what the science actually shows. As a physician-founded academy, we believe parents deserve facts — not fear. Here's what the current research says about screen time in the first three years of life, and what you can actually do about it.</p>
+
+        <h2>📋 The Expert Consensus: Clear Guidelines by Age</h2>
+        <p>The American Academy of Pediatrics (AAP), the World Health Organization (WHO), and the Canadian Paediatric Society are in agreement on the core recommendations:</p>
+
+        <div class="age-card">
+          <div class="age-card-label">Under 18 months</div>
+          <p style="margin:0;font-size:0.95rem;color:#374151;line-height:1.72;">Avoid screen media entirely, with one exception — live video calls (FaceTime, Zoom) with family members. These involve real back-and-forth interaction, which supports language and social development in a way passive viewing does not.</p>
+        </div>
+
+        <div class="age-card">
+          <div class="age-card-label">18 to 24 months</div>
+          <p style="margin:0;font-size:0.95rem;color:#374151;line-height:1.72;">If you introduce screens at all, choose high-quality educational content and always watch with your child. This is key — solo viewing at this age provides little developmental benefit. The conversation you have <em>around</em> the screen is what creates learning.</p>
+        </div>
+
+        <div class="age-card">
+          <div class="age-card-label">Ages 2 to 3</div>
+          <p style="margin:0;font-size:0.95rem;color:#374151;line-height:1.72;">Limit screen time to one hour per day of high-quality programming. Again, co-viewing matters. The goal is interaction, not passive consumption.</p>
+        </div>
+
+        <div class="tip-box">
+          <p><strong>Why the age cutoff?</strong> In the first 18 months, the brain develops faster than at any other point in life. Neural pathways form through physical touch, face-to-face communication, and real-world sensory experiences — things screens fundamentally cannot replicate.</p>
+        </div>
+
+        <h2>🔬 What the Research Shows About Excess Screen Time</h2>
+        <p>A landmark study published in <em>JAMA Pediatrics</em> — following over 2,400 children from birth to age 9 — found that children who had more than 2 hours of daily screen time at ages 2 to 3 scored measurably lower on developmental screening tests at ages 3 and 5.</p>
+        <p>Research from the NIH's Adolescent Brain Cognitive Development (ABCD) Study, the largest long-term brain development study in the United States, found that children exceeding 2 hours of daily screen time scored lower on thinking and language tests — and brain imaging showed structural differences in the cortex.</p>
+
+        <p>Other consistent findings across the research literature include:</p>
+        <ul>
+          <li>Toddlers with excessive screen time are significantly more likely to experience speech delays</li>
+          <li>Screens replace face-to-face time, which is the primary driver of early language acquisition</li>
+          <li>Higher screen use in early childhood is linked to disrupted sleep patterns and poorer emotional regulation</li>
+          <li>Every screen hour is a displaced hour of physical movement, exploration, and play</li>
+        </ul>
+
+        <div class="stat-box">
+          <p><strong>By the numbers:</strong> A 2025 study found that 42% of children under 2 are exposed to screen media daily, despite recommendations to avoid it at that age. Among preschoolers ages 3 to 5, average daily screen time is already 2.5 hours — well above the recommended maximum.</p>
+        </div>
+
+        <h2>📲 The "Transfer Deficit" — Why Educational Apps Aren't What They Seem</h2>
+        <p>One of the most important findings in early childhood research is something called the <strong>transfer deficit</strong>. Studies published in <em>Infant Behavior and Development</em> show that children under 18 months struggle to apply information learned from a screen to real-world contexts.</p>
+        <p>In simple terms: a toddler can watch the same word or concept dozens of times on a tablet and still not retain it the way they would from a single interaction with a real person. The human connection — the tone, the eye contact, the response to the child's reaction — is irreplaceable at this stage.</p>
+
+        <div class="tip-box">
+          <p><strong>The takeaway:</strong> No app, however well-designed, substitutes for a responsive adult. High-quality childcare settings provide exactly this — trained educators who read children's cues, narrate their world, and build language through genuine interaction.</p>
+        </div>
+
+        <h2>✅ What Parents Can Do: Practical Guidance</h2>
+        <p>The goal isn't perfection — it's intentionality. Here are evidence-backed strategies that work:</p>
+
+        <div class="age-card">
+          <div class="age-card-label">Designate screen-free zones and times</div>
+          <p style="margin:0;font-size:0.95rem;color:#374151;line-height:1.72;">Mealtimes and the hour before bed are the highest priority. Research from Lurie Children's Hospital confirms that consistent screen-free family time supports connection and development.</p>
+        </div>
+
+        <div class="age-card">
+          <div class="age-card-label">When screens are on, be present</div>
+          <p style="margin:0;font-size:0.95rem;color:#374151;line-height:1.72;">Co-viewing turns passive consumption into active learning. Narrate what's happening, ask questions, and connect screen content to things your child already knows.</p>
+        </div>
+
+        <div class="age-card">
+          <div class="age-card-label">Mind your own phone use</div>
+          <p style="margin:0;font-size:0.95rem;color:#374151;line-height:1.72;">Research shows that parental smartphone use directly influences children's habits — and that distracted caregiving reduces the quality of interaction children receive. Children model what they observe.</p>
+        </div>
+
+        <div class="age-card">
+          <div class="age-card-label">Reach for real-world alternatives first</div>
+          <p style="margin:0;font-size:0.95rem;color:#374151;line-height:1.72;">Books, blocks, outdoor play, music, and art provide richer developmental input than any screen equivalent for this age group.</p>
+        </div>
+
+        <div class="age-card">
+          <div class="age-card-label">Use video calls freely</div>
+          <p style="margin:0;font-size:0.95rem;color:#374151;line-height:1.72;">This is the one form of "screen time" experts universally support for young children. Live interaction with grandparents, relatives, and loved ones builds social and language skills.</p>
+        </div>
+
+        <h2>💛 A Note on Guilt</h2>
+        <p>A 2025 survey of parents across the U.S. found that 3 in 5 parents feel guilty about their child's screen time. Nearly half rely on screens daily to manage parenting responsibilities. One in four have used them because they couldn't afford or find childcare.</p>
+        <p>This is a real and human reality — not a parenting failure. The research doesn't call for zero screens or zero guilt. It calls for awareness about <em>when</em> and <em>how</em> screens are used, and for building environments where children have consistent access to responsive, language-rich human interaction.</p>
+
+        <div class="tip-box" style="background:linear-gradient(135deg,#E1F5EE,#C7EBE0);border-left-color:#0B6E5A;">
+          <p style="color:#085041;">That's what we do every day at Smart Beginnings Academy. Our curriculum is built on the founding belief that every child learns best through relationships, exploration, and play — guided by educators who understand child development at a clinical level. <strong>Small habits built early last a lifetime.</strong></p>
+        </div>
+
+      </div>
+
+      <div style="margin-top:48px;padding-top:32px;border-top:1px solid #E5E7EB;display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;">
+        <a href="blog.html" style="display:inline-flex;align-items:center;gap:6px;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.9rem;color:#0B6E5A;text-decoration:none;">&#8592; All Articles</a>
+        <a href="schedule-tour.html" class="btn-amber" style="padding:12px 28px;font-size:0.9rem;">Schedule a Free Tour</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer style="background:#1A1A1A;color:white;padding:64px 24px 0;">
+  <div style="max-width:1280px;margin:0 auto;"><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:48px;padding-bottom:56px;"><div><a href="index.html" style="display:inline-block;margin-bottom:16px;"><img src="Logo Transparency_Shadow.png" alt="Smart Beginnings Academy" style="height:52px;width:auto;filter:brightness(0) invert(1);" /></a><p style="font-family:'Open Sans',sans-serif;font-size:0.85rem;color:rgba(255,255,255,0.55);line-height:1.72;margin:0;">A physician-founded preschool where every child's learning journey begins with care, science, and heart.</p></div><div><h4 style="font-family:'Nunito',sans-serif;font-weight:700;color:white;font-size:0.8rem;text-transform:uppercase;letter-spacing:0.12em;margin:0 0 20px;">Quick Links</h4><ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;"><li><a href="index.html" style="font-family:'Open Sans',sans-serif;font-size:0.875rem;color:rgba(255,255,255,0.55);text-decoration:none;" onmouseover="this.style.color='#0D9E7E'" onmouseout="this.style.color='rgba(255,255,255,0.55)'">Home</a></li><li><a href="blog.html" style="font-family:'Open Sans',sans-serif;font-size:0.875rem;color:rgba(255,255,255,0.55);text-decoration:none;" onmouseover="this.style.color='#0D9E7E'" onmouseout="this.style.color='rgba(255,255,255,0.55)'">Blog</a></li><li><a href="schedule-tour.html" style="font-family:'Open Sans',sans-serif;font-size:0.875rem;color:rgba(255,255,255,0.55);text-decoration:none;" onmouseover="this.style.color='#0D9E7E'" onmouseout="this.style.color='rgba(255,255,255,0.55)'">Schedule a Tour</a></li></ul></div><div><h4 style="font-family:'Nunito',sans-serif;font-weight:700;color:white;font-size:0.8rem;text-transform:uppercase;letter-spacing:0.12em;margin:0 0 20px;">More Articles</h4><ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;"><li><a href="blog-on-track.html" style="font-family:'Open Sans',sans-serif;font-size:0.875rem;color:rgba(255,255,255,0.55);text-decoration:none;" onmouseover="this.style.color='#0D9E7E'" onmouseout="this.style.color='rgba(255,255,255,0.55)'">Is My Child on Track?</a></li><li><a href="blog-kindergarten.html" style="font-family:'Open Sans',sans-serif;font-size:0.875rem;color:rgba(255,255,255,0.55);text-decoration:none;" onmouseover="this.style.color='#0D9E7E'" onmouseout="this.style.color='rgba(255,255,255,0.55)'">5 Things That Predict Kindergarten Success</a></li><li><a href="blog-feeding.html" style="font-family:'Open Sans',sans-serif;font-size:0.875rem;color:rgba(255,255,255,0.55);text-decoration:none;" onmouseover="this.style.color='#0D9E7E'" onmouseout="this.style.color='rgba(255,255,255,0.55)'">Feeding Little Learners</a></li></ul></div></div></div>
+  <div style="border-top:1px solid rgba(255,255,255,0.07);"><div style="max-width:1280px;margin:0 auto;padding:20px 24px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;"><p style="font-family:'Open Sans',sans-serif;font-size:0.78rem;color:rgba(255,255,255,0.35);margin:0;">&#169; 2026 Smart Beginnings Academy. All Rights Reserved.</p><a href="privacy.html" style="font-family:'Open Sans',sans-serif;font-size:0.78rem;color:rgba(255,255,255,0.35);text-decoration:none;" onmouseover="this.style.color='#0D9E7E'" onmouseout="this.style.color='rgba(255,255,255,0.35)'">Privacy Policy</a></div></div>
+</footer>
+<script>
+  const hamburgerBtn = document.getElementById('hamburger-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  let menuOpen = false;
+  hamburgerBtn.addEventListener('click', () => { menuOpen = !menuOpen; hamburgerBtn.classList.toggle('open', menuOpen); mobileMenu.classList.toggle('open', menuOpen); hamburgerBtn.setAttribute('aria-expanded', String(menuOpen)); });
+</script>
+</body>
+</html>
