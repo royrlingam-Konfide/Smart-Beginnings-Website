@@ -274,6 +274,39 @@
     </div>
   </section>
 
+  <!-- CULTURE SPOTLIGHT -->
+  <section style="background:#F7F8F6;padding:72px 24px 80px;">
+    <div style="max-width:1100px;margin:0 auto;">
+      <div style="margin-bottom:40px;" class="reveal">
+        <p style="font-family:'Open Sans',sans-serif;font-size:0.8rem;color:#9CA3AF;margin:0 0 10px;letter-spacing:0.04em;">April 2026 &nbsp;·&nbsp; Team</p>
+        <h2 style="font-family:'Nunito',sans-serif;font-weight:900;font-size:clamp(1.6rem,3vw,2rem);color:#1A1A1A;letter-spacing:-0.025em;margin:0 0 10px;">We threw them a party.</h2>
+        <p style="font-family:'Open Sans',sans-serif;font-size:0.95rem;color:#6B7280;line-height:1.7;max-width:540px;margin:0;">Two of our educators found out they were both expecting around the same time. By the time anyone thought to ask who was organizing the celebration, it was already done.</p>
+      </div>
+
+      <!-- Article card -->
+      <div class="reveal" style="max-width:840px;">
+        <a href="blog-baby-shower.html" style="display:block;text-decoration:none;border-radius:20px;overflow:hidden;background:white;border:1px solid #E5E7EB;box-shadow:0 4px 24px rgba(0,0,0,0.06);transition:transform 0.25s cubic-bezier(0.25,0.46,0.45,0.94),box-shadow 0.25s;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 16px 48px rgba(0,0,0,0.1)';" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 24px rgba(0,0,0,0.06)';">
+          <div style="display:grid;grid-template-columns:1fr 1fr;min-height:300px;" id="culture-card-grid">
+            <!-- Photo -->
+            <div style="position:relative;overflow:hidden;min-height:240px;">
+              <img src="12.jpeg" alt="Two expectant educators at the SBA baby shower" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;transition:transform 0.5s cubic-bezier(0.25,0.46,0.45,0.94);" />
+              <div style="position:absolute;inset:0;background:linear-gradient(to right,transparent 60%,white 100%);pointer-events:none;"></div>
+            </div>
+            <!-- Text -->
+            <div style="padding:36px 36px 36px 28px;display:flex;flex-direction:column;justify-content:center;">
+              <h3 style="font-family:'Nunito',sans-serif;font-weight:900;font-size:1.25rem;color:#1A1A1A;letter-spacing:-0.02em;margin:0 0 12px;line-height:1.25;">Someone started a group chat. No one was put in charge. A few days later, the classroom had balloons.</h3>
+              <p style="font-family:'Open Sans',sans-serif;font-size:0.875rem;color:#6B7280;line-height:1.72;margin:0 0 20px;">A look at what actually happened when two of our team had babies on the way.</p>
+              <span style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.875rem;color:#0B6E5A;display:inline-flex;align-items:center;gap:6px;">
+                Read the story
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
   <!-- WHAT WE LOOK FOR -->
   <section style="background:white;padding:72px 24px 80px;">
     <div style="max-width:900px;margin:0 auto;">
@@ -427,6 +460,14 @@
   }
   updatePerksGrid();
   window.addEventListener('resize', updatePerksGrid);
+
+  // Culture card grid responsive
+  const cultureGrid = document.getElementById('culture-card-grid');
+  function updateCultureGrid() {
+    if (cultureGrid) cultureGrid.style.gridTemplateColumns = window.innerWidth < 640 ? '1fr' : '1fr 1fr';
+  }
+  updateCultureGrid();
+  window.addEventListener('resize', updateCultureGrid);
 </script>
 </body>
 </html>
