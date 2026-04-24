@@ -274,35 +274,43 @@
     </div>
   </section>
 
-  <!-- CULTURE SPOTLIGHT -->
-  <section style="background:#F7F8F6;padding:72px 24px 80px;">
+  <!-- LIFE AT SBA -->
+  <section style="background:#F7F8F6;padding:72px 24px 88px;">
     <div style="max-width:1100px;margin:0 auto;">
-      <div style="margin-bottom:40px;" class="reveal">
-        <p style="font-family:'Open Sans',sans-serif;font-size:0.8rem;color:#9CA3AF;margin:0 0 10px;letter-spacing:0.04em;">April 2026 &nbsp;·&nbsp; Team</p>
-        <h2 style="font-family:'Nunito',sans-serif;font-weight:900;font-size:clamp(1.6rem,3vw,2rem);color:#1A1A1A;letter-spacing:-0.025em;margin:0 0 10px;">Celebrating Our Own: A Baby Shower for Two of Our Brightest Stars</h2>
-        <p style="font-family:'Open Sans',sans-serif;font-size:0.95rem;color:#6B7280;line-height:1.7;max-width:540px;margin:0;">Two of our educators found out they were both expecting around the same time. By the time anyone thought to ask who was organizing the celebration, it was already done.</p>
+
+      <!-- Section header -->
+      <div style="display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-bottom:48px;" class="reveal">
+        <div>
+          <span style="display:inline-block;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.78rem;text-transform:uppercase;letter-spacing:0.12em;padding:6px 16px;border-radius:999px;background:#E1F5EE;color:#0B6E5A;margin-bottom:14px;">Life at SBA</span>
+          <h2 style="font-family:'Nunito',sans-serif;font-weight:900;font-size:clamp(1.8rem,3.5vw,2.4rem);color:#1A1A1A;letter-spacing:-0.025em;margin:0 0 8px;">From the inside</h2>
+          <p style="font-family:'Open Sans',sans-serif;font-size:0.95rem;color:#6B7280;line-height:1.7;margin:0;max-width:480px;">Moments, stories, and real glimpses of what it's like to work here.</p>
+        </div>
       </div>
 
-      <!-- Article card -->
-      <div class="reveal" style="max-width:840px;">
-        <a href="blog-baby-shower.html" style="display:block;text-decoration:none;border-radius:20px;overflow:hidden;background:white;border:1px solid #E5E7EB;box-shadow:0 4px 24px rgba(0,0,0,0.06);transition:transform 0.25s cubic-bezier(0.25,0.46,0.45,0.94),box-shadow 0.25s;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 16px 48px rgba(0,0,0,0.1)';" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 24px rgba(0,0,0,0.06)';">
-          <div style="display:grid;grid-template-columns:1fr 1fr;min-height:300px;" id="culture-card-grid">
-            <!-- Photo -->
-            <div style="position:relative;overflow:hidden;min-height:240px;">
-              <img src="12.jpeg" alt="Two expectant educators at the SBA baby shower" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;transition:transform 0.5s cubic-bezier(0.25,0.46,0.45,0.94);" />
-              <div style="position:absolute;inset:0;background:linear-gradient(to right,transparent 60%,white 100%);pointer-events:none;"></div>
+      <!-- Blog card grid — add more cards here as culture posts grow -->
+      <div id="culture-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:28px;">
+
+        <!-- Card 1: Baby Shower -->
+        <a href="blog-baby-shower.html" class="culture-card reveal" style="display:flex;flex-direction:column;text-decoration:none;color:inherit;background:white;border-radius:20px;overflow:hidden;border:1px solid #EBEBEB;box-shadow:0 4px 24px rgba(0,0,0,0.07);transition:transform 0.3s cubic-bezier(0.34,1.56,0.64,1),box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 20px 52px rgba(0,0,0,0.13)';" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 24px rgba(0,0,0,0.07)';">
+          <div style="overflow:hidden;height:220px;flex-shrink:0;">
+            <img src="12.jpeg" alt="Two expectant educators at the SBA baby shower" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;transition:transform 0.5s ease;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'" />
+          </div>
+          <div style="padding:24px;display:flex;flex-direction:column;flex:1;">
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:14px;">
+              <span style="font-family:'Nunito',sans-serif;font-weight:800;font-size:0.68rem;text-transform:uppercase;letter-spacing:0.1em;border-radius:999px;padding:4px 12px;background:#0B6E5A;color:white;">Team</span>
+              <span style="font-family:'Open Sans',sans-serif;font-size:0.75rem;color:#9CA3AF;">April 2026</span>
             </div>
-            <!-- Text -->
-            <div style="padding:36px 36px 36px 28px;display:flex;flex-direction:column;justify-content:center;">
-              <h3 style="font-family:'Nunito',sans-serif;font-weight:900;font-size:1.25rem;color:#1A1A1A;letter-spacing:-0.02em;margin:0 0 12px;line-height:1.25;">Someone started a group chat. No one was put in charge. A few days later, the classroom had balloons.</h3>
-              <p style="font-family:'Open Sans',sans-serif;font-size:0.875rem;color:#6B7280;line-height:1.72;margin:0 0 20px;">A look at what actually happened when two of our team had babies on the way.</p>
-              <span style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.875rem;color:#0B6E5A;display:inline-flex;align-items:center;gap:6px;">
-                Read the story
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </span>
-            </div>
+            <h3 style="font-family:'Nunito',sans-serif;font-weight:900;font-size:1.05rem;color:#1A1A1A;letter-spacing:-0.02em;margin:0 0 10px;line-height:1.3;">Celebrating Our Own: A Baby Shower for Two of Our Brightest Stars</h3>
+            <p style="font-family:'Open Sans',sans-serif;font-size:0.855rem;color:#6B7280;line-height:1.7;margin:0 0 20px;flex:1;">Two of our educators were expecting at the same time. By the time anyone thought to ask who was organizing the party, it was already done.</p>
+            <span style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.855rem;color:#0B6E5A;display:inline-flex;align-items:center;gap:6px;">
+              Read the story
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
           </div>
         </a>
+
+        <!-- Future cards go here -->
+
       </div>
     </div>
   </section>
@@ -461,10 +469,12 @@
   updatePerksGrid();
   window.addEventListener('resize', updatePerksGrid);
 
-  // Culture card grid responsive
-  const cultureGrid = document.getElementById('culture-card-grid');
+  // Culture grid responsive
+  const cultureGrid = document.getElementById('culture-grid');
   function updateCultureGrid() {
-    if (cultureGrid) cultureGrid.style.gridTemplateColumns = window.innerWidth < 640 ? '1fr' : '1fr 1fr';
+    if (!cultureGrid) return;
+    const w = window.innerWidth;
+    cultureGrid.style.gridTemplateColumns = w < 640 ? '1fr' : w < 900 ? 'repeat(2,1fr)' : 'repeat(3,1fr)';
   }
   updateCultureGrid();
   window.addEventListener('resize', updateCultureGrid);
