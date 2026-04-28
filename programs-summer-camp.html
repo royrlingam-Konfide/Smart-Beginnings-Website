@@ -295,6 +295,268 @@
     </div>
   </section>
 
+  <!-- ☀️ 2026 SCHEDULE -->
+  <section style="background:#FFFBF0;padding:80px 24px 96px;">
+    <div style="max-width:1100px;margin:0 auto;">
+
+      <div style="text-align:center;margin-bottom:48px;" class="reveal">
+        <span style="display:inline-flex;align-items:center;gap:6px;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.78rem;text-transform:uppercase;letter-spacing:0.12em;padding:6px 18px;border-radius:999px;background:#FEF3C7;color:#B45309;margin-bottom:16px;">☀️ 2026 Camp Schedule</span>
+        <h2 style="font-family:'Nunito',sans-serif;font-weight:900;font-size:clamp(1.8rem,3.5vw,2.4rem);color:#1A1A1A;letter-spacing:-0.03em;margin:0 0 12px;line-height:1.1;">What's Happening This Summer</h2>
+        <p style="font-family:'Open Sans',sans-serif;font-size:1rem;color:#6B7280;margin:0;">Select your location to see field trips, special events, and weekly activities.</p>
+      </div>
+
+      <!-- Location Tabs -->
+      <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-bottom:40px;">
+        <button id="sched-tab-oswego" onclick="switchSched('oswego')" style="font-family:'Nunito',sans-serif;font-weight:800;font-size:0.9rem;padding:12px 28px;background:#F59E0B;color:white;border:2px solid #F59E0B;border-radius:999px;cursor:pointer;transition:background 0.2s,color 0.2s,transform 0.15s;box-shadow:0 4px 16px rgba(245,158,11,0.35);">📍 Oswego</button>
+        <button id="sched-tab-ogden" onclick="switchSched('ogden')" style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.9rem;padding:12px 28px;background:transparent;color:#92400E;border:2px solid #FDE68A;border-radius:999px;cursor:pointer;transition:background 0.2s,color 0.2s,transform 0.15s;">📍 Ogden &amp; IL-59</button>
+        <button id="sched-tab-kirk" onclick="switchSched('kirk')" style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.9rem;padding:12px 28px;background:transparent;color:#92400E;border:2px solid #FDE68A;border-radius:999px;cursor:pointer;transition:background 0.2s,color 0.2s,transform 0.15s;">📍 Kirk &amp; Butterfield</button>
+      </div>
+
+      <!-- ═══ OSWEGO ═══ -->
+      <div id="sched-oswego">
+        <div style="text-align:center;margin-bottom:20px;">
+          <p style="font-family:'Open Sans',sans-serif;font-size:0.9rem;color:#6B7280;margin:0 0 12px;">June 1 – August 14, 2026 &nbsp;·&nbsp; 750 5th Street, Oswego</p>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;">
+            <span style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.78rem;padding:5px 14px;border-radius:999px;background:#EFF6FF;color:#1D4ED8;">🌊 Water Day Every Friday</span>
+            <span style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.78rem;padding:5px 14px;border-radius:999px;background:#FFF7ED;color:#C2410C;">🚌 Field Trips on Thursdays</span>
+          </div>
+        </div>
+        <div style="display:flex;gap:4px;border-bottom:3px solid #FDE68A;margin-bottom:0;">
+          <button id="sched-mtab-oswego-june" onclick="switchSchedMonth('oswego','june')" style="font-family:'Nunito',sans-serif;font-weight:800;font-size:0.85rem;padding:10px 24px;background:#F59E0B;color:white;border:none;cursor:pointer;border-radius:10px 10px 0 0;box-shadow:0 -2px 10px rgba(245,158,11,0.2);">June</button>
+          <button id="sched-mtab-oswego-july" onclick="switchSchedMonth('oswego','july')" style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.85rem;padding:10px 24px;background:#FEF3C7;color:#92400E;border:none;cursor:pointer;border-radius:10px 10px 0 0;">July</button>
+          <button id="sched-mtab-oswego-aug" onclick="switchSchedMonth('oswego','aug')" style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.85rem;padding:10px 24px;background:#FEF3C7;color:#92400E;border:none;cursor:pointer;border-radius:10px 10px 0 0;">August</button>
+        </div>
+        <div id="sched-oswego-june" style="padding-top:16px;">
+          <div style="background:white;border-radius:14px;border:1px solid #FDE68A;padding:18px 20px;margin-bottom:10px;box-shadow:0 2px 10px rgba(251,191,36,0.07);">
+            <div style="font-family:'Nunito',sans-serif;font-weight:800;font-size:0.8rem;color:#92400E;margin-bottom:10px;">June 1 – 5</div>
+            <div style="display:flex;flex-wrap:wrap;gap:6px;"><span style="font-family:'Open Sans',sans-serif;font-size:0.75rem;padding:4px 12px;border-radius:999px;background:#F0FDF4;color:#15803D;border:1px solid #BBF7D0;">Classroom Garden · Fizzy Sun Project · Splash Paint</span><span style="font-family:'Open Sans',sans-serif;font-size:0.75rem;padding:4px 12px;border-radius:999px;background:#FDF2F8;color:#9D174D;border:1px solid #FBCFE8;font-weight:600;">🎓 PreK Graduation (Thu)</span><span style="font-family:'Open Sans',sans-serif;font-size:0.75rem;padding:4px 12px;border-radius:999px;background:#EFF6FF;color:#1E40AF;border:1px solid #BFDBFE;font-weight:600;">🌊 Water Day (Fri)</span></div>
+          </div>
+          <div style="background:white;border-radius:14px;border:1px solid #FDE68A;padding:18px 20px;margin-bottom:10px;box-shadow:0 2px 10px rgba(251,191,36,0.07);">
+            <div style="font-family:'Nunito',sans-serif;font-weight:800;font-size:0.8rem;color:#92400E;margin-bottom:10px;">June 8 – 12</div>
+            <div style="display:flex;flex-wrap:wrap;gap:6px;"><span style="font-family:'Open Sans',sans-serif;font-size:0.75rem;padding:4px 12px;border-radius:999px;background:#F0FDF4;color:#15803D;border:1px solid #BBF7D0;">Color Scavenger Hunt · Hot Air Balloon Project · Outside Painting</span><span style="font-family:'Open Sans',sans-serif;font-size:0.75rem;padding:4px 12px;border-radius:999px;background:#FFF7ED;color:#C2410C;border:1px solid #FED7AA;font-weight:600;">🚌 Blackberry Farm (Thu)</span><span style="font-family:'Open Sans',sans-serif;font-size:0.75rem;padding:4px 12px;border-radius:999px;background:#EFF6FF;color:#1E40AF;border:1px solid #BFDBFE;font-weight:600;">🌊 Water Day + Stem Day</span></div>
+          </div>
+          <div style="background:white;border-radius:14px;border:1px solid #FDE68A;padding:18px 20px;margin-bottom:10px;box-shadow:0 2px 10px rgba(251,191,36,0.07);">
+            <div style="font-family:'Nunito',sans-serif;font-weight:800;font-size:0.8rem;color:#92400E;margin-bottom:10px;">June 15 – 19</div>
+            <div style="display:flex;flex-wrap:wrap;gap:6px;"><span style="font-family:'Open Sans',sans-serif;font-size:0.75rem;padding:4px 12px;border-radius:999px;background:#F0FDF4;color:#15803D;border:1px solid #BBF7D0;">Relay Race · Parachute Day · Obstacle Course</span><span style="font-family:'Open Sans',sans-serif;font-size:0.75rem;padding:4px 12px;border-radius:999px;background:#FDF2F8;color:#9D174D;border:1px solid #FBCFE8;font-weight:600;">🎉 Father's Day Lunch (Mon)</span><span style="font-family:'Open Sans',sans-serif;font-size:0.75rem;padding:4px 12px;border-radius:999px;background:#FFF7ED;color:#C2410C;border:1px solid #FED7AA;font-weight:600;">🚌 Color Me Mine (Thu)</span><span style="font-family:'Open Sans',sans-serif;font-size:0.75rem;padding:4px 12px;border-radius:999px;background:#EFF6FF;color:#1E40AF;border:1px solid #BFDBFE;font-weight:600;">🌊 Water Day</span></div>
+          </div>
+          <div style="background:white;border-radius:14px;border:1px solid #FDE68A;padding:18px 20px;margin-bottom:10px;box-shadow:0 2px 10px rgba(251,191,36,0.07);">
+            <div style="font-family:'Nunito',sans-serif;font-weight:800;font-size:0.8rem;color:#92400E;margin-bottom:10px;">June 22 – 26</div>
+            <div style="display:flex;flex-wrap:wrap;gap:6px;"><span style="font-family:'Open Sans',sans-serif;font-size:0.75rem;padding:4px 12px;border-radius:999px;background:#F0FDF4;color:#15803D;border:1px solid #BBF7D0;">Build a Tent · Butterfly Craft</span><span style="font-family:'Open Sans',sans-serif;font-size:0.75rem;padding:4px 12px;border-radius:999px;background:#FDF2F8;color:#9D174D;border:1px solid #FBCFE8;font-weight:600;">🏆 Field Day! (Mon)</span><span style="font-family:'Open Sans',sans-serif;font-size:0.75rem;padding:4px 12px;border-radius:999px;background:#FFF7ED;color:#C2410C;border:1px solid #FED7AA;font-weight:600;">🚌 Nature Museum (Thu)</span><span style="font-family:'Open Sans',sans-serif;font-size:0.75rem;padding:4px 12px;border-radius:999px;background:#EFF6FF;color:#1E40AF;border:1px solid #BFDBFE;font-weight:600;">🌊 Water Day + S'mores Camping</span></div>
+          </div>
+          <div style="background:white;border-radius:14px;border:1px solid #FDE68A;padding:18px 20px;margin-bottom:10px;box-shadow:0 2px 10px rgba(251,191,36,0.07);">
+            <div style="font-family:'Nunito',sans-serif;font-weight:800;font-size:0.8rem;color:#92400E;margin-bottom:10px;">June 29 – 30</div>
+            <div style="display:flex;flex-wrap:wrap;gap:6px;"><span style="font-family:'Open Sans',sans-serif;font-size:0.75rem;padding:4px 12px;border-radius:999px;background:#F0FDF4;color:#15803D;border:1px solid #BBF7D0;">Make Frozen Yogurt · Picnic Outside</span></div>
+          </div>
+        </div>
+        <div id="sched-oswego-july" style="display:none;padding-top:16px;">
+          <div style="background:white;border-radius:14px;border:1px solid #FDE68A;padding:18px 20px;margin-bottom:10px;box-shadow:0 2px 10px rgba(251,191,36,0.07);">
+            <div style="font-family:'Nunito',sans-serif;font-weight:800;font-size:0.8rem;color:#92400E;margin-bottom:10px;">July 1 – 3 &nbsp;<span style="font-weight:600;font-size:0.72rem;color:#9CA3AF;">(Center closed July 4)</span></div>
+            <div style="display:flex;flex-wrap:wrap;gap:6px;"><span style="font-family:'Open Sans',sans-serif;font-size:0.75rem;padding:4px 12px;border-radius:999px;background:#F0FDF4;color:#15803D;border:1px solid #BBF7D0;">Tie Dye Day · Ice Cream Bar Day</span></div>
+          </div>
+          <div style="background:white;border-radius:14px;border:1px solid #FDE68A;padding:18px 20px;margin-bottom:10px;box-shadow:0 2px 10px rgba(251,191,36,0.07);">
+            <div style="font-family:'Nunito',sans-serif;font-weight:800;font-size:0.8rem;color:#92400E;margin-bottom:10px;">July 6 – 10</div>
+            <div style="display:flex;flex-wrap:wrap;gap:6px;"><span style="font-family:'Open Sans',sans-serif;font-size:0.75rem;padding:4px 12px;border-radius:999px;background:#F0FDF4;color:#15803D;border:1px solid #BBF7D0;">Pet Fish in a Bag · National Freeze Pop Day · Going Fishing</span><span style="font-family:'Open Sans',sans-serif;font-size:0.75rem;padding:4px 12px;border-radius:999px;background:#FFF7ED;color:#C2410C;border:1px solid #FED7AA;font-weight:600;">🚌 Wolfs Crossing Park (Thu)</span><span style="font-family:'Open Sans',sans-serif;font-size:0.75rem;padding:4px 12px;border-radius:999px;background:#EFF6FF;color:#1E40AF;border:1px solid #BFDBFE;font-weight:600;">🌊 Water Day + Movie Day!</span></div>
+          </div>
+          <div style="background:white;border-radius:14px;border:1px solid #FDE68A;padding:18px 20px;margin-bottom:10px;box-shadow:0 2px 10px rgba(251,191,36,0.07);">
+            <div style="font-family:'Nunito',sans-serif;font-weight:800;font-size:0.8rem;color:#92400E;margin-bottom:10px;">July 13 – 17 · 🌊 Ocean Theme</div>
+            <div style="display:flex;flex-wrap:wrap;gap:6px;"><span style="font-family:'Open Sans',sans-serif;font-size:0.75rem;padding:4px 12px;border-radius:999px;background:#F0FDF4;color:#15803D;border:1px solid #BBF7D0;">Ocean Project · Celery Painting · Jellyfish Threading</span><span style="font-family:'Open Sans',sans-serif;font-size:0.75rem;padding:4px 12px;border-radius:999px;background:#FFF7ED;color:#C2410C;border:1px solid #FED7AA;font-weight:600;">🚌 Parkside Lanes Bowling (Thu)</span><span style="font-family:'Open Sans',sans-serif;font-size:0.75rem;padding:4px 12px;border-radius:999px;background:#EFF6FF;color:#1E40AF;border:1px solid #BFDBFE;font-weight:600;">🌊 Water Day + Stem Day</span></div>
+          </div>
+          <div style="background:white;border-radius:14px;border:1px solid #FDE68A;padding:18px 20px;margin-bottom:10px;box-shadow:0 2px 10px rgba(251,191,36,0.07);">
+            <div style="font-family:'Nunito',sans-serif;font-weight:800;font-size:0.8rem;color:#92400E;margin-bottom:10px;">July 20 – 24</div>
+            <div style="display:flex;flex-wrap:wrap;gap:6px;"><span style="font-family:'Open Sans',sans-serif;font-size:0.75rem;padding:4px 12px;border-radius:999px;background:#F0FDF4;color:#15803D;border:1px solid #BBF7D0;">Treasure Hunt · Feed Shark Toss · Jello Sensory</span><span style="font-family:'Open Sans',sans-serif;font-size:0.75rem;padding:4px 12px;border-radius:999px;background:#FFF7ED;color:#C2410C;border:1px solid #FED7AA;font-weight:600;">🚌 Philips Park Zoo (Thu)</span><span style="font-family:'Open Sans',sans-serif;font-size:0.75rem;padding:4px 12px;border-radius:999px;background:#EFF6FF;color:#1E40AF;border:1px solid #BFDBFE;font-weight:600;">🌊 Water Day</span></div>
+          </div>
+          <div style="background:white;border-radius:14px;border:1px solid #FDE68A;padding:18px 20px;margin-bottom:10px;box-shadow:0 2px 10px rgba(251,191,36,0.07);">
+            <div style="font-family:'Nunito',sans-serif;font-weight:800;font-size:0.8rem;color:#92400E;margin-bottom:10px;">July 27 – 31</div>
+            <div style="display:flex;flex-wrap:wrap;gap:6px;"><span style="font-family:'Open Sans',sans-serif;font-size:0.75rem;padding:4px 12px;border-radius:999px;background:#F0FDF4;color:#15803D;border:1px solid #BBF7D0;">Teacher Choice · Movie Day · Watermelon Sensory · Watermelon Volcano</span><span style="font-family:'Open Sans',sans-serif;font-size:0.75rem;padding:4px 12px;border-radius:999px;background:#FFF7ED;color:#C2410C;border:1px solid #FED7AA;font-weight:600;">🚌 Nike Park (Thu)</span><span style="font-family:'Open Sans',sans-serif;font-size:0.75rem;padding:4px 12px;border-radius:999px;background:#FDF2F8;color:#9D174D;border:1px solid #FBCFE8;font-weight:700;">🎉 Foam Party! (Fri)</span></div>
+          </div>
+        </div>
+        <div id="sched-oswego-aug" style="display:none;padding-top:16px;">
+          <div style="background:white;border-radius:14px;border:1px solid #FDE68A;padding:18px 20px;margin-bottom:10px;box-shadow:0 2px 10px rgba(251,191,36,0.07);">
+            <div style="font-family:'Nunito',sans-serif;font-weight:800;font-size:0.8rem;color:#92400E;margin-bottom:10px;">August 3 – 7</div>
+            <div style="display:flex;flex-wrap:wrap;gap:6px;"><span style="font-family:'Open Sans',sans-serif;font-size:0.75rem;padding:4px 12px;border-radius:999px;background:#F0FDF4;color:#15803D;border:1px solid #BBF7D0;">Movie Day · Birdhouse Painting · Snow Cone Day</span><span style="font-family:'Open Sans',sans-serif;font-size:0.75rem;padding:4px 12px;border-radius:999px;background:#FFF7ED;color:#C2410C;border:1px solid #FED7AA;font-weight:600;">🚌 95th St Splash Pad &amp; Picnic (Thu)</span><span style="font-family:'Open Sans',sans-serif;font-size:0.75rem;padding:4px 12px;border-radius:999px;background:#EFF6FF;color:#1E40AF;border:1px solid #BFDBFE;font-weight:600;">🌊 Water Day</span></div>
+          </div>
+          <div style="background:white;border-radius:14px;border:2px solid #F59E0B;padding:18px 20px;margin-bottom:10px;box-shadow:0 4px 18px rgba(245,158,11,0.14);">
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;"><span style="font-family:'Nunito',sans-serif;font-weight:800;font-size:0.8rem;color:#92400E;">August 10 – 14</span><span style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.7rem;padding:2px 10px;border-radius:999px;background:#FDE68A;color:#92400E;">Last Week of Camp!</span></div>
+            <div style="display:flex;flex-wrap:wrap;gap:6px;"><span style="font-family:'Open Sans',sans-serif;font-size:0.75rem;padding:4px 12px;border-radius:999px;background:#F0FDF4;color:#15803D;border:1px solid #BBF7D0;">Sunshine Camp &amp; S'mores · Parachute Day · Picnic Outside</span><span style="font-family:'Open Sans',sans-serif;font-size:0.75rem;padding:4px 12px;border-radius:999px;background:#FFF7ED;color:#C2410C;border:1px solid #FED7AA;font-weight:600;">🚌 Cantigny Park (Thu)</span><span style="font-family:'Open Sans',sans-serif;font-size:0.75rem;padding:4px 12px;border-radius:999px;background:#FDF2F8;color:#9D174D;border:1px solid #FBCFE8;font-weight:700;">🎉 End of Summer Bash! (Fri)</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ OGDEN ═══ -->
+      <div id="sched-ogden" style="display:none;">
+        <div style="text-align:center;margin-bottom:20px;">
+          <p style="font-family:'Open Sans',sans-serif;font-size:0.9rem;color:#6B7280;margin:0 0 12px;">June 1 – August 7, 2026 &nbsp;·&nbsp; 4105 Healthway Drive, Aurora</p>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;">
+            <span style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.78rem;padding:5px 14px;border-radius:999px;background:#EFF6FF;color:#1D4ED8;">🌊 Water Day Every Friday</span>
+            <span style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.78rem;padding:5px 14px;border-radius:999px;background:#FFF7ED;color:#C2410C;">🚌 Field Trips on Tuesdays</span>
+            <span style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.78rem;padding:5px 14px;border-radius:999px;background:#FEF3C7;color:#92400E;">🏆 Gobble Doggs Club Jun 1–Jul 13</span>
+          </div>
+        </div>
+        <div style="display:flex;gap:4px;border-bottom:3px solid #FDE68A;margin-bottom:0;">
+          <button id="sched-mtab-ogden-june" onclick="switchSchedMonth('ogden','june')" style="font-family:'Nunito',sans-serif;font-weight:800;font-size:0.85rem;padding:10px 24px;background:#F59E0B;color:white;border:none;cursor:pointer;border-radius:10px 10px 0 0;box-shadow:0 -2px 10px rgba(245,158,11,0.2);">June</button>
+          <button id="sched-mtab-ogden-july" onclick="switchSchedMonth('ogden','july')" style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.85rem;padding:10px 24px;background:#FEF3C7;color:#92400E;border:none;cursor:pointer;border-radius:10px 10px 0 0;">July</button>
+          <button id="sched-mtab-ogden-aug" onclick="switchSchedMonth('ogden','aug')" style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.85rem;padding:10px 24px;background:#FEF3C7;color:#92400E;border:none;cursor:pointer;border-radius:10px 10px 0 0;">August</button>
+        </div>
+        <div id="sched-ogden-june" style="padding-top:16px;">
+          <div style="background:white;border-radius:14px;border:1px solid #FDE68A;padding:18px 20px;margin-bottom:10px;box-shadow:0 2px 10px rgba(251,191,36,0.07);">
+            <div style="font-family:'Nunito',sans-serif;font-weight:800;font-size:0.8rem;color:#92400E;margin-bottom:10px;">June 1 – 5</div>
+            <div style="display:flex;flex-wrap:wrap;gap:6px;"><span style="font-family:'Open Sans',sans-serif;font-size:0.75rem;padding:4px 12px;border-radius:999px;background:#F0FDF4;color:#15803D;border:1px solid #BBF7D0;">Classroom Garden · Splash Paint · Create a Classroom Book</span><span style="font-family:'Open Sans',sans-serif;font-size:0.75rem;padding:4px 12px;border-radius:999px;background:#FFF7ED;color:#C2410C;border:1px solid #FED7AA;font-weight:600;">🚌 Naperville Settlement (Tue)</span><span style="font-family:'Open Sans',sans-serif;font-size:0.75rem;padding:4px 12px;border-radius:999px;background:#EFF6FF;color:#1E40AF;border:1px solid #BFDBFE;font-weight:600;">🌊 Water Day + Stem Day</span></div>
+          </div>
+          <div style="background:white;border-radius:14px;border:1px solid #FDE68A;padding:18px 20px;margin-bottom:10px;box-shadow:0 2px 10px rgba(251,191,36,0.07);">
+            <div style="font-family:'Nunito',sans-serif;font-weight:800;font-size:0.8rem;color:#92400E;margin-bottom:10px;">June 8 – 12</div>
+            <div style="display:flex;flex-wrap:wrap;gap:6px;"><span style="font-family:'Open Sans',sans-serif;font-size:0.75rem;padding:4px 12px;border-radius:999px;background:#F0FDF4;color:#15803D;border:1px solid #BBF7D0;">Color Scavenger Hunt · Hot Air Balloon Project · Outside Painting · Picnic on the Playground</span><span style="font-family:'Open Sans',sans-serif;font-size:0.75rem;padding:4px 12px;border-radius:999px;background:#FFF7ED;color:#C2410C;border:1px solid #FED7AA;font-weight:600;">🚌 Movies (Tue)</span><span style="font-family:'Open Sans',sans-serif;font-size:0.75rem;padding:4px 12px;border-radius:999px;background:#EFF6FF;color:#1E40AF;border:1px solid #BFDBFE;font-weight:600;">🌊 Water Day + Stem Day</span></div>
+          </div>
+          <div style="background:white;border-radius:14px;border:1px solid #FDE68A;padding:18px 20px;margin-bottom:10px;box-shadow:0 2px 10px rgba(251,191,36,0.07);">
+            <div style="font-family:'Nunito',sans-serif;font-weight:800;font-size:0.8rem;color:#92400E;margin-bottom:10px;">June 15 – 19</div>
+            <div style="display:flex;flex-wrap:wrap;gap:6px;"><span style="font-family:'Open Sans',sans-serif;font-size:0.75rem;padding:4px 12px;border-radius:999px;background:#F0FDF4;color:#15803D;border:1px solid #BBF7D0;">Relay Race · Parachute Day · Obstacle Course</span><span style="font-family:'Open Sans',sans-serif;font-size:0.75rem;padding:4px 12px;border-radius:999px;background:#FDF2F8;color:#9D174D;border:1px solid #FBCFE8;font-weight:600;">🎉 Father's Day Picnic – Whole Center</span><span style="font-family:'Open Sans',sans-serif;font-size:0.75rem;padding:4px 12px;border-radius:999px;background:#FFF7ED;color:#C2410C;border:1px solid #FED7AA;font-weight:600;">🚌 Phillip Zoo Water Park (Tue)</span><span style="font-family:'Open Sans',sans-serif;font-size:0.75rem;padding:4px 12px;border-radius:999px;background:#EFF6FF;color:#1E40AF;border:1px solid #BFDBFE;font-weight:600;">🌊 Water Day + Stem Day</span></div>
+          </div>
+          <div style="background:white;border-radius:14px;border:1px solid #FDE68A;padding:18px 20px;margin-bottom:10px;box-shadow:0 2px 10px rgba(251,191,36,0.07);">
+            <div style="font-family:'Nunito',sans-serif;font-weight:800;font-size:0.8rem;color:#92400E;margin-bottom:10px;">June 22 – 26</div>
+            <div style="display:flex;flex-wrap:wrap;gap:6px;"><span style="font-family:'Open Sans',sans-serif;font-size:0.75rem;padding:4px 12px;border-radius:999px;background:#F0FDF4;color:#15803D;border:1px solid #BBF7D0;">Going on a Bear Hunt · Butterfly Craft · Camping Under the Sun &amp; S'mores</span><span style="font-family:'Open Sans',sans-serif;font-size:0.75rem;padding:4px 12px;border-radius:999px;background:#FFF7ED;color:#C2410C;border:1px solid #FED7AA;font-weight:600;">🚌 DuPage Children Museum (Tue)</span><span style="font-family:'Open Sans',sans-serif;font-size:0.75rem;padding:4px 12px;border-radius:999px;background:#EFF6FF;color:#1E40AF;border:1px solid #BFDBFE;font-weight:600;">🌊 Water Day + Stem Day</span></div>
+          </div>
+          <div style="background:white;border-radius:14px;border:1px solid #FDE68A;padding:18px 20px;margin-bottom:10px;box-shadow:0 2px 10px rgba(251,191,36,0.07);">
+            <div style="font-family:'Nunito',sans-serif;font-weight:800;font-size:0.8rem;color:#92400E;margin-bottom:10px;">June 29 – 30</div>
+            <div style="display:flex;flex-wrap:wrap;gap:6px;"><span style="font-family:'Open Sans',sans-serif;font-size:0.75rem;padding:4px 12px;border-radius:999px;background:#F0FDF4;color:#15803D;border:1px solid #BBF7D0;">Make Frozen Yogurt</span><span style="font-family:'Open Sans',sans-serif;font-size:0.75rem;padding:4px 12px;border-radius:999px;background:#FDF2F8;color:#9D174D;border:1px solid #FBCFE8;font-weight:600;">🎉 Reptile Show! (Tue)</span></div>
+          </div>
+        </div>
+        <div id="sched-ogden-july" style="display:none;padding-top:16px;">
+          <div style="background:white;border-radius:14px;border:1px solid #FDE68A;padding:18px 20px;margin-bottom:10px;box-shadow:0 2px 10px rgba(251,191,36,0.07);">
+            <div style="font-family:'Nunito',sans-serif;font-weight:800;font-size:0.8rem;color:#92400E;margin-bottom:10px;">July 1 – 3 &nbsp;<span style="font-weight:600;font-size:0.72rem;color:#9CA3AF;">(Center closed July 4)</span></div>
+            <div style="display:flex;flex-wrap:wrap;gap:6px;"><span style="font-family:'Open Sans',sans-serif;font-size:0.75rem;padding:4px 12px;border-radius:999px;background:#F0FDF4;color:#15803D;border:1px solid #BBF7D0;">Tie Dye Day · Ice Cream Bar Day</span><span style="font-family:'Open Sans',sans-serif;font-size:0.75rem;padding:4px 12px;border-radius:999px;background:#EFF6FF;color:#1E40AF;border:1px solid #BFDBFE;font-weight:600;">🌊 Water Day + Stem Day (Fri)</span></div>
+          </div>
+          <div style="background:white;border-radius:14px;border:1px solid #FDE68A;padding:18px 20px;margin-bottom:10px;box-shadow:0 2px 10px rgba(251,191,36,0.07);">
+            <div style="font-family:'Nunito',sans-serif;font-weight:800;font-size:0.8rem;color:#92400E;margin-bottom:10px;">July 6 – 10</div>
+            <div style="display:flex;flex-wrap:wrap;gap:6px;"><span style="font-family:'Open Sans',sans-serif;font-size:0.75rem;padding:4px 12px;border-radius:999px;background:#F0FDF4;color:#15803D;border:1px solid #BBF7D0;">Pet Fish in a Bag · National Freeze Pop Day · Ice Fish Painting</span><span style="font-family:'Open Sans',sans-serif;font-size:0.75rem;padding:4px 12px;border-radius:999px;background:#FFF7ED;color:#C2410C;border:1px solid #FED7AA;font-weight:600;">🚌 Wolf Crossing Park (Tue)</span><span style="font-family:'Open Sans',sans-serif;font-size:0.75rem;padding:4px 12px;border-radius:999px;background:#EFF6FF;color:#1E40AF;border:1px solid #BFDBFE;font-weight:600;">🌊 Water Day + Stem Day</span></div>
+          </div>
+          <div style="background:white;border-radius:14px;border:1px solid #FDE68A;padding:18px 20px;margin-bottom:10px;box-shadow:0 2px 10px rgba(251,191,36,0.07);">
+            <div style="font-family:'Nunito',sans-serif;font-weight:800;font-size:0.8rem;color:#92400E;margin-bottom:10px;">July 13 – 17 · 🌊 Ocean Theme</div>
+            <div style="display:flex;flex-wrap:wrap;gap:6px;"><span style="font-family:'Open Sans',sans-serif;font-size:0.75rem;padding:4px 12px;border-radius:999px;background:#F0FDF4;color:#15803D;border:1px solid #BBF7D0;">Ocean Project · Celery Painting · Jellyfish Threading · Rock Painting</span><span style="font-family:'Open Sans',sans-serif;font-size:0.75rem;padding:4px 12px;border-radius:999px;background:#FFF7ED;color:#C2410C;border:1px solid #FED7AA;font-weight:600;">🚌 Philips Zoo (Tue)</span><span style="font-family:'Open Sans',sans-serif;font-size:0.75rem;padding:4px 12px;border-radius:999px;background:#EFF6FF;color:#1E40AF;border:1px solid #BFDBFE;font-weight:600;">🌊 Water Day + Stem Day</span></div>
+          </div>
+          <div style="background:white;border-radius:14px;border:1px solid #FDE68A;padding:18px 20px;margin-bottom:10px;box-shadow:0 2px 10px rgba(251,191,36,0.07);">
+            <div style="font-family:'Nunito',sans-serif;font-weight:800;font-size:0.8rem;color:#92400E;margin-bottom:10px;">July 20 – 24</div>
+            <div style="display:flex;flex-wrap:wrap;gap:6px;"><span style="font-family:'Open Sans',sans-serif;font-size:0.75rem;padding:4px 12px;border-radius:999px;background:#F0FDF4;color:#15803D;border:1px solid #BBF7D0;">Treasure Hunt · Jello Sensory · Shark Parachute</span><span style="font-family:'Open Sans',sans-serif;font-size:0.75rem;padding:4px 12px;border-radius:999px;background:#FFF7ED;color:#C2410C;border:1px solid #FED7AA;font-weight:600;">🚌 Bowling (Tue)</span><span style="font-family:'Open Sans',sans-serif;font-size:0.75rem;padding:4px 12px;border-radius:999px;background:#EFF6FF;color:#1E40AF;border:1px solid #BFDBFE;font-weight:600;">🌊 Water Day + Stem Day</span></div>
+          </div>
+          <div style="background:white;border-radius:14px;border:1px solid #FDE68A;padding:18px 20px;margin-bottom:10px;box-shadow:0 2px 10px rgba(251,191,36,0.07);">
+            <div style="font-family:'Nunito',sans-serif;font-weight:800;font-size:0.8rem;color:#92400E;margin-bottom:10px;">July 27 – 31</div>
+            <div style="display:flex;flex-wrap:wrap;gap:6px;"><span style="font-family:'Open Sans',sans-serif;font-size:0.75rem;padding:4px 12px;border-radius:999px;background:#F0FDF4;color:#15803D;border:1px solid #BBF7D0;">Teacher Choice · Watermelon Sensory · Watermelon Volcano</span><span style="font-family:'Open Sans',sans-serif;font-size:0.75rem;padding:4px 12px;border-radius:999px;background:#FFF7ED;color:#C2410C;border:1px solid #FED7AA;font-weight:600;">🚌 Movies (Tue)</span><span style="font-family:'Open Sans',sans-serif;font-size:0.75rem;padding:4px 12px;border-radius:999px;background:#FDF2F8;color:#9D174D;border:1px solid #FBCFE8;font-weight:700;">🎉 Foam Party! (Fri)</span></div>
+          </div>
+        </div>
+        <div id="sched-ogden-aug" style="display:none;padding-top:16px;">
+          <div style="background:white;border-radius:14px;border:2px solid #F59E0B;padding:18px 20px;margin-bottom:10px;box-shadow:0 4px 18px rgba(245,158,11,0.14);">
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;"><span style="font-family:'Nunito',sans-serif;font-weight:800;font-size:0.8rem;color:#92400E;">August 3 – 7</span><span style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.7rem;padding:2px 10px;border-radius:999px;background:#FDE68A;color:#92400E;">Last Week of Camp!</span></div>
+            <div style="display:flex;flex-wrap:wrap;gap:6px;"><span style="font-family:'Open Sans',sans-serif;font-size:0.75rem;padding:4px 12px;border-radius:999px;background:#F0FDF4;color:#15803D;border:1px solid #BBF7D0;">Movie Day · Teacher Choice + Snow Cone Day · Birdhouse Painting</span><span style="font-family:'Open Sans',sans-serif;font-size:0.75rem;padding:4px 12px;border-radius:999px;background:#FFF7ED;color:#C2410C;border:1px solid #FED7AA;font-weight:600;">🚌 Hyper Kids (Tue)</span><span style="font-family:'Open Sans',sans-serif;font-size:0.75rem;padding:4px 12px;border-radius:999px;background:#FDF2F8;color:#9D174D;border:1px solid #FBCFE8;font-weight:700;">🎉 End of Summer Carnival! (Fri)</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ KIRK ═══ -->
+      <div id="sched-kirk" style="display:none;">
+        <div style="text-align:center;margin-bottom:20px;">
+          <p style="font-family:'Open Sans',sans-serif;font-size:0.9rem;color:#6B7280;margin:0 0 12px;">June 1 – August 12, 2026 &nbsp;·&nbsp; 1555 Mesa Lane, Aurora</p>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;">
+            <span style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.78rem;padding:5px 14px;border-radius:999px;background:#EFF6FF;color:#1D4ED8;">🌊 Water Day Every Tuesday</span>
+            <span style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.78rem;padding:5px 14px;border-radius:999px;background:#FFF7ED;color:#C2410C;">🚌 Field Trips on Wednesdays</span>
+            <span style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.78rem;padding:5px 14px;border-radius:999px;background:#F0FDF4;color:#15803D;">🎨 Weekly Themes</span>
+          </div>
+        </div>
+        <div style="display:flex;gap:4px;border-bottom:3px solid #FDE68A;margin-bottom:0;">
+          <button id="sched-mtab-kirk-june" onclick="switchSchedMonth('kirk','june')" style="font-family:'Nunito',sans-serif;font-weight:800;font-size:0.85rem;padding:10px 24px;background:#F59E0B;color:white;border:none;cursor:pointer;border-radius:10px 10px 0 0;box-shadow:0 -2px 10px rgba(245,158,11,0.2);">June</button>
+          <button id="sched-mtab-kirk-july" onclick="switchSchedMonth('kirk','july')" style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.85rem;padding:10px 24px;background:#FEF3C7;color:#92400E;border:none;cursor:pointer;border-radius:10px 10px 0 0;">July</button>
+          <button id="sched-mtab-kirk-aug" onclick="switchSchedMonth('kirk','aug')" style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.85rem;padding:10px 24px;background:#FEF3C7;color:#92400E;border:none;cursor:pointer;border-radius:10px 10px 0 0;">August</button>
+        </div>
+        <div id="sched-kirk-june" style="padding-top:16px;">
+          <div style="background:white;border-radius:14px;border:1px solid #FDE68A;padding:18px 20px;margin-bottom:10px;box-shadow:0 2px 10px rgba(251,191,36,0.07);">
+            <div style="font-family:'Nunito',sans-serif;font-weight:800;font-size:0.8rem;color:#92400E;margin-bottom:10px;">June 1 – 5 &nbsp;<span style="font-weight:600;font-size:0.72rem;color:#6B7280;">Theme: Summertime Treats</span></div>
+            <div style="display:flex;flex-wrap:wrap;gap:6px;"><span style="font-family:'Open Sans',sans-serif;font-size:0.75rem;padding:4px 12px;border-radius:999px;background:#EFF6FF;color:#1E40AF;border:1px solid #BFDBFE;font-weight:600;">🌊 Water Day (Tue)</span><span style="font-family:'Open Sans',sans-serif;font-size:0.75rem;padding:4px 12px;border-radius:999px;background:#FFF7ED;color:#C2410C;border:1px solid #FED7AA;font-weight:600;">🚌 Ice Cream + Garfield Park (Wed)</span></div>
+          </div>
+          <div style="background:white;border-radius:14px;border:1px solid #FDE68A;padding:18px 20px;margin-bottom:10px;box-shadow:0 2px 10px rgba(251,191,36,0.07);">
+            <div style="font-family:'Nunito',sans-serif;font-weight:800;font-size:0.8rem;color:#92400E;margin-bottom:10px;">June 8 – 12 &nbsp;<span style="font-weight:600;font-size:0.72rem;color:#6B7280;">Theme: Exercise</span></div>
+            <div style="display:flex;flex-wrap:wrap;gap:6px;"><span style="font-family:'Open Sans',sans-serif;font-size:0.75rem;padding:4px 12px;border-radius:999px;background:#EFF6FF;color:#1E40AF;border:1px solid #BFDBFE;font-weight:600;">🌊 Water Day (Tue)</span><span style="font-family:'Open Sans',sans-serif;font-size:0.75rem;padding:4px 12px;border-radius:999px;background:#FFF7ED;color:#C2410C;border:1px solid #FED7AA;font-weight:600;">🚌 Movie Theater (Wed)</span></div>
+          </div>
+          <div style="background:white;border-radius:14px;border:1px solid #FDE68A;padding:18px 20px;margin-bottom:10px;box-shadow:0 2px 10px rgba(251,191,36,0.07);">
+            <div style="font-family:'Nunito',sans-serif;font-weight:800;font-size:0.8rem;color:#92400E;margin-bottom:10px;">June 15 – 19 &nbsp;<span style="font-weight:600;font-size:0.72rem;color:#6B7280;">Theme: Sports</span></div>
+            <div style="display:flex;flex-wrap:wrap;gap:6px;"><span style="font-family:'Open Sans',sans-serif;font-size:0.75rem;padding:4px 12px;border-radius:999px;background:#EFF6FF;color:#1E40AF;border:1px solid #BFDBFE;font-weight:600;">🌊 Water Day (Tue)</span><span style="font-family:'Open Sans',sans-serif;font-size:0.75rem;padding:4px 12px;border-radius:999px;background:#FFF7ED;color:#C2410C;border:1px solid #FED7AA;font-weight:600;">🚌 DuPage Children's Museum (Wed)</span></div>
+          </div>
+          <div style="background:white;border-radius:14px;border:1px solid #FDE68A;padding:18px 20px;margin-bottom:10px;box-shadow:0 2px 10px rgba(251,191,36,0.07);">
+            <div style="font-family:'Nunito',sans-serif;font-weight:800;font-size:0.8rem;color:#92400E;margin-bottom:10px;">June 22 – 26 &nbsp;<span style="font-weight:600;font-size:0.72rem;color:#6B7280;">Theme: Fun in the Sun</span></div>
+            <div style="display:flex;flex-wrap:wrap;gap:6px;"><span style="font-family:'Open Sans',sans-serif;font-size:0.75rem;padding:4px 12px;border-radius:999px;background:#EFF6FF;color:#1E40AF;border:1px solid #BFDBFE;font-weight:600;">🌊 Water Day (Tue)</span><span style="font-family:'Open Sans',sans-serif;font-size:0.75rem;padding:4px 12px;border-radius:999px;background:#FFF7ED;color:#C2410C;border:1px solid #FED7AA;font-weight:600;">🚌 Batavia Splash Pad (Wed)</span></div>
+          </div>
+        </div>
+        <div id="sched-kirk-july" style="display:none;padding-top:16px;">
+          <div style="background:white;border-radius:14px;border:1px solid #FDE68A;padding:18px 20px;margin-bottom:10px;box-shadow:0 2px 10px rgba(251,191,36,0.07);">
+            <div style="font-family:'Nunito',sans-serif;font-weight:800;font-size:0.8rem;color:#92400E;margin-bottom:10px;">Jun 29 – Jul 3 &nbsp;<span style="font-weight:600;font-size:0.72rem;color:#6B7280;">Theme: 4th of July</span></div>
+            <div style="display:flex;flex-wrap:wrap;gap:6px;"><span style="font-family:'Open Sans',sans-serif;font-size:0.75rem;padding:4px 12px;border-radius:999px;background:#FFF7ED;color:#C2410C;border:1px solid #FED7AA;font-weight:600;">🚌 Cantigny Park (Wed Jul 1)</span></div>
+          </div>
+          <div style="background:white;border-radius:14px;border:1px solid #FDE68A;padding:18px 20px;margin-bottom:10px;box-shadow:0 2px 10px rgba(251,191,36,0.07);">
+            <div style="font-family:'Nunito',sans-serif;font-weight:800;font-size:0.8rem;color:#92400E;margin-bottom:10px;">July 6 – 10 &nbsp;<span style="font-weight:600;font-size:0.72rem;color:#6B7280;">Theme: Camping</span></div>
+            <div style="display:flex;flex-wrap:wrap;gap:6px;"><span style="font-family:'Open Sans',sans-serif;font-size:0.75rem;padding:4px 12px;border-radius:999px;background:#EFF6FF;color:#1E40AF;border:1px solid #BFDBFE;font-weight:600;">🌊 Water Day (Tue)</span><span style="font-family:'Open Sans',sans-serif;font-size:0.75rem;padding:4px 12px;border-radius:999px;background:#FFF7ED;color:#C2410C;border:1px solid #FED7AA;font-weight:600;">🚌 Blackberry Farm (Wed)</span></div>
+          </div>
+          <div style="background:white;border-radius:14px;border:1px solid #FDE68A;padding:18px 20px;margin-bottom:10px;box-shadow:0 2px 10px rgba(251,191,36,0.07);">
+            <div style="font-family:'Nunito',sans-serif;font-weight:800;font-size:0.8rem;color:#92400E;margin-bottom:10px;">July 13 – 17 &nbsp;<span style="font-weight:600;font-size:0.72rem;color:#6B7280;">Theme: Ocean Fish</span></div>
+            <div style="display:flex;flex-wrap:wrap;gap:6px;"><span style="font-family:'Open Sans',sans-serif;font-size:0.75rem;padding:4px 12px;border-radius:999px;background:#EFF6FF;color:#1E40AF;border:1px solid #BFDBFE;font-weight:600;">🌊 Water Day (Tue)</span><span style="font-family:'Open Sans',sans-serif;font-size:0.75rem;padding:4px 12px;border-radius:999px;background:#FDF2F8;color:#9D174D;border:1px solid #FBCFE8;font-weight:600;">🎉 Reptile Show (Thu)</span></div>
+          </div>
+          <div style="background:white;border-radius:14px;border:1px solid #FDE68A;padding:18px 20px;margin-bottom:10px;box-shadow:0 2px 10px rgba(251,191,36,0.07);">
+            <div style="font-family:'Nunito',sans-serif;font-weight:800;font-size:0.8rem;color:#92400E;margin-bottom:10px;">July 20 – 24 &nbsp;<span style="font-weight:600;font-size:0.72rem;color:#6B7280;">Theme: Ocean Animals</span></div>
+            <div style="display:flex;flex-wrap:wrap;gap:6px;"><span style="font-family:'Open Sans',sans-serif;font-size:0.75rem;padding:4px 12px;border-radius:999px;background:#EFF6FF;color:#1E40AF;border:1px solid #BFDBFE;font-weight:600;">🌊 Water Day (Tue)</span><span style="font-family:'Open Sans',sans-serif;font-size:0.75rem;padding:4px 12px;border-radius:999px;background:#FFF7ED;color:#C2410C;border:1px solid #FED7AA;font-weight:600;">🚌 Skate / Bowling (Wed)</span></div>
+          </div>
+          <div style="background:white;border-radius:14px;border:1px solid #FDE68A;padding:18px 20px;margin-bottom:10px;box-shadow:0 2px 10px rgba(251,191,36,0.07);">
+            <div style="font-family:'Nunito',sans-serif;font-weight:800;font-size:0.8rem;color:#92400E;margin-bottom:10px;">July 27 – 31 &nbsp;<span style="font-weight:600;font-size:0.72rem;color:#6B7280;">Theme: Ocean Sharks</span></div>
+            <div style="display:flex;flex-wrap:wrap;gap:6px;"><span style="font-family:'Open Sans',sans-serif;font-size:0.75rem;padding:4px 12px;border-radius:999px;background:#EFF6FF;color:#1E40AF;border:1px solid #BFDBFE;font-weight:600;">🌊 Water Day (Tue)</span><span style="font-family:'Open Sans',sans-serif;font-size:0.75rem;padding:4px 12px;border-radius:999px;background:#FDF2F8;color:#9D174D;border:1px solid #FBCFE8;font-weight:600;">🎉 Carnival Day (Wed)</span></div>
+          </div>
+        </div>
+        <div id="sched-kirk-aug" style="display:none;padding-top:16px;">
+          <div style="background:white;border-radius:14px;border:1px solid #FDE68A;padding:18px 20px;margin-bottom:10px;box-shadow:0 2px 10px rgba(251,191,36,0.07);">
+            <div style="font-family:'Nunito',sans-serif;font-weight:800;font-size:0.8rem;color:#92400E;margin-bottom:10px;">August 3 – 7 &nbsp;<span style="font-weight:600;font-size:0.72rem;color:#6B7280;">Theme: Ocean Materials &amp; Elements</span></div>
+            <div style="display:flex;flex-wrap:wrap;gap:6px;"><span style="font-family:'Open Sans',sans-serif;font-size:0.75rem;padding:4px 12px;border-radius:999px;background:#EFF6FF;color:#1E40AF;border:1px solid #BFDBFE;font-weight:600;">🌊 Water Day (Tue)</span><span style="font-family:'Open Sans',sans-serif;font-size:0.75rem;padding:4px 12px;border-radius:999px;background:#FDF2F8;color:#9D174D;border:1px solid #FBCFE8;font-weight:600;">🎉 Foam Party (Wed)</span></div>
+          </div>
+          <div style="background:white;border-radius:14px;border:2px solid #F59E0B;padding:18px 20px;margin-bottom:10px;box-shadow:0 4px 18px rgba(245,158,11,0.14);">
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;"><span style="font-family:'Nunito',sans-serif;font-weight:800;font-size:0.8rem;color:#92400E;">August 10 – 12</span><span style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.7rem;padding:2px 10px;border-radius:999px;background:#FDE68A;color:#92400E;">Last Week of Camp!</span><span style="font-weight:600;font-size:0.72rem;color:#6B7280;">Theme: All About Me / Back to School</span></div>
+            <div style="display:flex;flex-wrap:wrap;gap:6px;"><span style="font-family:'Open Sans',sans-serif;font-size:0.75rem;padding:4px 12px;border-radius:999px;background:#FDF2F8;color:#9D174D;border:1px solid #FBCFE8;font-weight:700;">🎉 Glow Party (Tue Aug 11)</span><span style="font-family:'Open Sans',sans-serif;font-size:0.75rem;padding:4px 12px;border-radius:999px;background:#FDF2F8;color:#9D174D;border:1px solid #FBCFE8;font-weight:700;">🎉 Last Day of Summer Care (Wed Aug 12)</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Legend -->
+      <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:32px;padding-top:24px;border-top:1px solid #FDE68A;">
+        <span style="font-family:'Open Sans',sans-serif;font-size:0.72rem;padding:3px 12px;border-radius:999px;background:#F0FDF4;color:#15803D;border:1px solid #BBF7D0;">Activity</span>
+        <span style="font-family:'Open Sans',sans-serif;font-size:0.72rem;padding:3px 12px;border-radius:999px;background:#EFF6FF;color:#1D4ED8;border:1px solid #BFDBFE;">🌊 Water Day</span>
+        <span style="font-family:'Open Sans',sans-serif;font-size:0.72rem;padding:3px 12px;border-radius:999px;background:#FFF7ED;color:#C2410C;border:1px solid #FED7AA;">🚌 Field Trip</span>
+        <span style="font-family:'Open Sans',sans-serif;font-size:0.72rem;padding:3px 12px;border-radius:999px;background:#FDF2F8;color:#9D174D;border:1px solid #FBCFE8;">🎉 Special Event</span>
+      </div>
+
+    </div>
+  </section>
+  <script>
+  function switchSched(loc) {
+    ['oswego','ogden','kirk'].forEach(function(l) {
+      var panel = document.getElementById('sched-' + l);
+      if (panel) panel.style.display = (l === loc) ? 'block' : 'none';
+      var tab = document.getElementById('sched-tab-' + l);
+      if (tab) {
+        if (l === loc) {
+          tab.style.background = '#F59E0B'; tab.style.color = 'white'; tab.style.fontWeight = '800'; tab.style.boxShadow = '0 4px 16px rgba(245,158,11,0.35)'; tab.style.border = '2px solid #F59E0B';
+        } else {
+          tab.style.background = 'transparent'; tab.style.color = '#92400E'; tab.style.fontWeight = '700'; tab.style.boxShadow = 'none'; tab.style.border = '2px solid #FDE68A';
+        }
+      }
+    });
+  }
+  function switchSchedMonth(loc, month) {
+    ['june','july','aug'].forEach(function(m) {
+      var panel = document.getElementById('sched-' + loc + '-' + m);
+      if (panel) panel.style.display = (m === month) ? 'block' : 'none';
+      var tab = document.getElementById('sched-mtab-' + loc + '-' + m);
+      if (tab) {
+        if (m === month) {
+          tab.style.background = '#F59E0B'; tab.style.color = 'white'; tab.style.fontWeight = '800'; tab.style.boxShadow = '0 -2px 10px rgba(245,158,11,0.2)';
+        } else {
+          tab.style.background = '#FEF3C7'; tab.style.color = '#92400E'; tab.style.fontWeight = '700'; tab.style.boxShadow = 'none';
+        }
+      }
+    });
+  }
+  </script>
+
   <!-- CTA Cards -->
   <section style="background:#F7F7F7;padding:0 24px 80px;">
     <div style="max-width:1280px;margin:0 auto;">
