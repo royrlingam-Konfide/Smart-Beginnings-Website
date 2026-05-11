@@ -44,6 +44,7 @@
     .cat-badge { display: inline-flex; align-items: center; gap: 5px; font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; border-radius: 999px; padding: 4px 12px; }
     .cat-kids { background: #0B6E5A; color: white; }
     .cat-family { background: #F5A623; color: white; }
+    .cat-sba { background: #063D30; color: white; }
     .topic-tag { display: inline-flex; align-items: center; font-family: 'Nunito', sans-serif; font-weight: 700; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.06em; border-radius: 999px; padding: 3px 10px; background: #F3F4F6; color: #6B7280; }
     @media (max-width: 639px) {
       .blog-grid { grid-template-columns: 1fr !important; }
@@ -173,6 +174,7 @@
       <button onclick="filterPosts('all')" id="filter-all" style="display:inline-flex;align-items:center;gap:6px;padding:8px 18px;border-radius:999px;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.82rem;cursor:pointer;border:2px solid #0B6E5A;background:#0B6E5A;color:white;transition:all 0.2s;">All Posts</button>
       <button onclick="filterPosts('kids')" id="filter-kids" style="display:inline-flex;align-items:center;gap:6px;padding:8px 18px;border-radius:999px;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.82rem;cursor:pointer;border:2px solid #D4E8E2;background:white;color:#374151;transition:all 0.2s;">🎯 Kids Focus</button>
       <button onclick="filterPosts('family')" id="filter-family" style="display:inline-flex;align-items:center;gap:6px;padding:8px 18px;border-radius:999px;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.82rem;cursor:pointer;border:2px solid #D4E8E2;background:white;color:#374151;transition:all 0.2s;">🏠 Family Living</button>
+      <button onclick="filterPosts('sba')" id="filter-sba" style="display:inline-flex;align-items:center;gap:6px;padding:8px 18px;border-radius:999px;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.82rem;cursor:pointer;border:2px solid #D4E8E2;background:white;color:#374151;transition:all 0.2s;">🏫 Life at SBA</button>
     </div>
   </div>
 
@@ -182,7 +184,29 @@
 
       <div class="blog-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:28px;" id="posts-grid">
 
-        <!-- POST 1: Screen Time (most recent) -->
+        <!-- POST 0: Teacher Appreciation 2026 (most recent) -->
+        <a href="blog-teacher-appreciation-2026.html" class="blog-card reveal" data-cat="sba">
+          <div style="position:relative;overflow:hidden;height:220px;">
+            <img class="card-img" src="Teacher appreciation 2026/IMG_3530.jpg" alt="Team at the Teacher Appreciation Coffee Bar" loading="lazy" />
+            <div style="position:absolute;top:14px;left:14px;">
+              <span class="cat-badge cat-sba">🏫 Life at SBA</span>
+            </div>
+          </div>
+          <div style="padding:24px;flex:1;display:flex;flex-direction:column;">
+            <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px;">
+              <span class="topic-tag">Culture</span>
+              <span class="topic-tag">Our Team</span>
+            </div>
+            <h2 style="font-family:'Nunito',sans-serif;font-weight:900;font-size:1.2rem;color:#1A1A1A;letter-spacing:-0.02em;margin:0 0 10px;line-height:1.25;">They Show Up Every Single Day. This Is How We Show Up for Them.</h2>
+            <p style="font-family:'Open Sans',sans-serif;font-size:0.875rem;color:#4B5563;line-height:1.72;margin:0 0 18px;flex:1;">A real look inside Teacher Appreciation Week 2026 — what we did across all three campuses, and what it says about who we are.</p>
+            <div style="display:flex;align-items:center;justify-content:space-between;">
+              <span style="font-family:'Open Sans',sans-serif;font-size:0.76rem;color:#9CA3AF;">May 10, 2026 · 5 min read</span>
+              <span style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.85rem;color:#0B6E5A;display:inline-flex;align-items:center;gap:5px;">Read Article →</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- POST 1: Screen Time -->
         <a href="blog-screentime.html" class="blog-card reveal" data-cat="kids">
           <div style="position:relative;overflow:hidden;height:220px;">
             <img class="card-img" src="https://images.pexels.com/photos/4968506/pexels-photo-4968506.jpeg?auto=compress&cs=tinysrgb&w=800&h=440&fit=crop" alt="Child holding a tablet" loading="lazy" />
@@ -367,7 +391,7 @@
   // Category filter
   function filterPosts(cat) {
     const cards = document.querySelectorAll('#posts-grid [data-cat]');
-    const btns = { all: document.getElementById('filter-all'), kids: document.getElementById('filter-kids'), family: document.getElementById('filter-family') };
+    const btns = { all: document.getElementById('filter-all'), kids: document.getElementById('filter-kids'), family: document.getElementById('filter-family'), sba: document.getElementById('filter-sba') };
     Object.values(btns).forEach(b => { b.style.background = 'white'; b.style.color = '#374151'; b.style.borderColor = '#D4E8E2'; });
     btns[cat].style.background = '#0B6E5A'; btns[cat].style.color = 'white'; btns[cat].style.borderColor = '#0B6E5A';
     let visible = 0;

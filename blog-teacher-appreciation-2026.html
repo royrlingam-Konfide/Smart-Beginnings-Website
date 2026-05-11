@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>They Show Up Every Single Day. This Is How We Show Up for Them. | Smart Beginnings Academy</title>
+  <meta name="description" content="A look inside Teacher Appreciation Week 2026 at Smart Beginnings Academy — what we did, why we do it, and what it says about the people who chose to be here." />
+  <meta property="og:title" content="They Show Up Every Single Day. This Is How We Show Up for Them." />
+  <meta property="og:description" content="Teacher Appreciation Week 2026 at Smart Beginnings Academy. A real look inside the culture." />
+  <meta property="og:type" content="article" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&family=Open+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Lora:ital,wght@1,400;1,600&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Open Sans', sans-serif; color: #2D2D2D; -webkit-font-smoothing: antialiased; margin: 0; background: #F7F8F6; }
+    h1,h2,h3,h4 { font-family: 'Nunito', sans-serif; }
+    #site-header { position: fixed; top: 0; left: 0; right: 0; z-index: 50; background: white; box-shadow: 0 2px 24px rgba(0,0,0,0.07); }
+    .mobile-menu { max-height: 0; overflow: hidden; transition: max-height 0.4s cubic-bezier(0.4,0,0.2,1); background: white; }
+    .mobile-menu.open { max-height: 100dvh; overflow-y: auto; }
+    .hamburger-line { display: block; width: 22px; height: 2px; background: #2D2D2D; border-radius: 2px; transition: transform 0.3s ease, opacity 0.3s ease; }
+    .hamburger.open .line-1 { transform: translateY(8px) rotate(45deg); }
+    .hamburger.open .line-2 { opacity: 0; }
+    .hamburger.open .line-3 { transform: translateY(-8px) rotate(-45deg); }
+    .nav-dropdown { opacity: 0; visibility: hidden; transform: translateY(-8px); transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease; }
+    .nav-item:hover .nav-dropdown, .nav-item:focus-within .nav-dropdown { opacity: 1; visibility: visible; transform: translateY(0); }
+    .nav-link { position: relative; font-family: 'Nunito', sans-serif; font-weight: 600; font-size: 0.92rem; color: #2D2D2D; text-decoration: none; transition: color 0.2s; }
+    .nav-link:hover { color: #0B6E5A; }
+    .btn-amber { display: inline-flex; align-items: center; gap: 8px; background: #F5A623; color: white; font-family: 'Nunito', sans-serif; font-weight: 700; border-radius: 999px; text-decoration: none; cursor: pointer; border: none; transition: background 0.2s, transform 0.2s; }
+    .btn-amber:hover { background: #E8950F; transform: translateY(-1px); }
+    .desktop-nav { display: none !important; }
+    @media (min-width: 768px) { .desktop-nav { display: flex !important; } }
+    .hamburger { display: flex !important; }
+    @media (min-width: 768px) { .hamburger { display: none !important; } }
+
+    .article-body p { font-family: 'Open Sans', sans-serif; font-size: 1.05rem; color: #374151; line-height: 1.85; margin: 0 0 22px; }
+    .article-body h2 { font-family: 'Nunito', sans-serif; font-weight: 900; font-size: 1.35rem; color: #1A1A1A; letter-spacing: -0.02em; margin: 52px 0 16px; line-height: 1.2; }
+
+    .pull-quote {
+      border-left: 4px solid #0B6E5A;
+      padding: 18px 28px;
+      margin: 44px 0;
+      background: #F0FAF6;
+      border-radius: 0 14px 14px 0;
+    }
+    .pull-quote p {
+      font-family: 'Lora', Georgia, serif;
+      font-style: italic;
+      font-size: 1.2rem;
+      color: #063D30;
+      line-height: 1.65;
+      margin: 0;
+    }
+
+    .photo-card {
+      border-radius: 20px;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 8px 32px rgba(11,110,90,0.13), 0 2px 8px rgba(0,0,0,0.06);
+    }
+    .photo-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s cubic-bezier(0.25,0.46,0.45,0.94);
+    }
+    .photo-card:hover img { transform: scale(1.03); }
+
+    .photo-pair {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin: 40px 0;
+    }
+    .photo-pair .photo-card { aspect-ratio: 3/4; }
+
+    /* Full-bleed hero image */
+    .hero-image-wrap {
+      width: 100%;
+      aspect-ratio: 16/7;
+      overflow: hidden;
+      position: relative;
+    }
+    @media (max-width: 639px) { .hero-image-wrap { aspect-ratio: 4/3; } }
+    .hero-image-wrap img { width: 100%; height: 100%; object-fit: cover; object-position: center 30%; display: block; }
+
+    /* Gallery grid */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+    @media (max-width: 767px) { .gallery-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 480px) { .gallery-grid { grid-template-columns: 1fr; } }
+    .gallery-item {
+      border-radius: 14px;
+      overflow: hidden;
+      aspect-ratio: 1;
+      position: relative;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+      cursor: pointer;
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s cubic-bezier(0.25,0.46,0.45,0.94);
+    }
+    .gallery-item:hover img { transform: scale(1.06); }
+    .gallery-item .overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(6,61,48,0.35) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    /* Cinematic treatment for converted photos */
+    .cinematic img {
+      filter: contrast(1.12) saturate(0.78) brightness(0.96) sepia(0.12);
+    }
+    .cinematic .overlay {
+      background:
+        radial-gradient(ellipse at center, transparent 40%, rgba(10,20,15,0.55) 100%),
+        linear-gradient(to top, rgba(30,15,5,0.5) 0%, transparent 55%);
+    }
+    .cinematic::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(180,130,60,0.07);
+      mix-blend-mode: multiply;
+      pointer-events: none;
+    }
+    /* Cinematic in article body */
+    .photo-card.cinematic img {
+      filter: contrast(1.12) saturate(0.78) brightness(0.94) sepia(0.14);
+    }
+    .photo-card.cinematic::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at center, transparent 45%, rgba(10,15,8,0.45) 100%);
+      pointer-events: none;
+    }
+
+    /* Lightbox */
+    #lightbox { position: fixed; inset: 0; background: rgba(0,0,0,0.92); z-index: 200; display: flex; align-items: center; justify-content: center; opacity: 0; visibility: hidden; transition: opacity 0.3s ease, visibility 0.3s ease; padding: 20px; }
+    #lightbox.open { opacity: 1; visibility: visible; }
+    #lightbox img { max-width: 100%; max-height: 90vh; border-radius: 12px; object-fit: contain; box-shadow: 0 24px 80px rgba(0,0,0,0.5); }
+    #lightbox-close { position: absolute; top: 20px; right: 24px; background: rgba(255,255,255,0.12); border: none; color: white; font-size: 1.5rem; width: 40px; height: 40px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background 0.2s; }
+    #lightbox-close:hover { background: rgba(255,255,255,0.25); }
+
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.65s ease, transform 0.65s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .delay-1 { transition-delay: 0.1s; } .delay-2 { transition-delay: 0.2s; } .delay-3 { transition-delay: 0.3s; }
+
+    @media (max-width: 639px) {
+      footer { padding: 40px 16px 0 !important; }
+      footer > div:first-child > div:first-child { grid-template-columns: 1fr 1fr !important; gap: 24px !important; padding-bottom: 32px !important; }
+      footer > div:first-child > div:first-child > div:first-child { grid-column: 1 / -1 !important; }
+      footer > div:last-child > div { flex-direction: column !important; align-items: flex-start !important; gap: 6px !important; padding: 16px !important; }
+      .photo-pair { grid-template-columns: 1fr !important; }
+    }
+    @media (max-width: 767px) {
+      #site-header nav { padding: 0 20px !important; }
+      #site-header nav > div { height: 72px !important; }
+    }
+  </style>
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<header id="site-header">
+  <nav style="max-width:1280px;margin:0 auto;padding:0 24px;" aria-label="Main navigation">
+    <div style="display:flex;align-items:center;justify-content:space-between;height:84px;">
+      <a href="index.html" style="flex-shrink:0;"><img src="Logo Transparency_Shadow.png" alt="Smart Beginnings Academy" style="height:68px;width:auto;" /></a>
+      <div class="desktop-nav" style="align-items:center;gap:20px;">
+        <div class="nav-item" style="position:relative;">
+          <span class="nav-link" style="cursor:default;display:inline-flex;align-items:center;gap:5px;">Programs <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <div class="nav-dropdown" style="position:absolute;top:calc(100% + 12px);left:0;width:230px;background:white;border-radius:16px;box-shadow:0 12px 40px rgba(0,0,0,0.12);border:1px solid #f0f0f0;padding:8px;z-index:100;">
+            <a href="programs-infants.html" style="display:block;padding:10px 14px;border-radius:10px;font-size:0.875rem;color:#2D2D2D;text-decoration:none;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='';this.style.color='#2D2D2D'">Infants (6 wks – 14 mo)</a>
+            <a href="programs-toddlers.html" style="display:block;padding:10px 14px;border-radius:10px;font-size:0.875rem;color:#2D2D2D;text-decoration:none;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='';this.style.color='#2D2D2D'">Toddlers (15 – 23 mo)</a>
+            <a href="programs-twos.html" style="display:block;padding:10px 14px;border-radius:10px;font-size:0.875rem;color:#2D2D2D;text-decoration:none;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='';this.style.color='#2D2D2D'">Twos (24 – 35 mo)</a>
+            <a href="programs-preschool.html" style="display:block;padding:10px 14px;border-radius:10px;font-size:0.875rem;color:#2D2D2D;text-decoration:none;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='';this.style.color='#2D2D2D'">Pre School (3 – 5 yrs)</a>
+            <a href="programs-school-age.html" style="display:block;padding:10px 14px;border-radius:10px;font-size:0.875rem;color:#2D2D2D;text-decoration:none;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='';this.style.color='#2D2D2D'">School Age (K – 12)</a>
+            <a href="programs-summer-camp.html" style="display:block;padding:10px 14px;border-radius:10px;font-size:0.875rem;color:#2D2D2D;text-decoration:none;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='';this.style.color='#2D2D2D'">Summer Camp</a>
+          </div>
+        </div>
+        <div class="nav-item" style="position:relative;">
+          <span class="nav-link" style="cursor:default;display:inline-flex;align-items:center;gap:5px;">Our Story <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <div class="nav-dropdown" style="position:absolute;top:calc(100% + 12px);left:0;width:200px;background:white;border-radius:16px;box-shadow:0 12px 40px rgba(0,0,0,0.12);border:1px solid #f0f0f0;padding:8px;z-index:100;">
+            <a href="about.html" style="display:block;padding:10px 14px;border-radius:10px;font-size:0.875rem;color:#2D2D2D;text-decoration:none;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='transparent';this.style.color='#2D2D2D'">Who We Are</a>
+            <a href="leadership.html" style="display:block;padding:10px 14px;border-radius:10px;font-size:0.875rem;color:#2D2D2D;text-decoration:none;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='transparent';this.style.color='#2D2D2D'">Our Leadership &amp; Team</a>
+            <a href="learning-approach.html" style="display:block;padding:10px 14px;border-radius:10px;font-size:0.875rem;color:#2D2D2D;text-decoration:none;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='transparent';this.style.color='#2D2D2D'">Our Learning Approach</a>
+            <a href="health-safety.html" style="display:block;padding:10px 14px;border-radius:10px;font-size:0.875rem;color:#2D2D2D;text-decoration:none;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='transparent';this.style.color='#2D2D2D'">Health &amp; Safety</a>
+          </div>
+        </div>
+        <div class="nav-item" style="position:relative;">
+          <span class="nav-link" style="cursor:default;display:inline-flex;align-items:center;gap:5px;">Locations <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <div class="nav-dropdown" style="position:absolute;top:calc(100% + 12px);left:0;width:260px;background:white;border-radius:16px;box-shadow:0 12px 40px rgba(0,0,0,0.12);border:1px solid #f0f0f0;padding:8px;z-index:100;">
+            <a href="location-oswego.html" style="display:block;padding:12px 14px;border-radius:10px;text-decoration:none;" onmouseover="this.style.background='#E1F5EE'" onmouseout="this.style.background='transparent'"><span style="display:block;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.88rem;color:#0B6E5A;">Oswego</span><span style="display:block;font-size:0.75rem;color:#4B5563;">750 5th Street, Oswego IL 60543</span></a>
+            <div style="height:1px;background:#f0f0f0;margin:2px 0;"></div>
+            <a href="location-ogden.html" style="display:block;padding:12px 14px;border-radius:10px;text-decoration:none;" onmouseover="this.style.background='#E1F5EE'" onmouseout="this.style.background='transparent'"><span style="display:block;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.88rem;color:#0B6E5A;">Ogden &amp; IL 59</span><span style="display:block;font-size:0.75rem;color:#4B5563;">4105 Healthway Drive, Aurora IL</span></a>
+            <div style="height:1px;background:#f0f0f0;margin:2px 0;"></div>
+            <a href="location-kirk.html" style="display:block;padding:12px 14px;border-radius:10px;text-decoration:none;" onmouseover="this.style.background='#E1F5EE'" onmouseout="this.style.background='transparent'"><span style="display:block;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.88rem;color:#0B6E5A;">Kirk &amp; Butterfield</span><span style="display:block;font-size:0.75rem;color:#4B5563;">1555 Mesa Lane, Aurora IL 60502</span></a>
+          </div>
+        </div>
+        <a href="parent-stories.html" class="nav-link">Parent Stories</a>
+        <div class="nav-item" style="position:relative;"><span class="nav-link" style="cursor:default;display:inline-flex;align-items:center;gap:5px;">More <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div class="nav-dropdown" style="position:absolute;top:calc(100% + 12px);right:0;left:auto;width:160px;background:white;border-radius:16px;box-shadow:0 12px 40px rgba(0,0,0,0.12);border:1px solid #f0f0f0;padding:8px;z-index:100;"><a href="blog.html" style="display:block;padding:10px 14px;border-radius:10px;font-family:'Open Sans',sans-serif;font-size:0.875rem;color:#0B6E5A;font-weight:700;background:#E1F5EE;text-decoration:none;">Blog</a><a href="careers.html" style="display:block;padding:10px 14px;border-radius:10px;font-family:'Open Sans',sans-serif;font-size:0.875rem;color:#2D2D2D;text-decoration:none;" onmouseover="this.style.background='#E1F5EE';this.style.color='#0B6E5A'" onmouseout="this.style.background='transparent';this.style.color='#2D2D2D'">Careers</a></div></div>
+      </div>
+      <div style="display:flex;align-items:center;gap:16px;">
+        <a href="schedule-tour.html" class="btn-amber nav-cta" style="padding:9px 16px;font-size:0.8rem;">Schedule a Tour</a>
+        <button id="hamburger-btn" class="hamburger" aria-label="Open navigation menu" style="position:relative;z-index:60;flex-direction:column;gap:6px;padding:8px;background:none;border:none;cursor:pointer;" aria-expanded="false" aria-controls="mobile-menu">
+          <span class="hamburger-line line-1"></span>
+          <span class="hamburger-line line-2"></span>
+          <span class="hamburger-line line-3"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <div id="mobile-menu" class="mobile-menu" style="border-top:1px solid #f0f0f0;">
+    <div style="padding:12px 20px 24px;display:flex;flex-direction:column;gap:2px;">
+      <a href="careers.html" style="display:flex;align-items:center;padding:12px 14px;border-radius:10px;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.95rem;color:#2D2D2D;text-decoration:none;" onmouseover="this.style.background='#E1F5EE'" onmouseout="this.style.background='transparent'">&#8592; Life at SBA</a>
+      <div style="height:1px;background:#f0f0f0;margin:10px 0;"></div>
+      <a href="schedule-tour.html" class="btn-amber" style="padding:14px 24px;font-size:0.95rem;justify-content:center;border-radius:12px;">Schedule a Tour &#8594;</a>
+    </div>
+  </div>
+</header>
+
+<main style="padding-top:84px;">
+
+  <!-- ARTICLE HEADER -->
+  <section style="background:#FAFAFA;padding:56px 24px 0;">
+    <div style="max-width:700px;margin:0 auto;">
+      <a href="careers.html" style="display:inline-flex;align-items:center;gap:6px;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.82rem;color:#6B7280;text-decoration:none;margin-bottom:32px;transition:color 0.2s;" onmouseover="this.style.color='#0B6E5A'" onmouseout="this.style.color='#6B7280'">&#8592; Life at SBA</a>
+      <p style="font-family:'Open Sans',sans-serif;font-size:0.8rem;color:#9CA3AF;margin:0 0 14px;letter-spacing:0.04em;">May 2026 &nbsp;·&nbsp; Life at SBA</p>
+      <h1 style="font-family:'Nunito',sans-serif;font-weight:900;font-size:clamp(1.9rem,4.5vw,2.8rem);color:#1A1A1A;letter-spacing:-0.03em;margin:0 0 20px;line-height:1.1;">They Show Up Every Single Day.<br>This Is How We Show Up for Them.</h1>
+      <p style="font-family:'Open Sans',sans-serif;font-size:1.12rem;color:#4B5563;line-height:1.82;margin:0;border-bottom:1px solid #E5E7EB;padding-bottom:40px;">Teacher Appreciation Week happens every year. At a lot of places, it looks like a thank-you email and a free lunch. Here's what it looked like at Smart Beginnings Academy in May 2026 — and why we think that difference matters.</p>
+    </div>
+  </section>
+
+  <section style="background:#FAFAFA;padding:48px 24px 88px;">
+    <div style="max-width:700px;margin:0 auto;">
+
+      <div class="article-body reveal">
+        <p>Nobody asked them to be heroes. But somewhere between the 6 a.m. arrivals and the end-of-day handoffs, between the diaper changes and the finger-painting and the gentle redirects and the songs sung for the hundredth time with the same warmth as the first — it's what they became.</p>
+
+        <p>Our teachers don't talk about it that way. They'd probably roll their eyes at the word. But walk into any one of our classrooms on any given morning and you'll see it anyway. In the way a toddler runs toward them at drop-off. In the way a child calms down when they hear a familiar voice. In the way the whole room changes when they walk in.</p>
+
+        <p>That's not a job skill. That's a calling. And this year, we wanted to make sure they felt it.</p>
+      </div>
+
+      <!-- Full team photo -->
+      <div class="photo-card reveal" style="margin:40px 0;aspect-ratio:4/3;max-height:540px;">
+        <img src="Teacher appreciation 2026/IMG_3569.jpg" alt="The full SBA team in matching Teacher Appreciation shirts" style="object-position:center 30%;" />
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(6,61,48,0.5) 0%,transparent 50%);pointer-events:none;"></div>
+      </div>
+
+      <!-- Ogden gift table - wide shot -->
+      <div class="photo-card reveal" style="margin:40px 0;aspect-ratio:4/3;max-height:520px;">
+        <img src="Teacher appreciation 2026/6E2223FE-CF4E-44DC-85D2-373BF2F70E66.png" alt="The Ogden team standing in front of the Thank You appreciation display" style="object-position:center 45%;" />
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(6,61,48,0.3) 0%,transparent 50%);pointer-events:none;"></div>
+      </div>
+
+      <!-- Team photo pair -->
+      <div class="photo-pair reveal">
+        <div class="photo-card">
+          <img src="Teacher appreciation 2026/IMG_2029.jpg" alt="Teachers outside with smoothies, smiling in the sun" />
+          <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(6,61,48,0.4) 0%,transparent 55%);pointer-events:none;"></div>
+        </div>
+        <div class="photo-card">
+          <img src="Teacher appreciation 2026/IMG_2107.jpg" alt="A teacher on the playground showing off her award" />
+          <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(6,61,48,0.4) 0%,transparent 55%);pointer-events:none;"></div>
+        </div>
+      </div>
+
+      <div class="article-body reveal">
+        <h2>The Week Started Before Anyone Walked Through the Door</h2>
+
+        <p>Weeks before Teacher Appreciation Week officially began, our directors and leadership team were quietly at work. Custom shirts were ordered — every teacher at every campus got one. Not a generic "thank you for all you do" shirt. Custom printed, vibrant, worn with the kind of pride that tells you something about how people feel about where they work.</p>
+
+        <p>The theme at our Kirk &amp; Butterfield campus was superheroes. Not because it's cute — because it's true. The shirts said it plainly: <em>Teachers Are Heroes in Disguise.</em> And every single person wore one on Monday morning without being asked twice.</p>
+      </div>
+
+      <!-- Superhero coffee bar -->
+      <div class="photo-card reveal" style="margin:40px 0;aspect-ratio:16/9;">
+        <img src="Teacher appreciation 2026/IMG_3527.jpg" alt="The superhero-themed Teacher Coffee Bar set up before the day began" style="object-position:center center;" />
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(6,61,48,0.45) 0%,transparent 50%);pointer-events:none;"></div>
+        <div style="position:absolute;bottom:16px;left:20px;">
+          <p style="font-family:'Open Sans',sans-serif;font-size:0.82rem;color:rgba(255,255,255,0.85);margin:0;font-style:italic;">The Teacher Coffee Bar — set up before 7 a.m., before a single teacher arrived.</p>
+        </div>
+      </div>
+
+      <div class="article-body reveal">
+        <p>By the time the first teacher arrived that Monday, the Teacher Coffee Bar was already fully stocked. Starbucks drinks. Fresh donuts. Bagels. A superhero backdrop with comic-book balloons arching across the ceiling. The kind of setup that takes hours and makes you feel like someone actually stayed up thinking about what you'd like.</p>
+
+        <p>Because they did.</p>
+      </div>
+
+      <div class="pull-quote reveal">
+        <p>"The table was full before any of us even got there. Someone had been setting it up since before the sun came up. That's the thing about this place — the people who lead here don't just talk about appreciation. They show up for it."</p>
+      </div>
+
+      <!-- Coffee bar fun -->
+      <div class="photo-pair reveal">
+        <div class="photo-card">
+          <img src="Teacher appreciation 2026/IMG_3530.jpg" alt="Three team members posing at the Teacher Coffee Bar" />
+          <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(6,61,48,0.35) 0%,transparent 55%);pointer-events:none;"></div>
+        </div>
+        <div class="photo-card">
+          <img src="Teacher appreciation 2026/IMG_3555.jpg" alt="Two teachers laughing and eating donuts together" />
+          <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(6,61,48,0.35) 0%,transparent 55%);pointer-events:none;"></div>
+        </div>
+      </div>
+
+      <div class="article-body reveal">
+        <h2>It Wasn't Just One Day</h2>
+
+        <p>Monday was coffee and donuts. Tuesday was smoothies and drinks out on the playground — something about fresh air and a cold drink in the sun that hits differently than a snack in the break room. Wednesday, candy carts loaded with treats rolled through the hallways. Not the cheap stuff. Real candy, snacks stacked on two full carts, wheeled from room to room like a little parade of appreciation.</p>
+
+        <p>Each day felt like its own thing. Like someone had actually thought about the rhythm of a week — that the big gesture on day one doesn't sustain you through Friday, and that small, consistent moments of being seen matter just as much.</p>
+      </div>
+
+      <!-- Candy carts + outdoor fun -->
+      <div class="photo-pair reveal">
+        <div class="photo-card">
+          <img src="Teacher appreciation 2026/IMG_3591.jpg" alt="Four team members with candy carts piled high with snacks" />
+          <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(6,61,48,0.35) 0%,transparent 55%);pointer-events:none;"></div>
+        </div>
+        <div class="photo-card">
+          <img src="Teacher appreciation 2026/IMG_3564.jpg" alt="Three team members in superhero shirts, smiling together" />
+          <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(6,61,48,0.35) 0%,transparent 55%);pointer-events:none;"></div>
+        </div>
+      </div>
+
+      <div class="article-body reveal">
+        <h2>The Flowers Were the Quiet Part</h2>
+
+        <p>Amid all of it — the decorations, the food, the group energy — there were also the quiet moments. Individual teachers, walking to their classrooms in the morning, finding bouquets of red roses waiting for them. Not a mass delivery. Each one placed. Each one personal.</p>
+
+        <p>There's something about a flower delivered to where you actually do your work that lands differently than a gift card in an envelope. It means someone walked into your space. Thought about you specifically. And left something beautiful in the middle of the alphabet rug and the crayon bins and the little chairs.</p>
+      </div>
+
+      <!-- Roses in classroom -->
+      <div class="photo-card reveal" style="margin:40px 0;aspect-ratio:4/3;max-height:520px;">
+        <img src="Teacher appreciation 2026/IMG_2056.jpg" alt="Two teachers holding bouquets of red roses in their classroom" style="object-position:center 40%;" />
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(6,61,48,0.45) 0%,transparent 50%);pointer-events:none;"></div>
+      </div>
+
+      <div class="photo-card reveal" style="margin:40px 0;aspect-ratio:4/3;max-height:520px;">
+        <img src="Teacher appreciation 2026/IMG_2075.jpg" alt="A teacher smiling in her classroom holding her bouquet of roses" style="object-position:center 30%;" />
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(6,61,48,0.45) 0%,transparent 50%);pointer-events:none;"></div>
+      </div>
+
+      <div class="article-body reveal">
+        <h2>It Happened Across All Three Campuses</h2>
+
+        <p>Our Oswego campus had its own energy. The theme there was "Nacho Average Teacher" — which, if you know our Oswego team, is exactly right. The directors showed up in matching shirts that said <em>Nacho Average Director</em>. The banners were up. The spread was out. And the same feeling was in the room: we see you, we're glad you're here, and we're not going to let the week pass without making that obvious.</p>
+      </div>
+
+      <!-- Nacho theme -->
+      <div class="photo-card reveal" style="margin:40px 0;aspect-ratio:4/3;max-height:520px;">
+        <img src="Teacher appreciation 2026/11_720.jpg" alt="Two directors in Nacho Average Director shirts in front of the celebration backdrop" style="object-position:center 30%;" />
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(6,61,48,0.4) 0%,transparent 50%);pointer-events:none;"></div>
+      </div>
+
+      <!-- Gift table -->
+      <div class="photo-card reveal" style="margin:40px 0;aspect-ratio:4/3;max-height:480px;">
+        <img src="Teacher appreciation 2026/20260504_074359.jpg" alt="Personalized gift bags and flower arrangements set up for every teacher" style="object-position:center center;" />
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(6,61,48,0.35) 0%,transparent 50%);pointer-events:none;"></div>
+        <div style="position:absolute;bottom:16px;left:20px;">
+          <p style="font-family:'Open Sans',sans-serif;font-size:0.82rem;color:rgba(255,255,255,0.85);margin:0;font-style:italic;">Personalized gift bags for every teacher — before they even walked in.</p>
+        </div>
+      </div>
+
+      <div class="article-body reveal">
+        <h2>At Ogden, It Was Personal</h2>
+
+        <p>The Ogden campus took a different approach — quieter, but no less thoughtful. A gift table was set up in the break room: personalized boxes for every teacher, handwritten cards, small flowers arranged beside each one. The "Thank You, We Appreciate You" banner hung behind it. Nothing over the top. Just evidence that someone had sat down and thought about each person individually.</p>
+
+        <p>Over three days, teachers came in and found their boxes. Some opened them right there. One stood reading her card for a long time. Another carried hers back to her classroom and set it on the shelf where she could see it.</p>
+
+        <p>That's what a gift table looks like when it's made with actual intention.</p>
+      </div>
+
+      <!-- Ogden gift table - full team -->
+      <div class="photo-card reveal" style="margin:40px 0;aspect-ratio:16/9;max-height:500px;">
+        <img src="Teacher appreciation 2026/IMG_20260506_104907 (2).jpg" alt="The Ogden team gathered around the appreciation gift table" style="object-position:center 45%;" />
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(6,61,48,0.35) 0%,transparent 50%);pointer-events:none;"></div>
+        <div style="position:absolute;bottom:16px;left:20px;">
+          <p style="font-family:'Open Sans',sans-serif;font-size:0.82rem;color:rgba(255,255,255,0.9);margin:0;font-style:italic;">Ogden &amp; IL-59 — three days of appreciation, built one gift at a time.</p>
+        </div>
+      </div>
+
+      <div class="photo-pair reveal">
+        <div class="photo-card cinematic">
+          <img src="Teacher appreciation 2026/IMG_20260505_092830.jpg" alt="A teacher opening her personalized gift, smiling" />
+        </div>
+        <div class="photo-card cinematic">
+          <img src="Teacher appreciation 2026/IMG_20260506_104907 (5).jpg" alt="Teachers reading their personal cards" />
+        </div>
+      </div>
+
+      <div class="article-body reveal">
+        <h2>What This Actually Says About Who We Are</h2>
+
+        <p>We could have sent a card. We could have done a brief announcement at the morning meeting and called it done. A lot of places do exactly that, and their teachers know it.</p>
+
+        <p>We didn't do that. Not because we're trying to win an award for appreciation week — but because the people who work here deserve to feel the weight of what they do. Every morning they walk into rooms full of tiny people who need them completely. They hold those kids together through long days. They remember which child has a hard time at lunch, which one is working through something at home, which one just needs someone to sit with them for a minute.</p>
+
+        <p>That kind of attention to another person is exhausting and invisible and irreplaceable. The least we can do is make sure, at least once a year, it is seen. Loudly.</p>
+      </div>
+
+      <div class="pull-quote reveal">
+        <p>"We didn't build this place to be ordinary. That goes for how we care for children — and for how we care for the people who care for them."</p>
+      </div>
+
+      <div class="article-body reveal">
+        <p>If you're reading this and you're thinking about what it would feel like to work somewhere that actually means it when they say they value you — we'd like to talk.</p>
+      </div>
+
+      <!-- CTA -->
+      <div class="reveal" style="background:linear-gradient(135deg,#063D30 0%,#0B6E5A 100%);border-radius:20px;padding:36px 40px;margin:40px 0 56px;text-align:center;">
+        <p style="font-family:'Lora',Georgia,serif;font-style:italic;font-size:1.15rem;color:rgba(255,255,255,0.85);margin:0 0 10px;line-height:1.6;">We're hiring — across all three campuses.</p>
+        <p style="font-family:'Nunito',sans-serif;font-weight:800;font-size:1.4rem;color:white;margin:0 0 24px;letter-spacing:-0.02em;">Come be part of a team that shows up for each other.</p>
+        <a href="careers-openings.html" class="btn-amber" style="padding:14px 36px;font-size:1rem;box-shadow:0 6px 24px rgba(245,166,35,0.4);">
+          View Open Positions
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+
+      <!-- Closing nav -->
+      <div class="reveal" style="padding-top:8px;border-top:1px solid #E5E7EB;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;">
+        <a href="careers.html" style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.875rem;color:#6B7280;text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#0B6E5A'" onmouseout="this.style.color='#6B7280'">&#8592; Life at SBA</a>
+        <a href="careers-openings.html" style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.875rem;color:#0B6E5A;text-decoration:none;" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">See all open positions &#8594;</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PHOTO GALLERY -->
+  <section style="background:white;padding:72px 24px 88px;border-top:1px solid #E8EDE9;">
+    <div style="max-width:1100px;margin:0 auto;">
+      <div class="reveal" style="text-align:center;margin-bottom:48px;">
+        <span style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.75rem;text-transform:uppercase;letter-spacing:0.14em;color:#0B6E5A;">All Photos</span>
+        <h2 style="font-family:'Nunito',sans-serif;font-weight:900;font-size:clamp(1.5rem,3vw,2rem);color:#1A1A1A;letter-spacing:-0.025em;margin:10px 0 0;">Teacher Appreciation Week 2026</h2>
+      </div>
+
+      <div class="gallery-grid reveal">
+
+        <div class="gallery-item" onclick="openLightbox(this)">
+          <img src="Teacher appreciation 2026/IMG_3569.jpg" alt="Full team photo in matching appreciation shirts" />
+          <div class="overlay"></div>
+        </div>
+
+        <div class="gallery-item delay-1" onclick="openLightbox(this)">
+          <img src="Teacher appreciation 2026/IMG_3527.jpg" alt="Superhero-themed Teacher Coffee Bar" />
+          <div class="overlay"></div>
+        </div>
+
+        <div class="gallery-item delay-2" onclick="openLightbox(this)">
+          <img src="Teacher appreciation 2026/IMG_3530.jpg" alt="Team at the Coffee Bar" />
+          <div class="overlay"></div>
+        </div>
+
+        <div class="gallery-item" onclick="openLightbox(this)">
+          <img src="Teacher appreciation 2026/IMG_3537.jpg" alt="Coffee bar setup with donuts and pastries" />
+          <div class="overlay"></div>
+        </div>
+
+        <div class="gallery-item delay-1" onclick="openLightbox(this)">
+          <img src="Teacher appreciation 2026/IMG_3551.jpg" alt="Teachers eating donuts and laughing" />
+          <div class="overlay"></div>
+        </div>
+
+        <div class="gallery-item delay-2" onclick="openLightbox(this)">
+          <img src="Teacher appreciation 2026/IMG_3555.jpg" alt="Two teachers celebrating together" />
+          <div class="overlay"></div>
+        </div>
+
+        <div class="gallery-item" onclick="openLightbox(this)">
+          <img src="Teacher appreciation 2026/IMG_3564.jpg" alt="Three team members in superhero shirts" />
+          <div class="overlay"></div>
+        </div>
+
+        <div class="gallery-item delay-1" onclick="openLightbox(this)">
+          <img src="Teacher appreciation 2026/IMG_3591.jpg" alt="Candy carts piled high with treats" />
+          <div class="overlay"></div>
+        </div>
+
+        <div class="gallery-item delay-2" onclick="openLightbox(this)">
+          <img src="Teacher appreciation 2026/IMG_2029.jpg" alt="Teachers with smoothies outside in the sun" />
+          <div class="overlay"></div>
+        </div>
+
+        <div class="gallery-item" onclick="openLightbox(this)">
+          <img src="Teacher appreciation 2026/IMG_2056.jpg" alt="Two teachers with rose bouquets in their classroom" />
+          <div class="overlay"></div>
+        </div>
+
+        <div class="gallery-item delay-1" onclick="openLightbox(this)">
+          <img src="Teacher appreciation 2026/IMG_2075.jpg" alt="Teacher smiling in her classroom with roses" />
+          <div class="overlay"></div>
+        </div>
+
+        <div class="gallery-item delay-2" onclick="openLightbox(this)">
+          <img src="Teacher appreciation 2026/IMG_2107.jpg" alt="Teacher on the playground with her award" />
+          <div class="overlay"></div>
+        </div>
+
+        <div class="gallery-item" onclick="openLightbox(this)">
+          <img src="Teacher appreciation 2026/11_720.jpg" alt="Directors in Nacho Average Director shirts" />
+          <div class="overlay"></div>
+        </div>
+
+        <div class="gallery-item delay-1" onclick="openLightbox(this)">
+          <img src="Teacher appreciation 2026/20260504_074359.jpg" alt="Personalized gift table with flowers and bags" />
+          <div class="overlay"></div>
+        </div>
+
+        <div class="gallery-item cinematic delay-2" onclick="openLightbox(this)">
+          <img src="Teacher appreciation 2026/IMG_20260504_130943.jpg" alt="Two staff members beside the gift table on day one" />
+          <div class="overlay"></div>
+        </div>
+
+        <div class="gallery-item cinematic" onclick="openLightbox(this)">
+          <img src="Teacher appreciation 2026/IMG_20260504_130944 (1).jpg" alt="Staff with flowers beside the appreciation table" />
+          <div class="overlay"></div>
+        </div>
+
+        <div class="gallery-item cinematic delay-1" onclick="openLightbox(this)">
+          <img src="Teacher appreciation 2026/IMG_20260504_131159.jpg" alt="Two educators at the gift table" />
+          <div class="overlay"></div>
+        </div>
+
+        <div class="gallery-item cinematic delay-2" onclick="openLightbox(this)">
+          <img src="Teacher appreciation 2026/IMG_20260505_092819.jpg" alt="Staff beside the fully loaded gift table on day two" />
+          <div class="overlay"></div>
+        </div>
+
+        <div class="gallery-item cinematic" onclick="openLightbox(this)">
+          <img src="Teacher appreciation 2026/IMG_20260505_092830.jpg" alt="A teacher opening her personalized gift, smiling" />
+          <div class="overlay"></div>
+        </div>
+
+        <div class="gallery-item cinematic delay-1" onclick="openLightbox(this)">
+          <img src="Teacher appreciation 2026/IMG_20260505_092843.jpg" alt="Two educators posing at the appreciation table" />
+          <div class="overlay"></div>
+        </div>
+
+        <div class="gallery-item cinematic delay-2" onclick="openLightbox(this)">
+          <img src="Teacher appreciation 2026/IMG_20260505_092904.jpg" alt="Teachers in the hallway with their gift boxes" />
+          <div class="overlay"></div>
+        </div>
+
+        <div class="gallery-item cinematic" onclick="openLightbox(this)">
+          <img src="Teacher appreciation 2026/IMG_20260506_104907 (2).jpg" alt="The full Ogden team gathered at the gift table" />
+          <div class="overlay"></div>
+        </div>
+
+        <div class="gallery-item cinematic delay-1" onclick="openLightbox(this)">
+          <img src="Teacher appreciation 2026/IMG_20260506_104907 (5).jpg" alt="Teachers reading their personal appreciation cards" />
+          <div class="overlay"></div>
+        </div>
+
+        <div class="gallery-item cinematic delay-2" onclick="openLightbox(this)">
+          <img src="Teacher appreciation 2026/IMG_20260506_104907 (6).jpg" alt="Educators reading heartfelt notes side by side" />
+          <div class="overlay"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" onclick="closeLightbox()">
+  <button id="lightbox-close" onclick="closeLightbox()" aria-label="Close">&#x2715;</button>
+  <img id="lightbox-img" src="" alt="" onclick="event.stopPropagation()" />
+</div>
+
+<!-- FOOTER -->
+<footer style="background:#1A1A1A;color:white;padding:64px 24px 0;">
+  <div style="max-width:1280px;margin:0 auto;">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:48px;padding-bottom:56px;">
+      <div>
+        <a href="index.html" style="display:inline-block;margin-bottom:16px;"><img src="Logo Transparency_Shadow.png" alt="Smart Beginnings Academy" style="height:52px;width:auto;filter:brightness(0) invert(1);" /></a>
+        <p style="font-family:'Open Sans',sans-serif;font-size:0.85rem;color:rgba(255,255,255,0.55);line-height:1.72;margin:0 0 20px;">A physician-founded preschool where every child's learning journey begins with care, science, and heart.</p>
+      </div>
+      <div>
+        <h4 style="font-family:'Nunito',sans-serif;font-weight:700;color:white;font-size:0.8rem;text-transform:uppercase;letter-spacing:0.12em;margin:0 0 20px;">Quick Links</h4>
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;">
+          <li><a href="index.html" style="font-family:'Open Sans',sans-serif;font-size:0.875rem;color:rgba(255,255,255,0.55);text-decoration:none;" onmouseover="this.style.color='#0D9E7E'" onmouseout="this.style.color='rgba(255,255,255,0.55)'">Home</a></li>
+          <li><a href="about.html" style="font-family:'Open Sans',sans-serif;font-size:0.875rem;color:rgba(255,255,255,0.55);text-decoration:none;" onmouseover="this.style.color='#0D9E7E'" onmouseout="this.style.color='rgba(255,255,255,0.55)'">About Us</a></li>
+          <li><a href="careers.html" style="font-family:'Open Sans',sans-serif;font-size:0.875rem;color:rgba(255,255,255,0.55);text-decoration:none;" onmouseover="this.style.color='#0D9E7E'" onmouseout="this.style.color='rgba(255,255,255,0.55)'">Careers</a></li>
+          <li><a href="blog.html" style="font-family:'Open Sans',sans-serif;font-size:0.875rem;color:rgba(255,255,255,0.55);text-decoration:none;" onmouseover="this.style.color='#0D9E7E'" onmouseout="this.style.color='rgba(255,255,255,0.55)'">Blog</a></li>
+          <li><a href="schedule-tour.html" style="font-family:'Open Sans',sans-serif;font-size:0.875rem;color:rgba(255,255,255,0.55);text-decoration:none;" onmouseover="this.style.color='#0D9E7E'" onmouseout="this.style.color='rgba(255,255,255,0.55)'">Schedule a Tour</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 style="font-family:'Nunito',sans-serif;font-weight:700;color:white;font-size:0.8rem;text-transform:uppercase;letter-spacing:0.12em;margin:0 0 20px;">Our Locations</h4>
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          <a href="location-oswego.html" style="display:block;text-decoration:none;font-family:'Open Sans',sans-serif;font-size:0.82rem;color:rgba(255,255,255,0.55);" onmouseover="this.style.color='#0D9E7E'" onmouseout="this.style.color='rgba(255,255,255,0.55)'">📍 Oswego — 750 5th St</a>
+          <a href="location-ogden.html" style="display:block;text-decoration:none;font-family:'Open Sans',sans-serif;font-size:0.82rem;color:rgba(255,255,255,0.55);" onmouseover="this.style.color='#0D9E7E'" onmouseout="this.style.color='rgba(255,255,255,0.55)'">📍 Ogden &amp; IL-59 — 4105 Healthway Dr</a>
+          <a href="location-kirk.html" style="display:block;text-decoration:none;font-family:'Open Sans',sans-serif;font-size:0.82rem;color:rgba(255,255,255,0.55);" onmouseover="this.style.color='#0D9E7E'" onmouseout="this.style.color='rgba(255,255,255,0.55)'">📍 Kirk &amp; Butterfield — 1555 Mesa Ln</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="border-top:1px solid rgba(255,255,255,0.07);">
+    <div style="max-width:1280px;margin:0 auto;padding:20px 24px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;">
+      <p style="font-family:'Open Sans',sans-serif;font-size:0.78rem;color:rgba(255,255,255,0.35);margin:0;">&#169; 2026 Smart Beginnings Academy. All Rights Reserved.</p>
+      <a href="privacy.html" style="font-family:'Open Sans',sans-serif;font-size:0.78rem;color:rgba(255,255,255,0.35);text-decoration:none;" onmouseover="this.style.color='#0D9E7E'" onmouseout="this.style.color='rgba(255,255,255,0.35)'">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Header scroll
+  const header = document.getElementById('site-header');
+  window.addEventListener('scroll', () => { header.style.boxShadow = window.scrollY > 12 ? '0 2px 24px rgba(0,0,0,0.09)' : '0 2px 24px rgba(0,0,0,0.07)'; }, { passive: true });
+
+  // Hamburger
+  const hBtn = document.getElementById('hamburger-btn');
+  const mMenu = document.getElementById('mobile-menu');
+  let menuOpen = false;
+  hBtn.addEventListener('click', () => { menuOpen = !menuOpen; hBtn.classList.toggle('open', menuOpen); mMenu.classList.toggle('open', menuOpen); hBtn.setAttribute('aria-expanded', String(menuOpen)); });
+
+  // Reveal
+  const obs = new IntersectionObserver(entries => { entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } }); }, { threshold: 0.08 });
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+  // Lightbox
+  function openLightbox(item) {
+    const img = item.querySelector('img');
+    document.getElementById('lightbox-img').src = img.src;
+    document.getElementById('lightbox-img').alt = img.alt;
+    document.getElementById('lightbox').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+</script>
+</body>
+</html>
