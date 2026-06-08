@@ -37,16 +37,17 @@
     @media (min-width: 768px) { .desktop-nav { display: flex !important; } }
     .hamburger { display: flex !important; }
     @media (min-width: 768px) { .hamburger { display: none !important; } }
-    .event-card { background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 4px 24px rgba(0,0,0,0.08); transition: transform 0.3s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.3s ease; border: 1px solid #EBEBEB; }
-    .event-card:hover { transform: translateY(-6px); box-shadow: 0 20px 52px rgba(0,0,0,0.13); }
+    .event-card { background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 4px 24px rgba(0,0,0,0.08); transition: transform 0.3s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.3s ease; border: 1px solid #EBEBEB; display: flex; flex-direction: row; }
+    .event-card:hover { transform: translateY(-4px); box-shadow: 0 20px 52px rgba(0,0,0,0.13); }
     .event-card:hover .card-img { transform: scale(1.04); }
-    .card-img { width: 100%; height: 240px; object-fit: cover; transition: transform 0.5s ease; display: block; }
-    .gallery-img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s ease; }
-    .gallery-item:hover .gallery-img { transform: scale(1.05); }
-    .gallery-item { overflow: hidden; border-radius: 16px; }
-    @media (max-width: 639px) {
-      .events-grid { grid-template-columns: 1fr !important; }
-      .gallery-grid { grid-template-columns: 1fr 1fr !important; }
+    .card-img-wrap { flex-shrink: 0; width: 380px; overflow: hidden; }
+    .card-img { width: 100%; height: 100%; min-height: 260px; object-fit: cover; transition: transform 0.5s ease; display: block; }
+    .card-body { flex: 1; padding: 36px 40px; display: flex; flex-direction: column; justify-content: center; }
+    @media (max-width: 767px) {
+      .event-card { flex-direction: column; }
+      .card-img-wrap { width: 100%; }
+      .card-img { height: 220px; min-height: unset; }
+      .card-body { padding: 24px 24px 28px; }
     }
     @media (max-width: 639px) {
       footer { padding: 40px 16px 0 !important; }
@@ -174,21 +175,21 @@
         <p style="font-family:'Open Sans',sans-serif;font-size:1rem;color:#6B7280;line-height:1.75;max-width:480px;margin:0 auto;">Click any event to read the full story and see all the photos.</p>
       </div>
 
-      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:28px;">
+      <div style="display:flex;flex-direction:column;gap:24px;">
 
         <!-- Color Run 2026 event card -->
-        <a href="community-color-run-2026.html" class="event-card reveal" style="text-decoration:none;color:inherit;display:flex;flex-direction:column;">
-          <div style="overflow:hidden;flex-shrink:0;">
+        <a href="community-color-run-2026.html" class="event-card reveal" style="text-decoration:none;color:inherit;">
+          <div class="card-img-wrap">
             <img src="IMG_7891.jpeg" alt="SBA Color Run 2026 finish line" class="card-img" style="object-position:center 20%;" />
           </div>
-          <div style="padding:28px 28px 32px;flex:1;display:flex;flex-direction:column;">
+          <div class="card-body">
             <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
               <span style="font-family:'Nunito',sans-serif;font-weight:800;font-size:0.68rem;text-transform:uppercase;letter-spacing:0.1em;background:#063D30;color:white;padding:4px 12px;border-radius:999px;">Community Event</span>
               <span style="font-family:'Open Sans',sans-serif;font-size:0.78rem;color:#9CA3AF;">June 6, 2026</span>
             </div>
-            <h3 style="font-family:'Nunito',sans-serif;font-weight:900;font-size:1.25rem;color:#1A1A1A;letter-spacing:-0.02em;margin:0 0 10px;line-height:1.3;">Our First Color Run Was Everything We Hoped It Would Be</h3>
-            <p style="font-family:'Open Sans',sans-serif;font-size:0.875rem;color:#6B7280;line-height:1.75;margin:0 0 20px;flex:1;">T-shirts white at the start, technicolor by the end. Families, kids, educators, and founders came together for the inaugural SBA Color Run 2026 — loud, joyful, and covered in every shade imaginable.</p>
-            <div style="display:inline-flex;align-items:center;gap:6px;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.85rem;color:#0B6E5A;">
+            <h3 style="font-family:'Nunito',sans-serif;font-weight:900;font-size:1.45rem;color:#1A1A1A;letter-spacing:-0.02em;margin:0 0 12px;line-height:1.25;">Our First Color Run Was Everything We Hoped It Would Be</h3>
+            <p style="font-family:'Open Sans',sans-serif;font-size:0.925rem;color:#6B7280;line-height:1.8;margin:0 0 24px;">T-shirts white at the start, technicolor by the end. Families, kids, educators, and founders came together for the inaugural SBA Color Run 2026 — loud, joyful, and covered in every shade imaginable.</p>
+            <div style="display:inline-flex;align-items:center;gap:6px;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.9rem;color:#0B6E5A;">
               Read the story
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="#0B6E5A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </div>
@@ -196,12 +197,14 @@
         </a>
 
         <!-- More events coming placeholder -->
-        <div class="reveal delay-1" style="background:white;border-radius:20px;border:2px dashed #C8E8DF;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:48px 32px;text-align:center;min-height:340px;">
-          <div style="width:56px;height:56px;border-radius:16px;background:#E1F5EE;display:flex;align-items:center;justify-content:center;margin-bottom:16px;">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" stroke="#0B6E5A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div class="reveal delay-1" style="background:white;border-radius:20px;border:2px dashed #C8E8DF;display:flex;align-items:center;justify-content:center;padding:40px 48px;gap:20px;text-align:left;">
+          <div style="flex-shrink:0;width:52px;height:52px;border-radius:14px;background:#E1F5EE;display:flex;align-items:center;justify-content:center;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" stroke="#0B6E5A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </div>
-          <h3 style="font-family:'Nunito',sans-serif;font-weight:800;font-size:1.05rem;color:#1A1A1A;margin:0 0 8px;">More Events Coming</h3>
-          <p style="font-family:'Open Sans',sans-serif;font-size:0.875rem;color:#9CA3AF;line-height:1.7;margin:0;">We're always planning something. Check back soon for our next community event!</p>
+          <div>
+            <h3 style="font-family:'Nunito',sans-serif;font-weight:800;font-size:1rem;color:#1A1A1A;margin:0 0 4px;">More Events Coming</h3>
+            <p style="font-family:'Open Sans',sans-serif;font-size:0.875rem;color:#9CA3AF;line-height:1.7;margin:0;">We're always planning something. Check back soon for our next community event!</p>
+          </div>
         </div>
 
       </div>
