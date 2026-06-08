@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Our Community | Smart Beginnings Academy</title>
-  <meta name="description" content="Community events, celebrations, and memorable moments at Smart Beginnings Academy — where families connect and grow together." />
+  <title>SBA Color Run 2026 | Our Community | Smart Beginnings Academy</title>
+  <meta name="description" content="Our First Color Run Was Everything We Hoped It Would Be — families, kids, and staff came together for the inaugural SBA Color Run 2026." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&family=Open+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
@@ -37,16 +37,12 @@
     @media (min-width: 768px) { .desktop-nav { display: flex !important; } }
     .hamburger { display: flex !important; }
     @media (min-width: 768px) { .hamburger { display: none !important; } }
-    .event-card { background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 4px 24px rgba(0,0,0,0.08); transition: transform 0.3s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.3s ease; border: 1px solid #EBEBEB; }
-    .event-card:hover { transform: translateY(-6px); box-shadow: 0 20px 52px rgba(0,0,0,0.13); }
-    .event-card:hover .card-img { transform: scale(1.04); }
-    .card-img { width: 100%; height: 240px; object-fit: cover; transition: transform 0.5s ease; display: block; }
     .gallery-img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s ease; }
     .gallery-item:hover .gallery-img { transform: scale(1.05); }
-    .gallery-item { overflow: hidden; border-radius: 16px; }
-    @media (max-width: 639px) {
-      .events-grid { grid-template-columns: 1fr !important; }
-      .gallery-grid { grid-template-columns: 1fr 1fr !important; }
+    .gallery-item { overflow: hidden; border-radius: 14px; }
+    .inline-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    @media (max-width: 600px) {
+      .inline-pair { grid-template-columns: 1fr; }
     }
     @media (max-width: 639px) {
       footer { padding: 40px 16px 0 !important; }
@@ -150,67 +146,123 @@
 
 <main id="main-content" style="padding-top:76px;">
 
-  <!-- HERO -->
-  <section style="background:linear-gradient(135deg,#063D30 0%,#0B6E5A 55%,#0D8A6E 100%);padding:60px 24px 68px;position:relative;overflow:hidden;">
-    <div aria-hidden="true" style="position:absolute;top:-60px;right:-60px;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(245,166,35,0.15) 0%,transparent 70%);pointer-events:none;"></div>
-    <div aria-hidden="true" style="position:absolute;bottom:-40px;left:-40px;width:280px;height:280px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,0.05) 0%,transparent 70%);pointer-events:none;"></div>
-    <div style="position:relative;max-width:860px;margin:0 auto;text-align:center;">
-      <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.2);border-radius:999px;padding:6px 18px;margin-bottom:20px;">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8zM23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" stroke="#F5A623" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <span style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.8rem;color:rgba(255,255,255,0.9);text-transform:uppercase;letter-spacing:0.1em;">Events &amp; Celebrations</span>
-      </div>
-      <h1 style="font-family:'Nunito',sans-serif;font-weight:900;font-size:clamp(2rem,4vw,3rem);color:white;letter-spacing:-0.035em;margin:0 0 16px;line-height:1.1;">Our Community</h1>
-      <p style="font-family:'Open Sans',sans-serif;font-size:1.05rem;color:rgba(255,255,255,0.8);line-height:1.75;margin:0 auto;max-width:560px;">Where families connect, children celebrate, and memories are made. From annual traditions to surprise fun days — this is life at Smart Beginnings.</p>
+  <!-- BREADCRUMB -->
+  <div style="background:white;border-bottom:1px solid #F3F4F6;padding:14px 24px;">
+    <div style="max-width:860px;margin:0 auto;display:flex;align-items:center;gap:8px;">
+      <a href="community.html" style="font-family:'Open Sans',sans-serif;font-size:0.82rem;color:#0B6E5A;text-decoration:none;display:inline-flex;align-items:center;gap:5px;" onmouseover="this.style.opacity='0.75'" onmouseout="this.style.opacity='1'">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M19 12H5M12 5l-7 7 7 7" stroke="#0B6E5A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Our Community
+      </a>
+      <span style="font-family:'Open Sans',sans-serif;font-size:0.82rem;color:#D1D5DB;">/</span>
+      <span style="font-family:'Open Sans',sans-serif;font-size:0.82rem;color:#9CA3AF;">Color Run 2026</span>
     </div>
-  </section>
+  </div>
 
-  <!-- EVENTS GRID -->
-  <section style="background:#F7FBFA;padding:64px 24px 80px;">
-    <div style="max-width:1100px;margin:0 auto;">
+  <!-- ARTICLE -->
+  <section style="background:#F7FBFA;padding:56px 24px 0;">
+    <div style="max-width:860px;margin:0 auto;">
 
-      <div style="text-align:center;margin-bottom:52px;" class="reveal">
-        <span style="display:inline-block;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.78rem;text-transform:uppercase;letter-spacing:0.12em;padding:6px 16px;border-radius:999px;background:#E1F5EE;color:#0B6E5A;margin-bottom:16px;">All Events</span>
-        <h2 style="font-family:'Nunito',sans-serif;font-weight:900;font-size:clamp(1.7rem,3.5vw,2.4rem);color:#1A1A1A;letter-spacing:-0.025em;margin:0 0 12px;">Community Moments</h2>
-        <p style="font-family:'Open Sans',sans-serif;font-size:1rem;color:#6B7280;line-height:1.75;max-width:480px;margin:0 auto;">Click any event to read the full story and see all the photos.</p>
+      <!-- Label + Title -->
+      <div style="margin-bottom:36px;" class="reveal">
+        <span style="display:inline-block;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.78rem;text-transform:uppercase;letter-spacing:0.12em;padding:5px 14px;border-radius:999px;background:#E1F5EE;color:#0B6E5A;margin-bottom:14px;">Community Event · June 2026</span>
+        <h1 style="font-family:'Nunito',sans-serif;font-weight:900;font-size:clamp(1.9rem,4vw,2.8rem);color:#1A1A1A;letter-spacing:-0.03em;margin:0 0 10px;line-height:1.1;">Our First Color Run Was Everything We Hoped It Would Be</h1>
+        <p style="font-family:'Open Sans',sans-serif;font-size:0.88rem;color:#9CA3AF;margin:0;">Smart Beginnings Academy · Kirk &amp; Butterfield Campus</p>
       </div>
 
-      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:28px;">
+      <!-- Hero photo -->
+      <div class="reveal" style="border-radius:20px;overflow:hidden;margin-bottom:40px;box-shadow:0 8px 40px rgba(0,0,0,0.12);">
+        <img src="IMG_7360.jpeg" alt="Families running through color at SBA Color Run 2026" style="width:100%;height:480px;object-fit:cover;object-position:center 30%;display:block;" />
+      </div>
 
-        <!-- Color Run 2026 event card -->
-        <a href="community-color-run-2026.html" class="event-card reveal" style="text-decoration:none;color:inherit;display:flex;flex-direction:column;">
-          <div style="overflow:hidden;flex-shrink:0;">
-            <img src="IMG_7891.jpeg" alt="SBA Color Run 2026 finish line" class="card-img" style="object-position:center 20%;" />
-          </div>
-          <div style="padding:28px 28px 32px;flex:1;display:flex;flex-direction:column;">
-            <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
-              <span style="font-family:'Nunito',sans-serif;font-weight:800;font-size:0.68rem;text-transform:uppercase;letter-spacing:0.1em;background:#063D30;color:white;padding:4px 12px;border-radius:999px;">Community Event</span>
-              <span style="font-family:'Open Sans',sans-serif;font-size:0.78rem;color:#9CA3AF;">June 6, 2026</span>
-            </div>
-            <h3 style="font-family:'Nunito',sans-serif;font-weight:900;font-size:1.25rem;color:#1A1A1A;letter-spacing:-0.02em;margin:0 0 10px;line-height:1.3;">Our First Color Run Was Everything We Hoped It Would Be</h3>
-            <p style="font-family:'Open Sans',sans-serif;font-size:0.875rem;color:#6B7280;line-height:1.75;margin:0 0 20px;flex:1;">T-shirts white at the start, technicolor by the end. Families, kids, educators, and founders came together for the inaugural SBA Color Run 2026 — loud, joyful, and covered in every shade imaginable.</p>
-            <div style="display:inline-flex;align-items:center;gap:6px;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.85rem;color:#0B6E5A;">
-              Read the story
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="#0B6E5A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </div>
-          </div>
-        </a>
+      <!-- Opening paragraphs -->
+      <div class="reveal" style="margin-bottom:32px;">
+        <p style="font-family:'Open Sans',sans-serif;font-size:1.05rem;color:#374151;line-height:1.85;margin:0 0 20px;">On a bright June morning, something special happened at Smart Beginnings Academy. Families, children, educators, directors, and founders came together — t-shirts white at the start, technicolor by the end — for the inaugural <strong>SBA Color Run 2026</strong>. It was loud, joyful, and covered in every shade imaginable.</p>
+        <p style="font-family:'Open Sans',sans-serif;font-size:1.05rem;color:#374151;line-height:1.85;margin:0;">The event brought all three of our Chicagoland centers together in one place, united by something we believe in deeply: that the best learning — and the best memories — happen when a community moves as one. Parents who had only waved hello at drop-off found themselves laughing together mid-run, getting hit by the same cloud of magenta powder. Little ones who walk our hallways every day sprinted through color stations with pure, unfiltered delight.</p>
+      </div>
 
-        <!-- More events coming placeholder -->
-        <div class="reveal delay-1" style="background:white;border-radius:20px;border:2px dashed #C8E8DF;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:48px 32px;text-align:center;min-height:340px;">
-          <div style="width:56px;height:56px;border-radius:16px;background:#E1F5EE;display:flex;align-items:center;justify-content:center;margin-bottom:16px;">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" stroke="#0B6E5A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </div>
-          <h3 style="font-family:'Nunito',sans-serif;font-weight:800;font-size:1.05rem;color:#1A1A1A;margin:0 0 8px;">More Events Coming</h3>
-          <p style="font-family:'Open Sans',sans-serif;font-size:0.875rem;color:#9CA3AF;line-height:1.7;margin:0;">We're always planning something. Check back soon for our next community event!</p>
+      <!-- Inline photo pair 1 -->
+      <div class="inline-pair reveal" style="margin-bottom:32px;">
+        <img src="IMG_7568.jpeg" alt="Families walking together covered in color" style="width:100%;height:280px;object-fit:cover;object-position:center;display:block;border-radius:14px;" />
+        <img src="IMG_3884.jpeg" alt="Color station action at the run" style="width:100%;height:280px;object-fit:cover;object-position:center top;display:block;border-radius:14px;" />
+      </div>
+
+      <!-- Pull quote -->
+      <div class="reveal" style="border-left:4px solid #0B6E5A;background:white;border-radius:0 16px 16px 0;padding:28px 32px;margin-bottom:32px;box-shadow:0 4px 20px rgba(11,110,90,0.08);">
+        <p style="font-family:'Nunito',sans-serif;font-weight:800;font-size:1.2rem;color:#1A1A1A;margin:0 0 8px;line-height:1.4;">A day that showed what SBA is made of.</p>
+        <p style="font-family:'Open Sans',sans-serif;font-size:0.95rem;color:#6B7280;line-height:1.75;margin:0;">Our founders ran alongside the families they serve. Our directors organized every detail. Our educators cheered every finisher. This wasn't just a fun run — it was a portrait of our community.</p>
+      </div>
+
+      <!-- Inline photo pair 2 -->
+      <div class="inline-pair reveal" style="margin-bottom:32px;">
+        <img src="FullSizeRender.jpeg" alt="SBA staff member covered in color holding squeeze bottles" style="width:100%;height:300px;object-fit:cover;object-position:center top;display:block;border-radius:14px;" />
+        <img src="IMG_7891.jpeg" alt="Finishers celebrating under the finish line arch" style="width:100%;height:300px;object-fit:cover;object-position:center 20%;display:block;border-radius:14px;" />
+      </div>
+
+      <!-- Thank you + closing -->
+      <div class="reveal" style="margin-bottom:48px;">
+        <p style="font-family:'Open Sans',sans-serif;font-size:1.05rem;color:#374151;line-height:1.85;margin:0 0 20px;">A heartfelt thank you to every family who laced up, every volunteer who showed up early and stayed late, and especially to the staff and directors of our Kirk &amp; Butterfield location for organizing an event that will be hard to top. You turned a parking lot into a celebration.</p>
+        <p style="font-family:'Open Sans',sans-serif;font-size:1.05rem;color:#374151;line-height:1.85;margin:0 0 28px;">See you at the next one — and maybe wear something you don't mind keeping colorful.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;">
+          <span style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.78rem;color:#0B6E5A;background:#E1F5EE;padding:5px 14px;border-radius:999px;">#SBAColorRun2026</span>
+          <span style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.78rem;color:#0B6E5A;background:#E1F5EE;padding:5px 14px;border-radius:999px;">#SmartBeginningsAcademy</span>
+          <span style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.78rem;color:#0B6E5A;background:#E1F5EE;padding:5px 14px;border-radius:999px;">#OurCommunity</span>
+          <span style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.78rem;color:#0B6E5A;background:#E1F5EE;padding:5px 14px;border-radius:999px;">#ColorRun</span>
+          <span style="font-family:'Nunito',sans-serif;font-weight:700;font-size:0.78rem;color:#0B6E5A;background:#E1F5EE;padding:5px 14px;border-radius:999px;">#EarlyChildhood</span>
         </div>
+      </div>
 
+    </div>
+  </section>
+
+  <!-- FULL PHOTO GALLERY -->
+  <section style="background:#F7FBFA;padding:16px 24px 80px;">
+    <div style="max-width:1200px;margin:0 auto;">
+      <div style="text-align:center;margin-bottom:40px;" class="reveal">
+        <span style="display:inline-block;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.78rem;text-transform:uppercase;letter-spacing:0.12em;padding:6px 16px;border-radius:999px;background:#E1F5EE;color:#0B6E5A;margin-bottom:14px;">Photo Gallery</span>
+        <h2 style="font-family:'Nunito',sans-serif;font-weight:900;font-size:clamp(1.4rem,3vw,1.9rem);color:#1A1A1A;letter-spacing:-0.025em;margin:0;">Every Colorful Moment</h2>
+      </div>
+      <div class="reveal" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px;">
+        <div class="gallery-item"><img src="IMG_7360.jpeg" alt="Color Run 2026" class="gallery-img" style="height:220px;" /></div>
+        <div class="gallery-item"><img src="IMG_7568.jpeg" alt="Color Run 2026" class="gallery-img" style="height:220px;" /></div>
+        <div class="gallery-item"><img src="IMG_7655.jpeg" alt="Color Run 2026" class="gallery-img" style="height:220px;" /></div>
+        <div class="gallery-item"><img src="FullSizeRender.jpeg" alt="Color Run 2026" class="gallery-img" style="height:220px;" /></div>
+        <div class="gallery-item"><img src="IMG_3884.jpeg" alt="Color Run 2026" class="gallery-img" style="height:220px;" /></div>
+        <div class="gallery-item"><img src="IMG_3893.jpeg" alt="Color Run 2026" class="gallery-img" style="height:220px;" /></div>
+        <div class="gallery-item"><img src="IMG_3896.jpeg" alt="Color Run 2026" class="gallery-img" style="height:220px;" /></div>
+        <div class="gallery-item"><img src="IMG_7376.jpeg" alt="Color Run 2026" class="gallery-img" style="height:220px;" /></div>
+        <div class="gallery-item"><img src="IMG_7422.jpeg" alt="Color Run 2026" class="gallery-img" style="height:220px;" /></div>
+        <div class="gallery-item"><img src="IMG_7437.jpeg" alt="Color Run 2026" class="gallery-img" style="height:220px;" /></div>
+        <div class="gallery-item"><img src="IMG_7439.jpeg" alt="Color Run 2026" class="gallery-img" style="height:220px;" /></div>
+        <div class="gallery-item"><img src="IMG_7570.jpeg" alt="Color Run 2026" class="gallery-img" style="height:220px;" /></div>
+        <div class="gallery-item"><img src="IMG_7585.jpeg" alt="Color Run 2026" class="gallery-img" style="height:220px;" /></div>
+        <div class="gallery-item"><img src="IMG_7591.jpeg" alt="Color Run 2026" class="gallery-img" style="height:220px;" /></div>
+        <div class="gallery-item"><img src="IMG_7676.jpeg" alt="Color Run 2026" class="gallery-img" style="height:220px;" /></div>
+        <div class="gallery-item"><img src="IMG_7696.jpeg" alt="Color Run 2026" class="gallery-img" style="height:220px;" /></div>
+        <div class="gallery-item"><img src="IMG_7718.jpeg" alt="Color Run 2026" class="gallery-img" style="height:220px;" /></div>
+        <div class="gallery-item"><img src="IMG_7768.jpeg" alt="Color Run 2026" class="gallery-img" style="height:220px;" /></div>
+        <div class="gallery-item"><img src="IMG_7787.jpeg" alt="Color Run 2026" class="gallery-img" style="height:220px;" /></div>
+        <div class="gallery-item"><img src="IMG_7791.jpeg" alt="Color Run 2026" class="gallery-img" style="height:220px;" /></div>
+        <div class="gallery-item"><img src="IMG_7794.jpeg" alt="Color Run 2026" class="gallery-img" style="height:220px;" /></div>
+        <div class="gallery-item"><img src="IMG_7796.jpeg" alt="Color Run 2026" class="gallery-img" style="height:220px;" /></div>
+        <div class="gallery-item"><img src="IMG_7891.jpeg" alt="Color Run 2026" class="gallery-img" style="height:220px;" /></div>
+        <div class="gallery-item"><img src="IMG_7910.jpeg" alt="Color Run 2026" class="gallery-img" style="height:220px;" /></div>
+        <div class="gallery-item"><img src="IMG_0828.jpeg" alt="Color Run 2026" class="gallery-img" style="height:220px;" /></div>
+        <div class="gallery-item"><img src="IMG_1156.jpeg" alt="Color Run 2026" class="gallery-img" style="height:220px;" /></div>
+        <div class="gallery-item"><img src="IMG_1369.jpeg" alt="Color Run 2026" class="gallery-img" style="height:220px;" /></div>
+        <div class="gallery-item"><img src="IMG_4473.jpeg" alt="Color Run 2026" class="gallery-img" style="height:220px;" /></div>
+        <div class="gallery-item"><img src="IMG_5265.jpeg" alt="Color Run 2026" class="gallery-img" style="height:220px;" /></div>
+        <div class="gallery-item"><img src="D4134A96-C213-4110-88E6-37567D636721.jpg" alt="Color Run 2026" class="gallery-img" style="height:220px;" /></div>
       </div>
     </div>
   </section>
 
-  <!-- CTA -->
-  <section style="padding:72px 24px;background:linear-gradient(135deg,#052e22 0%,#0B6E5A 60%,#0d8a70 100%);text-align:center;">
+  <!-- BACK LINK + CTA -->
+  <section style="padding:64px 24px;background:linear-gradient(135deg,#052e22 0%,#0B6E5A 60%,#0d8a70 100%);text-align:center;">
     <div style="max-width:560px;margin:0 auto;" class="reveal">
+      <a href="community.html" style="display:inline-flex;align-items:center;gap:6px;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.85rem;color:rgba(255,255,255,0.7);text-decoration:none;margin-bottom:28px;" onmouseover="this.style.color='white'" onmouseout="this.style.color='rgba(255,255,255,0.7)'">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M19 12H5M12 5l-7 7 7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Back to Our Community
+      </a>
       <h2 style="font-family:'Nunito',sans-serif;font-weight:900;font-size:clamp(1.7rem,3vw,2.4rem);color:white;letter-spacing:-0.03em;margin:0 0 14px;">Come Be Part of Our Community</h2>
       <p style="font-family:'Open Sans',sans-serif;font-size:1rem;color:rgba(255,255,255,0.75);line-height:1.75;margin:0 0 28px;">Tour one of our campuses and see firsthand what makes Smart Beginnings a place families love.</p>
       <a href="schedule-tour.html" class="btn-amber" style="padding:15px 36px;font-size:1rem;box-shadow:0 8px 32px rgba(245,166,35,0.4);">Schedule a Free Tour <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
@@ -273,7 +325,6 @@
   const hamburgerBtn = document.getElementById('hamburger-btn');
   const mobileMenu = document.getElementById('mobile-menu');
   let menuOpen = false;
-
   function toggleMobSection(id) {
     var el = document.getElementById(id);
     var icon = document.getElementById(id + '-icon');
@@ -281,7 +332,6 @@
     el.style.display = isOpen ? 'none' : 'block';
     if (icon) icon.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(180deg)';
   }
-
   hamburgerBtn.addEventListener('click', () => {
     menuOpen = !menuOpen;
     hamburgerBtn.classList.toggle('open', menuOpen);
@@ -291,7 +341,6 @@
   mobileMenu.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => { menuOpen = false; hamburgerBtn.classList.remove('open'); mobileMenu.classList.remove('open'); hamburgerBtn.setAttribute('aria-expanded', 'false'); });
   });
-
   const io = new IntersectionObserver(entries => {
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
   }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
