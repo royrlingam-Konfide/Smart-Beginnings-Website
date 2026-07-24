@@ -593,11 +593,7 @@
       </div>
 
       <!-- Viewport -->
-      <div id="tc-viewport" style="overflow:hidden;border-radius:24px;" aria-live="polite" aria-atomic="true" role="region" aria-label="Parent testimonial 1 of 3">
-        <div id="tc-inner" style="display:flex;transition:transform 0.45s cubic-bezier(0.25,0.46,0.45,0.94);will-change:transform;">
-          <!-- Cards rendered by JS -->
-        </div>
-      </div>
+      <div id="tc-card" aria-live="polite" aria-atomic="true" style="transition:opacity 0.35s ease;"></div>
 
       <!-- Controls -->
       <div style="display:flex;align-items:center;justify-content:center;gap:20px;margin-top:28px;">
@@ -614,139 +610,111 @@
   </section>
   <script>
   (function(){
-    'use strict';
+    ‘use strict’;
 
     var testimonials = [
       {
-        id: ‘r-1’,
         quote: ‘My daughter was very clingy and I worried about the transition. Within two weeks she was running in happily every morning. Her vocabulary has literally doubled since starting here.’,
-        parentFirstName: ‘Maria R.’,
-        location: ‘Ogden & IL-59’,
-        rating: 5
+        name: ‘Maria R.’,
+        location: ‘Ogden & IL-59’
       },
       {
-        id: ‘r-2’,
-        quote: 'My 3-year-old can already identify most letters and counts to 30. I asked her what her favorite part of the day is and she said “all of it.” That says everything.',
-        parentFirstName: ‘Lauren C.’,
-        location: ‘Kirk & Butterfield’,
-        rating: 5
+        quote: ‘My 3-year-old can already identify most letters and counts to 30. I asked her what her favorite part of the day is and she said “all of it.” That says everything.’,
+        name: ‘Lauren C.’,
+        location: ‘Kirk & Butterfield’
       },
       {
-        id: ‘r-3’,
-        quote: "Four years — two kids, infant through Pre-K — all at Smart Beginnings. The teachers know our family by name, ask about siblings, and genuinely invest in each child. This isn’t childcare. It’s family.",
-        parentFirstName: ‘Karen H.’,
-        location: ‘Oswego’,
-        rating: 5
+        quote: ‘Four years — two kids, infant through Pre-K — all at Smart Beginnings. The teachers know our family by name and genuinely invest in each child. This isn’t childcare. It’s family.’,
+        name: ‘Karen H.’,
+        location: ‘Oswego’
       }
     ];
 
     var current = 0;
-    var timer = null;
+    var timer   = null;
+    var paused  = false;
     var INTERVAL = 7000;
-    var paused = false;
 
-    var viewport = document.getElementById('tc-viewport');
-    var inner    = document.getElementById('tc-inner');
-    var dotsEl   = document.getElementById('tc-dots');
-    var prevBtn  = document.getElementById('tc-prev');
-    var nextBtn  = document.getElementById('tc-next');
-    var section  = document.getElementById('tc-section');
+    var card    = document.getElementById(‘tc-card’);
+    var dotsEl  = document.getElementById(‘tc-dots’);
+    var section = document.getElementById(‘tc-section’);
 
-    function starsHtml(n, name) {
-      var s = '';
-      for (var i = 0; i < n; i++) s += '★';
-      return '<div style="color:#F5A623;font-size:1rem;letter-spacing:3px;" aria-label="' + n + ' out of 5 stars">' + s + '</div>';
+    function buildCard(t) {
+      var stars = ‘★★★★★’;
+      return ‘<div class=”tc-card-inner” style=”background:white;border-radius:20px;padding:24px 28px;box-shadow:0 4px 24px rgba(30,58,110,0.08),0 1px 4px rgba(0,0,0,0.04);position:relative;overflow:hidden;”>’ +
+        ‘<div aria-hidden=”true” style=”position:absolute;top:-4px;left:18px;font-size:4rem;line-height:1;color:#F5A623;font-family:Georgia,serif;opacity:0.15;pointer-events:none;”>“</div>’ +
+        ‘<blockquote style=”margin:0;padding-top:8px;font-family:\’Open Sans\’,sans-serif;font-size:0.92rem;color:#374151;line-height:1.75;font-style:italic;margin-bottom:16px;”>’ + t.quote + ‘</blockquote>’ +
+        ‘<div style=”display:flex;align-items:center;justify-content:space-between;gap:8px;”>’ +
+          ‘<div>’ +
+            ‘<div style=”font-family:\’Nunito\’,sans-serif;font-weight:800;font-size:0.85rem;color:#1E3A6E;”>’ + t.name + ‘</div>’ +
+            ‘<div style=”font-family:\’Open Sans\’,sans-serif;font-size:0.72rem;color:#9CA3AF;margin-top:2px;”>Smart Beginnings ‘ + t.location + ‘</div>’ +
+          ‘</div>’ +
+          ‘<div style=”color:#F5A623;font-size:0.85rem;letter-spacing:2px;” aria-label=”5 out of 5 stars”>’ + stars + ‘</div>’ +
+        ‘</div>’ +
+      ‘</div>’;
     }
 
-    // Build and inject cards
-    testimonials.forEach(function(t) {
-      var wrap = document.createElement('div');
-      wrap.style.cssText = 'min-width:100%;box-sizing:border-box;padding:0 2px;';
-      wrap.innerHTML =
-        '<div class=”tc-card-inner” style=”background:white;border-radius:20px;padding:24px 28px;box-shadow:0 4px 24px rgba(30,58,110,0.08),0 1px 4px rgba(0,0,0,0.04);position:relative;overflow:hidden;”>' +
-          '<div aria-hidden=”true” style=”position:absolute;top:-6px;left:20px;font-size:4rem;line-height:1;color:#F5A623;font-family:Georgia,serif;opacity:0.15;pointer-events:none;user-select:none;”>”</div>' +
-          '<blockquote style=”margin:0;padding-top:10px;font-family:\'Open Sans\',sans-serif;font-size:0.92rem;color:#374151;line-height:1.75;font-style:italic;margin-bottom:18px;”>' + t.quote + '</blockquote>' +
-          '<div style=”display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;”>' +
-            '<div>' +
-              '<div style=”font-family:\'Nunito\',sans-serif;font-weight:800;font-size:0.85rem;color:#1E3A6E;”>' + t.parentFirstName + '</div>' +
-              (t.location ? '<div style=”font-family:\'Open Sans\',sans-serif;font-size:0.72rem;color:#9CA3AF;margin-top:2px;”>Smart Beginnings ' + t.location + '</div>' : '') +
-            '</div>' +
-            (t.rating ? starsHtml(t.rating) : '') +
-          '</div>' +
-        '</div>';
-      inner.appendChild(wrap);
-    });
-
-    // Dots
     function renderDots() {
-      dotsEl.innerHTML = '';
-      testimonials.forEach(function(t, i) {
-        var dot = document.createElement('button');
-        dot.setAttribute('role', 'tab');
-        dot.setAttribute('aria-label', 'Testimonial ' + (i + 1) + ' of ' + testimonials.length);
-        dot.setAttribute('aria-selected', i === current ? 'true' : 'false');
-        dot.style.cssText = 'width:8px;height:8px;border-radius:50%;border:none;padding:0;cursor:pointer;transition:background 0.25s,transform 0.25s;background:' + (i === current ? '#F5A623' : '#CBD5E0') + ';transform:' + (i === current ? 'scale(1.4)' : 'scale(1)') + ';';
-        dot.addEventListener('click', function() { goTo(i); });
-        dotsEl.appendChild(dot);
+      dotsEl.innerHTML = ‘’;
+      testimonials.forEach(function(_, i) {
+        var d = document.createElement(‘button’);
+        d.setAttribute(‘aria-label’, ‘Go to testimonial ‘ + (i + 1));
+        d.style.cssText = ‘width:8px;height:8px;border-radius:50%;border:none;padding:0;cursor:pointer;transition:background 0.25s,transform 0.25s;background:’ + (i === 0 ? ‘#F5A623’ : ‘#CBD5E0’) + ‘;transform:’ + (i === 0 ? ‘scale(1.4)’ : ‘scale(1)’) + ‘;’;
+        d.addEventListener(‘click’, function() { goTo(i); });
+        dotsEl.appendChild(d);
       });
     }
 
     function updateDots() {
-      var dots = dotsEl.querySelectorAll('button');
+      var dots = dotsEl.querySelectorAll(‘button’);
       dots.forEach(function(d, i) {
-        d.style.background = i === current ? '#F5A623' : '#CBD5E0';
-        d.style.transform = i === current ? 'scale(1.4)' : 'scale(1)';
-        d.setAttribute('aria-selected', i === current ? 'true' : 'false');
+        d.style.background = i === current ? ‘#F5A623’ : ‘#CBD5E0’;
+        d.style.transform  = i === current ? ‘scale(1.4)’ : ‘scale(1)’;
       });
     }
 
-    function slide(index) {
-      inner.style.transform = 'translateX(-' + (index * 100) + '%)';
-      var t = testimonials[index];
-      viewport.setAttribute('aria-label',
-        'Parent testimonial ' + (index + 1) + ' of ' + testimonials.length +
-        ': “' + t.quote + '” — ' + t.parentFirstName + ', ' + t.relation + ' of a ' + t.childAge
-      );
-      updateDots();
+    function showCard(index) {
+      card.style.opacity = ‘0’;
+      setTimeout(function() {
+        card.innerHTML = buildCard(testimonials[index]);
+        card.style.opacity = ‘1’;
+        updateDots();
+      }, 200);
     }
 
     function goTo(index) {
       current = ((index % testimonials.length) + testimonials.length) % testimonials.length;
-      slide(current);
+      showCard(current);
       resetTimer();
     }
 
-    prevBtn.addEventListener('click', function() { goTo(current - 1); });
-    nextBtn.addEventListener('click', function() { goTo(current + 1); });
+    document.getElementById(‘tc-prev’).addEventListener(‘click’, function() { goTo(current - 1); });
+    document.getElementById(‘tc-next’).addEventListener(‘click’, function() { goTo(current + 1); });
 
-    // Keyboard arrow support on the section
-    section.addEventListener('keydown', function(e) {
-      if (e.key === 'ArrowLeft')  { goTo(current - 1); e.preventDefault(); }
-      if (e.key === 'ArrowRight') { goTo(current + 1); e.preventDefault(); }
+    section.addEventListener(‘keydown’, function(e) {
+      if (e.key === ‘ArrowLeft’)  { goTo(current - 1); e.preventDefault(); }
+      if (e.key === ‘ArrowRight’) { goTo(current + 1); e.preventDefault(); }
     });
 
-    // Touch swipe
     var touchX = 0;
-    viewport.addEventListener('touchstart', function(e) { touchX = e.touches[0].clientX; }, { passive: true });
-    viewport.addEventListener('touchend',   function(e) {
+    card.addEventListener(‘touchstart’, function(e) { touchX = e.touches[0].clientX; }, { passive: true });
+    card.addEventListener(‘touchend’,   function(e) {
       var dx = e.changedTouches[0].clientX - touchX;
       if (Math.abs(dx) > 40) goTo(dx < 0 ? current + 1 : current - 1);
     }, { passive: true });
 
-    // Auto-rotation: pause on hover OR keyboard focus inside section
     function startTimer() { clearInterval(timer); timer = setInterval(function() { if (!paused) goTo(current + 1); }, INTERVAL); }
     function resetTimer() { clearInterval(timer); if (!paused) startTimer(); }
 
-    section.addEventListener('mouseenter', function() { paused = true; });
-    section.addEventListener('mouseleave', function() { paused = false; if (!document.activeElement || !section.contains(document.activeElement)) startTimer(); });
-    section.addEventListener('focusin',    function() { paused = true; clearInterval(timer); });
-    section.addEventListener('focusout',   function(e) {
+    section.addEventListener(‘mouseenter’, function() { paused = true; });
+    section.addEventListener(‘mouseleave’, function() { paused = false; startTimer(); });
+    section.addEventListener(‘focusin’,    function() { paused = true; clearInterval(timer); });
+    section.addEventListener(‘focusout’,   function(e) {
       if (!section.contains(e.relatedTarget)) { paused = false; startTimer(); }
     });
 
-    // Init
     renderDots();
-    slide(0);
+    card.innerHTML = buildCard(testimonials[0]);
     startTimer();
   })();
   </script>
