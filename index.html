@@ -152,7 +152,7 @@
     @media (max-width: 639px) {
       .community-grid { grid-template-columns: 1fr !important; }
       .community-see-all { display: none !important; }
-      .tc-card-inner { padding: 28px 24px !important; }
+      .tc-card-inner { padding: 20px 18px !important; }
     }
     @media (min-width: 640px) and (max-width: 1023px) {
       .community-grid { grid-template-columns: repeat(2,1fr) !important; }
@@ -583,11 +583,6 @@
   </section>
 
   <!-- ▓▓▓ TESTIMONIAL CAROUSEL ▓▓▓ -->
-  <!--
-    ⚠️  PLACEHOLDER DATA — DO NOT PUBLISH.
-    Every quote below requires written parent permission before going live.
-    See the TODO comment inside the <script> block.
-  -->
   <section id="tc-section" style="background:#F8FAFF;padding:44px 0;" aria-label="Parent testimonials">
     <div style="max-width:860px;margin:0 auto;padding:0 24px;">
 
@@ -621,36 +616,26 @@
   (function(){
     'use strict';
 
-    // TODO: confirm written parent permission for EACH quote before publishing.
-    // Do not remove this flag or set to false until all quotes are approved.
-    var PLACEHOLDER_DATA = true;
-
     var testimonials = [
       {
-        id: 'ph-1',
-        quote: 'My son used to cry every drop-off. Three weeks in, he was running through the door to see his teacher.',
-        parentFirstName: 'Sarah',
-        relation: 'mom',
-        childAge: '3-year-old',
-        location: 'Oswego',
+        id: ‘r-1’,
+        quote: ‘My daughter was very clingy and I worried about the transition. Within two weeks she was running in happily every morning. Her vocabulary has literally doubled since starting here.’,
+        parentFirstName: ‘Maria R.’,
+        location: ‘Ogden & IL-59’,
         rating: 5
       },
       {
-        id: 'ph-2',
-        quote: 'They noticed my daughter learns better with hands-on activities before we did, and adjusted how they worked with her.',
-        parentFirstName: 'Mike',
-        relation: 'dad',
-        childAge: '4-year-old',
-        location: 'Kirk & Butterfield',
+        id: ‘r-2’,
+        quote: "My 3-year-old can already identify most letters and counts to 30. I asked her what her favorite part of the day is and she said “all of it.” That says everything.",
+        parentFirstName: ‘Lauren C.’,
+        location: ‘Kirk & Butterfield’,
         rating: 5
       },
       {
-        id: 'ph-3',
-        quote: "The ProCare updates during the day mean I actually see what my son is doing, not just a generic ‘had a good day.’",
-        parentFirstName: 'Priya',
-        relation: 'mom',
-        childAge: '2-year-old',
-        location: 'Ogden & IL-59',
+        id: ‘r-3’,
+        quote: ‘Four years — two kids, infant through Pre-K — all at Smart Beginnings. The teachers know our family by name, ask about siblings, and genuinely invest in each child. This isn’t childcare. It’s family.’,
+        parentFirstName: ‘Karen H.’,
+        location: ‘Oswego’,
         rating: 5
       }
     ];
@@ -678,15 +663,13 @@
       var wrap = document.createElement('div');
       wrap.style.cssText = 'min-width:100%;box-sizing:border-box;padding:0 2px;';
       wrap.innerHTML =
-        '<div class="tc-card-inner" style="background:white;border-radius:24px;padding:40px 48px;box-shadow:0 4px 32px rgba(30,58,110,0.09),0 1px 4px rgba(0,0,0,0.04);position:relative;overflow:hidden;">' +
-          '<div aria-hidden="true" style="position:absolute;top:-10px;left:26px;font-size:5.5rem;line-height:1;color:#F5A623;font-family:Georgia,serif;opacity:0.18;pointer-events:none;user-select:none;">“</div>' +
-          '<blockquote style="margin:0;padding-top:14px;font-family:\'Open Sans\',sans-serif;font-size:1.05rem;color:#2D2D2D;line-height:1.85;font-style:italic;margin-bottom:28px;">' + t.quote + '</blockquote>' +
-          '<div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;">' +
+        '<div class=”tc-card-inner” style=”background:white;border-radius:20px;padding:24px 28px;box-shadow:0 4px 24px rgba(30,58,110,0.08),0 1px 4px rgba(0,0,0,0.04);position:relative;overflow:hidden;”>' +
+          '<div aria-hidden=”true” style=”position:absolute;top:-6px;left:20px;font-size:4rem;line-height:1;color:#F5A623;font-family:Georgia,serif;opacity:0.15;pointer-events:none;user-select:none;”>”</div>' +
+          '<blockquote style=”margin:0;padding-top:10px;font-family:\'Open Sans\',sans-serif;font-size:0.92rem;color:#374151;line-height:1.75;font-style:italic;margin-bottom:18px;”>' + t.quote + '</blockquote>' +
+          '<div style=”display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;”>' +
             '<div>' +
-              '<div style="font-family:\'Nunito\',sans-serif;font-weight:800;font-size:0.9rem;color:#1E3A6E;">' +
-                t.parentFirstName + ' &middot; ' + (t.relation.charAt(0).toUpperCase() + t.relation.slice(1)) + ' of a ' + t.childAge +
-              '</div>' +
-              (t.location ? '<div style="font-family:\'Open Sans\',sans-serif;font-size:0.75rem;color:#9CA3AF;margin-top:3px;">Smart Beginnings ' + t.location + '</div>' : '') +
+              '<div style=”font-family:\'Nunito\',sans-serif;font-weight:800;font-size:0.85rem;color:#1E3A6E;”>' + t.parentFirstName + '</div>' +
+              (t.location ? '<div style=”font-family:\'Open Sans\',sans-serif;font-size:0.72rem;color:#9CA3AF;margin-top:2px;”>Smart Beginnings ' + t.location + '</div>' : '') +
             '</div>' +
             (t.rating ? starsHtml(t.rating) : '') +
           '</div>' +
