@@ -1885,7 +1885,7 @@
   setGalleryGrids();
   window.addEventListener('resize', setGalleryGrids);
 </script>
-<!-- ═══════════════ HALLOWEEN "BOO" INTRO (once per session, auto-expires Nov 1, 2026 12:00 AM Central) ═══════════════ -->
+<!-- ═══════════════ HALLOWEEN "BOO" INTRO (every page load, auto-expires Nov 1, 2026 12:00 AM Central) ═══════════════ -->
 <style>
   #hw-boo { position:fixed; inset:0; z-index:9999; pointer-events:none; display:flex; align-items:center; justify-content:center; overflow:hidden; }
   #hw-boo .boo-veil { position:absolute; inset:0; opacity:0; background:
@@ -1958,19 +1958,15 @@
   <div class="boo-text">BOO!</div>
 </div>
 <script>
-  /* Halloween intro: once per session, skipped for reduced-motion users. Add ?boo to the URL to replay. */
+  /* Halloween intro: plays on every homepage load/refresh until the cutoff; skipped for reduced-motion users. */
   (function(){
     var el = document.getElementById('hw-boo');
     if (!el) return;
-    var force = /[?&]boo\b/.test(location.search);
     var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    var seen = false;
-    try { seen = sessionStorage.getItem('sbaBooSeen') === '1'; } catch(e) {}
-    if (Date.now() >= Date.UTC(2026, 10, 1, 5, 0, 0) || reduce || (seen && !force)) { el.remove(); return; }
+    if (Date.now() >= Date.UTC(2026, 10, 1, 5, 0, 0) || reduce) { el.remove(); return; }
     var fl = document.createElement('link'); fl.rel = 'stylesheet';
     fl.href = 'https://fonts.googleapis.com/css2?family=Creepster&display=swap';
     document.head.appendChild(fl);
-    try { sessionStorage.setItem('sbaBooSeen', '1'); } catch(e) {}
     el.hidden = false;
     el.querySelector('.boo-veil').addEventListener('animationend', function(){ el.remove(); });
     setTimeout(function(){ if (el.parentNode) el.remove(); }, 4000);
