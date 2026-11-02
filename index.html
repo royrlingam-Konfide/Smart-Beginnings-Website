@@ -727,7 +727,7 @@
   </section>
 
   <!-- ▓▓▓ COMMUNITY STRIP ▓▓▓ -->
-  <section style="background:white;padding:72px 0 80px;">
+  <section id="community-strip" style="background:white;padding:72px 0 80px;scroll-margin-top:40px;">
     <div style="max-width:1280px;margin:0 auto;padding:0 24px;">
 
       <!-- Header row -->
@@ -742,11 +742,37 @@
         </a>
       </div>
 
-      <!-- Tiles -->
-      <div class="community-grid reveal" style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;">
+      <!-- Tiles — auto-scrolling strip (second set is a visual copy so the loop is seamless) -->
+      <style>
+        .cs-viewport { overflow:hidden; margin:-20px -24px; padding:20px 24px;
+          -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 48px,#000 calc(100% - 48px),transparent 100%); mask-image:linear-gradient(90deg,transparent 0,#000 48px,#000 calc(100% - 48px),transparent 100%); }
+        .cs-track { display:flex; width:max-content; animation:csScroll 48s linear infinite; }
+        .cs-viewport:hover .cs-track, .cs-viewport:focus-within .cs-track { animation-play-state:paused; }
+        .cs-tile { width:390px; margin-right:20px; }
+        .cs-tile:focus-visible { outline:2px solid #F5A623; outline-offset:3px; }
+        .cs-tile:active { transform:scale(.98); }
+        @keyframes csScroll { from { transform:translateX(0); } to { transform:translateX(-50%); } }
+        @media (max-width: 639px) { .cs-tile { width:78vw; margin-right:14px; } .cs-viewport { margin:-20px -20px; padding:20px 20px; } }
+        @media (prefers-reduced-motion: reduce) {
+          .cs-track { animation:none; } .cs-viewport { overflow-x:auto; } .cs-tile[data-dup] { display:none; }
+        }
+      </style>
+      <div class="cs-viewport reveal">
+        <div class="cs-track">
+
+        <!-- Tile — Brittney 11 years -->
+        <a class="cs-tile" href="blog-brittney-11-years.html" style="display:block;text-decoration:none;border-radius:20px;overflow:hidden;position:relative;aspect-ratio:4/3;flex-shrink:0;box-shadow:0 8px 32px rgba(11,110,90,0.12),0 2px 8px rgba(0,0,0,0.06);transition:transform 0.3s cubic-bezier(0.34,1.56,0.64,1),box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 20px 48px rgba(11,110,90,0.20),0 4px 16px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 8px 32px rgba(11,110,90,0.12),0 2px 8px rgba(0,0,0,0.06)'">
+          <img src="brittney-11-year-anniversary.jpg" alt="Brittney holding her 11-year anniversary award with the team" style="width:100%;height:100%;object-fit:cover;object-position:center 8%;display:block;transform:scale(1.07);transform-origin:center 30%;" />
+          <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(6,61,48,0.88) 0%,rgba(6,61,48,0.25) 45%,transparent 70%);"></div>
+          <div style="position:absolute;top:14px;left:14px;background:rgba(245,166,35,0.95);backdrop-filter:blur(4px);color:#3D2000;font-family:'Nunito',sans-serif;font-weight:800;font-size:0.65rem;text-transform:uppercase;letter-spacing:0.08em;padding:4px 10px;border-radius:999px;">11 Years</div>
+          <div style="position:absolute;bottom:0;left:0;right:0;padding:18px 18px 20px;">
+            <p style="font-family:'Nunito',sans-serif;font-weight:900;font-size:1rem;color:white;margin:0 0 5px;line-height:1.3;">Eleven years of showing up.</p>
+            <p style="font-family:'Open Sans',sans-serif;font-size:0.78rem;color:rgba(255,255,255,0.82);margin:0;line-height:1.55;">Celebrating Ms. Brittney, who helped grow SBA from one school to three.</p>
+          </div>
+        </a>
 
         <!-- Tile 1 — Kids smiling -->
-        <a href="community-color-run-2026.html" style="display:block;text-decoration:none;border-radius:20px;overflow:hidden;position:relative;aspect-ratio:4/3;box-shadow:0 8px 32px rgba(11,110,90,0.12),0 2px 8px rgba(0,0,0,0.06);transition:transform 0.3s cubic-bezier(0.34,1.56,0.64,1),box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 20px 48px rgba(11,110,90,0.20),0 4px 16px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 8px 32px rgba(11,110,90,0.12),0 2px 8px rgba(0,0,0,0.06)'">
+        <a class="cs-tile" href="community-color-run-2026.html" style="display:block;text-decoration:none;border-radius:20px;overflow:hidden;position:relative;aspect-ratio:4/3;flex-shrink:0;box-shadow:0 8px 32px rgba(11,110,90,0.12),0 2px 8px rgba(0,0,0,0.06);transition:transform 0.3s cubic-bezier(0.34,1.56,0.64,1),box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 20px 48px rgba(11,110,90,0.20),0 4px 16px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 8px 32px rgba(11,110,90,0.12),0 2px 8px rgba(0,0,0,0.06)'">
           <img src="IMG_0828.jpeg" alt="Kids celebrating at the SBA Color Run 2026" style="width:100%;height:100%;object-fit:cover;object-position:center 30%;display:block;" />
           <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(6,61,48,0.88) 0%,rgba(6,61,48,0.25) 45%,transparent 70%);"></div>
           <div style="position:absolute;top:14px;left:14px;background:rgba(245,166,35,0.95);backdrop-filter:blur(4px);color:#3D2000;font-family:'Nunito',sans-serif;font-weight:800;font-size:0.65rem;text-transform:uppercase;letter-spacing:0.08em;padding:4px 10px;border-radius:999px;">#SBAColorRun2026</div>
@@ -757,7 +783,7 @@
         </a>
 
         <!-- Tile 2 — Teacher Appreciation 2026 -->
-        <a href="blog-teacher-appreciation-2026.html" style="display:block;text-decoration:none;border-radius:20px;overflow:hidden;position:relative;aspect-ratio:4/3;box-shadow:0 8px 32px rgba(11,110,90,0.12),0 2px 8px rgba(0,0,0,0.06);transition:transform 0.3s cubic-bezier(0.34,1.56,0.64,1),box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 20px 48px rgba(11,110,90,0.20),0 4px 16px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 8px 32px rgba(11,110,90,0.12),0 2px 8px rgba(0,0,0,0.06)'">
+        <a class="cs-tile" href="blog-teacher-appreciation-2026.html" style="display:block;text-decoration:none;border-radius:20px;overflow:hidden;position:relative;aspect-ratio:4/3;flex-shrink:0;box-shadow:0 8px 32px rgba(11,110,90,0.12),0 2px 8px rgba(0,0,0,0.06);transition:transform 0.3s cubic-bezier(0.34,1.56,0.64,1),box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 20px 48px rgba(11,110,90,0.20),0 4px 16px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 8px 32px rgba(11,110,90,0.12),0 2px 8px rgba(0,0,0,0.06)'">
           <img src="Teacher Appreciation 2026/IMG_3530.jpg" alt="Teacher Appreciation Week 2026 — superhero coffee bar" style="width:100%;height:100%;object-fit:cover;object-position:center 30%;display:block;" />
           <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(6,61,48,0.88) 0%,rgba(6,61,48,0.25) 45%,transparent 70%);"></div>
           <div style="position:absolute;top:14px;left:14px;background:rgba(245,166,35,0.95);backdrop-filter:blur(4px);color:#3D2000;font-family:'Nunito',sans-serif;font-weight:800;font-size:0.65rem;text-transform:uppercase;letter-spacing:0.08em;padding:4px 10px;border-radius:999px;">Teacher Appreciation Week</div>
@@ -768,7 +794,7 @@
         </a>
 
         <!-- Tile 3 — Family crossing finish -->
-        <a href="community-color-run-2026.html" style="display:block;text-decoration:none;border-radius:20px;overflow:hidden;position:relative;aspect-ratio:4/3;box-shadow:0 8px 32px rgba(11,110,90,0.12),0 2px 8px rgba(0,0,0,0.06);transition:transform 0.3s cubic-bezier(0.34,1.56,0.64,1),box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 20px 48px rgba(11,110,90,0.20),0 4px 16px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 8px 32px rgba(11,110,90,0.12),0 2px 8px rgba(0,0,0,0.06)'">
+        <a class="cs-tile" href="community-color-run-2026.html" style="display:block;text-decoration:none;border-radius:20px;overflow:hidden;position:relative;aspect-ratio:4/3;flex-shrink:0;box-shadow:0 8px 32px rgba(11,110,90,0.12),0 2px 8px rgba(0,0,0,0.06);transition:transform 0.3s cubic-bezier(0.34,1.56,0.64,1),box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 20px 48px rgba(11,110,90,0.20),0 4px 16px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 8px 32px rgba(11,110,90,0.12),0 2px 8px rgba(0,0,0,0.06)'">
           <img src="IMG_7360.jpeg" alt="Family running at the SBA Color Run 2026" style="width:100%;height:100%;object-fit:cover;object-position:center 20%;display:block;" />
           <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(6,61,48,0.88) 0%,rgba(6,61,48,0.25) 45%,transparent 70%);"></div>
           <div style="position:absolute;top:14px;left:14px;background:rgba(245,166,35,0.95);backdrop-filter:blur(4px);color:#3D2000;font-family:'Nunito',sans-serif;font-weight:800;font-size:0.65rem;text-transform:uppercase;letter-spacing:0.08em;padding:4px 10px;border-radius:999px;">#SBAColorRun2026</div>
@@ -778,6 +804,51 @@
           </div>
         </a>
 
+        <!-- (loop copy) Tile — Brittney 11 years -->
+        <a class="cs-tile" aria-hidden="true" tabindex="-1" data-dup href="blog-brittney-11-years.html" style="display:block;text-decoration:none;border-radius:20px;overflow:hidden;position:relative;aspect-ratio:4/3;flex-shrink:0;box-shadow:0 8px 32px rgba(11,110,90,0.12),0 2px 8px rgba(0,0,0,0.06);transition:transform 0.3s cubic-bezier(0.34,1.56,0.64,1),box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 20px 48px rgba(11,110,90,0.20),0 4px 16px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 8px 32px rgba(11,110,90,0.12),0 2px 8px rgba(0,0,0,0.06)'">
+          <img src="brittney-11-year-anniversary.jpg" alt="Brittney holding her 11-year anniversary award with the team" style="width:100%;height:100%;object-fit:cover;object-position:center 8%;display:block;transform:scale(1.07);transform-origin:center 30%;" />
+          <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(6,61,48,0.88) 0%,rgba(6,61,48,0.25) 45%,transparent 70%);"></div>
+          <div style="position:absolute;top:14px;left:14px;background:rgba(245,166,35,0.95);backdrop-filter:blur(4px);color:#3D2000;font-family:'Nunito',sans-serif;font-weight:800;font-size:0.65rem;text-transform:uppercase;letter-spacing:0.08em;padding:4px 10px;border-radius:999px;">11 Years</div>
+          <div style="position:absolute;bottom:0;left:0;right:0;padding:18px 18px 20px;">
+            <p style="font-family:'Nunito',sans-serif;font-weight:900;font-size:1rem;color:white;margin:0 0 5px;line-height:1.3;">Eleven years of showing up.</p>
+            <p style="font-family:'Open Sans',sans-serif;font-size:0.78rem;color:rgba(255,255,255,0.82);margin:0;line-height:1.55;">Celebrating Ms. Brittney, who helped grow SBA from one school to three.</p>
+          </div>
+        </a>
+
+        <!-- (loop copy) Tile 1 — Kids smiling -->
+        <a class="cs-tile" aria-hidden="true" tabindex="-1" data-dup href="community-color-run-2026.html" style="display:block;text-decoration:none;border-radius:20px;overflow:hidden;position:relative;aspect-ratio:4/3;flex-shrink:0;box-shadow:0 8px 32px rgba(11,110,90,0.12),0 2px 8px rgba(0,0,0,0.06);transition:transform 0.3s cubic-bezier(0.34,1.56,0.64,1),box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 20px 48px rgba(11,110,90,0.20),0 4px 16px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 8px 32px rgba(11,110,90,0.12),0 2px 8px rgba(0,0,0,0.06)'">
+          <img src="IMG_0828.jpeg" alt="Kids celebrating at the SBA Color Run 2026" style="width:100%;height:100%;object-fit:cover;object-position:center 30%;display:block;" />
+          <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(6,61,48,0.88) 0%,rgba(6,61,48,0.25) 45%,transparent 70%);"></div>
+          <div style="position:absolute;top:14px;left:14px;background:rgba(245,166,35,0.95);backdrop-filter:blur(4px);color:#3D2000;font-family:'Nunito',sans-serif;font-weight:800;font-size:0.65rem;text-transform:uppercase;letter-spacing:0.08em;padding:4px 10px;border-radius:999px;">#SBAColorRun2026</div>
+          <div style="position:absolute;bottom:0;left:0;right:0;padding:18px 18px 20px;">
+            <p style="font-family:'Nunito',sans-serif;font-weight:900;font-size:1rem;color:white;margin:0 0 5px;line-height:1.3;">Three centers, one community.</p>
+            <p style="font-family:'Open Sans',sans-serif;font-size:0.78rem;color:rgba(255,255,255,0.82);margin:0;line-height:1.55;">Our first-ever Color Run brought families, educators, and founders together.</p>
+          </div>
+        </a>
+
+        <!-- (loop copy) Tile 2 — Teacher Appreciation 2026 -->
+        <a class="cs-tile" aria-hidden="true" tabindex="-1" data-dup href="blog-teacher-appreciation-2026.html" style="display:block;text-decoration:none;border-radius:20px;overflow:hidden;position:relative;aspect-ratio:4/3;flex-shrink:0;box-shadow:0 8px 32px rgba(11,110,90,0.12),0 2px 8px rgba(0,0,0,0.06);transition:transform 0.3s cubic-bezier(0.34,1.56,0.64,1),box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 20px 48px rgba(11,110,90,0.20),0 4px 16px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 8px 32px rgba(11,110,90,0.12),0 2px 8px rgba(0,0,0,0.06)'">
+          <img src="Teacher Appreciation 2026/IMG_3530.jpg" alt="Teacher Appreciation Week 2026 — superhero coffee bar" style="width:100%;height:100%;object-fit:cover;object-position:center 30%;display:block;" />
+          <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(6,61,48,0.88) 0%,rgba(6,61,48,0.25) 45%,transparent 70%);"></div>
+          <div style="position:absolute;top:14px;left:14px;background:rgba(245,166,35,0.95);backdrop-filter:blur(4px);color:#3D2000;font-family:'Nunito',sans-serif;font-weight:800;font-size:0.65rem;text-transform:uppercase;letter-spacing:0.08em;padding:4px 10px;border-radius:999px;">Teacher Appreciation Week</div>
+          <div style="position:absolute;bottom:0;left:0;right:0;padding:18px 18px 20px;">
+            <p style="font-family:'Nunito',sans-serif;font-weight:900;font-size:1rem;color:white;margin:0 0 5px;line-height:1.3;">They show up every single day.</p>
+            <p style="font-family:'Open Sans',sans-serif;font-size:0.78rem;color:rgba(255,255,255,0.82);margin:0;line-height:1.55;">A look inside how SBA celebrates the people who make it all possible.</p>
+          </div>
+        </a>
+
+        <!-- (loop copy) Tile 3 — Family crossing finish -->
+        <a class="cs-tile" aria-hidden="true" tabindex="-1" data-dup href="community-color-run-2026.html" style="display:block;text-decoration:none;border-radius:20px;overflow:hidden;position:relative;aspect-ratio:4/3;flex-shrink:0;box-shadow:0 8px 32px rgba(11,110,90,0.12),0 2px 8px rgba(0,0,0,0.06);transition:transform 0.3s cubic-bezier(0.34,1.56,0.64,1),box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 20px 48px rgba(11,110,90,0.20),0 4px 16px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 8px 32px rgba(11,110,90,0.12),0 2px 8px rgba(0,0,0,0.06)'">
+          <img src="IMG_7360.jpeg" alt="Family running at the SBA Color Run 2026" style="width:100%;height:100%;object-fit:cover;object-position:center 20%;display:block;" />
+          <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(6,61,48,0.88) 0%,rgba(6,61,48,0.25) 45%,transparent 70%);"></div>
+          <div style="position:absolute;top:14px;left:14px;background:rgba(245,166,35,0.95);backdrop-filter:blur(4px);color:#3D2000;font-family:'Nunito',sans-serif;font-weight:800;font-size:0.65rem;text-transform:uppercase;letter-spacing:0.08em;padding:4px 10px;border-radius:999px;">#SBAColorRun2026</div>
+          <div style="position:absolute;bottom:0;left:0;right:0;padding:18px 18px 20px;">
+            <p style="font-family:'Nunito',sans-serif;font-weight:900;font-size:1rem;color:white;margin:0 0 5px;line-height:1.3;">Families in full stride.</p>
+            <p style="font-family:'Open Sans',sans-serif;font-size:0.78rem;color:rgba(255,255,255,0.82);margin:0;line-height:1.55;">Kids and parents crossing the finish line together — that's the SBA difference.</p>
+          </div>
+        </a>
+
+        </div>
       </div>
     </div>
   </section>
@@ -1403,11 +1474,10 @@
       </div>
       <h2 style="font-family:'Nunito',sans-serif;font-weight:900;font-size:clamp(2rem,4.5vw,3rem);color:#1A1A1A;letter-spacing:-0.03em;margin:0 0 16px;">Come See It for Yourself</h2>
       <p style="font-family:'Open Sans',sans-serif;font-size:1.1rem;color:#4B5563;line-height:1.78;margin:0 auto 36px;max-width:520px;">Schedule a free tour at any of our Chicago area locations. Meet our teachers, see our classrooms, and ask all your questions — no pressure, ever.</p>
-      <a href="schedule-tour.html" class="btn-amber" style="padding:18px 44px;font-size:1.1rem;box-shadow:0 10px 36px rgba(245,166,35,0.45);margin-bottom:20px;">
+      <a href="schedule-tour.html" class="btn-amber" style="padding:18px 44px;font-size:1.1rem;box-shadow:0 10px 36px rgba(245,166,35,0.45);">
         Schedule Your Free Tour
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </a>
-      <p style="font-family:'Open Sans',sans-serif;font-size:0.85rem;color:#6B7280;margin:0;">Enrolling now for Fall 2025. Spots are limited.</p>
     </div>
   </section>
 
