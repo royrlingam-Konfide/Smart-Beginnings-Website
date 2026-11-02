@@ -457,8 +457,8 @@
       .hb-dot:active span { transform:scaleY(1.2); }
       .hb-dot:focus-visible { outline:2px solid #F5A623; outline-offset:4px; }
       @keyframes hbFill { from { transform:scaleX(0); } to { transform:scaleX(1); } }
-      /* Desktop: nudge the panel toward the left edge, never closer than 24px */
-      @media (min-width: 1024px) { .hb-glass { margin-left:max(-64px, calc((1280px - 100vw) / 2)); } }
+      /* Desktop: pin the panel near the screen's left edge at any width (24px–64px gutter), not the centered 1280px column */
+      @media (min-width: 1024px) { .hb-glass { margin-left:calc(clamp(24px, 3vw, 64px) - 24px - max(0px, (100vw - 1280px) / 2)); } }
       @media (max-width: 1023px) {
         .hb-glass { flex:none !important; width:100%; }
         .hb-sharp { --hb-top:84px; top:var(--hb-top); left:0; right:0; width:100%; max-width:none; height:min(75vw,62vh); aspect-ratio:auto;
