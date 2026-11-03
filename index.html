@@ -1666,5 +1666,121 @@
   setGalleryGrids();
   window.addEventListener('resize', setGalleryGrids);
 </script>
+<!-- ═══════════════ NOVEMBER 2026 OFFER (floating pill → details panel) — auto-hides Dec 1, 2026 12:00 AM Central ═══════════════ -->
+<style>
+  #nov-offer { position:fixed; right:24px; bottom:24px; z-index:998; font-family:'Open Sans',sans-serif; }
+  #nov-offer[hidden] { display:none; }
+  .nov-pill { display:flex; align-items:center; gap:12px; padding:10px 10px 10px 12px; background:rgba(255,255,255,0.97); border:1px solid rgba(13,43,85,0.08); border-radius:999px;
+    box-shadow:0 2px 6px rgba(13,43,85,0.08),0 18px 44px -12px rgba(13,43,85,0.35); opacity:0; transform:translateY(16px);
+    transition:opacity .5s ease, transform .6s cubic-bezier(.34,1.56,.64,1); }
+  #nov-offer.is-shown .nov-pill { opacity:1; transform:none; }
+  #nov-offer.is-open .nov-pill { opacity:0; transform:translateY(8px) scale(.96); pointer-events:none; }
+  .nov-open-btn { display:flex; align-items:center; gap:12px; background:none; border:0; padding:0; cursor:pointer; text-align:left; border-radius:999px; }
+  .nov-open-btn:focus-visible, .nov-x:focus-visible, .nov-close:focus-visible { outline:2px solid #F5A623; outline-offset:3px; }
+  .nov-icon { width:36px; height:36px; border-radius:50%; background:linear-gradient(135deg,#F5A623,#FFC966); display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+  .nov-eyebrow { display:block; font-family:'Nunito',sans-serif; font-weight:800; font-size:0.62rem; letter-spacing:0.14em; text-transform:uppercase; color:#B26F00; line-height:1.2; }
+  .nov-title { display:block; font-family:'Nunito',sans-serif; font-weight:800; font-size:0.92rem; color:#0D2B55; line-height:1.25; letter-spacing:-0.01em; }
+  .nov-arrow { width:28px; height:28px; border-radius:50%; background:#0D2B55; display:flex; align-items:center; justify-content:center; flex-shrink:0; transition:transform .35s cubic-bezier(.34,1.56,.64,1); }
+  .nov-open-btn:hover .nov-arrow { transform:translateX(3px); }
+  .nov-open-btn:active .nov-arrow { transform:scale(.92); }
+  .nov-x { width:26px; height:26px; border-radius:50%; border:0; background:transparent; cursor:pointer; display:flex; align-items:center; justify-content:center; color:#8A97A8; transition:transform .25s ease, opacity .2s; margin-left:-2px; }
+  .nov-x:hover { transform:rotate(90deg); color:#0D2B55; }
+  .nov-x:active { transform:scale(.9); }
+
+  .nov-panel { position:absolute; right:0; bottom:0; width:380px; max-width:calc(100vw - 32px); background:#fff; border-radius:24px; overflow:hidden;
+    border:1px solid rgba(13,43,85,0.08); box-shadow:0 4px 10px rgba(13,43,85,0.08),0 30px 80px -20px rgba(13,43,85,0.45);
+    opacity:0; visibility:hidden; transform:translateY(16px) scale(.97); transform-origin:bottom right;
+    transition:opacity .35s ease, transform .5s cubic-bezier(.34,1.4,.64,1), visibility 0s linear .5s; }
+  #nov-offer.is-open .nov-panel { opacity:1; visibility:visible; transform:none; transition:opacity .35s ease, transform .5s cubic-bezier(.34,1.4,.64,1), visibility 0s; }
+  .nov-head { position:relative; padding:24px 24px 20px; background:radial-gradient(120% 140% at 100% 0%,#1E5BA8 0%,#0D2B55 55%,#0A2246 100%); color:#fff; }
+  .nov-head::after { content:''; position:absolute; left:24px; right:24px; bottom:0; height:2px; border-radius:2px; background:linear-gradient(90deg,#F5A623,#FFC966 60%,transparent); }
+  .nov-head h2 { font-family:'Nunito',sans-serif; font-weight:900; font-size:1.3rem; letter-spacing:-0.025em; line-height:1.2; margin:6px 0 4px; color:#fff; }
+  .nov-head p { font-size:0.84rem; color:rgba(255,255,255,0.75); margin:0; line-height:1.55; }
+  .nov-close { position:absolute; top:16px; right:16px; width:32px; height:32px; border-radius:50%; border:1px solid rgba(255,255,255,0.2); background:rgba(255,255,255,0.08); color:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; transition:transform .25s ease, background .2s; }
+  .nov-close:hover { background:rgba(255,255,255,0.18); transform:rotate(90deg); }
+  .nov-close:active { transform:scale(.9); }
+  .nov-list { list-style:none; margin:0; padding:8px 24px 4px; }
+  .nov-item { display:flex; gap:14px; padding:16px 0; border-bottom:1px solid #EEF1F5; }
+  .nov-item:last-child { border-bottom:0; }
+  .nov-badge { flex-shrink:0; width:40px; height:40px; border-radius:12px; display:flex; align-items:center; justify-content:center; background:#FFF4DF; color:#B26F00; }
+  .nov-item h3 { font-family:'Nunito',sans-serif; font-weight:900; font-size:1rem; color:#0D2B55; margin:0 0 3px; letter-spacing:-0.01em; }
+  .nov-item h3 small { display:block; font-family:'Open Sans',sans-serif; font-weight:600; font-size:0.66rem; letter-spacing:0.12em; text-transform:uppercase; color:#8A97A8; margin-bottom:2px; }
+  .nov-item p { font-size:0.84rem; color:#4B5563; line-height:1.6; margin:0; }
+  .nov-foot { padding:8px 24px 24px; }
+  .nov-foot .btn-amber { width:100%; justify-content:center; padding:14px 20px; font-size:0.95rem; box-shadow:0 10px 28px -8px rgba(245,166,35,0.6); }
+  .nov-foot .btn-amber:focus-visible { outline:2px solid #0D2B55; outline-offset:3px; }
+  .nov-fine { font-size:0.7rem; color:#8A97A8; text-align:center; margin:12px 0 0; line-height:1.5; }
+
+  @media (max-width: 639px) {
+    #nov-offer { right:12px; left:12px; bottom:12px; display:flex; justify-content:flex-end; }
+    .nov-panel { position:fixed; left:12px; right:12px; bottom:12px; width:auto; max-width:none; max-height:calc(100dvh - 24px); overflow-y:auto; transform-origin:bottom center; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .nov-pill, .nov-panel, .nov-arrow, .nov-x, .nov-close { transition:none !important; }
+  }
+</style>
+<div id="nov-offer" hidden>
+  <div class="nov-pill">
+    <button type="button" class="nov-open-btn" aria-expanded="false" aria-controls="nov-panel">
+      <span class="nov-icon" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M20 12v9H4v-9M2 7h20v5H2zM12 21V7M12 7H7.5a2.5 2.5 0 010-5C11 2 12 7 12 7zM12 7h4.5a2.5 2.5 0 000-5C13 2 12 7 12 7z" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      <span><span class="nov-eyebrow">November Offer</span><span class="nov-title">One week free when you enroll</span></span>
+      <span class="nov-arrow" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+    </button>
+    <button type="button" class="nov-x" aria-label="Dismiss November offer"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg></button>
+  </div>
+
+  <div class="nov-panel" id="nov-panel" role="dialog" aria-labelledby="nov-panel-title">
+    <div class="nov-head">
+      <span class="nov-eyebrow" style="color:#FFC966;">November 2026</span>
+      <h2 id="nov-panel-title">A warm welcome this November</h2>
+      <p>Three ways to join, or share, the Smart Beginnings family this month.</p>
+      <button type="button" class="nov-close" aria-label="Close offer details"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></button>
+    </div>
+    <ul class="nov-list">
+      <li class="nov-item">
+        <span class="nov-badge" aria-hidden="true"><svg width="19" height="19" viewBox="0 0 24 24" fill="none"><path d="M8 2v4M16 2v4M3 10h18M5 4h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V6a2 2 0 012-2zM9 15l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <div><h3><small>New families</small>4th week free</h3><p>Enroll your child in November and, after your first three weeks with us, your fourth week is on us.</p></div>
+      </li>
+      <li class="nov-item">
+        <span class="nov-badge" aria-hidden="true"><svg width="19" height="19" viewBox="0 0 24 24" fill="none"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <div><h3><small>Current SBA families</small>$250 account credit</h3><p>Refer a family who enrolls and we'll add a $250 credit to your account.</p></div>
+      </li>
+      <li class="nov-item">
+        <span class="nov-badge" aria-hidden="true"><svg width="19" height="19" viewBox="0 0 24 24" fill="none"><path d="M3 7a2 2 0 012-2h14a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V7zM3 10h18M7 15h4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <div><h3><small>Friends of SBA</small>$250 gift card</h3><p>Not an SBA family? Recommend a family who enrolls and we'll send you a $250 gift card.</p></div>
+      </li>
+    </ul>
+    <div class="nov-foot">
+      <a href="schedule-tour.html" class="btn-amber">Schedule a Tour <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <p class="nov-fine">Offers apply to enrollments in November 2026. Ask our team for full details.</p>
+    </div>
+  </div>
+</div>
+<script>
+  /* November offer: pill appears after a moment; click opens details. Dismiss hides it for the rest of the visit. Auto-hides Dec 1, 2026 00:00 CST. */
+  (function(){
+    var root = document.getElementById('nov-offer');
+    if (!root) return;
+    var dismissed = false;
+    try { dismissed = sessionStorage.getItem('sbaNovOffer') === 'x'; } catch(e) {}
+    if (Date.now() >= Date.UTC(2026, 11, 1, 6, 0, 0) || dismissed) { root.remove(); return; }
+    var openBtn = root.querySelector('.nov-open-btn'), panel = root.querySelector('.nov-panel'), closeBtn = root.querySelector('.nov-close');
+    root.hidden = false;
+    setTimeout(function(){ root.classList.add('is-shown'); }, 1800);
+    function setOpen(o){
+      root.classList.toggle('is-open', o);
+      openBtn.setAttribute('aria-expanded', String(o));
+      (o ? closeBtn : openBtn).focus({ preventScroll:true });
+    }
+    openBtn.addEventListener('click', function(){ setOpen(true); });
+    closeBtn.addEventListener('click', function(){ setOpen(false); });
+    document.addEventListener('keydown', function(e){ if (e.key === 'Escape' && root.classList.contains('is-open')) setOpen(false); });
+    document.addEventListener('click', function(e){ if (root.classList.contains('is-open') && !root.contains(e.target)) setOpen(false); });
+    root.querySelector('.nov-x').addEventListener('click', function(){
+      try { sessionStorage.setItem('sbaNovOffer', 'x'); } catch(e) {}
+      root.remove();
+    });
+  })();
+</script>
 </body>
 </html>
